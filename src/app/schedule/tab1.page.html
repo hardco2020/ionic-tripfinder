@@ -1,17 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title class="ion-text-center">
+      LOGO
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="card-background-page">
+  <!--推薦景點 圖片輪播-->
+  <ion-card>
+    <ion-slides [options]="slideOptsOne" pager="true">
+     <ion-slide *ngFor="let slide of slides">
+      <div class="card-title">{{slide.title}}</div>
+      <div class="card-subtitle">{{slide.subtitle}}</div>
+      <img [src]="slide.img" >
+     </ion-slide>
+    </ion-slides>
+  </ion-card>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card >  <!--(click) 換頁function-->
+    <img src="assets/img/travel-background.png"/>
+    <div class="card-title" >篩選行程</div>
+    <div class="card-subtitle">
+      現在開始選擇
+      <ion-icon name="arrow-forward-circle-outline"></ion-icon>   
+   </div>
+  </ion-card>
 </ion-content>
