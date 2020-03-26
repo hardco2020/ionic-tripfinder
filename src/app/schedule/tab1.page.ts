@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -38,6 +38,9 @@ export class Tab1Page {
     autoplay: true,
     speed: 2000,
    };
-  constructor() {}
+  constructor(public nav: NavController) {}
+  turnpage(){   //換頁到phase1
+    this.nav.navigateRoot(['selecting-phase1']);
+  }
 
 }
