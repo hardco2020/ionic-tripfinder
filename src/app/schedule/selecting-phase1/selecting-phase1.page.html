@@ -24,7 +24,7 @@
   
     <ion-item>
       <ion-label>距離範圍(以內)</ion-label>
-      <ion-select placeholder="-">
+      <ion-select placeholder="-" [(ngModel)]="distance">
         <ion-select-option value="2km">2公里</ion-select-option>
         <ion-select-option value="5km">5公里</ion-select-option>
         <ion-select-option value="10km">10公里</ion-select-option>
@@ -34,7 +34,7 @@
   
     <ion-item>
       <ion-label>交通工具</ion-label>
-      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss">
+      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss" [(ngModel)]="transportion">
         <ion-select-option value="default">走路</ion-select-option>
         <ion-select-option value="blonde">騎車</ion-select-option>
         <ion-select-option value="black">汽車</ion-select-option>
@@ -44,7 +44,7 @@
 
     <ion-item>
       <ion-label>時段</ion-label>
-      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss">
+      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss" [(ngModel)]="period">
         <ion-select-option value="default">早上</ion-select-option>
         <ion-select-option value="blonde">下午</ion-select-option>
         <ion-select-option value="black">晚上</ion-select-option>
@@ -54,7 +54,7 @@
 
     <ion-item>
       <ion-label>消費金額</ion-label>
-      <ion-select value="default" okText="Okay" cancelText="Dismiss">
+      <ion-select value="default" okText="Okay" cancelText="Dismiss" [(ngModel)]="amount">
         <ion-select-option value="default">不限</ion-select-option>
         <ion-select-option value="blonde">$</ion-select-option>
         <ion-select-option value="black">$$</ion-select-option>
