@@ -17,9 +17,6 @@ const routes: Routes = [
   {
     path: 'outcome',
     loadChildren: () => import('./schedule/outcome/outcome.module').then( m => m.OutcomePageModule)
-  },  {
-    path: 'recommend-result',
-    loadChildren: () => import('./recommend-result/recommend-result.module').then( m => m.RecommendResultPageModule)
   },
   {
     path: 'view-detail',
