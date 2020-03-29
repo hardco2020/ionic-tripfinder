@@ -22,10 +22,10 @@
       </ion-label>
     </ion-list-header>
     
-    <!-- 動態 load 表單資料-->
+    <!-- 動態 load 表單資料 在 schedule/select-form.service.ts 中更改表單數值及選項-->
     <ion-item *ngFor= "let item of items;let i = index">
       <ion-label>{{item.title}}</ion-label>
-      <ion-select placeholder="-" name="item.model" [(ngModel)]="vals[i]">
+      <ion-select placeholder="-" name="item.model" okText="Okay" cancelText="Dismiss" [(ngModel)]="vals[i]">
         <ion-select-option *ngFor = "let option of item.options" [value]=option.value>{{option.text}}</ion-select-option>
       </ion-select>
     </ion-item>
