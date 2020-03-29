@@ -9,6 +9,8 @@ import { ActivatedRoute,Router } from '@angular/router';
   styleUrls: ['./selecting-phase2.page.scss'],
 })
 export class SelectingPhase2Page implements OnInit {
+
+  // 透過 url 將 selection 傳遞到此頁面
   data: any;
   constructor(private route: ActivatedRoute, private router: Router) { 
     this.route.queryParams.subscribe(param=>{

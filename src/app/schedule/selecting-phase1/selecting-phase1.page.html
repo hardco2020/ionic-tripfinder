@@ -21,10 +21,19 @@
       <ion-label>
       </ion-label>
     </ion-list-header>
-  
-    <ion-item>
+    
+    <!-- 動態 load 表單資料-->
+    <ion-item *ngFor= "let item of items;let i = index">
+      <ion-label>{{item.title}}</ion-label>
+      <ion-select placeholder="-" name="item.model" [(ngModel)]="vals[i]">
+        <ion-select-option *ngFor = "let option of item.options" [value]=option.value>{{option.text}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  <!--
+   <ion-item>
       <ion-label>距離範圍(以內)</ion-label>
-      <ion-select placeholder="-" [(ngModel)]="distance">
+      <ion-select placeholder="-" [(ngModel)]="vals[1]">
         <ion-select-option value="2km">2公里</ion-select-option>
         <ion-select-option value="5km">5公里</ion-select-option>
         <ion-select-option value="10km">10公里</ion-select-option>
@@ -34,7 +43,7 @@
   
     <ion-item>
       <ion-label>交通工具</ion-label>
-      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss" [(ngModel)]="transportion">
+      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss" [(ngModel)]="vals[2]">
         <ion-select-option value="default">走路</ion-select-option>
         <ion-select-option value="blonde">騎車</ion-select-option>
         <ion-select-option value="black">汽車</ion-select-option>
@@ -44,7 +53,7 @@
 
     <ion-item>
       <ion-label>時段</ion-label>
-      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss" [(ngModel)]="period">
+      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss" [(ngModel)]="vals[3]">
         <ion-select-option value="default">早上</ion-select-option>
         <ion-select-option value="blonde">下午</ion-select-option>
         <ion-select-option value="black">晚上</ion-select-option>
@@ -54,14 +63,14 @@
 
     <ion-item>
       <ion-label>消費金額</ion-label>
-      <ion-select value="default" okText="Okay" cancelText="Dismiss" [(ngModel)]="amount">
+      <ion-select value="default" okText="Okay" cancelText="Dismiss" [(ngModel)]="vals[4]">
         <ion-select-option value="default">不限</ion-select-option>
         <ion-select-option value="blonde">$</ion-select-option>
         <ion-select-option value="black">$$</ion-select-option>
         <ion-select-option value="red">$$$</ion-select-option>
       </ion-select>
     </ion-item>
-
+  -->
   </ion-list>
     
   <!--進入到多選項 同時將資料傳進後端-->
