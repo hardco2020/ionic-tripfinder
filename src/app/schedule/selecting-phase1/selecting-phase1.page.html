@@ -43,31 +43,31 @@
   
     <ion-item>
       <ion-label>交通工具</ion-label>
-      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss" [(ngModel)]="vals[2]">
-        <ion-select-option value="default">走路</ion-select-option>
-        <ion-select-option value="blonde">騎車</ion-select-option>
-        <ion-select-option value="black">汽車</ion-select-option>
-        <ion-select-option value="red">大眾運輸</ion-select-option>
+      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss" [(ngModel)]="transportion">
+        <ion-select-option value="walk">走路</ion-select-option>
+        <ion-select-option value="ride">騎車</ion-select-option>
+        <ion-select-option value="drive">汽車</ion-select-option>
+        <ion-select-option value="mrt">大眾運輸</ion-select-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label>時段</ion-label>
-      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss" [(ngModel)]="vals[3]">
-        <ion-select-option value="default">早上</ion-select-option>
-        <ion-select-option value="blonde">下午</ion-select-option>
-        <ion-select-option value="black">晚上</ion-select-option>
-        <ion-select-option value="black">深夜</ion-select-option>
+      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss" [(ngModel)]="period">
+        <ion-select-option value="morning">早上</ion-select-option>
+        <ion-select-option value="afternoon">下午</ion-select-option>
+        <ion-select-option value="evening">晚上</ion-select-option>
+        <ion-select-option value="midnight">深夜</ion-select-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-label>消費金額</ion-label>
-      <ion-select value="default" okText="Okay" cancelText="Dismiss" [(ngModel)]="vals[4]">
-        <ion-select-option value="default">不限</ion-select-option>
-        <ion-select-option value="blonde">$</ion-select-option>
-        <ion-select-option value="black">$$</ion-select-option>
-        <ion-select-option value="red">$$$</ion-select-option>
+      <ion-select value="default" okText="Okay" cancelText="Dismiss" [(ngModel)]="amount">
+        <ion-select-option value="unlimit">不限</ion-select-option>
+        <ion-select-option value="100">$100</ion-select-option>
+        <ion-select-option value="500">$500</ion-select-option>
+        <ion-select-option value="2000">$2000</ion-select-option>
       </ion-select>
     </ion-item>
   -->
