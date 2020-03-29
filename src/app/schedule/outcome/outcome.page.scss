@@ -1,0 +1,18 @@
+.class {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .display{ display:none; } 
+  .showDisplay{ display:inline; } 
+  .hideDisplay{ display:none; } 
+
+  .hello{
+    width:250px;
+  }
+  .substr{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+  }
+  

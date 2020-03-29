@@ -1,9 +1,75 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>outcome</ion-title>
+    <ion-title>
+      
+    </ion-title>
+      
+    <!--返回鍵 回到主頁-->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+ 
+  <ion-card>
+    <ion-item>
+      <ion-icon name="logo-react"></ion-icon>
+      <ion-label>奇美博物館</ion-label>
+    </ion-item>
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-4>
+ 
+          <img src="https://s.yimg.com/ny/api/res/1.2/7RJ44W3RWlpRYa7P4pe82w--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAwO2lsPXBsYW5l/http://media.zenfs.com/zh_hant_tw/News/bcc/pcl_20180702_120000.jpg"  />
+        </ion-col>
+        <ion-col col-4></ion-col>
+      </ion-row>
+      <p class="hello substr">
+        奇美博物館，位於臺灣臺南市仁德區，為奇美實業創辦人許文龍創立，是臺灣館藏最豐富的私人博物館、美術館。以典藏西洋藝術品為主，展出藝術、樂器、兵器與自然史四大領域。樂器領域，擁有全球數量最多小提琴收藏，其中包含世界各大製琴師名作。藝術方面，典藏台灣最完整西方繪畫雕塑，目標為建構出基礎西洋藝術史脈絡。
+        
+      </p>
+      
+      <ion-button fill="clear" slot="end" size="small">查看更多</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-item>
+      <ion-icon name="logo-react"></ion-icon>
+      <ion-label>駁二藝術特區</ion-label>
+    </ion-item>
+    <ion-card-content>
+      <ion-row>
+        <ion-col col-4>
+         
+          <img src="https://2.bp.blogspot.com/-5RP5j25aH_Q/XHYwfgfzlgI/AAAAAAAACcE/zj5pI_MZh6YjHntvoryfRlzgZQ0C0OMxwCLcBGAs/s1600/20190227-IMG_7484.jpg"  />
+        </ion-col>
+        <ion-col col-4></ion-col>
+      </ion-row>
+      <p class="hello substr">
+        駁二藝術特區是一個位於臺灣高雄市鹽埕區、鼓山區的藝術園區，以「前衛、實驗、創新」為理念來打造國際藝術平台
+      </p>
+      <ion-button fill="clear" slot="end" size="small">查看更多</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+  
 
 </ion-content>
+<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<script src=js/jquery.min.js></script>
+<script src=js/jquery.flexslider.js></script>
+
+<script>
+  $(function() {
+    $(".flexslider").flexslider({
+        slideshowSpeed: 5000, //展示时间间隔ms
+        animationSpeed: 500, //滚动时间ms
+        touch: true //是否支持触屏滑动
+    });
+}); 
+</script>
