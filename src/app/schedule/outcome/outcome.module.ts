@@ -8,6 +8,7 @@ import { OutcomePageRoutingModule } from './outcome-routing.module';
 
 import { OutcomePage } from './outcome.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,4 +18,7 @@ import { OutcomePage } from './outcome.page';
   ],
   declarations: [OutcomePage]
 })
-export class OutcomePageModule {}
+export class OutcomePageModule {
+ 
+
+}
