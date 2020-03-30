@@ -10,22 +10,22 @@ export class Tab1Page {
   // 圖片的位置
   slides = [
     {
-      img: 'assets/img/1.jpg',
+      img: 'assets/img/search/1.jpg',
       title: '熱門景點',
       subtitle: '高雄市'
     },
     {
-      img: 'assets/img/2.jpg',
+      img: 'assets/img/search/2.jpg',
       title: '熱門景點',
       subtitle: '合歡山'
     },
     {
-      img: 'assets/img/3.jpg',
+      img: 'assets/img/search/3.jpg',
       title: '哪裡哪裡',
       subtitle: 'Good'
     },
     {
-      img: 'assets/img/4.jpg',
+      img: 'assets/img/search/4.jpg',
       title: '熱門景點4',
       subtitle: ''
     }
@@ -39,7 +39,7 @@ export class Tab1Page {
     speed: 2000,
    };
   constructor(public nav: NavController) {}
-  turnpage(){   //換頁到phase1
+  turnpage(){   // 換頁到phase1
     this.nav.navigateRoot(['selecting-phase1']);
   }
 

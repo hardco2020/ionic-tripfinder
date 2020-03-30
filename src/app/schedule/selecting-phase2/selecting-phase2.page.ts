@@ -20,6 +20,58 @@ export class SelectingPhase2Page implements OnInit {
     });
   }
 
+  // 多選項列表
+  labels = [
+    {
+      title: '戶外',
+      img: 'http://via.placeholder.com/300x300'
+    },
+    {
+      title: '室內',
+      img: 'http://via.placeholder.com/300x300'
+    },
+    {
+      title: '動態',
+      img: 'http://via.placeholder.com/300x300'
+    },
+    {
+      title: '靜態',
+      img: 'http://via.placeholder.com/300x300'
+    },
+    {
+      title: '網美踩點',
+      img: 'http://via.placeholder.com/300x300'
+    },
+    {
+      title: '文青必去',
+      img: 'http://via.placeholder.com/300x300'
+    },
+    {
+      title: '靠山',
+      img: 'http://via.placeholder.com/300x300'
+    },
+    {
+      title: '靠海',
+      img: 'http://via.placeholder.com/300x300'
+    },
+    {
+      title: '逛街',
+      img: 'http://via.placeholder.com/300x300'
+    },
+    {
+      title: '展覽',
+      img: 'http://via.placeholder.com/300x300'
+    },
+    {
+      title: '名勝古蹟（歷史性）',
+      img: 'http://via.placeholder.com/300x300'
+    },
+    {
+      title: '夜景',
+      img: 'http://via.placeholder.com/300x300'
+    }
+  ];
+
   ngOnInit() {
     console.log(this.data);
   }

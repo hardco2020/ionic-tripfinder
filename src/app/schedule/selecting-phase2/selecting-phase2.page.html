@@ -1,13 +1,41 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <!--返回鍵 回到主頁-->
+    <ion-title>
+      探索
+    </ion-title>
+    
+    <!--返回鍵 回到choose-travel1-->
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="selecting-phase1"></ion-back-button>
+      <ion-back-button defaultHref="/selecting-phase1"></ion-back-button>
     </ion-buttons>
-    <ion-title>selecting_phase2</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen class="ion-padding">
+  <ion-text>
+    <h4>今天想去哪裡玩？</h4>
+  </ion-text>
+  <ion-grid>
+    <ion-row>
+      <!--col 為欄位 後面參數設定比例為12格下去做響應式畫面，ngFor迴圈串資料-->
+      <ion-col size="6" size-xs="6" size-sm="6" size-md="4" size-lg="3" *ngFor="let label of labels">
+        <ion-card class="card-background-page">
+          <ion-item >
+            <ion-card-content>
+              <!--要把使用者勾選出來的checkbox選項進行傳遞-->
+              <ion-checkbox color="primary" slot="start"></ion-checkbox>
+              <ion-card-title class="card-title">{{label.title}}</ion-card-title>
+              <img [src]="label.img"/>
+            </ion-card-content> 
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
+  <!--進入到outcome-->
+  <div class="ion-padding">
+    <ion-button expand="block" type="submit" class="ion-no-margin">送出</ion-button>
+  </div>
 </ion-content>
