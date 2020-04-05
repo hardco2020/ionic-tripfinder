@@ -1,3 +1,31 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+div{
+  height: 130px;
+}
+
+.collect //收藏景點
+{
+  background-image: url( 'https://3.bp.blogspot.com/-6r1QT9sJr3A/XDAniuD6YdI/AAAAAAAAAic/sqs8MqfDHD8vCmy1ywzxlnjHPOHrSSyZwCLcBGAs/s1600/tree-sea-grass-nature-451855.jpeg' );
+}
+.history //歷史行程
+{
+  background-image: url( 'https://photo.settour.com.tw/900x600/https%3A%2F%2Fwww.settour.com.tw%2Fss_img%2FGFG%2F0000%2F0092%2F94%2Fori_3555959.jpg' );
+}
+.set //喜好設定
+{
+  background-image: url( 'https://www.erv-nsa.gov.tw/content/images/page/top-attration-hualien-01.jpg' );
+}
+.history_record //歷史紀錄
+{
+  background-image: url( 'https://lh3.googleusercontent.com/proxy/1vHcUC9jTYYFKhUqZM4f_PvRzlXr1fNaFC3tV1jeTAuDiCyQK-z6K4JhSMlmaxOOJ-24jQuABkwM9y1mToZcwnfDYBQbh1XDdN7EP5cfBIVpM4roEaydxCA' );
+}
+.card-title{
+  text-align:center;
+  font-family:標楷體;
+  color: black;
+  font-size:22px;
+  font-weight:bold;
+  line-height:130px;
+}
