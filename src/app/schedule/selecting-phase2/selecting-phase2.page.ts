@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { NavController } from '@ionic/angular';
+import { NavigationExtras } from '@angular/router';
+
 import { SelectionPh1 } from '../selecting-phase1/selection-ph1';
 import { ActivatedRoute,Router } from '@angular/router';
 
@@ -12,7 +15,7 @@ export class SelectingPhase2Page implements OnInit {
 
   // 透過 url 將 selection 傳遞到此頁面
   data: any;
-  constructor(private route: ActivatedRoute, private router: Router) { 
+  constructor(public nav: NavController,private route: ActivatedRoute, private router: Router) { 
     this.route.queryParams.subscribe(param=>{
       if(param && param.special){
         this.data = JSON.parse(param.special);
@@ -74,6 +77,15 @@ export class SelectingPhase2Page implements OnInit {
 
   ngOnInit() {
     console.log(this.data);
+  }
+  turnpage(){   //換頁到 outcome
+    // 跳轉頁面時透過 navigationExtras 傳遞 data 資料
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        special: JSON.stringify(this.data)
+      }
+    };
+    this.nav.navigateRoot(['outcome'],navigationExtras);
   }
 
 }

@@ -16,6 +16,7 @@
   <ion-text>
     <h4>今天想去哪裡玩？</h4>
   </ion-text>
+  <form #frm="ngForm">
   <ion-grid>
     <ion-row>
       <!--col 為欄位 後面參數設定比例為12格下去做響應式畫面，ngFor迴圈串資料-->
@@ -24,7 +25,7 @@
           <ion-item >
             <ion-card-content>
               <!--要把使用者勾選出來的checkbox選項進行傳遞-->
-              <ion-checkbox color="primary" slot="start"></ion-checkbox>
+              <ion-checkbox required color="primary" slot="start"></ion-checkbox>
               <ion-card-title class="card-title">{{label.title}}</ion-card-title>
               <img [src]="label.img"/>
             </ion-card-content> 
@@ -36,6 +37,7 @@
 
   <!--進入到outcome-->
   <div class="ion-padding">
-    <ion-button expand="block" type="submit" class="ion-no-margin">送出</ion-button>
+    <ion-button [disabled]="!frm.valid" expand="block" type="submit" class="ion-no-margin" (click)="turnpage()">送出</ion-button>
   </div>
+</form>
 </ion-content>
