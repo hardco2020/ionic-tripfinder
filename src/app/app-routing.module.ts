@@ -21,7 +21,12 @@ const routes: Routes = [
   {
     path: 'view-detail',
     loadChildren: () => import('./view-detail/view-detail.module').then( m => m.ViewDetailPageModule)
+  },
+  {
+    path: 'collcet-attraction',
+    loadChildren: () => import('./myrecord/collcet-attraction/collcet-attraction.module').then( m => m.CollcetAttractionPageModule)
   }
+
 
 ];
 @NgModule({
