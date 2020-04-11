@@ -52,10 +52,13 @@
       <p class="hello substr">
         駁二藝術特區是一個位於臺灣高雄市鹽埕區、鼓山區的藝術園區，以「前衛、實驗、創新」為理念來打造國際藝術平台
       </p>
-      <ion-button fill="clear" slot="end" size="small">查看更多</ion-button>
+     
 
+      <ion-label ngDefaultControl [(ngModel)]="distance">{{distance}}</ion-label>
+      <ion-label ngDefaultControl [(ngModel)]="openingorNot">{{openingorNot}}</ion-label>
+      <ion-label ngDefaultControl [(ngModel)]="openPeriod">{{openPeriod}}</ion-label>
     </ion-card-content>
   </ion-card>
+  <div #mapElement class='map'></div> 
   
-
 </ion-content>

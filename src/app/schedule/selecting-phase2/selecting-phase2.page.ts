@@ -109,13 +109,13 @@ export class SelectingPhase2Page implements OnInit {
   onCheckboxChange(e) {
     const checkArray: FormArray = this.form.get('checkArray') as FormArray;
 
-    if (e.target.checked) {
-      checkArray.push(new FormControl(e.target.value));
+    if (e.target.checked) { //如果有勾的話
+      checkArray.push(new FormControl(e.target.value)); //push進array裡
     } else {
       let i: number = 0;
       checkArray.controls.forEach((item: FormControl) => {
-        if (item.value == e.target.value) {
-          checkArray.removeAt(i);
+        if (item.value == e.target.value) { 
+          checkArray.removeAt(i);  
           return;
         }
         i++;
