@@ -1,34 +1,44 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      我的
+      我的收藏行程
     </ion-title>
+      
+    <!--返回鍵 回到主頁-->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-card class="collect" >
-    <div class="card-title" >收藏景點</div>
+  <ion-card>
+    <ion-card-content>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="auto"> 
+            <div>
+              <img style="max-height: 250px;" src="https://2.bp.blogspot.com/-5RP5j25aH_Q/XHYwfgfzlgI/AAAAAAAACcE/zj5pI_MZh6YjHntvoryfRlzgZQ0C0OMxwCLcBGAs/s1600/20190227-IMG_7484.jpg"  />
+              <div class="evaluation_star"><ion-icon class="iconSize" slot="end" name="star"></ion-icon> 4.5</div>
+            </div>
+          </ion-col>
+        </ion-row>
+      <ion-card-title>
+        駁二藝術特區
+      </ion-card-title>
+      <ion-card-subtitle>
+        803高雄市鹽埕區大勇路1號
+      </ion-card-subtitle>
+      
+      <ion-chip color="primary">
+        <ion-label>類型一</ion-label>
+      </ion-chip>
+      <ion-chip color="primary">
+        <ion-label>類型二</ion-label>
+      </ion-chip>
+    </ion-card-content>
   </ion-card>
 
-  <ion-card class="history" >
-    <div class="card-title" >歷史行程</div>
-  </ion-card>
+  
 
-  <ion-card class="set" >
-    <div class="card-title" >喜好設定</div>
-  </ion-card>
-
-  <ion-card class="history_record" >
-    <div class="card-title" >歷史紀錄</div>
-  </ion-card>
-  <ion-list>
-    <ion-item><ion-label>關於</ion-label></ion-item>
-    <ion-item><ion-label>聯絡我們</ion-label></ion-item>  
-  </ion-list>
 </ion-content>
+
