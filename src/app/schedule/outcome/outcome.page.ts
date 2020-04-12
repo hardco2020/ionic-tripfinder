@@ -20,6 +20,7 @@ export class OutcomePage implements OnInit {
    distance: any;
    openingorNot : any;
    openPeriod : any;
+   phoneNumber : any;
    example ="台北市中正區開封街一段14巷劉山東牛肉麵";
    constructor(private route: ActivatedRoute, private router: Router ,private zone: NgZone,private geolocation: Geolocation , public service : ControllerserviceService) { 
      this.route.queryParams.subscribe(param=>{
@@ -65,6 +66,7 @@ export class OutcomePage implements OnInit {
                       this.openingorNot = "營業中";
                     }
                     this.openPeriod = results.opening_hours.weekday_text;
+                    this.phoneNumber = results.formatted_phone_number;
                   }
              );
         });
