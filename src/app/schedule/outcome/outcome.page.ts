@@ -5,7 +5,7 @@ import { ActivatedRoute,Router } from '@angular/router';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
-import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
+//import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
 declare var google;
 
 @Component({
