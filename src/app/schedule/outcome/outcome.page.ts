@@ -5,7 +5,10 @@ import { ActivatedRoute,Router } from '@angular/router';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
+<<<<<<< Updated upstream
 //import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
+=======
+>>>>>>> Stashed changes
 declare var google;
 
 @Component({
