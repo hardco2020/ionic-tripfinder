@@ -37,7 +37,7 @@
         </ion-item-divider>
         <ion-item lines="none">
           <ion-icon slot="start" name="home-outline"></ion-icon>
-          <ion-label>
+          <ion-label class="multi-line">
             <b>地址</b>
             <p>高雄市鼓山區連海一路17號高雄市鼓山區連海一路17號</p>
           </ion-label>
@@ -46,25 +46,32 @@
           <ion-icon slot="start" name="call-outline"></ion-icon>
           <ion-label>
             <b>電話</b>
-            <p>05-7776654</p>
+            <p ngDefaultControl [(ngModel)]="phoneNumber">{{phoneNumber}}</p>
           </ion-label>
         </ion-item>
-       <!-- <ion-item>
+        <ion-item lines="none">
+          <ion-icon slot="start" name="alarm-outline"></ion-icon>
+          <ion-label class="multi-line">
+            <b>營業時間</b>
+            <p ngDefaultControl [(ngModel)]="openPeriod">{{openPeriod}}</p>
+          </ion-label>
+        </ion-item>
+        
+        <ion-item lines="none">
           <ion-icon slot="start" name="book-outline"></ion-icon>
-          <ion-label>
+          <ion-label class="multi-line">
             <b>景點介紹</b>
             <p>as;lkda;lsdk;alskd;alskd;alskd;alskd</p>
           </ion-label>
         </ion-item>
-        google api 的欄位-->
         <ion-item-divider>
-          <ion-label>其他</ion-label>
+          <ion-label>距離與時間</ion-label>
         </ion-item-divider>
         <ion-item lines="none">
           <ion-icon slot="start" name="compass-outline"></ion-icon>
           <ion-label>
             <b>目前距離</b>
-            <p>8 km</p>
+            <p ngDefaultControl [(ngModel)]="distance">{{distance}}</p>
           </ion-label>
         </ion-item>
         <ion-item lines="none">
@@ -77,20 +84,21 @@
       </ion-list>
     </ion-col>
   </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-button expand="block" fill="outline" color="tertiary">營業中</ion-button>
-      <ion-button expand="block" fill="outline" color="medium">休息中</ion-button>
-    </ion-col>
-  </ion-row>
-  <!--
-  <ion-text color="dark" >
-    <h6>
-      地址：71755台南市仁德區文華路二段66號<br>
-      電話：05-7776543<br>
-      景點介紹
-      
-    </h6>
-  </ion-text>-->
-  
+      <ion-row>
+        <ion-col >
+          <ion-button *ngIf="openingorNot" expand="block" fill="outline" color="tertiary">營業中</ion-button>
+          <ion-button *ngIf="!openingorNot" expand="block" fill="outline" color="medium">休息中</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label ngDefaultControl [(ngModel)]="distance">{{distance}}</ion-label>
+        </ion-col>
+        <ion-col>
+      <ion-label ngDefaultControl [(ngModel)]="openingorNot">{{openingorNot}}</ion-label>
+      </ion-col>
+      <ion-label ngDefaultControl [(ngModel)]="openPeriod">{{openPeriod}}</ion-label>
+      <ion-label ngDefaultControl [(ngModel)]="phoneNumber">電話{{phoneNumber}}</ion-label>
+    </ion-row>
+    <div #mapElement class='map'></div>
   </ion-content>

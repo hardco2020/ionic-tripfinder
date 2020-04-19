@@ -31,6 +31,7 @@ export class OutcomePage implements OnInit {
      this.route.queryParams.subscribe(param=>{
        if(param && param.special){
          this.data = JSON.parse(param.special);
+         console.log(this.data);
        }
      });
    }
