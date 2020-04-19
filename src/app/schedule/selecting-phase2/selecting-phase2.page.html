@@ -29,7 +29,7 @@
           <ion-item>
             <ion-card-content>
               <!--要把使用者勾選出來的checkbox選項進行傳遞-->
-              <ion-checkbox color="primary" slot="start" [value]="label.title" (ionChange)="onCheckboxChange($event)"></ion-checkbox>
+              <ion-checkbox color="primary" slot="start" [value]="label.name" (ionChange)="onCheckboxChange($event)">[value]="label.title"</ion-checkbox>
               <ion-card-title class="card-title">{{label.title}}</ion-card-title>
               <img [src]="label.img"/>
             </ion-card-content> 

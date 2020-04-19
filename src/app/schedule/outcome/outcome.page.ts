@@ -121,7 +121,7 @@ export class OutcomePage implements OnInit {
     console.log(this.distance);
   }
 
-  UpdateCollection() {  
+ /* UpdateCollection() {  
     //this.favorite.place=this.example;
     this.favorites.forEach(element => {
       if(element.place==this.favorite.place){ //如果重複位置則UPDATE  
@@ -135,6 +135,6 @@ export class OutcomePage implements OnInit {
       
     });
     console.log(this.favorite);
-  }
+  }*/
  
 }
