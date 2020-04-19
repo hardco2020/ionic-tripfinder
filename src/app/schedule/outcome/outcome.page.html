@@ -92,7 +92,11 @@
       </ion-col>
       <ion-label ngDefaultControl [(ngModel)]="openPeriod">{{openPeriod}}</ion-label>
       <ion-label ngDefaultControl [(ngModel)]="phoneNumber">電話{{phoneNumber}}</ion-label>
+      
     </ion-row>
+    <ion-button expand="full" (click)="UpdateCollection()">+</ion-button>
+      
+
     </ion-card-content>
   </ion-card>
   <div #mapElement class='map'></div> 

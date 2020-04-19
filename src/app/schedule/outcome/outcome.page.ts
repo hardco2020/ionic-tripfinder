@@ -1,10 +1,10 @@
 import { Component, OnInit ,NgZone ,ViewChild, AfterContentInit} from '@angular/core';
-import { ControllerserviceService } from '../../controllerservice.service'
+import { ControllerserviceService,Favorites } from '../../controllerservice.service'
 import { ActivatedRoute,Router } from '@angular/router';
 //import { ConsoleReporter } from 'jasmine';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
-
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
+import { NavController, LoadingController } from '@ionic/angular';
 
 declare var google;
 
@@ -15,14 +15,19 @@ declare var google;
 })
 export class OutcomePage implements OnInit {
    // 透過 url 將 selection 傳遞到此頁面
+   favorite : Favorites = {
+    place: "測試",
+    collection: 1 
+   };
+   favorites: Favorites[]; //load進所有現存資料
    data: any;
    map;
    distance: any;
    openingorNot : any;
    openPeriod : any;
    phoneNumber : any;
-   example ="台北市中正區開封街一段14巷劉山東牛肉麵";
-   constructor(private route: ActivatedRoute, private router: Router ,private zone: NgZone,private geolocation: Geolocation , public service : ControllerserviceService) { 
+   example ="台北市中正區開封街一段14巷劉山東牛肉麵"; //到時候會改成所有地點的資料
+   constructor(private route: ActivatedRoute, private router: Router ,private zone: NgZone,private geolocation: Geolocation , public service : ControllerserviceService, private loadingController: LoadingController,private nav: NavController) { 
      this.route.queryParams.subscribe(param=>{
        if(param && param.special){
          this.data = JSON.parse(param.special);
@@ -34,6 +39,13 @@ export class OutcomePage implements OnInit {
   geocoder = new google.maps.Geocoder;
   GoogleAutocomplete = new google.maps.places.AutocompleteService();
   ngOnInit(): void{
+    this.service.getFavorites().subscribe(res => {
+      this.favorites = res; //接受firebase裡所有的欄位
+    });
+    
+    this.favorite.place =this.example; //將地址存進等等要放進firebase的地址裡 
+    // this.service.addFavorite(this.favorite).then(() => { 每次存都會需要先新增欄位，用此處來新增欄位
+    // }); 
   }
   ngAfterViewInit() : void{
     setTimeout(() => {
@@ -108,5 +120,20 @@ export class OutcomePage implements OnInit {
     console.log(this.distance);
   }
 
+  UpdateCollection() {  
+    //this.favorite.place=this.example;
+    this.favorites.forEach(element => {
+      if(element.place==this.favorite.place){ //如果重複位置則UPDATE  
+        this.favorite.collection = element.collection + 1 ;
+        this.service.updateFavorite(this.favorite, element.id).then(() => {
+        });
+      }else{
+        this.service.addFavorite(this.favorite).then(() => {
+        });
+      }
+      
+    });
+    console.log(this.favorite);
+  }
  
 }
