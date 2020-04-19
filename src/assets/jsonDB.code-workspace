@@ -1,0 +1,23 @@
+{  
+    "structure":{
+        "tables":{
+            "AttractionInfo":"([Aid] PRIMARY KEY, [Aname], [GoogleClass], [Phone], [Address], [Rate])"
+        }
+    },
+    "data":{
+            "inserts": {
+                
+                "AttractionInfo": [
+                    //這段 
+                    //一個大括號為一筆資料
+                    //將抓出來的資料照底下大括號的格式複製進來這個中掛號
+                    //{"Aid":景點ID,"Aname":"景點名稱","GoogleClass":"google分類","Phone":"連絡電話","Address":"地址","Rate":"評價"}
+                    {"Aid":1,"Aname":"高雄市立歷史博物館","GoogleClass":"當地歷史博物館","Phone":"07 5312612","Address":"803高雄市鹽埕區中正四路272號","Rate":"4.2"},
+                    {"Aid":2,"Aname":"西子灣海水浴場","GoogleClass":"海水浴場","Phone":"無","Address":"804高雄市鼓山區蓮海路70號","Rate":"4.3"},
+                    {"Aid":3,"Aname":"光榮碼頭","GoogleClass":"碼頭","Phone":"無","Address":"802高雄市苓雅區海邊路31號","Rate":"4.5"},
+                    {"Aid":4,"Aname":"","GoogleClass":"","Phone":"","Address":"","Rate":""}
+                ]
+                
+            }
+    }
+}
