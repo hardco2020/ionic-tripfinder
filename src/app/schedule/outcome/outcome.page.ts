@@ -57,8 +57,55 @@ export class OutcomePage implements OnInit {
           center: { lat: -34.9011, lng: -56.1645 },
           zoom: 15
       });
-    //此處先用if else處理篩選 
-    //等待竹秀將phase2傳值到此處
+    // 此處先用if else處理篩選
+    // 等待竹秀將phase2傳值到此處
+    /*
+    資料庫
+    |內外 | 動靜 |
+      內     動
+      外     靜
+
+    ionic選項
+    |室內 | 室外 | 動態 | 靜態 |
+      勾    勾     勾     勾
+     不勾   不勾   不勾   不勾
+    （同時勾 = 同時不勾）
+
+
+    if 室內 = 室外:
+        if 動態 = 靜態:
+            SELECT * FROM ...
+        elif 動態=勾 & 靜態=不勾:
+            SELECT * FROM ...
+            WHERE 動靜=動
+        elif 動態=不勾 & 靜態=勾:
+            SELECT *FROM ...
+            WHERE 動靜=靜
+
+    elif 室內=勾 & 室外=不勾:
+        if 動態 = 靜態:
+            SELECT * FROM ...
+            WHERE 內外=內
+        elif 動態=勾 & 靜態=不勾:
+            SELECT * FROM ...
+            WHERE 內外=內 AND 動靜=動
+        elif 動態=不勾 & 靜態=勾:
+            SELECT * FROM ...
+            WHERE 內外=內 AND 動靜=靜
+
+    elif 室內=勾 & 室外=不勾:
+        if 動態 = 靜態:
+            SELECT * FROM ...
+            WHERE 內外=外
+        elif 動態=勾 & 靜態=不勾:
+            SELECT * FROM ...
+            WHERE 內外=外 AND 動靜=動
+        elif 動態=不勾 & 靜態=勾:
+            SELECT * FROM ...
+            WHERE 內外=外 AND 動靜=靜
+    */
+
+
     
     
     //篩選出一系列地點後根據使用者的距離 金錢等等要求 做google place進一步二階段篩選
