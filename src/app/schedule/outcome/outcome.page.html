@@ -29,6 +29,7 @@
       </p>
     </ion-card-content>
   </ion-card>-->
+<<<<<<< Updated upstream
   <ion-item-sliding>
     <ion-item>
         <ion-card-content>
@@ -55,6 +56,80 @@
           </ion-chip>
         </ion-card-content>
     </ion-item>
+=======
+  <ion-card>
+    <ion-card-content>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="auto"> 
+          <div>
+            <img style="max-height: 250px;" src="https://s.yimg.com/ny/api/res/1.2/7RJ44W3RWlpRYa7P4pe82w--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAwO2lsPXBsYW5l/http://media.zenfs.com/zh_hant_tw/News/bcc/pcl_20180702_120000.jpg"  />
+            <div class="evaluation_star"><ion-icon class="iconSize" slot="end" name="star"></ion-icon> 4.7</div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-card-title>
+        奇美博物館
+      </ion-card-title>
+      <ion-card-subtitle>
+        71755台南市仁德區文華路二段66號
+      </ion-card-subtitle>
+      
+      <ion-chip color="primary">
+        <ion-label>類型一</ion-label>
+      </ion-chip>
+      <ion-chip color="primary">
+        <ion-label>類型二</ion-label>
+      </ion-chip>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card>
+    <ion-card-content>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="auto"> 
+          <div>
+            <img  style="max-height: 250px;" src="https://2.bp.blogspot.com/-5RP5j25aH_Q/XHYwfgfzlgI/AAAAAAAACcE/zj5pI_MZh6YjHntvoryfRlzgZQ0C0OMxwCLcBGAs/s1600/20190227-IMG_7484.jpg"  />
+            <div class="evaluation_star"><ion-icon class="iconSize" slot="end" name="star"></ion-icon> 4.5</div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-card-title>
+        駁二藝術特區
+      </ion-card-title>
+      <ion-card-subtitle>
+        803高雄市鹽埕區大勇路1號
+      </ion-card-subtitle>
+      
+      <ion-chip color="primary">
+        <ion-label>類型一</ion-label>
+      </ion-chip>
+      <ion-chip color="primary">
+        <ion-label>類型二</ion-label>
+      </ion-chip>
+      <p class="hello substr">
+        駁二藝術特區是一個位於臺灣高雄市鹽埕區、鼓山區的藝術園區，以「前衛、實驗、創新」為理念來打造國際藝術平台
+      </p>
+     
+      <ion-row>
+        <ion-col>
+          <ion-label ngDefaultControl [(ngModel)]="distance">{{distance}}</ion-label>
+        </ion-col>
+        <ion-col>
+      <ion-label ngDefaultControl [(ngModel)]="openingorNot">{{openingorNot}}</ion-label>
+      </ion-col>
+      <ion-label ngDefaultControl [(ngModel)]="openPeriod">{{openPeriod}}</ion-label>
+      <ion-label ngDefaultControl [(ngModel)]="phoneNumber">電話{{phoneNumber}}</ion-label>
+      
+    </ion-row>
+    <ion-list>
+      <ion-item *ngFor="let item of googles">
+        {{item.phoneNumber}} 
+      </ion-item>
+    </ion-list>
+    <ion-button expand="full" (click)="UpdateCollection()">+</ion-button>
+    <ion-button expand="full" (click)="Test()">Test</ion-button>
+    
+>>>>>>> Stashed changes
 
     <ion-item-options side="end"> 
       <ion-item-option >Favorite</ion-item-option>
