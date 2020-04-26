@@ -273,16 +273,7 @@ export class OutcomePage implements OnInit {
       }
       
     });
-<<<<<<< Updated upstream
     console.log(this.favorite);
   }*/
-=======
-    console.log(this.favorite.collection);
-    console.log(this.googles);
-  }
-  Test(){
-    console.log(this.googles);
-  }
->>>>>>> Stashed changes
  
 }

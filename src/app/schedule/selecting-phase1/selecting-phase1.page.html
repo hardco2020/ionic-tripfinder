@@ -21,16 +21,22 @@
       <ion-label>
       </ion-label>
     </ion-list-header>
-    <form #frm = "ngForm">
       <!-- 動態 load 表單資料 在 schedule/select-form.service.ts 中更改表單數值及選項-->
       <!-- required 至少選擇一項 -->
-      <ion-item *ngFor= "let item of items;let i = index">
+      <!--<ion-item *ngFor= "let item of items;let i = index">
         <ion-label>{{item.title}}</ion-label>
         <ion-select required placeholder="-" name="item.model" okText="Okay" cancelText="Dismiss" [(ngModel)]="vals[i]">
           <ion-select-option *ngFor = "let option of item.options" [value]=option.value>{{option.text}}</ion-select-option>
         </ion-select>
+      </ion-item>-->
+      <ion-item>
+        <ion-range (ionChange)="ionChange()" min="0" max="100" step="10" snaps="true" pin="true" [(ngModel)]="distanceRange">
+          <ion-icon small range-left name="sunny"></ion-icon>
+          <ion-icon range-right name="sunny"></ion-icon>
+        </ion-range>
       </ion-item>
-
+      <p>{{distanceRange}}</p>
+    
 
   <!--
    <ion-item>
@@ -72,11 +78,10 @@
         <ion-select-option value="2000">$2000</ion-select-option>
       </ion-select>
     </ion-item>
-  -->
-  <!--進入到多選項 同時將資料傳進後端-->
-  <div class="ion-padding">
-    <ion-button [disabled]="!frm.valid" expand="block" type="submit" class="ion-no-margin" (click)='turnpage()'>下一步</ion-button>
+  
+  進入到多選項 同時將資料傳進後端-->
+ <div class="ion-padding">
+    <ion-button [disabled]="!distanceValid" expand="block" type="submit" class="ion-no-margin" (click)='turnpage()'>下一步</ion-button>
   </div>
-  </form>
 </ion-list>
 </ion-content>

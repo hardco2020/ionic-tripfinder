@@ -8,6 +8,12 @@ export interface Favorites {
   place: string;
   collection: number;
 }
+export interface googleInfor {
+    distance: number;
+    openingorNot: any;
+    phoneNumber: number;
+    openPeriod: number
+}
 @Injectable({
   providedIn: 'root'
 })

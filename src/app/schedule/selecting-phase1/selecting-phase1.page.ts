@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 
-import { from } from 'rxjs';
-import { SelectionPh1 } from './selection-ph1';
 import { NavigationExtras } from '@angular/router';
 
-import { SelectFormService } from '../select-form.service';
 @Component({
   selector: 'app-selecting-phase1',
   templateUrl: './selecting-phase1.page.html',
@@ -13,30 +10,35 @@ import { SelectFormService } from '../select-form.service';
 })
 export class SelectingPhase1Page implements OnInit {
 
-  constructor(public nav: NavController, private selectform: SelectFormService) { } //宣告nav函數來換頁
-  private selection : SelectionPh1;
-
+  constructor(public nav: NavController, /*private selectform: SelectFormService*/) { } //宣告nav函數來換頁
+  private selection : any;
 
   ngOnInit() {
-    this.getSelectForm();
+    //this.getSelectForm();
   }
   
   // ngModel 變數值
-  vals :any = [];
+  //vals :any = [];
+  distanceRange:any;
+  distanceValid:boolean = false;
   items: any;
   // 取得表單資料
-  getSelectForm(){
+  /* getSelectForm(){
     this.items = this.selectform.getSelectForm();
-  }
+  }*/
 
   // 設定 selection 的值
   setItem(){  
     this.selection = {
-      distance: this.vals[0],
-      transportation: this.vals[1],
-      period: this.vals[2],
-      amount: this.vals[3]
+      distance: this.distanceRange,
     };
+  }
+  ionChange(){
+    if(this.distanceRange>0){
+      this.distanceValid=true;
+    }else{
+      this.distanceValid=false;
+    }
   }
   turnpage(){   //換頁到phase2
     this.setItem();
