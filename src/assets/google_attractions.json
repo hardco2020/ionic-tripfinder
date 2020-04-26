@@ -1,0 +1,2394 @@
+{  
+    "structure":{
+        "tables":{
+            "AttractionInfo":"([Aid] PRIMARY KEY, [Aname], [GoogleClass], [Phone], [Address], [Rate])",
+            "AttractionSelect":"([Aid] PRIMARY KEY, [InorOut], [StaticorDynamic], [Netbeauty], [Hipster], [NearMountain], [NearSea], [History], [NightView])",
+            "IsRookie":"([isRookie] PRIMARY KEY)"
+        }
+    },
+    "data":{
+            "inserts": {
+                
+                "AttractionInfo": [
+                    {
+                        "Aid": 1,
+                        "Aname": "大立百貨空中遊樂園",
+                        "photo": "CmRaAAAAIClT_Ynie6i7diws5vPTvz4IK7-cyWX93fkUtbAnI2EkIORzchzhzZARIHaaF6vDQTx78ZEIEjNX55fzXE2v8aSZ2PArtcX8rP2a7JeimjeaerACyg9ftF37z6p0cBnwEhDEW3u4n-x7AeGI2F5ApFAsGhSFoyAOGS2JKfDqLSLgRjabwJKxyQ",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "07 261 3060",
+                        "Address": "801台灣高雄市前金區五福三路59號RF",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 2,
+                        "Aname": "澄清湖風景區 兒童樂園",
+                        "photo": "CmRaAAAAQNI4jsV8_g86CEU7tWjZQHtUOMN0mu3aL1sKekjMvWyGqCmyiz9miFN1v5WT6yoRh1KOIb_jmVK38p_Vfy60tcx8TI_hMJr9RQNSq-VtahYFp9OvIOGt5CGSssc_fyD0EhBpe0PveufVdBpENptCQqkqGhRd9VvD2vhgAxF_37fgh5eUlYENtw",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "07 370 0821",
+                        "Address": "833台灣高雄市鳥松區",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 3,
+                        "Aname": "鈴鹿賽道樂園",
+                        "photo": "CmRaAAAAG8PNms_SXLnkhz00HQX-67phd-iMq8tNWMXrV8Gsv_l_oaBzi04AqrZsN4cbbHiz3NynrvZU0hd0LnuJpFtj3YuH3Rtd9Z6bhN-3kiS63zMjLoPgunF8SNbpUDtjyqlMEhAyqYYRWyTYj5kKDW05xWOpGhTTJNhM9B8xsRScOXNXZI-rdnyaOA",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "07 796 7766",
+                        "Address": "806台灣高雄市前鎮區中安路1-1號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 4,
+                        "Aname": "快樂100",
+                        "photo": "CmRZAAAA-fsbesBp772W6uhAJv9KHpHRzCJS2Zyc0DpWceXW0Wi_dUc7EwK7Ozcx7FzaE90wuNKoyMTrXW6a8c_Yx7kBs5oDKnG0vH0siWwKbxO45FBJKYQZcUHizAyKf_xIKR7dEhDMFLF-WuXuex-cB6-YAe2iGhTT7dyrqvN_b1Y0c7ujEV4GV4O4_Q",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "07 970 3366",
+                        "Address": "806台灣高雄市前鎮區中華五路789號",
+                        "Rate": 3.8
+                    },
+                    {
+                        "Aid": 5,
+                        "Aname": "義大遊樂世界",
+                        "photo": "CmRaAAAAEfcJtsjJGNzfyHpbx0E233P7IxQxHzCNTHYyRhXe2ibJdZr1Qh6K7_6ssX-FyEvYboqfNk_7Twd7c0XzJbH_LNLPlBsva80TXghUGaTSKr3DZwpEEeb9Ci2XQItoo-UREhCiOOQb1BOJmXAFJUbBgm3aGhTlszdFr_I_v50zBOGHWalIgud_Lg",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "07 656 8080",
+                        "Address": "840台灣高雄市大樹區學城路一段10號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 6,
+                        "Aname": "義大遊樂世界聖托里尼山城",
+                        "photo": "CmRZAAAANdgyNrSrAMs31cwtmIPAifLGfbfkirtUReQEwoL67VoLj2TSotcWq1pmFfwGnIx9uk-JIfsemDZ2Iw2R_nnYQeG8rn7P5oagqDRlrWCNbrhCSC3biyiEUIJURaIepoWnEhCRF-zf_YIMFTBMd4gyxplLGhQgghq0kkIDbRpObHYTTn0w4svEiQ",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "080 058 8887",
+                        "Address": "840台灣高雄市大樹區學城路一段12號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 7,
+                        "Aname": "三桃山遊樂園",
+                        "photo": "CmRaAAAAklfMo7dWTvl2u8ENcDyskXWeVbD4tEeuqrS9tD322v7j-2iz0l4HutvOB2d8BXbnwD5gyT8KhrWyTp0db_lLYNL1tH62p74gLTizDjOAt8_OR2L0M9J7PhYSdPAX6M69EhDXBYH65orxnazZ-kAgSC7EGhRJE02dsEc1ZGBGUrndd2PVoaOYGA",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "07 661 2482",
+                        "Address": "842台灣高雄市旗山區三桃巷9號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 8,
+                        "Aname": "美美der美pai屋",
+                        "photo": "CmRaAAAA_rC8fCl-UFQPNpwu3Kgp42nt65EKF8qHJog1buENi8JJ2u0SZ26XGzudUblgFr4mMfkniUNQPFoPvUjNBtusWb-FNDP6Q0MFqMTFG3GyxAv9yUnLy75_X8FsBB4i2FWvEhByGNzW--uY62GWBuw_CNfeGhT_vdkFXJbjXCsDgdHmcg6frAlRjw",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "0902 191 871",
+                        "Address": "807台灣高雄市三民區十全一路161號B2",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 9,
+                        "Aname": "遊戲愛樂園 高雄夢時代店",
+                        "photo": "CmRaAAAApMPRpA4be9_Udhh1FSAo_tqnhtfwEOe4fTPfWNoSx-VGWqc7YlpGrpptOTZoxQ0b37SjavSjLt7UEZGSXeHe3duX3QNGG_E1GXHy2GpdwCsVbP8qAwAz4cu9gjUZJ1QSEhA9FTIPTXnIKHeHOJ_P9hLvGhQ-t1aitgf9c20K_YnmUt00r8LJ8Q",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "07 970 0528",
+                        "Address": "號5樓, No. 789中華五路前鎮區高雄市台灣 806",
+                        "Rate": 4.7
+                    },
+                    {
+                        "Aid": 10,
+                        "Aname": "Lotus WakePark 蓮潭滑水主題樂園",
+                        "photo": "CmRaAAAAQMVtRkJ9QgsvAivds1zh1so1e1ugEZNl93OuPynsAxGKeInfzkrl7qNycHcnEiU--vShSd60Van1w1Kfc_8TRirAxNf4UYSpj54hPZFengQtrG1TL549PDGjeUF59VgFEhAvRqEy6Pkv-N4w0w3jpYxqGhRm4n790ZYhyf_GY2rr5O2nW9JNww",
+                        "GoogleClass": "tourist_attraction",
+                        "Phone": "07 581 1556",
+                        "Address": "813台灣高雄市左營區新庄仔路46號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 11,
+                        "Aname": "KOSMOSPOT x VIVELAND VR 虛擬實境樂園",
+                        "photo": "CmRaAAAABohHwbvtSD0iE7W7BPF8RyDkkDYfbZx22mxYnsgdShWZB6P2zHOw1maLwora7hwFEjkTCv52s1iPEyYdm9zUyZvYXdG8_bbHqv9TrM3I3TTiFHBsYhV_mM-dOfOZMsC4EhASQPf1IWSu0gtpM5V3REQZGhSnvyMF0R29Pi47TpJzA8ZeIBNxmA",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "07 972 8001",
+                        "Address": "806台灣高雄市前鎮區中安路1之1號（大道西1F - 1S-02a",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 12,
+                        "Aname": "騎士堡-遊學館( 高雄SOGO店)",
+                        "photo": "CmRaAAAAs0yr1UEQaxISZ9NeJkML_7Mff_sc6WcKi42mNbjRj8qalDs2zARcf7TokpAdgYvjU7ZU1Ff76DYZB2w09-15fcG0hOnEz9z3P5Ykm4GUcaCCNLqZPDiAZXhD3ljnsrnFEhCoFAfgUbC7xiOLnue4UgNgGhSDtf89awj7NHAHl1Wh0-Y-1oWgGw",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "07 970 5706",
+                        "Address": "80655台灣高雄市前鎮區三多三路217號6樓",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 13,
+                        "Aname": "PaPark",
+                        "photo": "CmRaAAAARB3dyK6nt8D0O_pO0YNtC2GyIlLUMjtjmKJI8HB7sqQR524hglbR8Mwu3-RTO-eE8SmaMBLz_FTg00RgIWGny6H-qiQEDJhqXOmiYp7-uvh8YTdLByEEg_NBjKdJf1_bEhCOWGZX8hVZ3unB7-0jJazTGhSqboCFbTvulrccVzE-PYZ6v6qkxg",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "07 823 0508",
+                        "Address": "806台灣高雄市前鎮區中華五路789號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 14,
+                        "Aname": "遊戲愛樂園 草衙店",
+                        "photo": "CmRaAAAAg7j0daowJZFmk__fImAmnlY396o1hT6GJudHvXJdZ9aj4xfvE4c51Q_OyKBfz3BOuP5zTeiyJhnkolzpQgfst38kS_1GqCPP54ZngGzBMiIEvS6K6LCfN6nLIu7WaHQgEhBhMwz5KbA0OjkOgpQYRhu9GhSKmQcgBxIN8FvZ_5depHr74orVaQ",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "07 793 3399",
+                        "Address": "3 No. 1-1號, 中安路前鎮區高雄市台灣 806",
+                        "Rate": 4.8
+                    },
+                    {
+                        "Aid": 15,
+                        "Aname": "騎士堡(夢時代店)",
+                        "photo": "CmRaAAAAjz0emxh7ZU8gFOwvizj6ajxkNpqDew9KAGagnjxrjoay-BPohdhaGDvbVH4Cz6vjbupiJp7FI8mlZnCbRB0Ze_vo0BoOHvKgsutKnxl8lCSHexAayexIP8XPtQhlCA-0EhAQ8hqJCY2TawybSpom2uYAGhRDDVPGsnYDSQ_VyxY3WEpYToAsFg",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "07 973 2100",
+                        "Address": "806台灣高雄市前鎮區中華五路789號4樓",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 16,
+                        "Aname": "遊戲愛樂園-左營新光店",
+                        "photo": "CmRaAAAAJuutAn9QEAQHOF7YlQbX9iqCPi5Vlr3InMJ4K8DtY3Bz7rSbsWjmeA1xIbGoKgE1sp-UyIDKRajXdHckVPOuGoO6-GT9fYHIMsC6noGqqZZxV6sgwaSGVqoTRNaXf67mEhBsyep5jCSdH4tZBr8UeMy5GhSMhXjwLmyczFgwh5PSIKIcFvx8gA",
+                        "GoogleClass": "tourist_attraction",
+                        "Phone": "07 345 8586",
+                        "Address": "813台灣高雄市左營區高鐵路123號5樓",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 17,
+                        "Aname": "澄清湖海洋奇珍園",
+                        "photo": "CmRaAAAAg61HqpNcHHXDHFmwh8Tb99ef5POdKvgcbXuX0Fw_RdQPam9at5AYJwtHGH-p_PDQcd2TAFTbqGysbxpEaUf357nlRk7Tupwws8RUvveT9YXSCzdrqHGiRSznrOwZUsq6EhB4SaoLIc0fLF8zVVdB7mrqGhRngUJoYlx729VrAVob2IEyRD-mXw",
+                        "GoogleClass": "aquarium",
+                        "Phone": "07 735 6166",
+                        "Address": "833台灣高雄市鳥松區大埤路32號",
+                        "Rate": 3.9
+                    },
+                    {
+                        "Aid": 18,
+                        "Aname": "海洋水族館",
+                        "photo": "CmRaAAAA3kgEBMR1lCasESwS8NTpHX4-TfQYVoIhpaCaIfMMfrN6mZ50idz0H48ZF9bIMzk--PHn_lpN8FM5siOgxOENhVBIhGAabbluwZlvjulUwXTqd3u89YkNJbk2DeV8U5cyEhBliGEePVsSpOJRXZtFKxfoGhQ5aJMSykUMPwyFU_4KTR_kigl60A",
+                        "GoogleClass": "aquarium",
+                        "Phone": "0932 791 725",
+                        "Address": "811台灣高雄市楠梓區學專路31號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 19,
+                        "Aname": "海島水藝水族設計Ｉ.Ａ.Ａ",
+                        "photo": "CmRaAAAA3hCxRRyq0H_7sTrKEpNWylxai-kKyfeaEv-4zB6EcfQBA3_QhhNk685xv8rSnaTOzaVp6EVAMNAE_Y5LJ0g-tUr0sP3iIcrVa0LMt3H5Z3UvlttGmA40dh34Gor8zgd5EhDm1AdqSfPjwRm76oPs2BiVGhTWnzOAfB51Ips__9k1VASTXSfHiQ",
+                        "GoogleClass": "aquarium",
+                        "Phone": "0911 003 989",
+                        "Address": "830台灣高雄市鳳山區光遠路257巷19號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 20,
+                        "Aname": "地中海水族-鳳屏店",
+                        "photo": "CmRaAAAAs4veCyACrTjMPst1qSavwRFn0UZtMH9-08IpcLiHUrhPzZRIX7v3F17Qa5F0eF_SFjh5m6q0l0CCFscuby_i9n0uLsRW9Jg63_9hvQnYrNZY1wWneSqfA2U5LUnXLxSbEhCt1QExm3k-mzLSbwBdwr2iGhSvQhtk3J7RRN2k7H_VLdfMDHMQcA",
+                        "GoogleClass": "aquarium",
+                        "Phone": "07 701 7980",
+                        "Address": "831台灣高雄市大寮區鳳屏一路463-2號",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 21,
+                        "Aname": "寶勝畫廊X-Power Gallery • 高雄Kaohsiung",
+                        "photo": "CmRaAAAAqS6lVbM0noepCVZJDt3GzKIVQz4Qzmr2vVuOLLeHpICbHM9LJgMq7_8Lx6PHkprXX5Xt5hRgnGeCWfks5Mg9qA8wmStGXZ6gPUOFLv_7JOhJiMVHnyee3zsRiNbv38GREhDdiNuSCLyRE8_TSZHH5xSVGhRdD0DWcyVvjuaLQdQrP5INn8GnOQ",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "07 222 3769",
+                        "Address": "802台灣高雄市苓雅區中正二路91號1樓",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 22,
+                        "Aname": "福溢畫廊",
+                        "photo": "CmRaAAAAOCiId0rZzfF0GLvYYi2A6GU66VWEtON-qwVsRguwhKyPZg7jYkG0clZ6JOIdIqytaqW_ECJ0IY75HgEYtdAmqWTHJRVtp8eBAfeFViXG__-dApSJ1ws6-oSsioAZMRMWEhB7jQruo3w9hSvoTZrySr1VGhTFLTWIJJ827awqvOI1shrgmFGthA",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "0929 804 829",
+                        "Address": "802台灣高雄市苓雅區三多二路63號",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 23,
+                        "Aname": "采石畫廊",
+                        "photo": "CmRaAAAAa-QqDlzsq-frqS4howPGtaiPhySX4n93uf1ZVFsRrmna6v57EITKXL4-okxH9cUSzbS-HWlJDOD9VcZfl5Db_gKknZ8tX7GCjGiGgR6yhxW8sN6MZ6lZp8iAViW9ieV_EhCCpOyPN9Mazy96SVTme2POGhQeNaQ4PhSjDDwI8b_pDDiKlbU5dA",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "07 556 8661",
+                        "Address": "813台灣高雄市左營區博愛二路646號",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 24,
+                        "Aname": "溫馨畫廊",
+                        "photo": "CmRaAAAA4stm4Gl4iLLLrNO3_ckCmUWR0SErhEjfXKGzzJDEM3RYe_F-ikmgfPhW1L8Xtc1_72DcfRvOrS2A2Lmly019ZoVPrzW4HirJUzaO8Dj3clwPeic1lcbfJ9PUjP48_9fpEhDJVQosOjo2g3Q4pErcWsnSGhSoUylLrEjajFtIPfIEfamoNFRgzA",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "07 723 7107",
+                        "Address": "802台灣高雄市苓雅區廣州一街126號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 25,
+                        "Aname": "弔詭畫廊",
+                        "photo": "CmRaAAAAi9ArtrgfrEX2hez_u22YnHpSaGoWKkz1-mVaX5uRMVnB_2b0do6V_Cnyra_8BjKO7YJJaHaSwJyVyZcEpZa0WJHdB3jQvci0-1LfpugyBczbCoLt1ffdzHOwahOHsECpEhDKdbjGKb4ZKprJoqOHTEelGhQINg-PtlTboGwwgrz0CDzeB4R_Rg",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "07 521 9028",
+                        "Address": "803台灣高雄市鹽埕區五福四路184號",
+                        "Rate": 4.8
+                    },
+                    {
+                        "Aid": 26,
+                        "Aname": "陳建智專業美術(智的藝術空間)",
+                        "photo": "CmRaAAAA32dCcY369RpBpGrsmybl1kIrIAwZtJGld1b2eGtF1NipkQEZpsHJVVm7jt2WufCpW_HkKyZ3XDXOw3VcjmRmdDMOtN_faSMTOlr8x04p-Z1ZqmW7sqdNFHY7Gb2WTuhIEhBeSR17_nBQz5oRm6ewAYkHGhTqfwBrnMeuYbvE6SD5f84HUghiPg",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "0919 876 200",
+                        "Address": "802台灣高雄市苓雅區泰成街1巷8號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 27,
+                        "Aname": "佳家藝品畫廊",
+                        "photo": "CmRaAAAAFWLZB0-yDqQNmsMWRqyGqcX0MGw_U5uoewBRehFQrubL2KPSx_OwdMlLut_w2EqIbOmEkjL9K--8qF0_2ChAoi3VJq6ldiXX00C8hEOHJdTWbbDohZNF0hmMtcuLu2nrEhBvCdClxCy8OH5NkL0evb_IGhSDJKHn64k4woz-LVLnq-6W5Brgaw",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "07 359 5881",
+                        "Address": "807台灣高雄市三民區鼎泰街248號",
+                        "Rate": 4.7
+                    },
+                    {
+                        "Aid": 28,
+                        "Aname": "荷軒新藝空間",
+                        "photo": "CmRaAAAA0wNSdS9WcZdVLCDr7WCJWDMNCODFRDuxZEjhX_CyiDQKVcUWd9b8OJMUDjlx9vfptOS-5nd6-0xWr1idJ5mMMBKNl5ptegBpWyp6EQGioCDbvnzPY653wv1blOyoB0AOEhDz6fDzrWWqgDZ-1EHQN-N1GhQQ5ayJqdRHgcvwW2DrrC9jCOxfqg",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "07 767 7566",
+                        "Address": "2f No. 457號, 文衡路鳳山區高雄市台灣 83048",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 29,
+                        "Aname": "大義倉庫",
+                        "photo": "CmRaAAAA0serQGkHv_uZdI1T7xoneAnnXOOmdtov_bvEXxXWk_7nDls5N6vZD6KIdjYUQ750IJDiiusS2vIRRCCrJgo-YSEMxUfUXMzbtOGfHMifxpu2TmV0oUic4G6XpwXFcdrZEhCPHf499lsR_62T_2U2r4osGhQhzDgv0_cPcoKBrd6QcoLYRfblHw",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "07 521 0014",
+                        "Address": "80343台灣高雄市鹽埕區大義街2-2號C8-1倉庫",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 30,
+                        "Aname": "皇品畫廊",
+                        "photo": "CmRaAAAAj8tqvXNpTq7Yw3U-ACNIlan3DvUzUQie5Es--hf4sRiLrSGeKV3PCKUwcz57aEQXrp25XBsUm4ZOlA97p95sSL_N8XM4WdxQUx1Mj-8ZPeZZ4S9FEcZ9zLeGwwmH13R-EhDVwPpQtP1w67ru4hSDqmT4GhTIDeL5czy02w7AXbrJsm9AzAtx7w",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "07 226 3119",
+                        "Address": "800台灣高雄市新興區五福一路160號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 31,
+                        "Aname": "春之藝廊",
+                        "photo": "CmRZAAAAlYUMfN29KarQ9HxUBTv7JgpM-oi_fgbUaHZvOCW9Z3_RPf-IMS0fXZE_1sLMlimIzaa1O5vK43q0LOB-e5dgGHthhe0yeUoI9lQ20YEgtDrHtPX6rpphN9LMfhQ-3DWIEhBAOznFDvlsmNIjaB_uOLyBGhSSJpwJ5u0XBTvjiJdY8ergokw0pg",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "0978 306 077",
+                        "Address": "802台灣高雄市苓雅區輔仁路155號6 樓 之 2",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 32,
+                        "Aname": "白色記憶空間 ART SPACE",
+                        "photo": "CmRaAAAAISiQ33AgbeOLdqdZ6xzhburbTwSQqW__0C9y3sYQqGLwI8OYxHOkNDpTPRB0Q9wfj09uSVNkiyffNIY2MnRRqcJyqoNknZ2rzHjpfPqMA2SbYDy3Tx4CfCQJH1Iot_hAEhCw6GcV3jGLyZhVBRbrpqjxGhShem7beNN_oy2YrXJ6Um5LhqbsZg",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "07 311 0137",
+                        "Address": "807台灣高雄市三民區遼寧一街358號No",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 33,
+                        "Aname": "Crane Gallery 弔詭畫廊",
+                        "photo": "CmRaAAAAoptM0V1J7An8-1IPI1vOde8puClCj6fKLffjC3Tq2ErgrGrL3LXlaADt1TmLMC9HHo_5lYFRdTATqwrrDne6W11EK7s-q6YocgMvuSzuV9NXkVMcaweyh7GVgd_QFRZlEhDRQAhnHDuo3ESWRRKuYkzQGhThm4i0uK_15jdC1MTELc853c1izA",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "07 521 9028",
+                        "Address": "803台灣高雄市鹽埕區五福四路184號",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 34,
+                        "Aname": "山口藝廊 Gallery Yamaguchi kunst-bau Kaohsiung",
+                        "photo": "CmRaAAAAOUnflEoxjHKqAZSDj32xf-awe1hM4JJ14HYSjz33JWvPEkl-gtcqA3_erXyscdV1evp1ysPk6e394n3NSSLnCG33K4PspI19BubEhcv2ya5cc7nSZRIpfU9xD9LMwt4CEhALVW0O4f7CEbIf85O_UkYIGhRgz8BUBJryTfB4ZgWRDBAAOs4rGA",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "07 521 8042",
+                        "Address": "803台灣高雄市鹽埕區大義街2號C8-9倉庫",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 35,
+                        "Aname": "春帶彩名家畫廊",
+                        "photo": "CmRaAAAAN5uDyd3x3HhCkWRsvnbFtiC4gV6ncNxEbAKQCd7PA9WCHQGJ57iwKPKWkWbkNrPpjBWluDf6n5-ZrcU9hsGuXRpCPjpIGlPyQnFTmfz7rvvRzrNyixleoXqvq-DukFP_EhAd4ZA9giiyqAZ2LOUepKbuGhStwsr0ShijKUnxz_W3XMZ0z6jIog",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "07 553 6567",
+                        "Address": "804台灣高雄市鼓山區中華一路352號五樓",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 36,
+                        "Aname": "韓湘子畫廊 HHT Art Gallery（Members Only)",
+                        "photo": "CmRaAAAAmENfNQr9WCV-6BFCIFcr7aVuBDkfbh4txghuechM9TNaGI2zMq9PoGLDgPOpRGAuctJ1p8kNHLQ71Z_Ty1Y9k9SFhcZzxbiaw13slCJJMv5Rel06rwvF6EvPf-RTQhfoEhAmy6o7cIiwKZb7zpfaC-ujGhQfyZBdUgIVxxrmNReHfk842HGt1Q",
+                        "GoogleClass": "art_gallery",
+                        "Phone": "07 224 4926",
+                        "Address": "802台灣高雄市苓雅區廣州一街159號",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 37,
+                        "Aname": "三千 - Atman Space",
+                        "photo": "CmRaAAAAtR0fl7hSaXUMdzV4DMc86x98kP0NANfv4vH1lrNd7hivKEdGazgpT1WSjPSTtyv3tVZA9pSGkDthqsqGZTfPEEcMbVP0HWVnbby7p4kTXHgGF61FoLHtz_R_njAP3pg-EhC_rmO8nEpJNi2UGksrKan-GhQWUXpabKIAdmv8rswECQsGV0zqdQ",
+                        "GoogleClass": "bar",
+                        "Phone": "0902 312 756",
+                        "Address": "802台灣高雄市苓雅區民權一路94號",
+                        "Rate": 4.7
+                    },
+                    {
+                        "Aid": 38,
+                        "Aname": "Ing 音樂酒吧",
+                        "photo": "CmRaAAAAZBD5SfuF0wmRL-3JxeijWARz7bhVauJ78dl0W4JHHOrYtT8dVknpHmYG7pN8dAR8jljZ35grYjWCOzq_Bkfa7mapIsotAFsjPTPGgsE7ZzvPxK03b6HH4lnbL8EHOn2lEhC2DEFH-ycpgjtgMPvGQHESGhSvDTDkSSSMdXl3xTrDN9jX-CvEjg",
+                        "GoogleClass": "bar",
+                        "Phone": "0989 211 030",
+                        "Address": "802台灣高雄市苓雅區建國一路11-4號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 39,
+                        "Aname": "Old.Trick 佬掉牙商行",
+                        "photo": "CmRaAAAAjMNL00BPCesnlPaznWHdCzPoSJUhhzkTSTT7j6Xj4BFqAfQzFIShpb2zMo7CJKLc2UDMl9fjZfzrx6e5-nL-6hYFGrjYFv0KkB9awte_nvM8a0OFb7DE9GPXFJREGjhGEhCO17b5dKFfOr52MOZFGuFdGhQbKNz3pN9KfyrnY1oFQRrJd6rJ7A",
+                        "GoogleClass": "bar",
+                        "Phone": "07 551 9555",
+                        "Address": "80343台灣高雄市鹽埕區大勇路68號",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 40,
+                        "Aname": "Hush Drinker 小聲點酒館",
+                        "photo": "CmRaAAAAaGzU2ZND9bAiSk0gqzQTESvjkXY89tuy0FPS7bDXndzcS14S_fjT-DkN70MVIMoWKU_ZlvwtCSe2to7eQXeK_7sI3KQNBx_ugFlACQTxggMcqPRlv7b5Q5zIKGSXEtA0EhDnAFfUwoSbyvX-jubjmhRhGhQ6GznDMZTmuZf-LbshLYTLwKqtdg",
+                        "GoogleClass": "bar",
+                        "Phone": "07 561 7808",
+                        "Address": "803台灣高雄市鹽埕區五福四路11號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 41,
+                        "Aname": "MINI FUSION",
+                        "photo": "CmRaAAAAfxMwIxqoKq9iWg2BN25IYWf6uqC1MCYPJHebBoP8CfDJj-gppO1Mk5_BkLnvBSVrNqavj2kUwYDS4q69y_RBcsO-dwd9nd37HsVwKkYCH6DcwDpXjF7JOnyhEqJXFuNZEhAmDXhyIp7b6AhOZTyEtiBfGhTd70fdgdbG4g4RJCiWJzZ7b8-htA",
+                        "GoogleClass": "bar",
+                        "Phone": "07 715 8671",
+                        "Address": "802台灣高雄市苓雅區林德街10巷4號",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 42,
+                        "Aname": "Inn Bistro",
+                        "photo": "CmRaAAAANAQPnVnZQ8O_rdKXGVwjotfDjQFIeiz2B5bi1QH3XJISBZzmtLXHRW5cNm9ivHi8j_kytG45a8H6t5rXtWd7Bpl32gzbgfdO1-k1i4lV-lUlBRwHihP8vZwSNxE3Rk7HEhDAeKiJhAhJXNCjaf9EcXJZGhSc7UXIKY7NUSzrZbixzTnU0hCQKA",
+                        "GoogleClass": "bar",
+                        "Phone": "07 288 2998",
+                        "Address": "801台灣高雄市前金區六合二路128號2樓",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 43,
+                        "Aname": "Urban Soul Music Bar",
+                        "photo": "CmRaAAAAGFY_Be_pQlVriRTgwTTLyQriJGdP0lQ1OgDVr-2-oFLuvWJbM75Ho6d_KhIpAT5krF8ZaPNSbUVLxKcaOax1joX7x63x1N0AtjNNRjzo4KjmLj-_NP61pyBaTUvjiy4PEhCX8S4t_I6jF5259awXfwvZGhQf_DL6kJ3nvMplNj--hTjjwxqr6Q",
+                        "GoogleClass": "bar",
+                        "Phone": "07 269 1885",
+                        "Address": "802台灣高雄市苓雅區中華四路57號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 44,
+                        "Aname": "德蔻脫鞋子飛鏢酒吧 - Decor Darts Bar",
+                        "photo": "CmRaAAAArwg-dqFowh_mBHYs-W4YU02ZyCahL4SMFXo7ghv0tMm-JXCljkIKTFsoeFvsUkesxtfMlHg7mGKHay3y9rAJMkHivoPH377ij_vxaXAPvYBENuAnpd1RGMoCJkOA3rvfEhDTIDPpOHa_m4UdVKlZW5jBGhTb8Etu1Nvh_OPhOy3ZwdvMYUOGKg",
+                        "GoogleClass": "bar",
+                        "Phone": "07 346 2618",
+                        "Address": "807台灣高雄市三民區明誠一路78號",
+                        "Rate": 4.8
+                    },
+                    {
+                        "Aid": 45,
+                        "Aname": "The Drunken Master Whisky Bar醉俠威士忌酒館",
+                        "photo": "CmRaAAAAe10sWhYoDucp5srGtZkTIyXOfdz9qbO2Bxxkl-mq860Vti-BfQdaX6gI12R9zSVoUGYiLJw905j4dC1tV5A48bVAqz7QqBvhH7vyYIDprBZRMgSZKioauuxAbAcKmazuEhDREUIdkccnFBbQx0J9WCqmGhSEUZ1I2m7uFDz3ZBlJla3NpxNPOA",
+                        "GoogleClass": "bar",
+                        "Phone": "07 285 4312",
+                        "Address": "801台灣高雄市前金區中華三路172號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 46,
+                        "Aname": "小島公寓/小島茶酒",
+                        "photo": "CmRaAAAA8GP6WbBScT0Px29JVMUbIQsyns7fKnXHgXnhXvaJGkaGf3P0POSraq_IyUBycBcZ9yapdWmYjvHMWKmA7ul0If26Q5j-eNpXH0PESK6BTQkc8BcVADWDwznc0MwayTraEhA_WB_dz-YLU6nVEiXdMDF9GhQIXUY5Ak9lz7PblR-4EsNJEZ6A2A",
+                        "GoogleClass": "bar",
+                        "Phone": "07 238 8166",
+                        "Address": "800台灣高雄市新興區六合一路148號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 47,
+                        "Aname": "Marsalis Bar馬沙里斯爵士酒館",
+                        "photo": "CmRaAAAAXIjuxIRZC11wMM8nT8DRtn5CGX2f80WQw18Q9OLvRaA0tT0qkD-JhPKyoWqAde9iLW1sBS4krU0N29wDAy8eDWJRRD3esoeol3fFJvun3huljScwrkAqFCYhsN8WtBPEEhBWI7yPWY2wGzXul8kLsw5YGhSUw08liawHMOfwvElRPcBx6KGRcQ",
+                        "GoogleClass": "bar",
+                        "Phone": "07 281 4078",
+                        "Address": "800台灣高雄市新興區中正四路71號2樓",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 48,
+                        "Aname": "Mini Enclave 聚落",
+                        "photo": "CmRaAAAAxpttwvBzJsYdl3wAnuOfSsTrYL3ahkiQiXUHu9Qvtpktlc7EcmQmofVC-KTcE04ZqATCb_z-3Qt7eA9lsk32D1m_AiKc5dpctTcA5ztRG1YLWJb8buZROGljgZswsY_-EhANmY2Vf0Hd2sFxyAhBUZlYGhRYgMfyWzM4r8mPKifKvUrJWJvM4g",
+                        "GoogleClass": "bar",
+                        "Phone": "07 550 1388",
+                        "Address": "804台灣高雄市鼓山區美術東五路120號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 49,
+                        "Aname": "La Face Bar",
+                        "photo": "CmRaAAAABIAojRpGhIw_V1GtWocaaSxWiPYocip_msn28l9Jffjkrrhfy1vt5k3HPNIgbY4SeZnGcOC6iCyG2Kbw8mBDJL6NP65ZgrvEgo6y28aN5h26fcoOVhtwoG_WJGIHDp6EEhDpSg2t2xKHnARC7Zw_fyM5GhTuc4NPfs_daPheHbW7fXnFu2Y3_g",
+                        "GoogleClass": "bar",
+                        "Phone": "0919 139 779",
+                        "Address": "802台灣高雄市苓雅區成功一路230號",
+                        "Rate": 4.7
+                    },
+                    {
+                        "Aid": 50,
+                        "Aname": "TimeS Antique & Bar 時光古董酒吧",
+                        "photo": "CmRaAAAAGqQMrfQdj4r19B0dIOadgxt7eks3bXnQwQXDnWkz3YydKJX-FCXH_-biYTo0W649IrcZW8ohUxzXRkq2uNODBILwRfAmMO6w3wUytyP0Sp8SKAHXgJkeXvZXGuT8ke1QEhDupoziPBLjAucHTd9ASBdmGhS4Ib5DTwwsUVlR6G-VkPKWakJ_hA",
+                        "GoogleClass": "bar",
+                        "Phone": "0963 757 838",
+                        "Address": "80441台灣高雄市鼓山區臨海一路20-7號",
+                        "Rate": 4.8
+                    },
+                    {
+                        "Aid": 51,
+                        "Aname": "E&V沙發音樂酒吧",
+                        "photo": "CmRaAAAAPOpO0woqNa5U7DrEvbhrVuWY9YySG6nN52zKBicu5UfQj2r6UUUDSYX0Yy4El_XgJW45-5XGyxMvb72_xNJxnTagyTsJTBc4WOH-eBpdIR1wzrUGRU4Kc0VXlS4hjstQEhD8kdPOJ9iAbBeiJcB6J6j1GhTco2_lG4IutdasBCTeOwmlPBDmog",
+                        "GoogleClass": "bar",
+                        "Phone": "07 535 3088",
+                        "Address": "802台灣高雄市苓雅區光華一路99號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 52,
+                        "Aname": "Pier No. 1",
+                        "photo": "CmRaAAAAoLJ9IaTWvvRSqNgzEGk6LDXEzS9A6PghnhF6E8GGhThANcbP544pPFq1cUOwODpgARXZO1sx6MggOXqD3FVYyaDSOc3-zEbTSvJHjCrtKhcl0Mg2u-j7sjk05EpU60TGEhCm4FfoUqKdtWx836stjQR0GhS1pyFcmjLwjs3OxRu9uUSBf5bDhw",
+                        "GoogleClass": "bar",
+                        "Phone": "07 272 1888",
+                        "Address": "800台灣高雄市新興區中山一路4號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 53,
+                        "Aname": "藍色狂想音樂餐廳 BLUE FANTASY Music Pub & Bar",
+                        "photo": "CmRaAAAAHrJUzYd76DU5RSxTYoMu3bJei8XdxBujXdUf89f5fnKzNgMHSVm4BRDrF3lEhL5bhI3TrLYf4IZ64e8uDskjd6IKVNgnVU6uu0W4WxukxRRLaAVYs4_yzq-rCHse2LziEhBtoMjLO3ycFXhFukZe-jLrGhTQoDqHgT-sxH0EdATwJPXhRUFzrA",
+                        "GoogleClass": "electronics_store",
+                        "Phone": "07 227 0505",
+                        "Address": "802台灣高雄市苓雅區五福一路111號",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 54,
+                        "Aname": "緹娜複合式酒館",
+                        "photo": "CmRaAAAAOZarsNHdxoINjCWm0WN59KMF3p4NguGJBnHya81hQIrF0-Mwrve396wezNMczSwrOUk1B_BpKWkEpRvmO-Yy6jyynMXplqbSrQCzziCUt_CDBE1WjSi8VlU9vFtV4-8dEhATsrdXepRlEUlHkBkjIHBjGhR33aKRhiFdbzZ5nKT57WxBFkdoKw",
+                        "GoogleClass": "bar",
+                        "Phone": "07 227 3535",
+                        "Address": "802台灣高雄市苓雅區中正二路22號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 55,
+                        "Aname": "WO BAR",
+                        "photo": "CmRaAAAASIBM1ZeMZQsIyNTHKGayebCfBf4mqMpI8UDaLm3Q3KmUb-KcVMQ1KON0qqPqsIxAkirlkAITS3UxhN0pCWoo_F0-GjWzQlOsRi9QsbqAQwkDQY7WV3-x3sIfHUjKOLPUEhBrvdWj-Je7hIzom8Jc1yMXGhTHdbcqhjuiS2-aC1gZHMNcgApXwQ",
+                        "GoogleClass": "bar",
+                        "Phone": "07 282 2158",
+                        "Address": "801台灣高雄市前金區七賢二路394號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 56,
+                        "Aname": "城邦書店高雄店",
+                        "photo": "CmRaAAAAxTsBOwxjmhz8lUd8p7EwEn6jHs_NyF5xAjBPzEikVeVPSOpyPC0-0www8hXEV3NrmYwAxAQu0E9tRxNEQGwWCRvuSc4YVEow5ZUk4sRI0fBik0gc4jliAibxFohnqydqEhCJDkSvOWTHlUsaESo_rPt5GhSTL4hxvHAA8phaHYFnIIXIBOdKiQ",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 223 5809",
+                        "Address": "802台灣高雄市苓雅區廣州一街165號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 57,
+                        "Aname": "三餘書店",
+                        "photo": "CmRaAAAAJy2RmWd9zINpvGZ_bAEjROVmKFfq6fX9qllKj6F23uiEAI0OBYflSZl-TyB98QmOy7VzhtZaGuIZ_mXeiPj7XU_SDbuMqrp2aGOnUFyQDqT42r9MfNgLRzfqxvp2jS-eEhC40AcFLG3P3Pj3neLGlx1bGhSnh04ldhAGE0lxypnwhBLY46fbGg",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 225 3080",
+                        "Address": "800台灣高雄市新興區中正二路214號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 58,
+                        "Aname": "若水堂簡體書店 高雄門市",
+                        "photo": "CmRaAAAAm5CKcoYrnG5Gt2UZdbOQHhSiUv0u__7en0znDiVipO_PX2OMJva6ntsuImHZvMy1KnFtn2FQORxJ_W3o56odzSmYPhet4JNcf9492R8Ell-olVH3CUgqIBHm2f4jIYs0EhBKLIXiP7rGTOHSJyvqYII8GhQoy4T8BYgRIkEpHocIOTVWMsDsKA",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 713 8838",
+                        "Address": "802台灣高雄市苓雅區林德街3號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 59,
+                        "Aname": "等閑書房二手書店",
+                        "photo": "CmRaAAAAu79GCdIz6IAjiFLF0Yz184nec8BOXlQjY0uzQjgLtZNJ-XJy4WzqT5E2Wmj6XfGi09fngrQHbgBkvhneUpwP2sSRrpp-v1MbUSBmRFWhff6e4ntEk_3FNqy8aoJQs9k2EhA8qoX_a9EanTZWFvFH0UhAGhSqriuFW3VaIXypBKmM0f7rhBOxwg",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 715 3333",
+                        "Address": "80282台灣高雄市苓雅區福壽街136號",
+                        "Rate": 4.8
+                    },
+                    {
+                        "Aid": 60,
+                        "Aname": "左彎 二手書店",
+                        "photo": "CmRaAAAAKUUBVqu-NbHDolUL9v00-ns_ZWRZ9sZnQO2soQFBe5eCEml0O7nhQG-_LkR29Fi4SfwexJx78irZpVirbpH8Zo3KcWvCWQGKZv03JsSlUIeOvUq05_xvzjRTI6HzEnIrEhDVLFjt2HguYazIORg0xhDoGhTPgiTbki0cYcr7dnIFF45Nqvu6Ug",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 715 0466",
+                        "Address": "802台灣高雄市苓雅區林泉街8巷30號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 61,
+                        "Aname": "茉莉二手書店高雄店",
+                        "photo": "CmRaAAAAF6JWGHNAp7JbX0TCcHzc6NNKuLn8FKhvEvg_ewk67NcWSwbQH4oSHxLTHHVouXxwSGKwPm-59NdbHDKo22c3C3TKTXWRUFSKI5H3e2kPsqqlyNwJEG04_lGEGK9t_Q2xEhCixzq-4bv9qj2Nwi5eO7IgGhQ9ADLYSb3v1QeJdQsP40oObjPGHw",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 269 5221",
+                        "Address": "b1, No. 38號新光路苓雅區高雄市台灣 802",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 62,
+                        "Aname": "高雄書林書店",
+                        "photo": "CmRaAAAABBtz7ahtZ75YgcJ5zbt7qDSzXn5aWq8dNaC9uLjPJ2GVQkiCKqZBIsa4asp3ZH7VabHuepV3IdA1zNNlbNxzXuDOrliDWQ_Xs_fV4LCYhpkfjbOcwhzIcoiHEXvDYXT8EhCNUuWtorDRKHCgQSGEwR-sGhTWh2HLSd844_ztpT3HVKatrwsvEg",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 229 0300",
+                        "Address": "802台灣高雄市苓雅區五福一路77號2F",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 63,
+                        "Aname": "一新書局",
+                        "photo": "CmRaAAAAQ9GG6XD_MznbiZw1dz0Ijrz7xCRHRHynyOm4ss_Z0ju9_TE597Mind_nb3os13HcJLx5ujq72SnDB79yEgaTDGBhPs5bj5bY1VYnl3WG5aHq1KMugmaNCDVzwcyStdw_EhALcvURRPiw65GrSGIL2uxlGhQOjAi_x_37edB3tlC8HppGznMejg",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 225 6611",
+                        "Address": "802台灣高雄市苓雅區廣州一街143-6號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 64,
+                        "Aname": "青年書局",
+                        "photo": "CmRaAAAAWlRN3-cGbpje8BdcpVC8ZwI4eow_THZ7XRT6g00rHojBrVttJ0qI7vwje9Ng7tu9RlSrjrsYdXp6iVL0-Rujzfz8KAdBrtv_EcsriKVtdBD2FGHjsuJQ3szrS_dnACN6EhANPKcDFfcHl0iPLQujnoflGhRuXQUz6s-btnOBNIfn80bYxDrCuw",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 332 4910",
+                        "Address": "802台灣高雄市苓雅區青年一路141號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 65,
+                        "Aname": "麗文文化事業機構",
+                        "photo": "CmRaAAAA8zA5_D2OAzA50TEczDoLzzXnt-83cp-P_5eEX_OBEgDoYm5gyAEqfDOLO5WoNgVE1IoH_cf7HG6GOfT1RFej0-faYRtFGqVq5JqoH5sot_dpAM34cu-tcGsXwXQ4_vjlEhCWyk8I_DXheJ83b1cU4KbdGhSxd_sMAslo3RhzTStyLH28H1llog",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 226 5267",
+                        "Address": "802台灣高雄市苓雅區五福一路57 號 2號樓之2",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 66,
+                        "Aname": "MLD Reading",
+                        "photo": "CmRaAAAACRbzVaZZbBBg2DcTBQgc583si8fVQ_dche49vb17SPR66WXGh1Cx5Z2Po8FpRJmGKzgt9kbTLzj5e2Z5hEFrIzHZOeXFjPq4ep-wUpd0863dASFcLDUk9XivkbyknRQBEhBj4zM1m_BjS8QLDICAcxMFGhQ5xqC-TPSe6OiSViXm_Kqr6Fk29w",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 536 5388",
+                        "Address": "80661台灣高雄市前鎮區忠勤路8號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 67,
+                        "Aname": "鳳山大書城",
+                        "photo": "CmRaAAAATjUGx0rY8oTkBTN4sSlDid3qA4stHCGTnxe4FKCgA7UINB5uPRm_Mx74onQtlb9kfi_T6KDRp_y_suC96tOk-hfWkAB-Z9wlEA4RieMgQ0Cm0O_dpbUU85lTTr1Y6_QoEhCIsS6BcaS7c6Y0FMkNsQF9GhSYcfbOSLpadFthxSthAk_d10NQ8g",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 743 2143",
+                        "Address": "830台灣高雄市鳳山區中山路138號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 68,
+                        "Aname": "明儀倉庫書店",
+                        "photo": "CmRaAAAAAV7ZRCt977N6m43xrakhxHPsiEwqsxEEIQgxjClhFMibLgs4iKidqOPMlNRHyqWG3eDSbX5oPfSY8fla3Gm1pPYF5i690Xx2cjyEjJ9Lh4BprQ87KwkO-vj238bKi7cwEhA2Hd2KcWHMKnVou-kcWszuGhT-FhBH3_SGIdsFJBbUxKUS3eaVJg",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 343 5387",
+                        "Address": "80794台灣高雄市三民區明福街2號1樓2樓",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 69,
+                        "Aname": "城內二手書店",
+                        "photo": "CmRaAAAAPI2qDj9lfHufwaDOyOod8ZcYiFGzeeFB79pIWWsWyq3kO-HWHPLvpvIrn0n2npordX-YlIJxetrBr-hQjhrOA-ZiQuoh67dubNyuWN0794BndX4rwbTCJaxwyee2sYR0EhDMun3jxriJpQuRnVnG-PiqGhTJW9Z4R6_fWQ_9Yjc6bdgFK1DRUw",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 749 9730",
+                        "Address": "802台灣高雄市苓雅區尚勇路5號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 70,
+                        "Aname": "小房子書鋪",
+                        "photo": "CmRaAAAATCUdkRcpvIqk3L0V2s3UguFmKYFjJ6dlejUzQeyZNIAMVSrKBmon_6MY8zWm9MuHFiP-AjY_lvTbNZOtLlq7ZgvctkIafW07N0rC2lvx27IWBNRzWOaHeZuFOe-DFdR5EhDlXhWjiOajZpy8uOLivRv0GhR9eifKFRCyJC4zVIgWk6dktL6B5Q",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 338 0887",
+                        "Address": "802台灣高雄市苓雅區文橫二路115巷15號",
+                        "Rate": 4.7
+                    },
+                    {
+                        "Aid": 71,
+                        "Aname": "復興二手書店",
+                        "photo": "CmRaAAAA30iemYe4Vm4zKFXZgujKZBv257jSkaC63i5hHxttq-RbakWsSpTG2j0jEYOPzd8w0EFgya-B0CG-Ac12VB4vj4wqGN-jLWam4Ui3oXZAr-oQwFIYFKM20vn6m2LKhxCVEhCow5cNbHk-pGaVzXqjIG2RGhQiJUB9CJmxcsNg18y1RA4dZogahA",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 241 0303",
+                        "Address": "800台灣高雄市新興區新田路85-1號",
+                        "Rate": 4.8
+                    },
+                    {
+                        "Aid": 72,
+                        "Aname": "大盟書局",
+                        "photo": "CmRaAAAAVztjRICJhOuU3htTBoxOHGMyO0jNS8YoAResv8-i7eN2rmB20AJB42bd5UYsZN0blEPPtmsFwvj10YlP92fLu1G4XzI5cHH40a8_ldHI72HdqZgPB3UzYouSNqIr_fpsEhATqg8QueiHIhoSNMz95maNGhRr0W5xI_H6XWRT3USCZ-JPBPWjig",
+                        "GoogleClass": "book_store",
+                        "Phone": "07 384 6676",
+                        "Address": "807台灣高雄市三民區壽昌路201號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 73,
+                        "Aname": "北高雄保齡球館",
+                        "photo": "CmRaAAAAhq2BDrCpwIsZf3_Uf4Dqmb-2FEl2qxTAxf4XvQ82KjHoZOtFdYccgauEDX_LzcwdRVBTq5JnI5dQ4m6D53EqTVj3Hna-Cbh5z_T_hcfwq5ptj2_BfnxxMUVMJSgia1sxEhCQ4SIYChcWJJcO0BD15BTVGhTKly0JIDSL2-fBbkiHDL2NXoHvqA",
+                        "GoogleClass": "bowling_alley",
+                        "Phone": "07 552 5343",
+                        "Address": "804台灣高雄市鼓山區裕誠路1039號",
+                        "Rate": 3.4
+                    },
+                    {
+                        "Aid": 74,
+                        "Aname": "壽山保齡球館",
+                        "photo": "CmRaAAAAT8UMe_UJce1sAHKKRefL75H8_nRD4RnDKGkrbofbXyhV8LtguMy4__TlOB6I-0ViGpbKFfhP7425TWfmEKw4QZAmADxmVXoEJ0zYTqzWZAbgRAkvRWD3ao6cOlXlqwitEhD2XEEgQdz3cz3zVtICBZ92GhTBhHAzkbOkUxpCHNuWo2cMxQv8hw",
+                        "GoogleClass": "bowling_alley",
+                        "Phone": "07 336 3866",
+                        "Address": "802台灣高雄市苓雅區中山二路361號",
+                        "Rate": 3.5
+                    },
+                    {
+                        "Aid": 75,
+                        "Aname": "滾吧 LET'S ROLL",
+                        "photo": "CmRaAAAAgcCTsvGlMX_8UwrkWQkG1v8BDaEujrXGsGOwE2cVD0iPoGo5Rde8Thv5K8HC1aPPwczpd1zACA-4OmM9eS4Jwf5caB5K1gGfTLQv7OVdpdHFuw-9cgP6UXtZeigpvy46EhB1kExH1br520nTcH7356P2GhTwO0gEmGOk9UoXLwm2-vsMRSN1QA",
+                        "GoogleClass": "bowling_alley",
+                        "Phone": "07 791 6333",
+                        "Address": "號 大道 西 2 樓, No. 100中山四路前鎮區高雄市台灣 806",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 76,
+                        "Aname": "尚美保齡球館、釣蝦場",
+                        "photo": "CmRaAAAA4yI1oWfsezVZrPe7INK4EcKZoZWj61yAME_Qtno5UEttYdJKEEiSSjBBqb-hCRQesOOfoIhY7fpQGFeaxnkxJBgTmPTLYxyls7P-jqlz22kYta1eG7cFYmJW_nco-oPuEhBAc02ld7x6bV8U-Ex3QHb-GhS9wAYISSsJzztb1WFNYL7DMgcTYQ",
+                        "GoogleClass": "bowling_alley",
+                        "Phone": "07 362 8981",
+                        "Address": "811台灣高雄市楠梓區萬昌街62號",
+                        "Rate": 3.5
+                    },
+                    {
+                        "Aid": 77,
+                        "Aname": "E7PLAY三多店",
+                        "photo": "CmRZAAAAQaY0Aq28jHb9RHXRV_ibO3luABxCgNKs7OT510i5c0O-fSq1jbIjSv2TPMHAFZVllglStjCHrC04PAWtOIre7IJvrMngxROS7jqSNmiYgVKx_GSgSSfik830ZyduBKcLEhDhKKeVUBHPuQ2OMTnG7DhtGhQvCxce6gfGXzzuQ4LWOck8zy0iaQ",
+                        "GoogleClass": "bowling_alley",
+                        "Phone": "07 727 0853",
+                        "Address": "802台灣高雄市苓雅區三多一路335號2樓",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 78,
+                        "Aname": "南方保齡球館",
+                        "photo": "CmRaAAAAEbpIa9edfDkLQ45uEUb3JXSpdBOT-wJ4rnXwQPoQhGQ4WnvkeWnDAbcgGDNryf2CHcZfwwc3n3TcZjkFSOlLSQU71XliqmO0GQKpY0DuC8bT1Xt0SORCa9lsh4Ri2O33EhA18UhTbYk9-rTuISdae618GhTAJlPIleUJqusZRMVfPY6LEXaELg",
+                        "GoogleClass": "bowling_alley",
+                        "Phone": "07 699 2155",
+                        "Address": "829台灣高雄市湖內區中山路二段226巷6號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 79,
+                        "Aname": "超越極限保齡球館/保齡球用品專賣/保齡球鑽孔",
+                        "photo": "CmRaAAAAJp4Qk6WPPCYbok9c6Qmz_SylRFBCyJhKCZJdDipsgEA3ObemH8Bhm9vF6Y1yPeHoCphImATH5FZqiaNYpem0A2rK9Bd5OshCbeQdwWKJLj7aCkDP5mTmmSCS6HaCtg24EhAQypmrLKjHhKvNSlijL28TGhTnr165FIgrS6aDSi_fWsLmeUCCUA",
+                        "GoogleClass": "bowling_alley",
+                        "Phone": "07 621 5351",
+                        "Address": "820台灣高雄市岡山區大德二路69號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 80,
+                        "Aname": "步道咖啡館 Cafe Strada",
+                        "photo": "CmRaAAAAV79-Du32AD3SKbiECsDDa34lIsYN5cYn8Pp229-7BBHwbXuLSC2XKyxTbqtWqdUsSwJfW8hzQTgvMT7rCsViJMTg9M7Br6UnzHWLK9sl0I0HSt9T7Hnhy3f6VGRheJZ9EhAFspHi0WA07m6lqs24RIZ2GhTSU3XP8ay4dzHzTFZigXK4pippVw",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 223 1881",
+                        "Address": "802台灣高雄市苓雅區中正二路67號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 81,
+                        "Aname": "灰。咖啡",
+                        "photo": "CmRaAAAAwM6OYvF4VMKou8Iao2MN6JF9OwePUydTbOSGEGVWRZ5yTTGU9DUjsTqDMfOpCP-2pMQiZ40QnXqCIRmzkgSbmk-82aNAhDPyvRPB3s4ELE2jMpKqk8GiCYmrbdQWAE8gEhDp6XK8gUkb2PXchnc4uXPhGhSa0MNSXreHp6OMI3YCepnKJQXBxw",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 251 5665",
+                        "Address": "800台灣高雄市新興區林森一路146巷2號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 82,
+                        "Aname": "酷多思kudos coffee",
+                        "photo": "CmRaAAAAbhPm8r8Y91m1Hi2iRAxTzBxH8LlHF8-Nq0t1icg8cq8l_lM9bAnz5IIHRI9S8pHJi2A0MUtRNX6VtNwmEK3ahRU_UTGglJ3gspq_OZqoCNgUXJ2X9bIqpGotgwujmK_WEhBdVXpFpdTK5edflVWOVqdLGhTlFcOb1yQ_dsRVH8rBjfXW_ep7VA",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 556 6895",
+                        "Address": "813台灣高雄市左營區裕誠路455號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 83,
+                        "Aname": "新銳咖啡高雄鼎中店（深夜咖啡廳）",
+                        "photo": "CmRaAAAA8RnPHAFk9hP0FyMQ-OiBBwP_zJcT_uyimxkpivw71MshrKt-RDYOMs1E9WrdGENRPN01VX0hzEQOTPPYmvAILVj9vcpqHHQYK-K9i2zngU_fnj4c6Oam8sg4VbaKFaDtEhDW6yZJTXfT4EExrfNpIu3oGhSXElVF7X0O6DbysNBNbxnnxr1e-g",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 350 8520",
+                        "Address": "807台灣高雄市三民區鼎中路172號",
+                        "Rate": 4.8
+                    },
+                    {
+                        "Aid": 84,
+                        "Aname": "卡啡那美術館店",
+                        "photo": "CmRaAAAApLriuM5paGyhTPxoIUNyxKaNP0uHKbyzamIrpL6W5gIJxfgoztFKnPh7X3CDyR8yPGKgxO3o09DzTpm22MC2HJd5DiYHIGwp6VWqx7Jx8IUjt0pbckn533qRLt7l0vNjEhAZ6TQXb1wVCU7g5D8H8SAnGhQ53M83R6ijeeLdPiyab7hpfLhNqQ",
+                        "GoogleClass": "bakery",
+                        "Phone": "07 552 0031",
+                        "Address": "804台灣高雄市鼓山區美術東二路3號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 85,
+                        "Aname": "二元品嚐咖啡館",
+                        "photo": "CmRaAAAA8qWah6t0L0kmoxYqkiJsTy8TKADIGXwmgmecMa0UEVcY0IrX6-kLPTsN88hjAcRTEWMacNDRlQSPbQG5duXu6AYh4xJs59kbgHUVr19rTVcnRe3K1__MoNHsbGEM3G9PEhBRzlcZFa5_2nIyWrTXO401GhTF-KCsQ9uGxZH0F-KOeFqA5sbtnA",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 221 4646",
+                        "Address": "801台灣高雄市前金區民生二路201-1號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 86,
+                        "Aname": "卡啡那明誠店",
+                        "photo": "CmRaAAAAEaM9ZPDkq3pK0w_zdQepcSWht9hwigWuc24_-vP8sS-rPBec74j5RuGHW3-RP5Y2JycaZWHR9FZbm1KIXQdB6jYT2NtXXE92aU-RUU5-uVAV2ztj7sfce-gAbJItVQk2EhA8Y79cRSin6oDTdI6VG088GhSY5D77dL_Nx9yhBe3hyc9xogH2rQ",
+                        "GoogleClass": "bakery",
+                        "Phone": "07 556 2661",
+                        "Address": "813台灣高雄市左營區明誠二路243號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 87,
+                        "Aname": "好意外咖啡(質介社会店)",
+                        "photo": "CmRaAAAApTu3DeaoeMfwDr8-324S0jgz8mwLPr_AqryRBHJC8_f3fvzHcM9mBerwIXaKG-b6cMvo1WWIBRGZdCE1TxIKVqv24auH2kIEZFwEKdrCi6XQvi7IZBpaxuiXfg0dW97jEhCvj56jXMuTT57O_3otJWO2GhQmfw4hG5I7hCPahY6yxUUpWYgKsQ",
+                        "GoogleClass": "cafe",
+                        "Phone": "0909 193 009",
+                        "Address": "813台灣高雄市左營區文上路38號",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 88,
+                        "Aname": "Parlare coffee",
+                        "photo": "CmRaAAAA_XAzD7NZw25d6oLnzbJSqHPt58RQH2TdsNjHbzL_Bv9euS_KL9Wnh25SAa_OFh9FAqvrPTLPp9Bt7BP7QB_Oiz9Io1p2Xms3-8mnvjh4eb2BTm0A2KaJkXzObdG3V3ReEhAW_SFVU0fM7UIHLeHvPpG7GhTSovu8X6eT-zNhS_vcPOubTgMVOg",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 780 6976",
+                        "Address": "830台灣高雄市鳳山區文化西路7號",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 89,
+                        "Aname": "Reel_木軸咖啡館",
+                        "photo": "CmRaAAAAvRLodrBX9UK8nUNsQlrdN0D4zdolSZLjL7EMMU8LFlSoK9CDy9b92ZxcQJufwRxaOIyEcBLjvC_Vgy0E4mun9iIj5w27bNsSab18NcBh-eWVN3tsJkixyklDeavTqxSHEhBRtP-9mDiQ57aTbiR-5iA5GhSExDx6QFqoQZaWodREZtnhS18c3A",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 387 4339",
+                        "Address": "807台灣高雄市三民區天民路11號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 90,
+                        "Aname": "有。咖啡",
+                        "photo": "CmRaAAAAjOj5u97OyOwmyDMWRVZf5fBUntrAz5GbvAM5XipUNF1hKYRtPIWCBLUcgM83AHgRkvA0HgAs0g3iPH3nTl7AudPHxDYH0WCM5GGYdisxQIdyJUy1lAjsyqwP2iGNkpXpEhCbTf_JI_xpmGp-esYZj8QWGhTRmIYu_UaeLG82R6TLkj-WVlp3LA",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 223 6808",
+                        "Address": "802台灣高雄市苓雅區中正二路56巷11號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 91,
+                        "Aname": "柴吉他。咖啡",
+                        "photo": "CmRZAAAAqJ0Ik3vHKiTMBvG-BjEliGoOy5A0TV7eeHqRpzKPKuFu-NfpC9xpewB73ZErrnyENlunR7npIAX8TnaRCtuHrkInPftmdu4Df9IJLFNooBZS9pvVidl9hEMZrD_LMCoAEhCdwxnIdFhxolfyg0GIEQkYGhSMIzgCUQJ0Li7MqPFdmSa9wpQfoA",
+                        "GoogleClass": "cafe",
+                        "Phone": "0970 767 716",
+                        "Address": "No. 83號, 文學街鳳山區高雄市台灣 830",
+                        "Rate": 4.7
+                    },
+                    {
+                        "Aid": 92,
+                        "Aname": "36味咖啡館",
+                        "photo": "CmRaAAAAO73KNI27L-zmD0BjSCj5m8leVjg7qJW2Xh5Ui_5NwQ0ZTG9Y9R0kcJL_CUFPhXaK6ry6bD4moz89VxjEYrnBVvJrKlxIJHu3VWEOqlRTUI7DuYFm5k6YGc8-doDYxGQbEhAdVhd0clY-3pnOUBHBl0VEGhT7zOooYnMbM3fLXy1EmFbIrQeQaQ",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 397 0136",
+                        "Address": "807台灣高雄市三民區正興路74號",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 93,
+                        "Aname": "季洋莊園咖啡-高雄創始店",
+                        "photo": "CmRaAAAAb83GNoRT0FHBqR60vmuZ1w7AkxIkQKbvwBaforUHqlPZJri-OYXakfZT-sJD43n9fIFuIfE6kok8mtvpuZZq_0BGNQt_zLB751RnfLegz7tIhSd-wcGJLlaxlQ3rGKpcEhAu51sACtvOYQCA1lUsRLFmGhSABvcAx3sDiKSprPouB4lfsibjWg",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 777 9198",
+                        "Address": "807台灣高雄市三民區褒揚東街40號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 94,
+                        "Aname": "RUNA CAFÉS 嚕娜咖啡 陽明覺民店",
+                        "photo": "CmRaAAAAdjCYaX5G4TTJ-RzSc8omATtiap16ScV38AVY45d0PkHI8QpxlsmDJdk4Ui_KBgcfrfZvfB_1GBOz1Ww94j8D8_jRN2WAzQ40vQ7tPhAICtd2__w_AbbkFvw7T3uembI5EhCqfLmfgwQbMtK9meUQm5tvGhRf0EAzqiDgLAs6uarP8ncu3Fg9kg",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 382 0038",
+                        "Address": "807台灣高雄市三民區覺民路212號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 95,
+                        "Aname": "奎克咖啡 Cuiqu Coffee",
+                        "photo": "CmRaAAAAIBGVLiiZwAtkCfpMsmffdscdxmjR3DRG6n5g2IEkSUSW6CnTBznTbDsPlNPFier-yD9EEs4g3ZKm0r0mln5vGuFQwyTg0lHjztFOQL7rnY_YfqXFqoPpdviaJVIvCKuHEhAa_cNatdM5Tgix6DIh3sgKGhSWmmeMSW_XAqXHUFlV23Q9AaVpRA",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 557 0977",
+                        "Address": "804台灣高雄市左營區博愛二路236號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 96,
+                        "Aname": "和好珈琲店",
+                        "photo": "CmRaAAAAfQTOrL2U9b6VfXOeY_pNE0pfU4r_xVry0sOKetcLz2XtLMzk2S3rZGz5zrrBhAb2jva_sduPZRLnf6ZVbvWJiOpSe289AfDo3uN_pLDHSiunEu3wDChtPFinfFvsjfmCEhBQhldLufJk6EjCcyikWvPrGhTxZLygb_wTJ7RcUhjGfh6rd-x39Q",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 380 9876",
+                        "Address": "807台灣高雄市三民區興隆街21號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 97,
+                        "Aname": "興趣 x simtree 中正店 精品咖啡 高雄咖啡 拿鐵咖啡",
+                        "photo": "CmRaAAAAj2Wox8cp9arqEONpjEX1SiCDKxbSpcLc2AKM4JyR_mjZWJBQkFIXBvLy1_TZiF7tx-npibx29WpI-7xswyn5D6OsPeoa2gFrye45N_HMhv2P7qWWCc7eOmMADTx8XsQ8EhB-OflRWQ9xnW-DtAk23tmgGhQ1l5XOF-pj82vAF4sZH5-3jURY7g",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 215 7766",
+                        "Address": "800台灣高雄市新興區中正三路73號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 98,
+                        "Aname": "馞咖啡-光華店 Balmy Cafe'",
+                        "photo": "CmRaAAAAFvaRWDC_7GWnKjvgcL6w-S9RaaxOzpquElRi_02nmeAhVURqcBBqvX2Rv0-dN2ekMypmuBWvZO7qMGYdvEVBN19vJGd5D8XlU_mvJYIn3P6f-q1kCR02RRurPytA_iS3EhCwdqm7whb5_ufX9taEu8H6GhTpxLYZgLfQXKqsJpvFU1TO9ONM8w",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 333 0289",
+                        "Address": "802台灣高雄市苓雅區光華一路207號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 99,
+                        "Aname": "多一點咖啡(文化館)",
+                        "photo": "CmRaAAAArK7GX6cTuW6dvSCmzojjKQHhOrTnoIJhkLFzqekwQ6T00lLGT3Cq-wdofcl40nAZy-QsAi_4gh3L4Hb4oGBcWIVTsync6ygsEg31Xb_wi8-Q_ryNGFHYLpdpIg7S5W_YEhDDGgRsclblIb4hQQq4MwR7GhRgvClOHxD5E4Cs5e6ZwaO-4lfsyg",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 223 8389",
+                        "Address": "802台灣高雄市苓雅區同慶路138號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 100,
+                        "Aname": "TOP Korea Men's 韓國服飾 新崛江文化店",
+                        "photo": "CmRaAAAAaef1FlMCSXuG44d26gnIkb6wFrR0ymjJwvNjom7UPgU1bh3yhcQoV_5Y3qeRElpMIeoKGWR0jm_EHtHMQF3uiUnNn08RLxcVnchx9kK-upwFMCW0p3r2vulXiDlZgZqkEhBARP_x5wHufxI9C7etYLWbGhROhXNTWjNAsxNdTLQ_3UwDPfVlvw",
+                        "GoogleClass": "clothing_store",
+                        "Phone": "07 221 3633",
+                        "Address": "800台灣高雄市新興區文化路70-1號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 101,
+                        "Aname": "風揚劇堂藝術公司",
+                        "photo": "CmRaAAAAOFVuveSAmL15YL3gGmeP-XWRonGYKMgEWLeryR_1n0XHDHH5kVddzn1q9dOFU0bB9Rf_8BmHENCxbmzzbFCa7pCiUUMsShao4odhFmRQrLWUSlsV3GkNXYO3f68J4vpoEhDe87IbhO1HQrTnvVljO4aUGhRUqqHeOC6oOC8IS8_mejBkTPuXMQ",
+                        "GoogleClass": "point_of_interest",
+                        "Phone": "0973 501 399",
+                        "Address": "807台灣高雄市三民區九如一路214巷3號",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 102,
+                        "Aname": "Meo 平價服飾",
+                        "photo": "CmRaAAAAkkuS9tNHhoC4WbUfTS9lwzm_6mdwlH00zV1rb__80QunuC5pXjkvYfKcPZfdA7Ol-wguoLO0aoLT45Ja6IEC17gFBF0f8Ns1vw-ydWuCFjkX6aNt1jgRkw3fsCqWU_QpEhBDeylHYcJqBa5r0AwpopxuGhSVkoSW6jWCsjnY2lo87-_OYCFgAw",
+                        "GoogleClass": "clothing_store",
+                        "Phone": "07 777 8135",
+                        "Address": "830台灣高雄市鳳山區青年路二段578號",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 103,
+                        "Aname": "more-1 store 正韓服飾精品",
+                        "photo": "CmRaAAAAj_s-CmegdLPaAGWaI4sNa7hlqEBv7wv7ipeVr5HLzHpOVcsNG-CBoBBiD1G0oZFkLuJQYce_vDY8K4d7gV1EoLgmNCVmv57GvFng2L9fPLUKQ1rGmpEVhw2L3JzWpaRYEhBgxXc295g8aJOkFXV0cqX1GhRMT-59pjMHsb0cZlt8n4X8a-4U4A",
+                        "GoogleClass": "clothing_store",
+                        "Phone": "07 370 7268",
+                        "Address": "833台灣高雄市鳥松區本館路393號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 104,
+                        "Aname": "高朋服飾店",
+                        "photo": "CmRaAAAAgQERaHN2MLl7nptDh1vbCnLCRXcMEPlkdVqC6Ii8ebxDx8mf80P4gLoHtuHzLvb0lpUs8gVRVWjA2_cLwg3w0LAMplZEvaOxawOK-yhZwEONxnTC1hpbAJsilLhmC3A4EhAZ8PSl8R_VQ8zncOSJpygSGhTNPnvkIOzKYiccXTxnAoQ03l4j-Q",
+                        "GoogleClass": "clothing_store",
+                        "Phone": "07 395 3366",
+                        "Address": "807台灣高雄市三民區建工路876號",
+                        "Rate": 4.8
+                    },
+                    {
+                        "Aid": 105,
+                        "Aname": "MOMA鳳山門市",
+                        "photo": "CmRaAAAAfY2CZ_G9vQbUdKgccbAGtZW0G_SiHe7yG20WtcIHI2ipwtaQTtNRUuP2oYoj-XZdtPIVOvwfEzFGpUE_4FdBNqTXHgjf7WgdzG4megUBhEYIJUMNsGpFfLMeXpCAaO3AEhDxqWqsHGrdXGBzgb1e1qXXGhQkeAP8eRvwH3p4zOyMiHUV4iswSQ",
+                        "GoogleClass": "clothing_store",
+                        "Phone": "07 767 0823",
+                        "Address": "830台灣高雄市鳳山區青年路二段247號",
+                        "Rate": 4.8
+                    },
+                    {
+                        "Aid": 106,
+                        "Aname": "Airsa - 正韓 平價服飾 流行女鞋-100% com for korea",
+                        "photo": "CmRaAAAAATM4PqiHnU_Kw-EwzwciKBLdHh-qt-2hGOVVdNXHzmxGvYO7yCJ8xPyAdnMgjFlFfwG5dSP5LCybzKaOZ9RZqWz3raw06akyppm7zZWt93o_7RmN3RVo0udhn505QiHfEhBhMnXdQsb46KI7rcQ3chABGhRmOwUfM7ftHxTvDuDWb78JN_7XmQ",
+                        "GoogleClass": "clothing_store",
+                        "Phone": "0936 533 392",
+                        "Address": "830台灣高雄市鳳山區建國路三段322號6樓",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 107,
+                        "Aname": "MUCH主幼商場(大昌店)",
+                        "photo": "CmRaAAAAfEyPfm9PqNiB-o1huaXuec4sjAqUpdhv4tZIAIreJpULyXchXS8uV3K22E8wL4rMOebquVE-TyM0BZCTAzPwyTZKAJs-4_g4I_6JYjk4edajVYmoIA5dA7YSTRXg3TbxEhA-0OHH3a0_QOkxAyDm6VvJGhQT-vqHaQGhfgWEBZfjK0MYoxu9eg",
+                        "GoogleClass": "clothing_store",
+                        "Phone": "07 395 9366",
+                        "Address": "807台灣高雄市三民區大昌二路127號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 108,
+                        "Aname": "POPCORN爆米花服飾-鳳山店",
+                        "photo": "CmRaAAAApvBr_l_QivQup8G2UvH6F2bUCh7uyPCF6NepTimppnJpxRgwf7AMZ2fAhb6OPQ7jlfGH9iCNfbx5hjCC8bR4aoVVVo9GSZiEVsA27-of4AWovIOZeZgOb74WW3gh5vaGEhDCxO1-k1D9kSPH6BUJ8D2bGhRAzam2ZTl1Me--qL83J0t4m3XEGw",
+                        "GoogleClass": "point_of_interest",
+                        "Phone": "07 777 6529",
+                        "Address": "83048台灣高雄市鳳山區文衡路548號",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 109,
+                        "Aname": "衣凡卡時尚",
+                        "photo": "CmRaAAAAmiDjWGsRx8UgJm2hC1b-VW-W_xHbhpiOZeUMAn3RiM6oy7_lsO7Fsdj91r1VvpaN9ZpN0akyiB5jqh2vNu75wUdiUiwmXh2ZR5cS95RIcd9SjSizmhWfhpDf-54oq2jREhADvuzGv-_Ri8R1H7WJjfA7GhQMivm7MrO051IfXh3c19dtUKDpDw",
+                        "GoogleClass": "clothing_store",
+                        "Phone": "0913 281 330",
+                        "Address": "80773台灣高雄市三民區陽明路158號1樓",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 110,
+                        "Aname": "漢神巨蛋購物廣場",
+                        "photo": "CmRaAAAAE4DoBeJiSWCsvvXHPFPoftEoD8Hjy2v8H5zLYVH39Picjl8oQxAgKVzaeOOeK2-CPoh4MDZC1XvE9BJz8eFc1Es2CjmFzPcViBDrErS5c0GXvbM7fTRRTh9cu93metgqEhDFwbqTpHo6iPGooOV7gZqMGhSgByZRSPkV0VDUfAYUv65R-7hu8g",
+                        "GoogleClass": "department_store",
+                        "Phone": "07 555 9688",
+                        "Address": "813台灣高雄市左營區博愛二路777號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 111,
+                        "Aname": "遠東SOGO高雄店",
+                        "photo": "CmRaAAAA7TJtqqg2Kjxr-JGjQp3nv4CZvjc8FPh_--Sr_7SooI5oOeDvosHxoJm6gpqIBOfyZiY_8hagcLdrIJYvW9JxSnh5cLKJiv6apQ9u02UkiEok982JCMtAew0rL8Hhl3sMEhDS_6hwRj4VhDwZSPcdtTA-GhSAb50MC0qWTzCvGLetfDIUTwNoGQ",
+                        "GoogleClass": "department_store",
+                        "Phone": "07 338 1000",
+                        "Address": "806台灣高雄市前鎮區三多三路217號",
+                        "Rate": 3.9
+                    },
+                    {
+                        "Aid": 112,
+                        "Aname": "新光三越高雄三多店",
+                        "photo": "CmRaAAAA6xrXvkxG460zzDq4t4X3t18l-aRinaY9Y25-96wijssoHoZZ5DGQA3y_hUxSsjPTyUqpRY67Ykhlzl2XvoJfwOuQGoUqIaIVQHKE7iLhWvuZ_7jOWkdLRHzsr0uukIFWEhD41SbdWZ65ClKBMfiHwmOiGhQB8PQunoVqVi1HNNmNJ7-QzIedLw",
+                        "GoogleClass": "department_store",
+                        "Phone": "07 336 6100",
+                        "Address": "806台灣高雄市前鎮區三多三路213號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 113,
+                        "Aname": "新光三越高雄左營店",
+                        "photo": "CmRaAAAAGlU-x1eDCmmjejQZXNflEn-M5ilgh-ZfP4xxAytFGNe603q5EycSJwXtrVJCFyPhNACANSICqgpSZIuQjzpEtBP1FWubIB0cmPG4jL8Gmsmzx4cEo65q8cFDbJAppfoOEhB43EBoqydGgJF_jZ_0iSUJGhTw2Ae6qXQbPeSQiR9uff5oO2eqzg",
+                        "GoogleClass": "department_store",
+                        "Phone": "07 346 9999",
+                        "Address": "813台灣高雄市左營區高鐵路123號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 114,
+                        "Aname": "大統百貨和平店",
+                        "photo": "CmRaAAAAHQ6ovz08udogsBYrLX8KdQmTca3EGNWTcLx2i252tecb4Ma0wKvIkX4gZ1bumMNjH5jn-ZBHZRHvUyTorKBBnUPmfHWZNePtnxAK3u-BBMeNLjxqbCDtc2BQ1sEmTQzAEhDF_vZ2J1nsy8AotwNteRN7GhQZGQUM-kwOoFVP_l7947HudSbqBw",
+                        "GoogleClass": "department_store",
+                        "Phone": "07 225 5791",
+                        "Address": "802台灣高雄市苓雅區和平一路218號",
+                        "Rate": 3.8
+                    },
+                    {
+                        "Aid": 115,
+                        "Aname": "大立百貨",
+                        "photo": "CmRaAAAAseNUc65J1bZFmAYOGGWCQC6YTD43RN_BIO8EsAbKsx1WR_QAkosF88H6eSCzDmuCPnQXEpVhNcfbFxS54z7-X68jQXjnKlqy6eZ4fxlRuGwnx90Scr2y-2nFPPqyaoDCEhB5jnVvKz9GbZbinB8wsr4VGhRgZYoiRfmwhsNEqwLsiU8hbTdJ-w",
+                        "GoogleClass": "department_store",
+                        "Phone": "07 261 3060",
+                        "Address": "801台灣高雄市前金區五福三路59號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 116,
+                        "Aname": "漢神百貨",
+                        "photo": "CmRaAAAAfFCOHRJZrbDkck46ups-Aj8_EVYZHuciQefRCrOpTqJRCMntjhaM9sMgLtNnKGJvMdD-ZJ9Qss74CT6mgEGy5QVHkW7yAS0a6bC4zBjSp4NsXwl43DBGAYBTfKyGR6RoEhBJyFYMt_DJVRb29_tKGTPzGhSMIxpDaJJsSX-Z15kZd15qkkQpcQ",
+                        "GoogleClass": "department_store",
+                        "Phone": "07 215 7266",
+                        "Address": "801台灣高雄市前金區成功一路266-1號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 117,
+                        "Aname": "高雄大遠百",
+                        "photo": "CmRaAAAAthRpnHMK5nnnJ9AiUZ6wbCo8S94xRkrMsH-UxoW6X80MK9SqSE34HtKkZEVGH3xMLFeNikFM3wBwXoa8bhDZ_yQ9Nx_o18DDxl1pzMboi7vvzc8PgntG0B-BCUWnLsK5EhAUXMuWEoD52yo-t--E3hBQGhQYkF-fiJ0TalByC6b2X43b5BcW4Q",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 972 8888",
+                        "Address": "802台灣高雄市苓雅區三多四路21號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 118,
+                        "Aname": "大統百貨 五福店",
+                        "photo": "CmRaAAAALzPYE8ng9EwTgP7m7GftOZXlVkoMTV4NZGXJcymoCVwCi7n-broXz4zfjIrGsRIfsE6HtU38AFMbowVoZbA3RTbuEpBt2TyzVeLBqlrn7Y57fcHhBhvycEVAw2a_AQb5EhAigtrVIXFTs38BhmAfxOeQGhQbcevh0z2ebLSX1HQLMjKHxmjEew",
+                        "GoogleClass": "department_store",
+                        "Phone": "07 281 3111",
+                        "Address": "800台灣高雄市新興區五福二路262號",
+                        "Rate": 3.8
+                    },
+                    {
+                        "Aid": 119,
+                        "Aname": "Nespresso 高雄漢神本館 專櫃",
+                        "photo": "CmRaAAAAZomnK1yTK7P-nRLluUI9XrrOuKImd0TNsXG2ZbcdnlL9GqtS_jipDUP_2DooC8S818YaMNl15Lx-HY_3H4rG71-WiEIo1633a2m3HkOKBdN7-jAlQCwo1I7BA14l9pzZEhAqJM4-Rq7-aHZLKQLMeLLPGhTm-7cojkHzCEVqryTnIF95hMeFZA",
+                        "GoogleClass": "department_store",
+                        "Phone": "07 215 8721",
+                        "Address": "801台灣高雄市前金區成功一路266-1號號6F",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 120,
+                        "Aname": "Porter International高雄漢神巨蛋",
+                        "photo": "CmRaAAAAwxDs1zDVfGB5oDwypDIqXupsAcPrfTnFmTDj8rFvxp4ZWGwUSFMALr-3qOp0qJdxZ4V77hqbjGwp3lVQe-uTks_wDjgnR1Rl9KjLzNmX-PKrZNeDx7tWTRXqSx2dtX9qEhCnMpGZXuIjzDn-ut8ckj35GhRgNoa02aT0dsLBFJwv_QX8-x7Zbw",
+                        "GoogleClass": "department_store",
+                        "Phone": "07 553 1900",
+                        "Address": "81355台灣高雄市左營區博愛二路777號7F",
+                        "Rate": 4.7
+                    },
+                    {
+                        "Aid": 121,
+                        "Aname": "Porter International高雄左營新光三越",
+                        "photo": "CmRaAAAAhVu3DjRCiQ9aMYiMqVc2r8s7hFoFYxtyZ2LGNTA2KWLSlSYYhRJ9offxEC4MSD4Y4Ltq9iPhIEvpNMwXr2nyJkVFrmiAuvWUNquy7_rD9SHVg91JVJhvo2-ppw0iWD_nEhAjKut0Bb8h7HKW03toJ3rKGhQcTwi0MK3ElfNIrxNDOtOAE-7_ZA",
+                        "GoogleClass": "department_store",
+                        "Phone": "07 345 2634",
+                        "Address": "81361台灣高雄市左营区高鐵路123號 B1F",
+                        "Rate": 4.8
+                    },
+                    {
+                        "Aid": 122,
+                        "Aname": "新光三越高雄左營店彩虹市集",
+                        "photo": "CmRaAAAAf-6Myvud1B8wdmTAfPJKt8zUi37w_PvWDB_g05klePK1QvzGPl50tzp5gL7r2YRbm92XIZUIzf4yYCbAaQSR5VEkPoTHV8ehLOTAK3udJj1OD8nBXH05SWuhcmUSHiC1EhDfdxXyom5TB2gkeIKrBatxGhRinE3pxJGM1Fy_sWNG7NIz_u6kfA",
+                        "GoogleClass": "department_store",
+                        "Phone": "07 346 9999",
+                        "Address": "813台灣高雄市左營區高鐵路115號2F",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 123,
+                        "Aname": "樂齡網 高雄和平門市",
+                        "photo": "CmRaAAAA6-BCq4ttNHomnzfEg6Bx0ifEQg2-zeqDTmE0J4idj8m84smjQH1ejfDGD9Wjk8AjclGdQibQSwL_KbrdL7h6vCGJNMnYCwByEpaU-7ZWVXTG3U8zDPCWitOxj2lgD1DREhC2_5jPJh5m1VYaGEBhFoNwGhSUD3v0WEIGN7aBvN6VsbsWji-Btw",
+                        "GoogleClass": "department_store",
+                        "Phone": "07 223 6682",
+                        "Address": "802台灣高雄市苓雅區和平一路132號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 124,
+                        "Aname": "Nespresso 統一時代百貨 高雄店 專櫃",
+                        "photo": "CmRaAAAAOuYkYmnT3E6awgX1kFHBVujLA1LNNGO4FNE-7HLgQx-jFvKMDX0jEDl-zpQmXvVhe81w4Cfr6OCGNAKJjHw4AztmgxtEML3cHloM2hTCR-eJx41OjvcUYVZ1jUw9wUf0EhAhqp5ImMHhTx8BWmo_SSThGhTyjG8Iib5ulL6ivvXEBj0-aWP4Mg",
+                        "GoogleClass": "department_store",
+                        "Phone": "0908 297 181",
+                        "Address": "5F, No. 789號, No. 806中華五路前鎮區高雄市台灣 806",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 125,
+                        "Aname": "Anytime Fitness 高雄文山店24小時健身房",
+                        "photo": "CmRaAAAA6j4AUBIAoLN1Mlfz_-PgwOJJTpyHsugeauNVK18gmugzulnh0aJL2825AGdDXHM6VQiBosuJICymhn2LkxfxnmovxIjwDC30IUjWDrHsLpcRW7lquVhXa2dreTOF-eA1EhBWYPRSqTHEc7fOEfGKHG9BGhSUCVDuo4YKz3qgFMyPylqKmVA_pQ",
+                        "GoogleClass": "gym",
+                        "Phone": "07 777 7559",
+                        "Address": "830台灣高雄市鳳山區文濱路138號",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 126,
+                        "Aname": "凱爾健身Kair Sports",
+                        "photo": "CmRaAAAAXtJIj3hjLYPSCwhhFmeg4WEyRIILQFqgcLpGDjz8iaSKkuAxTELdVCsDpc8QBN-coe_um3D2iKB4w9Ztl_0UsrWE8Y2287Lp5RTA76rXjACbqMhaMBvLieff3EWYuCFJEhDbjrPUvaXM0comykDjUtMNGhRaB5Vappnxy8miJVyQQbad1A0gtg",
+                        "GoogleClass": "gym",
+                        "Phone": "07 385 4666",
+                        "Address": "807台灣高雄市三民區九如一路67號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 127,
+                        "Aname": "艾斯靈魂私教健身房-高雄健身房 | 一對一訓練 | 營養師追蹤 | 減肥 | 體態雕塑 | IGS天賦諮詢 |增肌 |減脂 |健康餐 |重訓 |阻力訓練 |功能性訓練",
+                        "photo": "CmRaAAAAHQiex1Ep5adWVczCtCAPstHXEupWMuvVzqulhmOYAkzGp35uqJ4p7pqukHU_pcEQR5ZQ_rvvicQlxfXAmHDpMiVqX6LIuaUnDlNK1aJ3ocIPAag1_hB9EaF1-p1v7-6eEhA69mnnb_LNwx2esp20oICjGhR32teH5j0FHuosFMIM1udyxUIqgw",
+                        "GoogleClass": "gym",
+                        "Phone": "07 550 6692",
+                        "Address": "813台灣高雄市左營區立信路255-1號",
+                        "Rate": 4.8
+                    },
+                    {
+                        "Aid": 128,
+                        "Aname": "FUNS 放肆運動 - 高雄健身房",
+                        "photo": "CmRaAAAAbxxMg2XPMrQ_o2KnBvXq5RBiO9Q2rLAHECSJvS65mflzHxhkESzQ--bi0Glpiq2iXD_ODlNyyw5uvnhL3F2_s1c9YC_gdyQE8YYIkTGEksOAK_Ltn_QGoF9GMnUHhwS3EhD2gN3yAG5BgzpbAqJVlPnuGhTVJYWCfI4gHgt1qEK-vvIEoRIxFA",
+                        "GoogleClass": "gym",
+                        "Phone": "0909 765 767",
+                        "Address": "813台灣高雄市左營區富民路No. 452號",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 129,
+                        "Aname": "安蕎體能運動館 高雄健身房 運動醫學 私人教練 小班團課",
+                        "photo": "CmRaAAAAltw64v-YH8g_fLXxMeCLSqumH6Ku65I8goA97ErYZm9HdazHwW1XdEvvM1q6tSDd_7-Y5zxPvN0bVokeaf6TXVpyQ2omBvW6MlwN0PSa58p9SYROuiaqI_iF1IaItylZEhBMQ0U2mjbuZm9yTLZA6ypvGhRKrgE9iiJR54B2AOlf63V4wH1SgQ",
+                        "GoogleClass": "gym",
+                        "Phone": "07 236 2008",
+                        "Address": "800台灣高雄市新興區七賢一路240號",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 130,
+                        "Aname": "The::Gym高雄有家健身中心",
+                        "photo": "CmRaAAAAx4oEcx_32AiTlUY_DyfEO71ot3Q88tssuxuUIwGChvgRRQfgYYV5WBI205bDqByZ8R9-Cc2uWU7j3sotyic54xhlBE6kf2udGVP3cQ7qUj7WzdXZRFAdMYsq8IN39O-4EhBijx_g82CquNbYl0emM3uIGhTlmiPrkTFIWr3vgB07lufegVVLKg",
+                        "GoogleClass": "gym",
+                        "Phone": "07 261 0707",
+                        "Address": "80748台灣高雄市三民區建國三路437號b1",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 131,
+                        "Aname": "MED多運動時代",
+                        "photo": "CmRaAAAAoV9o4Orzb3Xu46zQZKK-EbA2I9LLhSEXs5zxAd_5x5FpZYciBFl8BOyFU1KSkHmTS1hbF-y6GTdaUxIUs_n8Yd4y4gIRfym5lMM7WNqgFur-mQoKCn3xnObNPNHOTRYZEhDNUJlF3LE6CH_2f8CaUteJGhT_u2wP0_eE1t4hLnWTyL6fCCev0w",
+                        "GoogleClass": "gym",
+                        "Phone": "07 385 1569",
+                        "Address": "3樓, No. 579號覺民路三民區高雄市台灣 807",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 132,
+                        "Aname": "健身工廠FitnessFactory-鳳山廠",
+                        "photo": "CmRaAAAAvQSOVY-1qSqRWcOBMY7WfjhjAWpYTDYx_Ab0-MwbekJ3IhupDDCF9FBlBO9t4yTDzdsBvwcmoWFUUzywhf7VgTUDfBFLJVClxXtd1-NRFhilNlSsPXFNDSMfrtwUQbVBEhBk62SYSMcFf4f6-vkugwfPGhRkGNr24JGbG-7TtlxUZ-EdDtPfPg",
+                        "GoogleClass": "gym",
+                        "Phone": "07 785 1177",
+                        "Address": "807台灣高雄市三民區澄清路466-1號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 133,
+                        "Aname": "有家The::Gym高雄輕食健身中心 - 私人教練課 以分計費 單次計費 包月不綁約 平價健身中心健身房推薦",
+                        "photo": "CmRaAAAAu0MshkcVp32W3BoMLna7z5iJKG-fnIgkbvolHYU4YbsdeVYwRYH54txCk8WGuIzD8_Kv0NJWuLNxKG3O3Xaer-whk-OJNVLu91eB5vSj0Wj8UCz_SVOwFcRiIMDe-NVbEhDBwCCgeZQNS0HweYInxMPqGhR31JLAUjrVvqKmcA-3GMTflhivUw",
+                        "GoogleClass": "gym",
+                        "Phone": "07 222 0088",
+                        "Address": "80047台灣高雄市新興區中正二路218號2樓",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 134,
+                        "Aname": "FitBull Gym 鬥犬健身中心",
+                        "photo": "CmRaAAAALJINYqe4xZOSYSO4tFFgu2fzxosn6gwupYURXj_Pr9BMKDr8T0rF1tfSI0pdFQU5mQAenOigbONaZuWyPTLc_7ni4tcfmLdImGSpd1DhDthOZl0WzpnkOHqb81wL-Ic4EhAiuxXs1FusStA5Yb3vny8mGhQEi1EPfItu5-q0S4so43OAAOQQIQ",
+                        "GoogleClass": "gym",
+                        "Phone": "07 722 8437",
+                        "Address": "806台灣高雄市前鎮區和平二路254號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 135,
+                        "Aname": "力邁斯健身運動廣場",
+                        "photo": "CmRaAAAATrlRjE0DerVBB-sOas-OmCNemV04QolCwCJZcRVNIiK7yz45Pa1q8QR1qoKUl7yt2uDyC6-LW4IbjlOnEL6iWXQ9_Omv81AsSYikzmJsUiRusfTklFjvB_GdMlwJkI19EhBcV6SuTRxBfxA8K6TLS4t4GhRJ6anYhdd4gu76Hl5soEIUP6f_tw",
+                        "GoogleClass": "gym",
+                        "Phone": "07 761 5092",
+                        "Address": "806台灣高雄市前鎮區保泰路355號2樓",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 136,
+                        "Aname": "東京健身中心",
+                        "photo": "CmRaAAAAI0auirFPONciGlvJbtC6QOt59r7wBTES_12G8AUFbBx4K-b5gS6VSUIhVEWVcsOHjHo4HpR9X9rtK-VWzmBwwOEjLNCksOhzjkL8M1p1Y1d5jQHa9fiVmzuWWil9LQmyEhC9jEZADDwLst0Ll9E1upmwGhQ1-WGUB5eBKmyhMGu26YEiV9ADUw",
+                        "GoogleClass": "gym",
+                        "Phone": "07 777 5077",
+                        "Address": "830台灣高雄市鳳山區青年路二段201號",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 137,
+                        "Aname": "Anytime Fitness 高雄天祥店24小時健身房",
+                        "photo": "CmRaAAAAjxj-MgcnWkPTRjrd7-YRWs2RTFQrswKHw8Qk6Y5QW9ukOnxeqHst4aw8HMuFGLbKo6Nk7sFj52ZSWUems3hXf64lzJ36pZGiZBVbdmLK6VsmoL8aqIyJixZkKo3esHYUEhAxubese7UCeP1qDjlK6HXqGhTJuBfhEwZtJtSjyiXZQyqOca5hLw",
+                        "GoogleClass": "gym",
+                        "Phone": "07 350 9633",
+                        "Address": "2 No. 102號, 天祥一路三民區高雄市台灣 807",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 138,
+                        "Aname": "美力健身房",
+                        "photo": "CmRaAAAAiK7K_uKKB2eMPaR5xnPu1Ii7NZEsERNVBW5Wg7wMkDarViIhPFQJf_Le9p2P2HTSUkOhKliw2CXiGmA4Xwup4RaiaeO1NTcNYDunhHOeysZTIKIRLT0Ofc24PlhLLhPaEhBOHPD9aqIJchDfV_nO1kA6GhRmuCVL5k-9bn4M801EobzkC22OcA",
+                        "GoogleClass": "gym",
+                        "Phone": "07 537 3597",
+                        "Address": "802台灣高雄市苓雅區中山二路410號7樓",
+                        "Rate": 4.7
+                    },
+                    {
+                        "Aid": 139,
+                        "Aname": "Green Power 營養諮詢/運動中心-高雄明誠會館",
+                        "photo": "CmRZAAAAp9JZyHpW7p-afOwiO0-N4_cyCeSaNggZg0WsSncWJtXFPo_1uk2jKCd2y34NGY1JH1nUB-6VxyRmthlOOp2lQCMaVVzkjHxzhe8vDy8-OP3Pdm2MNbkbLBtt5WMTF2epEhCWyhUFYZEAAQe0kF4fkBKtGhQHcIqtOlWT7Y99Az9614Vt1-4S_g",
+                        "GoogleClass": "gym",
+                        "Phone": "07 556 0838",
+                        "Address": "813台灣高雄市左營區明誠二路332號9樓之1",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 140,
+                        "Aname": "Anytime Fitness 美術館店24小時健身房",
+                        "photo": "CmRaAAAAPNR6LutmIzob1hM84fhw0cKKcl8N74MFalFRFggnQ7QLNTpHPZIgu4NcyXb7RvDEPit0Tf6VwP7l2o84B9wSfnb6bYc9OM7dqCfnrXuuM5qqvQ_l-1C7eEgmdwxosHlbEhBi9jfsQifWCS4zvMkNnQ1MGhR26K-dzYUKicqZa7KZBZM8B-abOA",
+                        "GoogleClass": "gym",
+                        "Phone": "080 088 8247",
+                        "Address": "804台灣高雄市鼓山區美術東五路61號2f",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 141,
+                        "Aname": "Anytime Fitness 五甲店24小時健身房",
+                        "photo": "CmRaAAAAzyw2g6hIg6EYYPYSfOhevvmyL6gyxsgFYP4e2Ey13Z11RGeqU1Eq4dkDEQrljmbTsgho8mfR5jitYDtLst_IJnDbg-UsiZ_8wOKtJCRmqxPdHEF2O8NHOe3Qba97xYpeEhDXRLCpP-sell8p62xM73rsGhSMwqcZEwgoaqRmPSHsfNG5MSJBHw",
+                        "GoogleClass": "gym",
+                        "Phone": "080 088 8247",
+                        "Address": "2F, No. 171號南華路鳳山區高雄市台灣 830",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 142,
+                        "Aname": "Curves高雄科工館店-專屬女性30分鐘健身中心",
+                        "photo": "CmRaAAAAeprVTHJbtVf7F6mr-1aciLQfIGfposZ4v0mvVqVW-02F1LT3EQKXp-OFz25JyXvW5pomkWn1LRklwFOG_Py9jt0XoubLAUo6ejC4DJ2FNI0UByC7pvHcxhnDrIAoAQBdEhDosLPkZVfr8i5DRiJHZVXkGhTIrdpNsHlt5h8sPfmIGC-mpmSnJw",
+                        "GoogleClass": "gym",
+                        "Phone": "07 380 1855",
+                        "Address": "807台灣高雄市三民區九如一路805號3 樓",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 143,
+                        "Aname": "World Gym世界健身俱樂部 高雄寶成店",
+                        "photo": "CmRaAAAAw_hokFq_rjBec1jOUJClpbdWJOvUA_3FQVXx9rJW7itFgOz75QALlbSnk2Ygdhv2qDtjHsmi8d3AfMGujVWvF9mM9UL4WaoRpo9i6mN7D4pbJ2FyaNef6m6kNMguzstYEhBCXqi8GYZBda1LnpxeuhesGhSQflYyDxxI8AaDiuQpFGcMz_Qj7Q",
+                        "GoogleClass": "gym",
+                        "Phone": "07 338 2266",
+                        "Address": "806台灣高雄市前鎮區民權二路8號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 144,
+                        "Aname": "高雄市立圖書館總館",
+                        "photo": "CmRaAAAAjwswdrvXdiLOg-Ih_On5IUcBJX90LcS9QJpKIzyt2tUiLuBtVBip4VYnJmKtXdUsZN5WZu3J7xHRJVxR27UoJUNd6mdHuCq-gobaqJyr1qrfFx-n2fO2TiplE2h-e79TEhDaKYOg4WB8iNbvSvDzQDLuGhTnXbaz0vlGHbWSNnlTGavlkeEAvg",
+                        "GoogleClass": "library",
+                        "Phone": "07 536 0238",
+                        "Address": "80661台灣高雄市前鎮區新光路61號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 145,
+                        "Aname": "高雄市立圖書館陽明分館",
+                        "photo": "CmRaAAAAWM2vrzZh4Xqb2-7OCI9w5L_T-VgAaKzOXLijBmfibtyEE-uxQU7VfnYjc667MsINFjfhcjZFDJuFm0G-U08hEVahv9mKCPSAHnWo8ukh6v0TrD3he0EjRKIedqy3JbQYEhBO0xB4m833Vg9z_DIQNwbqGhQcAkvAE6k-r0LFKuMrmz1KEvfE_g",
+                        "GoogleClass": "library",
+                        "Phone": "07 389 9938",
+                        "Address": "807台灣高雄市三民區陽明路300號3樓",
+                        "Rate": 3.2
+                    },
+                    {
+                        "Aid": 146,
+                        "Aname": "高雄市立圖書館鳳山曹公分館",
+                        "photo": "CmRZAAAAko1Yl58gOPsJOIbcS7YxHsWi3wTznegbMwXhHFaHzt6Qwm3zy1iBbWIr8vS7sj8P4JPR7Kih96azNg2Cepdh7D7TunZ8SmlccBnU8K74Rf6OjKPBow1roFN0oAiJTNQUEhABROEB3lrSLY8v1ldDVgngGhSVIhuihpB9gpnei8ozAYJn4SJ4Lg",
+                        "GoogleClass": "library",
+                        "Phone": "07 746 8809",
+                        "Address": "830台灣高雄市鳳山區曹公路23號",
+                        "Rate": 3.5
+                    },
+                    {
+                        "Aid": 147,
+                        "Aname": "高雄市立圖書館 高雄文化中心分館",
+                        "photo": "CmRaAAAAmeE_Aud2-X3rCyL6ZKRZbaxnG8H-DOqSlzi_Q1hBbOUkTBkCEA4q0SJbxUTHwR_6dlevBV-KvFw_2_Y0-c2lvnOm9ctXIfUWiIBTNlNrYQUnKVAuflr2q71Tce4UMxY7EhD9hui5pQtWfzzG4HGheFPKGhS5Ie0OhU7ZK-3x9JBUFaTt24Xcdg",
+                        "GoogleClass": "library",
+                        "Phone": "07 222 5136#8213",
+                        "Address": "802台灣高雄市苓雅區五福一路67號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 148,
+                        "Aname": "高雄市立圖書館新興分館",
+                        "photo": "CmRaAAAAqV-ib9pc5lY04am8VjQ96NH5lqwaPI1dmqo8j-cxu2DjFzxpQgKV09urDM_eMOqw1vY6Zme7Y5b4KzdG9yzhO2OLGWVtAteaXLSx0evyLH3AU6Oip69uZdXk9uVKVTjZEhBnHzIOtLnMZ-fTe-0iKcbUGhSKq4Gf6J32kkr9vkpgdXAckhh1JQ",
+                        "GoogleClass": "library",
+                        "Phone": "07 237 2563",
+                        "Address": "800台灣高雄市新興區中正三路34號",
+                        "Rate": 3.5
+                    },
+                    {
+                        "Aid": 149,
+                        "Aname": "高雄市立圖書館 左新分館",
+                        "photo": "CmRaAAAAd5Uo3RR0rKrpB682oWUMollE_MGSgebFcwN40-i33VWchYskhfmZz4KqCSstaQ8m9l3H-PzpGCuWEwjGVodSR-dY5TuVXtYiwai7_x9lOt3Z1nVXPfDw5HM6mM-fDlivEhCegjynFKmU1yr2UkgTamczGhQMt065Q1BNBgTjXSOPeUOxrI50xQ",
+                        "GoogleClass": "library",
+                        "Phone": "07 350 0228",
+                        "Address": "813台灣高雄市左營區博愛三路453號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 150,
+                        "Aname": "高雄市立圖書館三民分館",
+                        "photo": "CmRaAAAAA-hhK2Oh-ivBZidv2n9bCI3WlxeZii_YMZdHxB2mGHlv_w1-mUBLP_MlXVV05EhrzmrjTwuDje1BlUg0EBrPEWDQOFD4aWQmGG3_PxyQMYsqvDfaM_rlT3hrUNIPR1s_EhAcSqp7uPSZxSMQqZGSuincGhThmRIJv3N4OJLfQUgpAHP4yHMbVQ",
+                        "GoogleClass": "library",
+                        "Phone": "07 322 5528",
+                        "Address": "807台灣高雄市三民區十全一路220號",
+                        "Rate": 3.7
+                    },
+                    {
+                        "Aid": 151,
+                        "Aname": "高雄市立圖書館 河堤分館",
+                        "photo": "CmRaAAAAPEbGu4gGU1wCFS1RTQ6hljtJcD64gfPunKe1l16gx9YZcDt3fh6oxVn4Z-yFKqDQ96oaiHfMSKpgFU4-85V3ONlPt5MZPXZ65XzEPfeGKkQ-HLQ7g_1lJeCvl8hrzRhEEhCzGC1BKNWqC2nN7FC7_FedGhSVhCO6X8mkFURYFZpubscP4vjjEQ",
+                        "GoogleClass": "library",
+                        "Phone": "07 341 2637",
+                        "Address": "807台灣高雄市三民區裕誠路1號",
+                        "Rate": 3.5
+                    },
+                    {
+                        "Aid": 152,
+                        "Aname": "高雄市立圖書館前鎮分館",
+                        "photo": "CmRaAAAAHgGh9Qo5OLJkHjIkzGyDKMM7V74uSWeocWTRveCH6Sb_LwA6mUPtPC51EK5cEsUyD4Tdb-M_F6sJGs-7H9z2xcgnwKUTIIeOuQ9VVNEXxkSsWiHN9ugez-gAkSqxPqUsEhD9xybZW1wL6S26wufc2HOHGhSRYyBh-bEaq0JWiBshxwOTeAf6dQ",
+                        "GoogleClass": "library",
+                        "Phone": "07 717 3008",
+                        "Address": "806台灣高雄市前鎮區保泰路303號4-5樓",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 153,
+                        "Aname": "高雄市立圖書館鳳山二館",
+                        "photo": "CmRaAAAASYapm6Z7__LC1N7MMDG7xHwl8Um2TGoBYvLi6ucXHU05h_hFEJBo8E2m7QRYqfK-s26f06hr58Ktv8n4bQTNP_XUn17y0PfTc2OAic8yD9KtX1m50Gy60As7YOthaPqhEhDe8aUYAGn1SHnw1iUUJEh9GhQxESUAWi3Wcnz_gLf8ULWVyE5jhA",
+                        "GoogleClass": "library",
+                        "Phone": "07 841 5875",
+                        "Address": "830台灣高雄市鳳山區自強一路119巷75號",
+                        "Rate": 3.7
+                    },
+                    {
+                        "Aid": 154,
+                        "Aname": "高雄市立圖書館寶珠分館",
+                        "photo": "CmRaAAAAgpmivOTPPT_55MqlcVmSoYo1DGXMj5VT3I5_aekpYMUM6diiZgnm9Pgq1SNCSR-km5a404xWRcQOduONTs7B_0ruwGDk25ouUvpU9QPA_ieetAyiYt6rG6jx5cXNyhWOEhBAfmifedb_jNeASMCWdAz4GhRgbNnpM7njqm2dFypMFM23MABL2g",
+                        "GoogleClass": "library",
+                        "Phone": "07 395 0813",
+                        "Address": "807台灣高雄市三民區大順二路468號4樓",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 155,
+                        "Aname": "高雄市立圖書館 中崙分館",
+                        "photo": "CmRaAAAA65ObyULOIeyKiEkR2euDnUEFdR7cLs3pqJwTrEMeIOv4mpZrSOmqCdbUYTduSI67_kcBLTk0JecRGTRb8mCdu854l837JK2zKmUTnjPSKKzaKuP-vlC1V1mMz_8sgk8HEhCEVJ0Pz8wJw54SHg_UDifkGhRZYDEdelv19ptF_6DxRjuQ8JNL8w",
+                        "GoogleClass": "library",
+                        "Phone": "07 755 5508",
+                        "Address": "830台灣高雄市鳳山區中崙五路1號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 156,
+                        "Aname": "高雄市立圖書館新興民眾閱覽室",
+                        "photo": "CmRaAAAAGbkDys_EQHxrrMOVlmvOzW3_HUWYOkfz-lNT43J39ptXpV0ct24dfU7K7600lQVuNf82Ds4ymPbU_0UVjybiZaPr4-eABymy7JKREEICRBfYIS-PfeziqFGLWUeTwUi6EhAwToSTd5coh3xQbdTVXkNRGhR7McDMV1GUTPPjBYQ_mpfUdmWPcw",
+                        "GoogleClass": "library",
+                        "Phone": "07 241 1805",
+                        "Address": "800台灣高雄市新興區民生一路271號",
+                        "Rate": 3.8
+                    },
+                    {
+                        "Aid": 157,
+                        "Aname": "高雄市立圖書館鳥松分館",
+                        "photo": "CmRaAAAAU-3m9KoAqQ51UKnMHGkzwqAXimghBgaOW32Zrfa3VDDNH2s2s5hvEvE0sdZP6Lj9zGcTGAn8a3bujs4gPkb63oy_DJ3K3HyJFYOEpzKxDm6bLOrJaReFtLwubyiAZw5iEhCZeDAEpNg2kVTtuygpRe1YGhRM6C998QeT5uGDM1qt8tqqweiP3A",
+                        "GoogleClass": "library",
+                        "Phone": "07 731 4809",
+                        "Address": "833台灣高雄市鳥松區大仁北路10號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 158,
+                        "Aname": "高雄市立圖書館 中庄分館",
+                        "photo": "CmRaAAAAqWXk934CAzkjsNaKih95TW_rhMAvAw_IaxsKOKSel8cMJYbz8L1N4fss2LvbjdNV_PQmss6re0p7HIwYlxECa9DXhMJ29W3lJcoD8hcue5n5vMGyOUSVjd7Zc12qXsSWEhBH4omB_DrLA-pxhRcGhRwoGhRgK9rLFUvi1OVyT4Z1MPOdLjZkYA",
+                        "GoogleClass": "library",
+                        "Phone": "07 702 3199",
+                        "Address": "831台灣高雄市大寮區光明路三段1437號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 159,
+                        "Aname": "高雄文學館",
+                        "photo": "CmRaAAAACN7SaTjHh-9UpVRUQfnRiaXj26rY1MErDEyBVIprblIO1dajpaArxC84rZCQmP69GQ41C_o_wQ8y-D7AMZqW56KOgAWpV9Idw0seX7M7HLFZjk7-ZT47L2owhxdvy6peEhDIgyXu69PyyznGal4f6diFGhTCOk23mzDmGtPVFy6-TCUIItgSMQ",
+                        "GoogleClass": "library",
+                        "Phone": "07 261 1706",
+                        "Address": "801台灣高雄市前金區民生二路39號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 160,
+                        "Aname": "高雄市立圖書館南鼓山分館",
+                        "photo": "CmRaAAAAwTrlM6k6AvvoOpCaBfr28EJfbHt5rSZPcpV7u68a_lBtoEcA8BZICliYm6S48iVyoQl5D5Kc8scRoGc9oA_AVSG0XE-MUSb1YNEe2aFA8J0XVLkGCjCR9FySd6z6KDJdEhB8tHqGgi0kB6sSrmos4wZ5GhRxv9SkEEYV4l3DvsckdncAJDrGTQ",
+                        "GoogleClass": "library",
+                        "Phone": "07 561 0940",
+                        "Address": "804台灣高雄市鼓山區延平街87之13號4樓",
+                        "Rate": 3.7
+                    },
+                    {
+                        "Aid": 161,
+                        "Aname": "高雄市立圖書館大寮分館",
+                        "photo": "CmRaAAAAEEvEkZXxxbQOWqjuBL2W1qp6hEqF2E98gY3M--9vhnYYIG8SFjmd56M4pa0Js64d3uYzBOnrsEIkUKYDwxhM8a9m4w5DkdpLzjvvN4q4bXwLMfD9yzS5_Q2H8gEZfzbhEhDvdG2WMDjgPWmMGHU-sUBsGhRZ64GdZFJ-9VgpyMDZ4kQn_crWGg",
+                        "GoogleClass": "library",
+                        "Phone": "07 782 6855",
+                        "Address": "831台灣高雄市大寮區進學路133號",
+                        "Rate": 3.5
+                    },
+                    {
+                        "Aid": 162,
+                        "Aname": "高雄市立圖書館 澄觀分館",
+                        "photo": "CmRaAAAAQrP-Mce3f3fjCsSnkyrEKGzxx2sKQNM5Y--fJiGaz1y2Rfzgv6tlcfcUH8eLR6W6k7rYTGYqQy3mwix_0o0cwiG4ddY-aKsgAgbabwwZbpi315NP4oW6KdoIADh6_jpgEhBE8pEnwDTjST_sCkYvDrNuGhTGSgGUw3FnNwZLZW163Ye3g632jQ",
+                        "GoogleClass": "library",
+                        "Phone": "07 374 7592",
+                        "Address": "814台灣高雄市仁武區澄仁路200號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 163,
+                        "Aname": "高雄市立圖書館左營分館",
+                        "photo": "CmRaAAAAUNmuU0P9_GMRX_LP-1UjUQOAcKTUsAgU42E0YSblbNfg6-2dwj1Bg72mDdmmhj8PZQnN20qFtbMFdrkPZ-xnIx1A_Kf-tQ7CNWfdvXyEhCGdB1pHl4CEGTyd-0jbwL2KEhAO8PetdQwD25sFHMVDIK_tGhTxzm0P2wGdaOygr-KgTXBsTrC8KQ",
+                        "GoogleClass": "library",
+                        "Phone": "07 582 0514",
+                        "Address": "813台灣高雄市左營區自助里2鄰啟文路12號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 164,
+                        "Aname": "環球影城",
+                        "photo": "CmRaAAAA2RkqgOiDE5GJLMJztPfaszI5UnXwOK4_7perAvidG_nvewoW1HyV64FesOxP0VATS3XJ-cTDPyizTMpJV78hTl0ITCzdtMNY36jBnXzvndDys3kWCk21Mf6Sp6p-x2MdEhDUDc21gpb_j8Qpod1F6ixVGhTffgWtqOeK76rXXLWGKvPRYASZOA",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 722 0066",
+                        "Address": "802台灣高雄市苓雅區大順三路108號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 165,
+                        "Aname": "美奇萊影城",
+                        "photo": "CmRaAAAA2-XhOhS7Yct7fq4o_6XoDJfp9hNAOQMnH6oh2XjhO9JbIXL__7WK_35bdj_S5OTCh_jNXRyfKnG4dwaRZhIcJWHrGCVo3NIuA7h1J__NsEBw8vsZKvHyo1q0_SEjw8WsEhDasPDSHf5xvPLaSh8YTMqHGhSTUi1yS7fpT6ik-uRn9Y7omH2TYw",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 321 0663",
+                        "Address": "807台灣高雄市三民區十全一路161號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 166,
+                        "Aname": "威秀影城",
+                        "photo": "CmRaAAAA2AHGV5bpsH5e_B7Fg9hlyYcJAe0qk4RlljV8Zb2nbozU6_YXfDGhuMT9tEGa29QjPwcLC1Ok0-85eKKFXwXqTRbEVrP1-oB4ttD0J0O4YpcDZdVGZhW5dcorwDOuTQewEhDeaXRsH-8Qg7O6Ho5NCo39GhTx0J6W-6ts0-DeO28wqL3rhFHohw",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 334 5566",
+                        "Address": "802台灣高雄市苓雅區三多四路21號13-15樓",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 167,
+                        "Aname": "MLD Cinema",
+                        "photo": "CmRaAAAAPCrxSCA_mPJm2fbyUqQXtKV5OBrlQgMiAKCxmQySPVb7uyqJ0j_5NDK-e6M7P3V6Qse2XfsYpPgloHDI6k6R-RTGNjefcwDIkERYcGIOXXkFLXJnAb2r3Txki-1m8mN1EhDKjtlHePuJRlGlypGMMolEGhTuX8MGYStfe4vBu7PKhsD-cr7x7g",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 536 5388",
+                        "Address": "806台灣高雄市前鎮區忠勤路8號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 168,
+                        "Aname": "十全電影城",
+                        "photo": "CmRZAAAALol6SyFJGVxM8cTsToDiCFCvRd1N00FS2QeTy8qQV_kPdUZPflAndEp--x5I5EFwJNtz5P8pKwJc-Rpnd5dDUIUb0gEQlxbgw0HoqZzSgowBtZn7j2Gkmpw7UH2PVgtbEhArKawPyf06l86rtQeAUKwRGhRF-_r2wsLNECVO8ljSc3ueQTcnzg",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 311 7141",
+                        "Address": "807台灣高雄市三民區十全二路21號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 169,
+                        "Aname": "奧斯卡3D數位影城",
+                        "photo": "CmRaAAAAqL4rLM65mSUIl24JBcNQq6WS847TPLjZKRhGBiBXEzu-6mJ0V7nAF8YcUH7QME9b_trJ_vIr0GsIfoX9PuFEKEGeGOScPujqHjaRtyTeP-uu4a1PdAsqyIGZNb_4S7PzEhDwQ3sHPS0YuayCGLNnUyUtGhRc9Ppi1ahc0MNcVhkqT8AWzPuekg",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 241 2128",
+                        "Address": "800台灣高雄市新興區仁智街287號",
+                        "Rate": 3.6
+                    },
+                    {
+                        "Aid": 170,
+                        "Aname": "高雄市電影館",
+                        "photo": "CmRaAAAAil_rGznI1Y3hZhoYsr4wAXUza6w7fNczOEK4BMroJ6PRRXtgeDpz-lTgni5cR8qVRGhktoZZBhjhq_-J7nqby3SMUuZvXpt7UaGFr66DTlZBsL7khAD32Q4hHhDCG8UREhD_X_x3RJtJBkyy7o_xTHmGGhSBKgUr6NLZM3rORQ5V4ovIQRXaCA",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 551 1211",
+                        "Address": "803台灣高雄市鹽埕區河西路10號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 171,
+                        "Aname": "高雄大立in89豪華影城",
+                        "photo": "CmRaAAAA9wQzNGIjhGr8IIcVGHUOT06sMKdQ4Pl_TBGYCfciudxDbpaOTh2ln1F6q44g_UCPeFcjeI9vEzs2bPGttKV_v18eIkdGcT2PVTPbM7ls3yhDipqAMnHFya65I2nLc4ojEhDNQb3ouPM3Odc2PX0vW3gwGhS1lk2jy3bdXjJ9wDapd63tKCOi5A",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 216 6189",
+                        "Address": "80148台灣高雄市前金區五福三路57號9樓",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 172,
+                        "Aname": "喜滿客",
+                        "photo": "CmRaAAAARt53MdgwIE2v5O509R85fFN2cW0DkcGykv0tpJsfe0kM7kZaY2eg9s7YLPjU6SIVH7ubBTmjL96IxmRZS6jWo5AjgHpushkZ59jY39bGmPvtxgsW14s8crCzbD-Kc2nhEhAOHlM5WSjHIWo-eX6PElBsGhSaGospxYlzTIuctOn4pun8fLkeog",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 970 2001",
+                        "Address": "806台灣高雄市前鎮區中華五路789號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 173,
+                        "Aname": "in89駁二電影院",
+                        "photo": "CmRaAAAAn7wZmOGqjU8oE2rcC4aGmq0nlTnFyZTN08r1fAaM1-KYqY0DV9Iaq9k87mcmJZu5O5JYO0xpDtVEBs6ObcX8mV2hHHL0LByZZ7OTcyOgJ2flG9zpTCBzfVizJ9OxUZlgEhBfzu9SP0h8Y0kVzKV9S4bIGhSIMZ_Gf5uOhSurcwn03sF42f0dGA",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 532 8989",
+                        "Address": "80343台灣高雄市鹽埕區大勇路5-1, 5-2號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 174,
+                        "Aname": "國賓影城@高雄義大世界",
+                        "photo": "CmRaAAAAPZKvxVSOl6EFZRZfVyoCXdkn-EpRBDymgKAKbRrDS8xnHnXyihy7ug4iZ9y5bZ374lMuLmgUx3523ysW6Kb4UDsokhfc33eTCnqEsAgPTibZxb5EHm33piS3qWq4pj_SEhAdT6EridBECJPm-px5hPP7GhRYad5LFvI3dUYSvZ054plY9oy-pQ",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 656 8368",
+                        "Address": "840台灣高雄市大樹區學城路一段12號3F",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 175,
+                        "Aname": "開放電影院",
+                        "photo": "CmRaAAAAs6uqXB4fkVv1GYFvSGYKO7Lvr1X5R1CUAxjg0Cyse14Xa_UzmC6z_PWyR61W4_nddgUywP56E4_nszjr3LI2hvmQIN_ZkfALMIouVpbK1caBgNLBQV7xfZE09T_ffCh3EhDbnbgU0-ZaGi_aaqo58dz0GhSy_EILEYpjctexC3CmpJJHQdsjLA",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 281 0099",
+                        "Address": "3樓, No. 213號五福二路新興區高雄市台灣 80054",
+                        "Rate": 3.9
+                    },
+                    {
+                        "Aid": 176,
+                        "Aname": "VR體感劇院 VR FILM LAB",
+                        "photo": "CmRaAAAADuP7moOrciMLW6wBpUPukdYMIhdIA1B8dyzoVzWOZ4xRiSZZkaJDoTp3BkY5063zMPLdJe6dq54z8YbPwsnwrJBeM7CEyHH0T10w0AfGI4VigZ7xJH_rnvyDlw0-Ce1qEhDuRpiZspC-uRqizud9JqudGhSrbIBgie19-dciQ-JJ7hxzrflnOw",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 551 1211#5001",
+                        "Address": "803台灣高雄市鹽埕區大義街C9-8, C9-20",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 177,
+                        "Aname": "岡山統一戲院",
+                        "photo": "CmRaAAAAbqphe881xr4e6pbTCFhpw9ghNT-L718mb2zfKsT5OH6ZChkzvRQetjoGUl_RrOwI7gLAqCZw4inNjV6M8ExCKTh2z1WeDLFVS5lyY7nGKWxh_7ITOaluK9MzYX6DHsLQEhDueJLw9Ya2drsqmpRj0nH4GhSfwOkAnELqMWshmYpGim56jSIbCQ",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 622 3300",
+                        "Address": "820台灣高雄市岡山區壽天路103之18號5樓",
+                        "Rate": 3.8
+                    },
+                    {
+                        "Aid": 178,
+                        "Aname": "凡啊特DVD.BD出租(三多店)",
+                        "photo": "CmRaAAAAyS0SWeag6qRvHuIAc1O-wzPmYjNZJ70jZdDl_7KiBrJlT7I1b0pGflKQy9aWFX-aIb9mpXdjmqxyiDumQSB6wRtVBtcV50PRBujdSzxAED8ORfwCcqo6RdZGWuv1C1jdEhBwcrymK8O_2n20W8efdCSuGhSkRmUl5KrSOmERBV9rqwmE4-OoXg",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 339 4294",
+                        "Address": "802台灣高雄市苓雅區三多三路162號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 179,
+                        "Aname": "國立科學工藝博物館",
+                        "photo": "CmRaAAAAfgbgtvBjsq6T8WO5R4Kg5NuCXyrQtvl3PZJ5kg-3mKc5EgrSuwFgp35TpJpbi2PYnGAftspOAJeoWnML6FaV_wz_2kKjsijl7Oa7LHSOErPHFBm25vmo3Cm0NTVwaBAcEhCQQSmTqN7Ayr3YtieIMgrGGhT_w2MhdOSoEx6I5iYuALWHrK7RAA",
+                        "GoogleClass": "tourist_attraction",
+                        "Phone": "07 380 0089",
+                        "Address": "807台灣高雄市三民區九如一路720號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 180,
+                        "Aname": "高雄市立歷史博物館 (原高雄市役所)",
+                        "photo": "CmRaAAAANGOp2JDtXa5oNzGdaOOqWiqLyO1SFvaWMPQbItZvNqzAFfso1AjYCHlvWAGB7y7B7moiUOzXZut29TKdLD1HRv65sc4xTyJ8ObsLc4fL4gzos-BJkH8_Wxr0mS_W8lamEhDLP8Mth0-4_yYNPptKYmdVGhRk6CUndmo-hzXj6qAucVNTHMt26w",
+                        "GoogleClass": "tourist_attraction",
+                        "Phone": "07 531 2612",
+                        "Address": "803台灣高雄市鹽埕區中正四路272號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 181,
+                        "Aname": "國立科學工藝博物館南館",
+                        "photo": "CmRaAAAAV3I7fRMJNW9Jwi4xOPoKM5oF8m-x3SJYNT3BREn-ZB9lp9wNsxgVgZdNoeooxHNK90FUp6iz35z9l8R00T5VGCXyv4hcYsb-NNK6BVytGpAfQ9vihMcEaCAsTk430e7gEhCPZ9IrAp9o3sp0zTOvHbmsGhT3BiVo3R0HWuB2a5N6XwHwfI8sCQ",
+                        "GoogleClass": "museum",
+                        "Phone": "07 380 0089",
+                        "Address": "807台灣高雄市三民區九如一路797號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 182,
+                        "Aname": "鳳山地方文化館",
+                        "photo": "CmRaAAAAOZDYNvHnuS2FOSxdIaKj-198L3-iOcQqIcRJqeTob-a4y6lLpPATPLqmjFTytI2iVjLTGrFm_qc9YgMsgvP124oxETmeJslXd2JLhH45cdaP8bN6BlV7u8duQsNWt3boEhA6mSbIkjZXixgABu9xq8GKGhQknfNxSWHGtWMjFBEDq6B-0XgfEw",
+                        "GoogleClass": "museum",
+                        "Phone": "07 790 5529",
+                        "Address": "830台灣高雄市鳳山區青年路二段77號",
+                        "Rate": 3.5
+                    },
+                    {
+                        "Aid": 183,
+                        "Aname": "高雄市客家文物館",
+                        "photo": "CmRaAAAA45pVqBSIUluXnA0jHFesPKCIfwZWeoCrRevXGic6gIUmAsnKDJ99xIZhQtxKTUzwkQu6-Z58c7Qm2Bcl76_EI8WLE2lKBr734gIFxNL54q2GQYhzgY55VIuaEZbwEQ9tEhANoQTxYo6NrTUnw6uMXjm6GhQGewlWrOFDUdvYqsyq7NV3lIm1TA",
+                        "GoogleClass": "museum",
+                        "Phone": "07 315 2136",
+                        "Address": "807台灣高雄市三民區同盟二路215號",
+                        "Rate": 3.9
+                    },
+                    {
+                        "Aid": 184,
+                        "Aname": "高雄市勞工博物館",
+                        "photo": "CmRaAAAAOrRWJNWzGsr9ZfIPVE7K64-LZajt57-tcftvXIZTzrKWXK0KyS0GsMjQWQTZNjdnCBsXNxWOx0VtnhtMN79ciJ6P-N9rarRcTMa1g2lpIvOGDjnHbQGN27XqMhj4kWwgEhCKgaNK7q-SgVZDGCSVN1lPGhS-yR_ZtatF1WJihcyxrcFTDLdJ-Q",
+                        "GoogleClass": "museum",
+                        "Phone": "07 216 0509",
+                        "Address": "801台灣高雄市前金區中正四路261號",
+                        "Rate": 3.9
+                    },
+                    {
+                        "Aid": 185,
+                        "Aname": "高雄市立美術館",
+                        "photo": "CmRaAAAAP1m5bdK4LzhEf-ZW5TclTBnjeaYvS3FvGTODnbzMTWJS4-ukKaloRWwRfQmo1NFb0r7fVb1AAr28yTHN8Lh9hX0IAO1hplEaWpbQbLKFN_jQ_iurld5KOsHtyt8n4nOvEhBMioaTmTbK-NkLM5nqeRdKGhQxAHYvjLegWPlubMFPDV1QmUtfIw",
+                        "GoogleClass": "tourist_attraction",
+                        "Phone": "07 555 0331",
+                        "Address": "804台灣高雄市鼓山區美術館路80號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 186,
+                        "Aname": "國立科學工藝博物館南館-樂活節能屋",
+                        "photo": "CmRaAAAAAxieWqDlRgqCsOdHFIN9Cy4hYgDgbDw8r2zwI78bmBXtN5wG199BMBTEDeMmDFkO1nq0AAm1rXQ9u-Km_SErt5YZ1eI0QPBrlk-b-p5KIWM3C8D8D0DFRRhlRLUg_EBBEhBoI-l-HlMtN7FBo2DPHFdzGhQktXFHlorN7QWjZYAQmEo63ZsMhg",
+                        "GoogleClass": "museum",
+                        "Phone": "07 380 0089",
+                        "Address": "807台灣高雄市三民區九如一路720號",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 187,
+                        "Aname": "高雄市戰爭與和平紀念公園主題館",
+                        "photo": "CmRaAAAA8rTmgVEcu8JUKxDEXbgiovZAOxSDeQW7ZeUQcNwroc4joGV_n4u2jMP8QHTzE2DkqRa9yyS55DrFv0d-fkYwZfEztmVP5mxXH9LOY3NG6q-Ta8O7lbuqd3VO8bmcdvOoEhDdeZyFTdOeyOe31i0HsnXVGhRSjOkNSsqRlWIwAdg49mofIeBBVA",
+                        "GoogleClass": "museum",
+                        "Phone": "07 571 9973",
+                        "Address": "805台灣高雄市旗津區旗津二路701號",
+                        "Rate": 3.9
+                    },
+                    {
+                        "Aid": 188,
+                        "Aname": "高雄科學工藝博物館演講廳",
+                        "photo": "CmRaAAAAjdPhQjovLbPdsbVEqWb9UpRQvnBM70SiW7QdXEt_b5gUFaRT5BaPfb_aM5SosPINcQeWnlyTur3pTS31geqjksXS7_r5uDpe1btYLezJympjU1rUAZPeQ7HiuU9qNtTPEhDH1rkWIwHojbugQW3-T_FSGhRfkM9MzEJy29rRCmbmyrClxHxJ4A",
+                        "GoogleClass": "museum",
+                        "Phone": "07 387 9275",
+                        "Address": "807台灣高雄市三民區九如一路797號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 189,
+                        "Aname": "高雄市電影館",
+                        "photo": "CmRaAAAAil_rGznI1Y3hZhoYsr4wAXUza6w7fNczOEK4BMroJ6PRRXtgeDpz-lTgni5cR8qVRGhktoZZBhjhq_-J7nqby3SMUuZvXpt7UaGFr66DTlZBsL7khAD32Q4hHhDCG8UREhD_X_x3RJtJBkyy7o_xTHmGGhSBKgUr6NLZM3rORQ5V4ovIQRXaCA",
+                        "GoogleClass": "movie_theater",
+                        "Phone": "07 551 1211",
+                        "Address": "803台灣高雄市鹽埕區河西路10號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 190,
+                        "Aname": "舊打狗驛故事館",
+                        "photo": "CmRaAAAAyE5pbvApgpa_-k5wMGwR_2fYWOzKLTGyi1o5_N3FSsizgaOzWFtnxQVOTFtg4fzkbrTqf3I3vc431cHpFM21FTnILknc79J1iLpokFLxyCm4TFI2tOVpaW7EMWgwc_m5EhCMuwSn-S8O12leFx8C8NNCGhRd3CMKr5_jwmeM8jpx1aUrlEN2wg",
+                        "GoogleClass": "tourist_attraction",
+                        "Phone": "07 531 6209",
+                        "Address": "804台灣高雄市鼓山區鼓山一路32號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 191,
+                        "Aname": "高雄市立兒童美術館",
+                        "photo": "CmRaAAAA4W0Qej9dSBoYA2tp1o1PsPst2eFuyb_aEcxgWx3BFIn_cnaKTFpbYSolYlBX8fDuEdAh5VEKV_sT6E6JJ-qNvYZJaG50hLWZQUWkJ03jSGJWtGvXbKx6BmXMCz-Gv7w-EhBGpUziko4JwsAnNvzPFiNDGhQl1naDVS7D0vVI0TGc3ez3Nn_NFg",
+                        "GoogleClass": "tourist_attraction",
+                        "Phone": "07 555 0331#300",
+                        "Address": "804台灣高雄市鼓山區馬卡道路330號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 192,
+                        "Aname": "旗津貝殼館",
+                        "photo": "CmRaAAAApENwVQUZOfeKFlpYzKRkXCQ_7v-M5JLjauW4kgczXpNQrDFOBajA9_L8gFMDkpi5v7nTN4MVxkSaZWGsiqzHM-lLC1mT0gDeOp7wk_28U1szYwzDED8ryGUK6aSosOuCEhBzlWyVsZ58HE5pDWkoiwUlGhS5L3XZMZfyCpfdtuEuMeFKdsj_TA",
+                        "GoogleClass": "museum",
+                        "Phone": "07 571 8920",
+                        "Address": "805台灣高雄市旗津區旗津三路887號2樓",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 193,
+                        "Aname": "高雄醫學大學校史暨醫學人文館",
+                        "photo": "CmRaAAAAw0LH3ASG2M6PMaG1c4EG4hr3dxQizo0FVsbb7mBAOMLvLo1Bj4WfV4e9o_NTIf1U8ubexChrPmjWJDiNdSeEG5YpXjfs-HVCvE_n8Qs4O9P0WNnc1dAaq5ZivpiOvvWHEhDJndhZ8EWI1M862H3cPrE3GhQBqNiHBnQcRIM028RpadTVUoHyCw",
+                        "GoogleClass": "museum",
+                        "Phone": "07 312 1101#2734",
+                        "Address": "807台灣高雄市三民區十全一路100號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 194,
+                        "Aname": "哈瑪星台灣鐵道館",
+                        "photo": "CmRaAAAAZPti_ExEa6sBaFTqSzzWEgxMR5kDSOrnlff_jXLAb788Dzws-jmTiHz0_WCFIp1YwNqExCRsCc1QL1_xME4IK9ySHihIfWkHesrj_iHQbFU_S9S_DVHBpOyS7zhHjEs0EhBP_Upaf2hQZ4LOT4JfcmifGhTA1iu-cFQKiGcNpwfs9MXY-kw89g",
+                        "GoogleClass": "tourist_attraction",
+                        "Phone": "07 521 8900",
+                        "Address": "80441台灣高雄市鼓山區倉庫蓬萊路99號 駁二藝術特區蓬萊B7、B8",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 195,
+                        "Aname": "高雄港港史館 (原高雄港港務局) Kaohsiung Port History Museum",
+                        "photo": "CmRaAAAAnyJdH1S48O2S7QdOgLAgXWd1Ky_XQcha2VFEf8KcDDXss4Kzdy3QUuN2Z28Az3GHKteueXdcHNYG6vsu_M_ZergK9c8HngrlSxfWqaVXC9W8CuQx-B5Fyrc0oXURvUlLEhBKvgAu3akJ97JkfO349zGBGhQ5FLICxG7XaeqUwsWkIakDPRNzpw",
+                        "GoogleClass": "tourist_attraction",
+                        "Phone": "07 562 2419",
+                        "Address": "804台灣高雄市鼓山區蓬萊路3號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 196,
+                        "Aname": "航空教育展示館",
+                        "photo": "CmRaAAAA5E3qhOMHkaJ5iPHwwlP0zQK7KKejaanr0nDHzbG2pjXxox14E2jpn7W9nq-QSwdXjCs35Z-IzPKMmfyu9w6FbaBjoyZ5x5KggE30EG44KriJFf-Na2jSlpCW8VAaZG1ZEhADD9ub8ebG_jet_eIfCWq4GhTdR4JeJMSgYPaad2fWP5vVf9xmaA",
+                        "GoogleClass": "tourist_attraction",
+                        "Phone": "07 625 8111",
+                        "Address": "820台灣高雄市岡山區致遠路55號",
+                        "Rate": 3.9
+                    },
+                    {
+                        "Aid": 197,
+                        "Aname": "見城館",
+                        "photo": "CmRaAAAAZVewb7VIVZP9dROFiZXNS479juroUT4dVc4gxRO_U-I18NPSH6_phWeww49GFg1J1cJ1Tlt0tFTI2c0lqWic6gMYJV9ku0DQuJD5Jkt2dLgU1d4qyziJOqP1jeSO7kyDEhADUk3TOBOdjHwJFiAJDP3WGhTr_wSzseASCuj4gY7hrOmtgbu-Aw",
+                        "GoogleClass": "tourist_attraction",
+                        "Phone": "07 588 8398",
+                        "Address": "813台灣高雄市左營區龜山巷157-2號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 198,
+                        "Aname": "台灣糖業博物館",
+                        "photo": "CmRaAAAA7ZaPQhLVbf-H2Yz7DarnwIfYThhRpYiX2J8C_3X9eqidK7NpKHEVEdRffAnAP-fY-gLQ1wYm9-dnsm8R3b3yrsBvyaP2x-wzKPnMCNRLnSl6-Utj-qapGcp37w9ietdnEhCVEryjICvMtJzMe7i8-fcxGhT1Jeb2asPWZ47YnseF9Et5_EJqKg",
+                        "GoogleClass": "museum",
+                        "Phone": "07 611 9299#5",
+                        "Address": "825台灣高雄市橋頭區糖廠路24號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 199,
+                        "Aname": "大富爺精緻酒店",
+                        "photo": "CmRaAAAAAv7_-K3-myV9NS42Gps6wLNa1CPEO3a6apC-ha4DhMu8MezTPhY9W4OJweqpYWcUZCyTYASpIi-N3nU-XdmXu51M8nXwNMVGqVGvofv8QcbGOUkFmW4vgVGcm-COezVxEhDRV2t4nDP83ilo-h5BtFKgGhQiq4ZPGrbncFu0lknj_qTQZ6lzMg",
+                        "GoogleClass": "night_club",
+                        "Phone": "07 315 5688",
+                        "Address": "80752台灣高雄市三民區十全二路188號",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 200,
+                        "Aname": "美麗華舞廳",
+                        "photo": "CmRaAAAArDuNY--7i7JfF0EtPIHaHmIwr6numXd5R-fYZVjPGqwtB9OWvqBZ53ePj9Vcw96dq5B0LoJIclejZ6StyG9nDGOn6VYFHrcMB5oOv8PnNhALAUHlho3U9sgB-gzYRMBsEhBR1-3DuWW5RDtInkJfvf8rGhSqgFv-aa6ia6O70w2zMu41KhHxWQ",
+                        "GoogleClass": "night_club",
+                        "Phone": "07 285 2799",
+                        "Address": "800台灣高雄市新興區七賢二路58號",
+                        "Rate": 3.8
+                    },
+                    {
+                        "Aid": 201,
+                        "Aname": "威尼斯精緻酒店",
+                        "photo": "CmRaAAAA5vsNJk6iKg67FByTxVTZpw7QcLC1yCeIe3sjYbpc21LGEgOrwmC9Lg-Hu1fasUmoPZ0as08n0VIPw2cMNj-Ka2WqggVoINCV2mMEQs01_b5Fglbu6JAtRInF8tN7h9D9EhCF_TUyaN6GK97Sb-4sExg1GhS_YPghqx-6fK7vATMWJfuDJPrF0Q",
+                        "GoogleClass": "night_club",
+                        "Phone": "07 315 3999",
+                        "Address": "80752台灣高雄市三民區十全一路209號",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 202,
+                        "Aname": "Love76酒店",
+                        "photo": "CmRaAAAA0Pu6QYqG3k5Edbk5wYwQdaok3t6VI92Yay1FRREIj4K2AbLVjOr9VxTAAalvbipIqS8QAxR7mImhsdnxHx1M4wbVKVoLBTnZXURluSQ5A9cCxk3U_vy1sjsmXWwIlTjGEhDxix39QtfXRuExgcG2gNaNGhRMKZwfXSTcB1aTtV7zYd85aelTpQ",
+                        "GoogleClass": "night_club",
+                        "Phone": "07 556 6766",
+                        "Address": "813台灣高雄市左營區立文路77號",
+                        "Rate": 3.8
+                    },
+                    {
+                        "Aid": 203,
+                        "Aname": "新樂園精品會館 New Paradise KTV Club",
+                        "photo": "CmRaAAAAV3m6KZokls4z8krc7-SV8x8uoFgEbyeBCQsWs0urDCfvLWtYUXHJL9KbB_cbYySVQgQPAaNgVuf-PwQ1sfC44z59eeRtNtYrk7sq5-ieFBWoW98otULKFowbxzodxkK8EhCFdlP92IyAanc8nZea239-GhQ8b69-NCtcnDTy0GoorzLJd7Xibw",
+                        "GoogleClass": "night_club",
+                        "Phone": "0968 501 623",
+                        "Address": "號16樓 No. 188, 大同一路新興區高雄市台灣 800",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 204,
+                        "Aname": "太子酒店",
+                        "photo": "CmRaAAAAr8ydq2K402i_Xgvh0jdEMmuE5ZXmE5SufXhvLiueV4CWIpx0HKWyGJeug8qhMqYjo1NY8Cn64YvHBvm36yvqghMNCGFWkDEn_xrhm_NSf0K7QAUEXXDOe5f4s90RNWpjEhCcfrivODDkDKx9UItm99npGhTJNcj_yBaNe0wS9inHYQ_h2-CKSg",
+                        "GoogleClass": "night_club",
+                        "Phone": "07 235 3111",
+                        "Address": "800台灣高雄市新興區七賢一路469號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 205,
+                        "Aname": "金儷凰舞場",
+                        "photo": "CmRaAAAAbQWyvWlAsD6vyGNDKwpf2GA9bEewnPhpQyIprJvPX6INyw9Dm7k1vRAJ5pCJtBLFUKH-GjHBVqoSKALeEVnEnIE8IhGEy6FMPYx5oLmvhB_B0HcGZlyj3Grw_FbSziB4EhD1TiSGWRQZh7Uwo7T6S7o1GhRJUtx2XXXsigMF2a4kMyJvFIQDPw",
+                        "GoogleClass": "night_club",
+                        "Phone": "0928 166 932",
+                        "Address": "806台灣高雄市前鎮區三多三路21號3樓",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 206,
+                        "Aname": "花園KTV商務俱樂部",
+                        "photo": "CmRaAAAAVv3kmKft_FP1Hp9F9hw0psd21vzG4wdfKMwSa5QC7HQRkCjrTgOpgTbbP-SLX0zr77IM7pdNlJf9qC0oA-N7YtBiNShiBASnISrj1o3y3gbgVcrrYEsUILLd5sMz7_G4EhAzYcL65kTgAVXjf1WWF12kGhTB_r4RfThYGXb_yeJa8PEFuXFpRQ",
+                        "GoogleClass": "night_club",
+                        "Phone": "07 331 0055",
+                        "Address": "號 11 樓 489, 中山二路苓雅區高雄市台灣 802",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 207,
+                        "Aname": "常鶴香格里拉有限公司",
+                        "photo": "CmRaAAAAbT69x2XH-DPLZ005Cv0PYAGp-icWIOdJDTIpbR6qJmOSHIBga2X9DzprPNUEwNX2O4P31u-2QdRskXRN1IHoI69nTzNngZwYBA-KwtuSFMxqb0ezxnDAQX-pSZSQsCuNEhAYx9XgN5Sg2zb0coYqJqZHGhQfHGLDQfX-o1laisaVqL-6GcC_jg",
+                        "GoogleClass": "night_club",
+                        "Phone": "07 535 3579",
+                        "Address": "802台灣高雄市苓雅區四維二路353號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 208,
+                        "Aname": "321皇家會館",
+                        "photo": "CmRaAAAAcV5Xjwsf-1BVrJw3WpNcdrwdoHAKz6VMJvtqQ7pl0KuvqfqUNbr137OzmDepd7pTi5B0jM_za3eeHybysNYUxJozGfHhYHVJ3LkKILYbyDt80TSD3_yq659oRXmNvucAEhB-9zZ1iUfETe36SyhsGI9JGhQPKyRpbdzGfCdx3Sfj2-YB0lkRXA",
+                        "GoogleClass": "night_club",
+                        "Phone": "07 555 9992",
+                        "Address": "804台灣高雄市鼓山區文信路321號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 209,
+                        "Aname": "金芭黎大舞廳",
+                        "photo": "CmRaAAAA6pgHdABiOBwikngm3IbYV9r9Y3Hg6AuGhK12Rh15W1MY5N77iReUPIdDVFFS5L7rk4X67OeVHE6m_UN0taCmUFXDD2vAmaTogjkOEjMfCkFit5ni6C_cxvVZHQ_krdo6EhBFbTvI1qXh4wxs-zLh5jrXGhRUqamA4fn5ImjHZRy6Nc_QVaL42Q",
+                        "GoogleClass": "night_club",
+                        "Phone": "07 339 3936",
+                        "Address": "802台灣高雄市苓雅區中山二路361號",
+                        "Rate": 3.9
+                    },
+                    {
+                        "Aid": 210,
+                        "Aname": "七星會館",
+                        "photo": "CmRaAAAA22npj4-VCEtyCJBkNrowjMS-n_2QMBrT3VwOTFQ4Z0TuHU8rfZItRS7imRgO_rzi7ab_88U9j-L2_XwOQjBgv6AJcJustguXEI8l1fsbtSB0AB8Jkot26rrdTdYTl2nzEhDyosP9hk5nh9JKY3IV3UpKGhTCfG1iYlXaaU-HHVdXdC6kn0_Nvg",
+                        "GoogleClass": "night_club",
+                        "Phone": "07 221 1200",
+                        "Address": "800台灣高雄市新興區五福二路47號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 211,
+                        "Aname": "紅樓夢男模會所",
+                        "photo": "CmRaAAAAjPQnsGcy7gBGLimWzN_lWNR7XsgQVasHlf6Izrn5l_ZkvSm7ZwBwzFTaL2oCF198ichEhGL3DMzeCiiOFl_T4bQd_2uTUH_GI8XpRb-Zu-Mg1C_DKHzj2hECX7UuwM5REhBOPqmMwxKnMw9r06SBono_GhT2lOzLjK5fZkBpEJE2933mFMjmPg",
+                        "GoogleClass": "night_club",
+                        "Phone": "07 285 5552",
+                        "Address": "807台灣高雄市三民區河北二路101號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 212,
+                        "Aname": "大埔鐵板燒 -高雄九如店",
+                        "photo": "CmRaAAAAt_JsrOcliX01MldznTMNw3QHP26sIyuxDAo_ga-Eo9llSI_k8jPFDTujkWEJ2zjbH3CARzrkuFm0toRYVjjlfdpsvg8Fdtk8Nq3oK4GyEkagLXGZe5T8VJw2bh7886nDEhAUfXjyto2yw-DN_acu4lRlGhQ3qHH-EGJ0q0sEXC2CE0mdoxX71g",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 398 3337",
+                        "Address": "807台灣高雄市三民區九如一路124號",
+                        "Rate": 3.8
+                    },
+                    {
+                        "Aid": 213,
+                        "Aname": "Deli Cheese",
+                        "photo": "CmRaAAAAsfhgu0zffCBrsJRxvTKqA_WuuLYpDeV2Iq4aqEU8NV3v7EsVgyT-yBSVQ1dhrpJ9bOOo3zXFNMnABVkp2h5b56Yv9mBWlGYVBecPw1Cw3JFDVrpUoXM-_5zHnFGiVVwwEhCjT9ZhjeBYA0MBa2-yJXMQGhSn8hG3CINVMchXc9cRvJBxaSzdJw",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 381 2574",
+                        "Address": "807台灣高雄市三民區大昌二路374號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 214,
+                        "Aname": "碳佐麻里 高雄美術館旗艦店",
+                        "photo": "CmRZAAAAjY4Opd3TW1XC0c0o4ylLgJg3VOgVjWfaSvD1Lms3E_KVctm4_eJFR6UjgVKgm8Z0In00cl2Jw_U4nRxo7DvxZiG6DMugpOXuUc14vbHtj2QlmocIgq21gYQDzw6jsl2KEhCAN5ZC7eMQ8__ruIlfSfrPGhRYZJLTlTUL42GVmrE8GdtAixn2-Q",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 552 6555",
+                        "Address": "804台灣高雄市鼓山區美術東四路562號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 215,
+                        "Aname": "(高雄外燴專家)大都邑餐廳",
+                        "photo": "CmRaAAAAt5kVqn-L7nvcua29rIhFFhxopWveo2B3ssKNrZKkFCBJvZ1z4Yb_FxaQtHcSbttDAe5pB5RjFKF8-9tsmu5IQPVUNVqgwedWq0Vd-PUhuLXthhUlrIjGbKZ5clz51NK_EhDnaTShgr4kQAw382R8CSNaGhTdwJ23FzTnEobCOJ3FK8qzxXxt7A",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 385 0000",
+                        "Address": "807台灣高雄市三民區克強路7號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 216,
+                        "Aname": "老陳台灣土羊肉",
+                        "photo": "CmRaAAAAbFSdD67SX-2AS80mkz71gtUYI50BcCoE_4DX7S-qifu9D8F7ukVMD64fSt3gvT56UAliSj5QE4Od1Bgmk7J9Yko67L1Isvt4KK0qhukvB5fL-J8AaEslh_K7V1SDgdXkEhCrVZQYSCNahPvbNO3QAhdgGhRGsIQLmPVf9p3YlMncnsYatXk17A",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 387 6755",
+                        "Address": "807台灣高雄市三民區九如一路26號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 217,
+                        "Aname": "丫國鵝肉 鳳山 高雄小吃店/鳳山熱炒店/在地美食",
+                        "photo": "CmRaAAAAbAQssrJSwuFhusnuPtyzhon1rIs47EqTCPOjravwkwChS9Q_usjGiyQ-10SgHeqFQzjwwEpDbAtMHSDnKMLdJJD7wQfHcbr58iUJZH2TWx6qKSSHjeF0Ctqj2X45XgqkEhAioGspg1FbRhrcp4EwT_KVGhTupR10SEkJjQRVitX0spcrJZHkFg",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 780 6900",
+                        "Address": "830台灣高雄市鳳山區建國路三段396-1號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 218,
+                        "Aname": "貳捌羊肉高雄三民美食",
+                        "photo": "CmRaAAAABHzwVTRPD5w5eXpRpCbg_lKHnmCOH0FYEVHA9iqBwJASiYNXW8pNOmMawHzAUxuaNopgIsLhIr5UgWD6NHrJJM_QswAMri9HJbcO-x341HfxXUI4yOlpRphO5_MaqPPbEhD1Ro0k8HuXKB8XypDr3GOFGhReA1x0W-xeCp3yG2mXrkOzMfEpHg",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 383 9029",
+                        "Address": "807台灣高雄市三民區大昌二路309號之 1 號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 219,
+                        "Aname": "Belon貝隆餐廳",
+                        "photo": "CmRaAAAAn7Cfq60b1ZIqxmuD8pDhaDhRilMymxLYuMV-s5eE_UWLBiiuZjm1Pp3aBDmF99f8qFyujQGE0Pt4zs2wWW4TkJQf2qY9ZC2fKZvNTebTNPG5Bd9SheqRchwSDY72cGlfEhAjPZBZRsiJDyZPkdbgHFTBGhTaXUUtEb_e_KAGuFdA3ij8lqC1ZA",
+                        "GoogleClass": "restaurant",
+                        "Phone": "0908 888 382",
+                        "Address": "806台灣高雄市前鎮區成功二路39-1號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 220,
+                        "Aname": "水刺床韓式料理",
+                        "photo": "CmRaAAAA1NKyQf4b6dhyetpt1Ey763NtxSopJpQfPk7o7wEZdBvXKGP4G3DsX-Axf27fyIk6zQGVn7oMKZvrf0iUfpbIduE3tbrrQQZMfFXmO-yBEDnDZiXO1k052MZXMZ06qr_rEhBZM6jtvdnolvSk_B81AKCYGhQPC8wttzRwaEGowv-sTQICiOcwZg",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 767 0686",
+                        "Address": "807台灣高雄市三民區澄清路536號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 221,
+                        "Aname": "麥當勞-高雄陽明店",
+                        "photo": "CmRaAAAAzynxtvN0XxKYr4UtYzXhO3HGcnSHdlyk3tEuhPdz5_Es2oVARHOXkDnhqowd8efAlA5vrDSUMMjpVIg51JUMKyNxqOZPQCKMZ1ijQwwvXSHhmUe8VlO_-qNK15g6-oUXEhDs8QKOkQyNjWafgAyhrnPOGhTk7muryuQrjZ0OjMVIQK5__qkSJA",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 387 1408",
+                        "Address": "807台灣高雄市三民區陽明路67號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 222,
+                        "Aname": "Double Soul coffee & bistro",
+                        "photo": "CmRaAAAAFE5ESzKcaFfAJ6FC0vmgiy51BU_P1Jt7lJHZi8gxTJTdBNkxyLbVk6vafKxShyufbjM7K2kUYXJAZq3jSddyMQIalttoZPzQylVEl8ATEtsvv8r9UjTOveTW-HtJ11crEhB2pC4hzIYDbQndsfxPXfVxGhRkF-OnUuG8U50FxbNOJNnUa1rM2w",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 350 2927",
+                        "Address": "813台灣高雄市左營區文育路1號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 223,
+                        "Aname": "麥當勞-高雄新澄清店",
+                        "photo": "CmRaAAAAHIVZu2NNoCMS7Qk_g2TNSQFyt31Sz7tLkp686wpDmGyTMcKiH-3fzdnO9QFGnPrGxOL-llcDbZjfOf4UvhpEjkS4f2QeJKrCalgAW0MClWvw_DNt6IxUR-54cER72oHyEhBX_cn3AddqsOlppBHEbYt9GhQScen2njeXwHLpJ3bSfZg_PTMI_Q",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 777 8077",
+                        "Address": "807台灣高雄市三民區澄清路550號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 224,
+                        "Aname": "東港斌 日式料理（路邊攤）",
+                        "photo": "CmRaAAAAw-LyQEpjhOTgsB4kjTc0kdswRgyoZEsTzgQw0IH6VBPinV6gpspEnh3ED3iJPOwlsb4OYFm-CqzNccN7t0o6WOjhUL3XKgRBH4Do4GzgWotLVXdDfVYFcaYPJ2zPzPdiEhCq_RR8_Qb7TpJdYd6HyI_SGhSI5Zch2opOZ650i978Px1b6KtJiQ",
+                        "GoogleClass": "restaurant",
+                        "Phone": "0918 693 001",
+                        "Address": "802台灣高雄市苓雅區正義路159號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 225,
+                        "Aname": "覓奇頂級日本料理高雄龍蝦和牛美食餐廳",
+                        "photo": "CmRaAAAA1-eq8ssuB5nxb-4SjaRjF7klUdewgmiC-s3b8g9MGtb4_32Nx9xxV6Q4D1UT38lPldiTyzFJwHFSDHrNmUkH3oicOYeHJrNDMzIr-_uB_Rdn7s9kBL_Aly7l0sl5pro6EhAnIxn2XmdMG4hy4Kr2T7FMGhQ8Zwb_6M25M94-HFbxh1c0j7qFSA",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 269 5111",
+                        "Address": "802台灣高雄市苓雅區成功一路76號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 226,
+                        "Aname": "BT蝴蝶餐廳",
+                        "photo": "CmRaAAAA4ESijLYoYmBdRbdLNCVXfDLOAI3IeOxNM-kazXIaI5EWAeVvou7dH6tTxZ1-2UN3f08dJ1I6WvIVJ7cYKw2Hc_njhs7UMhporJXkuc0L6vFAZBXWVygBC8oC47CzMTPTEhBCDpWHjk-u6AVbZbCyhI6dGhQx6X3EfATMhPUaYtfthMCyh-gX0Q",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 780 3938",
+                        "Address": "83048台灣高雄市鳳山區文濱路71號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 227,
+                        "Aname": "蒸鮮腸粉港式飲茶總店。高雄美食餐廳推薦",
+                        "photo": "CmRaAAAATOk_hmH1VltTZVq_7_lkeIVVOHaa8u91ooLowHeKlWo2ucCXImgS3L3W6SD8mmhwEsN1T7H7gFJXnvcy4Th9UlkTEugtEaDZkAPrrdZpli4mQh-wII4HVORDkBY1kSELEhBkkXl72JQqU0u5PYX-tshOGhRyr3vMBTg5E1-IRHsRPwF1VQMQsg",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 777 7286",
+                        "Address": "807台灣高雄市三民區青年路二段529號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 228,
+                        "Aname": "To Be Smoothie 高雄文山特區店【綠果昔、沙拉、輕食餐廳】",
+                        "photo": "CmRaAAAAhYarY2cqdXSkHd3uhvpVfrD2TDeWZWtRtpcnAeGU8K7sLP0J2EGKmZP4pNVr1s-rTVKsA-K3InB_oZeByR9cSGCXyujYzffS13UeDo0UXzihEjZl2oQQ3OuZw5C8yCl-EhBKk6KEA6y6HXGbm0sHMrgaGhQ8hTRmRaVZeQ_E8RUtmAbYFb4rUA",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 777 7051",
+                        "Address": "807台灣高雄市三民區文安南街86號",
+                        "Rate": 4.7
+                    },
+                    {
+                        "Aid": 229,
+                        "Aname": "胖老爹美式炸雞-高雄覺民店",
+                        "photo": "CmRaAAAAFsBOfxhP-saf_FUonfU0Bi2gclDpeXMfWjT29YcEdpHgTDsPVKwuXf1T1GiBi4lOy-3SjjjulfqQL8dr6zT5SzY28LDPuSwQDyu8bENu9O7reHElCaVirH-a0CQ_NzDfEhD8oJaDHUAo_lYP_dllQrmpGhQtXYl708vOTA-wTod69rcy8AGNaA",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 381 9478",
+                        "Address": "807台灣高雄市三民區覺民路271號",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 230,
+                        "Aname": "童樂島親子餐廳",
+                        "photo": "CmRaAAAA6C2wmYIsFoDB3cW2j6PfrrFyuwFwVmfNjQqSRSEDEpdYfrrYbxrD0S1zVLvt-M_5DDOoKiQWiEs2fEVOmZiEXuKI5_u8J8bzsXuWO_EtqxrJ-Y-_oG51uC9WjkbqVqXMEhDZyGuHeZ1uIAUPe2h5afcRGhSMWpzzk_sNi-MqeoBkROSBkgtgRA",
+                        "GoogleClass": "cafe",
+                        "Phone": "07 780 8777",
+                        "Address": "807台灣高雄市三民區文濱路45號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 231,
+                        "Aname": "孟菲斯美式餐廳",
+                        "photo": "CmRaAAAAov7exWuMCQmPeXyWVPrEPpLXTNx1XMOh8HTRtW6lnNe3KI_q5Vbspq5BwZDKYhELTshMof5_PgjFOnttc2kGDgnV-1tRPxVDVB3_eeP6LWmtLkYXvcOY87O5LZr0KlLPEhDeemJI7QwRc9Mj5AXFULTKGhQhrLk760yJTR1_a4p4fkliknT3jg",
+                        "GoogleClass": "restaurant",
+                        "Phone": "07 777 7200",
+                        "Address": "807台灣高雄市三民區褒揚東街162巷5號",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 232,
+                        "Aname": "夢時代購物中心 Dream Mall",
+                        "photo": "CmRaAAAAWUeco2Yy5fAWA5q-EXGYD6rZaHOf4WTN8Gq5LYFI701FR2hAZ2m-OSphtKLOcJ4AhVhqAqXoyd-wB4AOvu_cjDNfS1Y4OMsyF-MnE647fwbwJOJ4mrPrUcXJdO0DHjZeEhANK9SXam2a47_EpPIKd7bcGhQ7o445-1u46GFCeRCfWa5aswpFbA",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 813 5678",
+                        "Address": "806台灣高雄市前鎮區中華五路789號",
+                        "Rate": 4.4
+                    },
+                    {
+                        "Aid": 233,
+                        "Aname": "環球購物中心新左營車站店",
+                        "photo": "CmRaAAAA-KNnkUfA_JnaOys5WWjtwLDloMKWN01su-yjob6lJ0Xd3a7ygpyyY1I0-X1k5UUYq4I-0lsLDo0zV6uTU5VWmgI5S5ERHFxlF-gMe870IA-yJCLJUqWozx9C8gkt23xCEhDe0BOYyGTJ-mbnGlt4BYydGhT0sqOYUxpAaMQqwMxn3mW8usZT8Q",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 585 9999",
+                        "Address": "813台灣高雄市左營區站前北路1號1F—3F",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 234,
+                        "Aname": "大魯閣草衙道",
+                        "photo": "CmRaAAAA9-xg0SUJUiY8K8kRp4izuCL_wFhqeAxWqqeYzEThYdJMxZSmcC6M6d45nlU3XHmNFM_qPRumC5R_xLUxdyitVsEnYuFYtlvqsIGAkeldR548Jqdil8dlMwsLf3MHJdgrEhDX95i25ja7SdGr_1nlXtshGhQJIZ6irMXQx8sUEwqCFAglnukGxQ",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 796 9999",
+                        "Address": "806台灣高雄市前鎮區中安路1-1號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 235,
+                        "Aname": "高雄大遠百",
+                        "photo": "CmRaAAAAthRpnHMK5nnnJ9AiUZ6wbCo8S94xRkrMsH-UxoW6X80MK9SqSE34HtKkZEVGH3xMLFeNikFM3wBwXoa8bhDZ_yQ9Nx_o18DDxl1pzMboi7vvzc8PgntG0B-BCUWnLsK5EhAUXMuWEoD52yo-t--E3hBQGhQYkF-fiJ0TalByC6b2X43b5BcW4Q",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 972 8888",
+                        "Address": "802台灣高雄市苓雅區三多四路21號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 236,
+                        "Aname": "義大世界購物廣場",
+                        "photo": "CmRaAAAAQnqzgFhjP6xaYuvNI_Sxcut9kNG8h7r_TxGWsuOXuHc7xq5qT6ACD3OpaucueeyfsOn6nnL3AzsLYG9joayrSVHWRuNodhmJV7V37qvyEA_9bGgDJUZ0vmNyC-InmsiREhDuzEZDKLUkYXVZ09VVvDluGhR77TjW8UX88izK95MlENMfjv2p5Q",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "080 065 6080",
+                        "Address": "840台灣高雄市大樹區學城路一段12號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 237,
+                        "Aname": "Diffa大樂購物中心1F",
+                        "photo": "CmRaAAAAau4kOMTtaHCtIUd59QGtTiPzpu25lZB3-F0ZxJwUYRr7DQ4DbV_9B3ueP90GtHjqgHPJtJK-1C-v7Lbj9ZSDsuOGnYjln5yti4eejqz_xC1E0QMVD3NFtL8EA13O96B0EhCtZchdIQCEblRwywSZLXd3GhTNxXxDXtgT8HFWSWPTGqxSbSsZew",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 392 6729",
+                        "Address": "807台灣高雄市三民區民族一路463號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 238,
+                        "Aname": "JOY PLAZA 悦誠廣場",
+                        "photo": "CmRaAAAA9_NY2rIUPJJb2vW9DoHswIUf89YJaeM-RhACT9xZ9aCZXfueZRltsj3_mENRW92FA2QwAu8FZNADAXHBIjc92mccTIqiSEpIwP9mmrQtRWiSC_s6JsCRNJZm4LyNAgwJEhABt-zKWtyCD2xRDo6vOidwGhSQHRMtM6Hoi_9H3AMwbhy-jNtAwQ",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 955 5888#0",
+                        "Address": "807台灣高雄市三民區民族一路427號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 239,
+                        "Aname": "MLD 台鋁生活商場",
+                        "photo": "CmRaAAAA36fec_Na68ul5E8V0C0InZjtuHDOlDO9jqv-RemekBnC3Lf-ogZEo9FsPpjbvIbLFjqaFrunVQu_gSZp1IqJVnAAgEuMv1X4aDKRpM0uSbtYNgZ9zkv0MDeQ-Dnh-m9EEhCER45shQU07woFnXSo4_iGGhTGqEIqG_9rIV_ukzFdxnb1yYMGjA",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 536 5388",
+                        "Address": "806台灣高雄市前鎮區忠勤路8號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 240,
+                        "Aname": "統正開發股份有限公司（夢時代購物中心）",
+                        "photo": "CmRaAAAA7g7q6jkWjmOIrcPW3QAM4LZgg73EQ-DlcGE1lahOgbwiRk5QoCl4sVUbpm1Wgpk9oro0gadeWsMixsp3_puciLqAKHYTBkZZljrGM5wKew8o0-S-FuIYzWlM9XiAjUy4EhCx8xaMiWAMEZk72x1IXU2WGhSKQaXQwHGqANlpSeuv3gNm3bMKuA",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 823 3111",
+                        "Address": "806台灣前鎮區中華五路789號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 241,
+                        "Aname": "麗人服裝行暢貨中心",
+                        "photo": "CmRaAAAA5qErJlGmQ3UO5RMN0-V2H-_64-8wgNDLVyXot8n1tzZCQ3tFvJ4yVsrgpz-7ZGHjk5VOuremp636FDf7ykJXPZYVrWDHUEZYjUXensQ_0VIqPQx7Pfp1CZp4fEG3eCAkEhAIfuFl7ibBB_0GDQ5rmetdGhSZwekBkKU5aqdH3smMwRM73AZOUw",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 236 9169",
+                        "Address": "807台灣高雄市三民區長明街224號",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 242,
+                        "Aname": "新堀江購物商場",
+                        "photo": "CmRaAAAAK_Y7gGHDEjgGmqbKHjJyNYTAwuFT_VjlZ7iJvO9YfwFCki9aZtb5iHLuGVfSEYM2cTIjGJUziMnGwqtaQzwnLK9eT8mJKBrxL211J5GfzkvJ1HH-0u15ZWVbpwfcx2g1EhA4BQ9VvSC9zq-x_lInH_uKGhQQvepyEKRnWerSqoLnlhKJHzDTpQ",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 272 3277",
+                        "Address": "800台灣高雄市新興區文化路70之1號",
+                        "Rate": 4
+                    },
+                    {
+                        "Aid": 243,
+                        "Aname": "大樂DOLLARS",
+                        "photo": "CmRaAAAAaRW7GnYMy_Fi5IsrEB_bjV-w1tK5Efjt4CS8sNQOi9G8LSx5WqRYfeq7_NwUKTigeMAH_mlPNX25HCK4AWMRnnnmMOV2xTTYpxMavHub4UILTKyCfKSEC886ihn5sX7PEhA2XAD1Y-X-Aox0Rwata2YcGhRhtCWbfbippiHmsy_pK6gsd_5EtQ",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 392 6900",
+                        "Address": "807台灣高雄市三民區民族一路463號",
+                        "Rate": 4.1
+                    },
+                    {
+                        "Aid": 244,
+                        "Aname": "阿荷的直播殿堂",
+                        "photo": "CmRaAAAAjq-TvOCnFA2vu1IWT_dQVbmMtcfXaG_C-Lc22GM8pMxLFw8i_juiNS9iTxmaoayqzbceBTsrxpH6rFQxqqas6NYHjF3bK6TY0j2-y3r_6q4bfgXXvIWvBivjK3GlCuwHEhD7WyB8s4xYmgnyoML17QaGGhQ0M8d7hzuef7KViajqIP4Q6cVB-w",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "0900 232 831",
+                        "Address": "807台灣高雄市三民區褒忠街78巷12號",
+                        "Rate": 4.7
+                    },
+                    {
+                        "Aid": 245,
+                        "Aname": "高雄大立百貨5樓嘉龍珠寶",
+                        "photo": "CmRaAAAA1QqRuJbawTdlkaaP3o3OO0V83Di7IIG_EE0qggEkDFKJdX5HwbPk15ZXjlkEo6LLzu8K3Yhl1E-z9lQcD2IXxfVfEZPDoOiCUq9D7w7xRHRR_ioCaiKXT_Cs6W-FA3C2EhAMKe7fXjEowzCs0i26O8lnGhQp3Y6PNtwlf21OnXB77Y_ElWk9cw",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 215 2733",
+                        "Address": "號 5 樓, No. 59五福三路前金區高雄市台灣 801",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 246,
+                        "Aname": "高雄藝品百貨公司",
+                        "photo": "CmRaAAAAd3Aw0qJ5afXwrG1arlz_Dz9VNV-q7LmFA8ESy04t7mkaM73-Z0Jt4xjE8r-sgEWhiCoSiW0SIBOuRIImhW_MJgJ-a2W4ceNgOmlFxO0yv7Naj4kuDhsm8SWbOxqLXsYyEhBFmeS6kKZjE-cIrNUfJprsGhRPlfN_2oD20jOBrrRdLF4m5MwvEQ",
+                        "GoogleClass": "shopping_mall",
+                        "Phone": "07 281 3168",
+                        "Address": "801台灣高雄市前金區大同二路147號",
+                        "Rate": 3.5
+                    },
+                    {
+                        "Aid": 247,
+                        "Aname": "浮宮漂浮【Spa舒緩館】(按摩、ＳＰＡ、美體服務模特兒推薦館）",
+                        "photo": "CmRaAAAAbwYfcSlJ8Ni3Oerscb2vaqfCCPaLt08LXlAPLB5m2-IJ7LISPYgqY9DiiC1zsRKKGZhxi7dLt7qpiNeFNqgSnBQgTOo4QOcxLrP8Sd7_rbsK2HPWaWdqSWPoYpNh4G0kEhBrtREaKzF64srfK8EPZGiYGhRE0huj2bMnv9hV9mB4LWxTXsFk6g",
+                        "GoogleClass": "spa",
+                        "Phone": "07 335 6366",
+                        "Address": "802台灣高雄市苓雅區苓雅一路360號",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 248,
+                        "Aname": "Tp&b天然有機精油芳療SPA",
+                        "photo": "CmRaAAAAEy1kim-GKnCinsgus9cBmvWZb2ankzP2ssgA6uU8UQRgZG7Pae9qkG2PTTGh9AtUO-Of85wiLUzksqY5nDX28IkU0vljHchoxP3QyCOim5xbo4OlScIGdPwljpAPRHgIEhBtMhIXXasZ4CS4UU6dcjrIGhSWZNW-uMjYE_-aU-Sacj9XE9Xfug",
+                        "GoogleClass": "spa",
+                        "Phone": "07 222 7868",
+                        "Address": "802台灣高雄市苓雅區泰順街25號",
+                        "Rate": 4.3
+                    },
+                    {
+                        "Aid": 249,
+                        "Aname": "Diovia SPA 菂椏 SPA 裕誠路 農十六館",
+                        "photo": "CmRaAAAAEBp16kiu7-wKQownH44z3KvW5be73VVJG15M3wk-gl5HHySaJ0Hx4PQiY9xOtT_YbAmjOy3D0xvdadmsgNqLW25K1_-HtFHRWOk2l04vLo447CSDOXlcJV8Z96rbDAdBEhCW1fWyAI2UDiRJYK9Nb5G8GhTXkCi0IFr1fEvwJyKhbTuwSuJcIw",
+                        "GoogleClass": "spa",
+                        "Phone": "07 586 9630",
+                        "Address": "804台灣高雄市鼓山區裕誠路1663號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 250,
+                        "Aname": "放鬆美學spa美容生活館 高雄苓雅店全身芳香美體紓壓 .私密處除毛 美容清粉刺做臉最多網友推薦",
+                        "photo": "CmRaAAAAgCZcUmfxsb6mnkCNibGvfJETPQRzf8t7Bm5cpDkuCgAuSGzj1FIy0egVWDWprmQgQxkSsJAt7YSxvCpzDx7L3eB52Pe4zPWuH1qMq4fitUsNQRnDd1SOSylHdqwIi50REhBAqvwIPsSkzMC4VkuRcp1_GhQ4SWX97csHzFQ6SfrpP_jOeMhB0A",
+                        "GoogleClass": "beauty_salon",
+                        "Phone": "07 722 5185",
+                        "Address": "802台灣高雄市苓雅區林泉街98巷8號",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 251,
+                        "Aname": "莉筑SPA",
+                        "photo": "CmRaAAAAgB7ZodNb8ElTjPU5mbYEJaCH1RroyoDaxVp9JuNpzavK5vtG4_Z3RnDTw3JWjwF5dT0GoC6yRt7l7E8PxjjkMCgPgua_nORnoWxX249gFjqNoWHKCu3L65nSkYorhGF8EhCf5QUd7x06zjJnNYNrTNhZGhReBV1D3LvhIaA9lzwdhQ4-MfqbnQ",
+                        "GoogleClass": "spa",
+                        "Phone": "07 389 0377",
+                        "Address": "807台灣高雄市三民區建中路27號2樓",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 252,
+                        "Aname": "杉之秀SPA文衡店(高雄孕婦按摩)",
+                        "photo": "CmRaAAAA8IuWQIbyXU1jvWeauoZNGuQV5UjHOGs4uDPgRfTSGrah0Keg0niddwDKos0KP_9KDNPMhdXT7i5dxmreyj2VDPFYfkGtK8lb8igrc9JbDDaL05wdFqtqEUjznsMoIbITEhD036S-_UKK2Sot9-VecuI1GhQs26ohCPxBRaqMglrCf-0Ypyxvag",
+                        "GoogleClass": "spa",
+                        "Phone": "07 777 5571",
+                        "Address": "830台灣高雄市鳳山區文衡路488號",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 253,
+                        "Aname": "高雄按摩推薦,按摩精油-茉香泰式推拿",
+                        "photo": "CmRaAAAAM9IQJ0Rl0PwJMAoUZVbCYWKcL0KiPnp34SqdKNV580K1oA8PJQ8_dD6aW2BWG1ZwzVUIuVacdBPaguvOkPjNvGtyPIE1SA2xcbK_7w-KNvMUgbpouQhv5fVt0BXnSdsAEhByu5bCXZQbVOrI9piwvALuGhTCYgbk3FHnSYGnTn4r2hivDppOhQ",
+                        "GoogleClass": "spa",
+                        "Phone": "07 536 9092",
+                        "Address": "802台灣高雄市苓雅區四維三路53號",
+                        "Rate": 4.5
+                    },
+                    {
+                        "Aid": 254,
+                        "Aname": "喬絲登美容美體spa",
+                        "photo": "CmRZAAAAwJ9ut3bBly7-re8fyOaIyF5erXqdpVhDTQTvozmu1Oi4h0CdkznDPpOIHLp6nqMspp2oQuZWzKNQyLN5T9p-OclN1tMQMaYa-yktnUhUMjUISMTukPecQ5SJ2f4IzPiwEhB7iRkFMWF7vU75kQ1YzcX-GhQJvmFVnKUrRO0543nMF4rFq1QCQg",
+                        "GoogleClass": "beauty_salon",
+                        "Phone": "07 381 1811",
+                        "Address": "807台灣高雄市三民區覺民路246號",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 255,
+                        "Aname": "香悅SPA芳療身心靈-高雄美術店",
+                        "photo": "CmRZAAAA6wOxcyBD-_mWWQRxtNCY7JlknqayzDHj0UoIwDffnIH8ugPBVJ3WNuCWD08Ezgm67AdfOmDEvqqbiRzeJH5Rn26IVXYkzPV-oYJqdbX2SxtlIvobZECUZH3oGtP_0JL0EhClhk5NyGjIxQVA_7oqWdnYGhTMmC4aPJGc6i3TPN__YcltNQjatA",
+                        "GoogleClass": "spa",
+                        "Phone": "07 552 3258",
+                        "Address": "804台灣高雄市鼓山區青海路72號",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 256,
+                        "Aname": "高雄spa驛站",
+                        "photo": "CmRaAAAAzE3gK2btAocy59dIhl-wPs_2gqXW28vEHOrGpjavRhbmVjBZdBT3baGggS61eN1qbF0jDObYGqQrPV3a1vPuPkOCKCuH45rSaHI6tgpxQbQEQKIIgpRi9fhAPv1b4soMEhC60Sc1Cr-Jrhao2xcKNltGGhSx3msTwi8s5-Mo2GUByFcjyXBXIw",
+                        "GoogleClass": "spa",
+                        "Phone": "0953 570 666",
+                        "Address": "803台灣高雄市鹽埕區河西路102號",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 257,
+                        "Aname": "名門美容沙龍SPA",
+                        "photo": "CmRaAAAA55FXywTjmOI83mUzedfY2Aneo36QI2sRbUoHADf520UmDYjkEwggkSRoayXKw_nFtHbZw4vhrApH0mpvZTzB52UTuN1oI4oM9c7QYOpCU1JRKvTrRyUojoMpc28zbZhtEhCGqnSlZltyYdCq97PBZUtZGhTGilvsTKl0nh7OH-flbdbVgMX4qQ",
+                        "GoogleClass": "store",
+                        "Phone": "07 749 3722",
+                        "Address": "802台灣高雄市苓雅區建國一路9-2號",
+                        "Rate": 5
+                    },
+                    {
+                        "Aid": 258,
+                        "Aname": "麗緻SPA養生會館-七賢店",
+                        "photo": "CmRaAAAAvzvkAVDoEfNR-nDCGgbVI-mbMfpT3Gs2SxLZ_ToPi58ZgUPTiKZLLRC0PfhJa4JERAgA4GhsUgnJoJDWyel1PEdQoj8KMD1W-9twfS1flYMSjNtxX6Arg7_hHGwxWkI2EhBge5zVPY728rNJuH4TaGyuGhRnMMJgH4ni0ANhClp65w-3w8guNg",
+                        "GoogleClass": "spa",
+                        "Phone": "07 235 2325",
+                        "Address": "800台灣高雄市新興區七賢一路270號2F",
+                        "Rate": 4.6
+                    },
+                    {
+                        "Aid": 259,
+                        "Aname": "麗緻spa養生會館",
+                        "photo": "CmRaAAAAPU0-0Uk7JMVblps721jy9vi74FMAppyBFGgbK5zkXA9uw9lFjl5px7YnSNGKRWloJ3bTvCxzkf1b_kAqgvgENM8fx3SeAN1cnE4OhyznvyVSY2N_KfQ0rYa0biQ4nxKNEhC80bCslYU9OBjmjhOLGB1ZGhTTgcic7BkOHv8bhXVGqFD_V408Fg",
+                        "GoogleClass": "spa",
+                        "Phone": "07 238 2966",
+                        "Address": "800台灣高雄市新興區六合一路140號",
+                        "Rate": 4.2
+                    },
+                    {
+                        "Aid": 260,
+                        "Aname": "維格SPA纖體中心-文山店",
+                        "photo": "CmRaAAAAaeF59wpmahmCjUdqiC7kThZLp-BQPCjrlDoCVfI92kJtSrUVnPOMXzj_BSixCaGheEVKNFSZF2ZJjQE7ApdOTrceiDfyBTWeXEnAJdjPLvDS8dFq5A0dmtgZHzdhSW7mEhC_Mtj4ZOagVY0QuKEFjTA-GhQ_oFu03U1B44DPe2IfhfTnaIUm5g",
+                        "GoogleClass": "spa",
+                        "Phone": "07 777 4520",
+                        "Address": "807台灣高雄市三民區文安南街180號",
+                        "Rate": 4.8
+                    },
+                    {
+                        "Aid": 261,
+                        "Aname": "依美琦spa高雄自強旗艦店",
+                        "photo": "CmRaAAAA_0T4elJ15XaJn93DBvDNwsGfCHf2jq3NHb-G_W6NEsSJfzFYThYiaeepjGNzdpH_mRLdqhOy7wo0Fvl8xUVVwi_YWSzZ6ODJJwBLjaChOFFTcqDMEEoV9H_uFf--Qai7EhDqShkaUdpn9UnEhsF0d9kwGhQF0mrDABKL6vhMhlRsRrtiGIriDw",
+                        "GoogleClass": "spa",
+                        "Phone": "07 231 2525",
+                        "Address": "801台灣高雄市前金區自強二路29號",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 262,
+                        "Aname": "維格SPA纖體中心-自由店",
+                        "photo": "CmRaAAAAVdWXUJ4LPAex3-XoMFwvNRqqDeWzhgLUQVVGK10IpxtfGzWm78yYX5Jr2-OvHg633HgF-hI0qKZx0nAlUHcF2svMxdjuuyP7AESZ4AhLPM2yVD1pVGvRoS8yz5CRBP4zEhCA9f984CFwskcvztX3jiZiGhQngy4IWsRsMHmaTvQoZcLDZU3g6Q",
+                        "GoogleClass": "spa",
+                        "Phone": "07 550 8147",
+                        "Address": "813台灣高雄市左營區自由二路106號3樓",
+                        "Rate": 4.9
+                    },
+                    {
+                        "Aid": 263,
+                        "Aname": "高雄市壽山動物園",
+                        "photo": "CmRaAAAAIGLKK_1lO4lEmFEimAGmsA049zoTVwMjy7kzLpDWx19zox8Ob9YYuQX-IyP-JZrtkrUoUCNe-jjxHscPf6VKf7txCGePzQ2qR8PTbg1dWbv3IQeCCeetP9TTv5rP6LkeEhBY8zraccPb-uWMIBVO5A34GhRctjcP34yvQnnRWH_6D7od0GFKKQ",
+                        "GoogleClass": "zoo",
+                        "Phone": "07 521 5187",
+                        "Address": "80444台灣高雄市鼓山區萬壽路350號",
+                        "Rate": 4.2
+                    }
+                ],
+                
+                "AttractionSelect": [
+                    
+                ]
+
+                
+                
+            }
+    }
+}
+
+
+
+
