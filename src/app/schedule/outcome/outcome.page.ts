@@ -106,7 +106,6 @@ export class OutcomePage implements OnInit {
           center: { lat: -34.9011, lng: -56.1645 },
           zoom: 15
       });
-    }
     // 此處先用if else處理篩選
     // 等待竹秀將phase2傳值到此處
     /*
@@ -185,7 +184,7 @@ export class OutcomePage implements OnInit {
             SELECT * FROM ...
             WHERE 內外=外 AND 動靜=靜
     */
-   else if (Indoor == 'n' && Outdoor == 'y'){
+  else if (Indoor == 'n' && Outdoor == 'y'){
     var InorOut = 'out';
     if(Dynamic == Static){
     }else if(Dynamic =="y" && Static =="n"){
@@ -343,5 +342,4 @@ export class OutcomePage implements OnInit {
     });
     console.log(this.favorite);
   }*/
- 
-}
+}}
