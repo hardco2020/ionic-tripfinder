@@ -8,6 +8,7 @@ import { ActivatedRoute,Router } from '@angular/router';
 
 import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
 import { ValueTransformer } from '@angular/compiler/src/util';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-selecting-phase2',
@@ -106,12 +107,26 @@ export class SelectingPhase2Page implements OnInit {
     }
   ];
   form: FormGroup;
-
+  result = {
+    indoor:"n",
+    outdoor:"n",
+    static:"n",
+    dynamic:"n",
+    netbeauty:"n",
+    hipster:"n",
+    near_mountain:"n",
+    near_sea:"n",
+    shopping:"n",
+    exhibition:"n",
+    historic_site:"n",
+    night_view:"n",
+  };
+  a:any;
   ngOnInit() {
     console.log(this.data);
   }
   turnpage(){   //換頁到 outcome
-    this.selection = Object.assign(this.data,this.form.value);
+    this.selection = Object.assign(this.data,this.result);
     // 跳轉頁面時透過 navigationExtras 傳遞 data 資料
     let navigationExtras: NavigationExtras = {
       queryParams: {
@@ -125,11 +140,13 @@ export class SelectingPhase2Page implements OnInit {
 
     if (e.target.checked) { //如果有勾的話
       checkArray.push(new FormControl(e.target.value)); //push進array裡
+      this.result[e.target.value]="y";
     } else {
       let i: number = 0;
       checkArray.controls.forEach((item: FormControl) => {
         if (item.value == e.target.value) { 
           checkArray.removeAt(i);  
+          this.result[e.target.value]="n";
           return;
         }
         i++;
