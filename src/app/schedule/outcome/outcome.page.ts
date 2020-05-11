@@ -121,7 +121,19 @@ export class OutcomePage implements OnInit {
      不勾   不勾   不勾   不勾
     （同時勾 = 同時不勾）
 
-
+    */
+   const Indoor = this.data.indoor;
+   const Outdoor = this.data.outdoor;
+   const Static = this.data.static;
+   const Dynamic = this.data.dynamic;
+   const Netbeauty = this.data.netbeauty;
+   const Hipster = this.data.hipster;
+   const NearSea = this.data.near_sea;
+   const NearMountain = this.data.near_mountain;
+   const NightView = this.data.night_view;
+   const Shopping = this.data.shopping;
+   const History = this.data.historic_site;
+   /*
     if 室內 = 室外:
         if 動態 = 靜態:
             SELECT * FROM ...
@@ -131,7 +143,16 @@ export class OutcomePage implements OnInit {
         elif 動態=不勾 & 靜態=勾:
             SELECT *FROM ...
             WHERE 動靜=靜
-
+    */
+    if(Indoor == Outdoor){
+      if(Dynamic == Static){
+      }else if(Dynamic =="y" && Static =="n"){
+        var StaticorDynamic = "d";
+      }else if(Dynamic =="n" && Static =="y"){
+        var StaticorDynamic = "s";
+      }
+    }
+    /*
     elif 室內=勾 & 室外=不勾:
         if 動態 = 靜態:
             SELECT * FROM ...
@@ -142,8 +163,18 @@ export class OutcomePage implements OnInit {
         elif 動態=不勾 & 靜態=勾:
             SELECT * FROM ...
             WHERE 內外=內 AND 動靜=靜
-
-    elif 室內=勾 & 室外=不勾:
+    */
+    else if (Indoor == 'y' && Outdoor == 'n'){
+      var InorOut = 'in';
+      if(Dynamic == Static){
+      }else if(Dynamic =="y" && Static =="n"){
+        var StaticorDynamic = "d";
+      }else if(Dynamic =="n" && Static =="y"){
+        var StaticorDynamic = "s";
+      }
+    }
+    /*
+    elif 室內=不勾 & 室外=勾:
         if 動態 = 靜態:
             SELECT * FROM ...
             WHERE 內外=外
@@ -154,6 +185,15 @@ export class OutcomePage implements OnInit {
             SELECT * FROM ...
             WHERE 內外=外 AND 動靜=靜
     */
+   else if (Indoor == 'n' && Outdoor == 'y'){
+    var InorOut = 'out';
+    if(Dynamic == Static){
+    }else if(Dynamic =="y" && Static =="n"){
+      var StaticorDynamic = "d";
+    }else if(Dynamic =="n" && Static =="y"){
+      var StaticorDynamic = "s";
+    }
+  }
 
 
     
