@@ -16,7 +16,16 @@ const routes: Routes = [
   },
   {
     path: 'outcome',
-    loadChildren: () => import('./schedule/outcome/outcome.module').then( m => m.OutcomePageModule)
+    children:[
+      {
+        path:'',
+        loadChildren: () => import('./schedule/outcome/outcome.module').then( m => m.OutcomePageModule)
+      },
+      {
+        path: ':detailId',
+        loadChildren: () => import('./view-detail/view-detail.module').then( m => m.ViewDetailPageModule)
+      }
+    ]
   },
   {
     path: 'view-detail',
@@ -25,8 +34,8 @@ const routes: Routes = [
   {
     path: 'collcet-attraction',
     loadChildren: () => import('./myrecord/collcet-attraction/collcet-attraction.module').then( m => m.CollcetAttractionPageModule)
-  }
-
+  },
+  
 
 ];
 @NgModule({

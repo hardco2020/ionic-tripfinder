@@ -1,7 +1,8 @@
 import { Component, OnInit, NgZone ,ViewChild} from '@angular/core';
-
+import { ActivatedRoute,Router } from '@angular/router';
 import { ControllerserviceService } from '../controllerservice.service'
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { location } from '../location.model';
 
 declare var google;
 
@@ -11,24 +12,39 @@ declare var google;
   styleUrls: ['./view-detail.page.scss'],
 })
 export class ViewDetailPage implements OnInit {
+  loadedDetail: location;
   data:any;
   map;
-   distance: any;
-   openingorNot : any;
-   openPeriod : any;
-   phoneNumber : any;
-   example ="台北市中正區開封街一段14巷劉山東牛肉麵";
-   constructor(private zone: NgZone,private geolocation: Geolocation , public service : ControllerserviceService) {
+  distance: any;
+  openingorNot : any;
+  openPeriod : any;
+  phoneNumber : any;
+  example ="台北市中正區開封街一段14巷劉山東牛肉麵";
+  constructor(
+     private zone: NgZone,
+     private geolocation: Geolocation , 
+     private activatedRoute: ActivatedRoute,
+     private router: Router,
+     public service : ControllerserviceService) {
     this.data={
       distance:2
     }
-   }
-  
-   @ViewChild('mapElement',{static:true}) mapElement;
+  }
+  @ViewChild('mapElement',{static:true}) mapElement;
    
   geocoder = new google.maps.Geocoder;
   GoogleAutocomplete = new google.maps.places.AutocompleteService();
   ngOnInit(): void{
+    this.activatedRoute.paramMap.subscribe(paraMap =>{
+      if(!paraMap.has('detailId')){
+        //redirect
+        this.router.navigate(['/recipes']);
+        return;
+      }
+      const detailId = parseInt(paraMap.get('detailId'));
+      
+      this.loadedDetail = this.service.getDetail(detailId);
+    }) //obeservable? 用法
   }
   ngAfterViewInit() : void{
     setTimeout(() => {
@@ -44,7 +60,7 @@ export class ViewDetailPage implements OnInit {
     
     
     //篩選出一系列地點後根據使用者的距離 金錢等等要求 做google place進一步二階段篩選
-    this.GoogleAutocomplete.getPlacePredictions({ input: this.example },  //用此地址作為範例
+    this.GoogleAutocomplete.getPlacePredictions({ input: this.loadedDetail.Aname},  //用此地址作為範例
       (predictions, status) => {
         this.zone.run(() => {
           predictions.forEach((prediction) => {  
@@ -68,7 +84,7 @@ export class ViewDetailPage implements OnInit {
       });
     });
     ////////////找到兩地距離  1.先找到兩個地方的經緯度 再使用function計算出距離
-    this.geocoder.geocode({ 'address': this.example},  (results, status)  => { //先找到當地的經緯度 
+    this.geocoder.geocode({ 'address': this.loadedDetail.Aname},  (results, status)  => { //先找到當地的經緯度 
       let pos;
         if (status == google.maps.GeocoderStatus.OK) {
             pos = {                                         //目標經緯度
@@ -99,8 +115,6 @@ export class ViewDetailPage implements OnInit {
             });      
         }
     });
-  
-    console.log(this.distance);
   }
 
 

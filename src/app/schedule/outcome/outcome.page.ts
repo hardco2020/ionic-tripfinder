@@ -20,35 +20,63 @@ export class OutcomePage implements OnInit {
     place: "測試",
     collection: 1 
    };
-   test : googleInfor = {
-    distance: 1,
-    openingorNot:2,
-    phoneNumber:3,
-    openPeriod:4,
-   };
-   tests : googleInfor = {
-    distance: 1,
-    openingorNot:2,
-    phoneNumber:3,
-    openPeriod:4,
-   };
-   testss : googleInfor = {
-    distance: 1,
-    openingorNot:2,
-    phoneNumber:3,
-    openPeriod:4,
-   };
-   googles: googleInfor[] = [this.test,this.tests,this.testss];
+  //  test : googleInfor = {
+  //   distance: 1,
+  //   openingorNot:2,
+  //   phoneNumber:3,
+  //   openPeriod:4,
+  //  };
+  //  tests : googleInfor = {
+  //   distance: 1,
+  //   openingorNot:2,
+  //   phoneNumber:3,
+  //   openPeriod:4,
+  //  };
+  //  testss : googleInfor = {
+  //   distance: 1,
+  //   openingorNot:2,
+  //   phoneNumber:3,
+  //   openPeriod:4,
+  //  };
+  //  googles: googleInfor[] = [this.test,this.tests,this.testss];
    
    
    favorites: Favorites[]; //load進所有現存資料
    data: any;
    map;
-   distance: any;
-   openingorNot : any;
-   openPeriod : any;
-   phoneNumber : any;
+  //  distance: any;
+  //  openingorNot : any;
+  //  openPeriod : any;
+  //  phoneNumber : any;
    example ="高雄小巨蛋"; //到時候會改成所有地點的資料
+   alldata = [{      //所有的data
+   "Aid": 1,
+   "Aname": "大立百貨空中遊樂園",
+   "photo": "CmRaAAAAIClT_Ynie6i7diws5vPTvz4IK7-cyWX93fkUtbAnI2EkIORzchzhzZARIHaaF6vDQTx78ZEIEjNX55fzXE2v8aSZ2PArtcX8rP2a7JeimjeaerACyg9ftF37z6p0cBnwEhDEW3u4n-x7AeGI2F5ApFAsGhSFoyAOGS2JKfDqLSLgRjabwJKxyQ",
+   "GoogleClass": "amusement_park",
+   "Phone": "07 261 3060",
+   "Address": "801台灣高雄市前金區五福三路59號RF",
+   "Rate": 4.2
+    },
+    {
+    "Aid": 2,
+    "Aname": "澄清湖風景區 兒童樂園",
+    "photo": "CmRaAAAAQNI4jsV8_g86CEU7tWjZQHtUOMN0mu3aL1sKekjMvWyGqCmyiz9miFN1v5WT6yoRh1KOIb_jmVK38p_Vfy60tcx8TI_hMJr9RQNSq-VtahYFp9OvIOGt5CGSssc_fyD0EhBpe0PveufVdBpENptCQqkqGhRd9VvD2vhgAxF_37fgh5eUlYENtw",
+    "GoogleClass": "amusement_park",
+    "Phone": "07 370 0821",
+    "Address": "833台灣高雄市鳥松區",
+    "Rate": 4
+    },
+    {
+      "Aid": 3,
+      "Aname": "鈴鹿賽道樂園",
+      "photo": "CmRaAAAAG8PNms_SXLnkhz00HQX-67phd-iMq8tNWMXrV8Gsv_l_oaBzi04AqrZsN4cbbHiz3NynrvZU0hd0LnuJpFtj3YuH3Rtd9Z6bhN-3kiS63zMjLoPgunF8SNbpUDtjyqlMEhAyqYYRWyTYj5kKDW05xWOpGhTTJNhM9B8xsRScOXNXZI-rdnyaOA",
+      "GoogleClass": "amusement_park",
+      "Phone": "07 796 7766",
+      "Address": "806台灣高雄市前鎮區中安路1-1號",
+      "Rate": 4.3
+    }
+    ]
    examples = ["鍋呆子鍋燒麵","老紀牛肉麵","高雄市立圖書館左新分館"];
    constructor(private route: ActivatedRoute, private router: Router ,private zone: NgZone,private geolocation: Geolocation , public service : ControllerserviceService, private loadingController: LoadingController,private nav: NavController) { 
      this.route.queryParams.subscribe(param=>{
@@ -59,7 +87,6 @@ export class OutcomePage implements OnInit {
      });
    }
    @ViewChild('mapElement',{static:true}) mapElement;
-   
   geocoder = new google.maps.Geocoder;
   GoogleAutocomplete = new google.maps.places.AutocompleteService();
   ngOnInit(): void{
@@ -79,6 +106,7 @@ export class OutcomePage implements OnInit {
           center: { lat: -34.9011, lng: -56.1645 },
           zoom: 15
       });
+    }
     // 此處先用if else處理篩選
     // 等待竹秀將phase2傳值到此處
     /*
@@ -131,73 +159,73 @@ export class OutcomePage implements OnInit {
     
    
     //篩選出一系列地點後根據使用者的距離 金錢等等要求 做google place進一步二階段篩選
-    for(let i=0;i<=this.examples.length;i++){
-      this.GoogleAutocomplete.getPlacePredictions({ input: this.examples[i] },  //用此地址作為範例
-        (predictions, status) => {
-          this.zone.run(() => {
-            predictions.forEach((prediction) => {  
-                let service = new google.maps.places.PlacesService(this.map);  //將算出的prediction id丟進detail來找到進階資訊
-                service.getDetails(
-                  {placeId: prediction.place_id},
-                    (results, status) =>{
-                      console.log(results);
-                      // console.log(results.opening_hours.open_now);  //知道現在有沒有開 
-                      if(results.opening_hours.open_now==false){
-                        this.googles[i].openingorNot= "休業中";
+    // for(let i=0;i<=this.examples.length;i++){
+    //   this.GoogleAutocomplete.getPlacePredictions({ input: this.examples[i] },  //用此地址作為範例
+    //     (predictions, status) => {
+    //       this.zone.run(() => {
+    //         predictions.forEach((prediction) => {  
+    //             let service = new google.maps.places.PlacesService(this.map);  //將算出的prediction id丟進detail來找到進階資訊
+    //             service.getDetails(
+    //               {placeId: prediction.place_id},
+    //                 (results, status) =>{
+    //                   console.log(results);
+    //                   // console.log(results.opening_hours.open_now);  //知道現在有沒有開 
+    //                   if(results.opening_hours.open_now==false){
+    //                     this.googles[i].openingorNot= "休業中";
                   
-                      }else{
-                        this.googles[i].openingorNot = "營業中";
-                      }
-                      console.log(results.opening_hours.weekday_text);
-                      console.log(i);
+    //                   }else{
+    //                     this.googles[i].openingorNot = "營業中";
+    //                   }
+    //                   console.log(results.opening_hours.weekday_text);
+    //                   console.log(i);
                       
-                      this.googles[i].distance = i;
-                      console.log(this.googles[i].distance);
-                      this.googles[i].openPeriod = results.opening_hours.weekday_text;
-                      this.googles[i].phoneNumber = results.formatted_phone_number;
+    //                   this.googles[i].distance = i;
+    //                   console.log(this.googles[i].distance);
+    //                   this.googles[i].openPeriod = results.opening_hours.weekday_text;
+    //                   this.googles[i].phoneNumber = results.formatted_phone_number;
                       
-                    }
-               );
-          });
-        });
-      });
-      this.geocoder.geocode({ 'address': this.examples[i]},  (results, status)  => { //先找到當地的經緯度 
-        let pos;
-          if (status == google.maps.GeocoderStatus.OK) {
-              pos = {                                         //目標經緯度
-                lat: results[0].geometry.location.lat(),
-                lng: results[0].geometry.location.lng()
-              };
-              this.geolocation.getCurrentPosition().then((resp) => {  //自己的經緯度
-                // resp.coords.latitude
-                // resp.coords.longitude
-               }).catch((error) => {
-                 console.log('Error getting location', error);
-              });
-              let watch = this.geolocation.watchPosition();
-              watch.subscribe((data) => {
-               // 兩者合併算距離
-               //console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
-               if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))>=1000){
+    //                 }
+    //            );
+    //       });
+    //     });
+    //   });
+    //   this.geocoder.geocode({ 'address': this.examples[i]},  (results, status)  => { //先找到當地的經緯度 
+    //     let pos;
+    //       if (status == google.maps.GeocoderStatus.OK) {
+    //           pos = {                                         //目標經緯度
+    //             lat: results[0].geometry.location.lat(),
+    //             lng: results[0].geometry.location.lng()
+    //           };
+    //           this.geolocation.getCurrentPosition().then((resp) => {  //自己的經緯度
+    //             // resp.coords.latitude
+    //             // resp.coords.longitude
+    //            }).catch((error) => {
+    //              console.log('Error getting location', error);
+    //           });
+    //           let watch = this.geolocation.watchPosition();
+    //           watch.subscribe((data) => {
+    //            // 兩者合併算距離
+    //            //console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
+    //            if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))>=1000){
   
-                 this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))/1000;
+    //              this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))/1000;
                  
-                 this.distance = Math.round(this.distance);
-                 this.distance = this.distance +"公里";
-                 this.googles[i].distance = this.distance;
+    //              this.distance = Math.round(this.distance);
+    //              this.distance = this.distance +"公里";
+    //              this.googles[i].distance = this.distance;
                  
-               }else{
-                this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude));
-                this.distance = Math.round(this.distance);
-                this.distance = this.distance +"公尺";
-                this.googles[i].distance = this.distance;
-               }
-               // 四捨五入
-              });      
-          }
-      });  
-      console.log(this.distance);
-    }
+    //            }else{
+    //             this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude));
+    //             this.distance = Math.round(this.distance);
+    //             this.distance = this.distance +"公尺";
+    //             this.googles[i].distance = this.distance;
+    //            }
+    //            // 四捨五入
+    //           });      
+    //       }
+    //   });  
+    //   console.log(this.distance);
+    // }
   
     ////////////////////測試
     // this.GoogleAutocomplete.getPlacePredictions({ input: this.example },  //用此地址作為範例
@@ -225,40 +253,40 @@ export class OutcomePage implements OnInit {
     // });
     ////////////找到兩地距離  1.先找到兩個地方的經緯度 再使用function計算出距離
     
-    this.geocoder.geocode({ 'address': this.example},  (results, status)  => { //先找到當地的經緯度 
-      let pos;
-        if (status == google.maps.GeocoderStatus.OK) {
-            pos = {                                         //目標經緯度
-              lat: results[0].geometry.location.lat(),
-              lng: results[0].geometry.location.lng()
-            };
-            this.geolocation.getCurrentPosition().then((resp) => {  //自己的經緯度
-              // resp.coords.latitude
-              // resp.coords.longitude
-             }).catch((error) => {
-               console.log('Error getting location', error);
-            });
-            let watch = this.geolocation.watchPosition();
-            watch.subscribe((data) => {
-             // 兩者合併算距離
-             //console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
-             if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))>=1000){
+  //   this.geocoder.geocode({ 'address': this.example},  (results, status)  => { //先找到當地的經緯度 
+  //     let pos;
+  //       if (status == google.maps.GeocoderStatus.OK) {
+  //           pos = {                                         //目標經緯度
+  //             lat: results[0].geometry.location.lat(),
+  //             lng: results[0].geometry.location.lng()
+  //           };
+  //           this.geolocation.getCurrentPosition().then((resp) => {  //自己的經緯度
+  //             // resp.coords.latitude
+  //             // resp.coords.longitude
+  //            }).catch((error) => {
+  //              console.log('Error getting location', error);
+  //           });
+  //           let watch = this.geolocation.watchPosition();
+  //           watch.subscribe((data) => {
+  //            // 兩者合併算距離
+  //            //console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
+  //            if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))>=1000){
 
-               this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))/1000;
-               this.distance = Math.round(this.distance);
-               this.distance = this.distance +"公里";
-             }else{
-              this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude));
-              this.distance = Math.round(this.distance);
-              this.distance = this.distance +"公尺";
-             }
-             // 四捨五入
-            });      
-        }
-    });
+  //              this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))/1000;
+  //              this.distance = Math.round(this.distance);
+  //              this.distance = this.distance +"公里";
+  //            }else{
+  //             this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude));
+  //             this.distance = Math.round(this.distance);
+  //             this.distance = this.distance +"公尺";
+  //            }
+  //            // 四捨五入
+  //           });      
+  //       }
+  //   });
   
-    console.log(this.distance);
-  }
+  //   console.log(this.distance);
+  // }
 
  /* UpdateCollection() {  
     //this.favorite.place=this.example;

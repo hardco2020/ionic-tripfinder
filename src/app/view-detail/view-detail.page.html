@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-title>
       <ion-icon slot="start" name="logo-react"></ion-icon>
-      <ion-label>奇美博物館</ion-label>
+      <ion-label>{{loadedDetail.Aname}}</ion-label>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -16,7 +16,7 @@
   <ion-row>
     <ion-col>
       <ion-chip color="primary">
-        <ion-label>類型一</ion-label>
+        <ion-label>{{loadedDetail.GoogleClass}}</ion-label>
       </ion-chip>
       <ion-chip color="primary">
         <ion-label>類型二</ion-label>
@@ -25,8 +25,8 @@
   </ion-row>
   <ion-row>
     <ion-col>
-      <b>評價分數 : </b>
-      <ion-icon color="warning" class="ion-margin-start" name="star"></ion-icon> 4.5
+      <b>評價分數 :  </b>
+      <ion-icon color="warning" class="ion-margin-start" name="star"></ion-icon> {{loadedDetail.Rate}}
     </ion-col>
   </ion-row>
   <ion-row>
@@ -39,14 +39,14 @@
           <ion-icon slot="start" name="home-outline"></ion-icon>
           <ion-label class="multi-line">
             <b>地址</b>
-            <p>高雄市鼓山區連海一路17號高雄市鼓山區連海一路17號</p>
+            <p>{{loadedDetail.Address}}</p>
           </ion-label>
         </ion-item>
         <ion-item lines="none">
           <ion-icon slot="start" name="call-outline"></ion-icon>
           <ion-label>
             <b>電話</b>
-            <p ngDefaultControl [(ngModel)]="phoneNumber">{{phoneNumber}}</p>
+            <p ngDefaultControl [(ngModel)]="phoneNumber">{{loadedDetail.Phone}}</p>
           </ion-label>
         </ion-item>
         <ion-item lines="none">
@@ -90,7 +90,7 @@
           <ion-button *ngIf="!openingorNot" expand="block" fill="outline" color="medium">休息中</ion-button>
         </ion-col>
       </ion-row>
-      <ion-row>
+      <!-- <ion-row>
         <ion-col>
           <ion-label ngDefaultControl [(ngModel)]="distance">{{distance}}</ion-label>
         </ion-col>
@@ -99,6 +99,6 @@
       </ion-col>
       <ion-label ngDefaultControl [(ngModel)]="openPeriod">{{openPeriod}}</ion-label>
       <ion-label ngDefaultControl [(ngModel)]="phoneNumber">電話{{phoneNumber}}</ion-label>
-    </ion-row>
-    <div #mapElement class='map'></div>
+    </ion-row> -->
+    <div #mapElement class='map'></div> 
   </ion-content>
