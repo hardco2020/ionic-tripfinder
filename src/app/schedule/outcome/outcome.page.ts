@@ -75,6 +75,15 @@ export class OutcomePage implements OnInit {
       "Phone": "07 796 7766",
       "Address": "806台灣高雄市前鎮區中安路1-1號",
       "Rate": 4.3
+    },
+    {
+      "Aid": 4,
+                        "Aname": "快樂100",
+                        "photo": "CmRZAAAA-fsbesBp772W6uhAJv9KHpHRzCJS2Zyc0DpWceXW0Wi_dUc7EwK7Ozcx7FzaE90wuNKoyMTrXW6a8c_Yx7kBs5oDKnG0vH0siWwKbxO45FBJKYQZcUHizAyKf_xIKR7dEhDMFLF-WuXuex-cB6-YAe2iGhTT7dyrqvN_b1Y0c7ujEV4GV4O4_Q",
+                        "GoogleClass": "amusement_park",
+                        "Phone": "07 970 3366",
+                        "Address": "806台灣高雄市前鎮區中華五路789號",
+                        "Rate": 3.8
     }
     ]
    examples = ["鍋呆子鍋燒麵","老紀牛肉麵","高雄市立圖書館左新分館"];
