@@ -16,7 +16,10 @@
                     {"Aid":2,"Aname":"西子灣海水浴場","GoogleClass":"海水浴場","Phone":"無","Address":"804高雄市鼓山區蓮海路70號","Rate":"4.3"},
                     {"Aid":3,"Aname":"光榮碼頭","GoogleClass":"碼頭","Phone":"無","Address":"802高雄市苓雅區海邊路31號","Rate":"4.5"},
                     {"Aid":4,"Aname":"","GoogleClass":"","Phone":"","Address":"","Rate":""}
-                ]
+                ],
+
+                
+                    
                 
             }
     }
