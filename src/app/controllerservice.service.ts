@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 declare var google;
 export interface Favorites {
+  img: string;
   place: string;
   collection: number;
 }

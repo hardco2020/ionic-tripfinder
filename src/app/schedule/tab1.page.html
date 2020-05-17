@@ -11,8 +11,8 @@
   <ion-card>
     <ion-slides [options]="slideOptsOne" pager="true">
      <ion-slide *ngFor="let slide of slides">
-      <div class="card-title">{{slide.title}}</div>
-      <div class="card-subtitle">{{slide.subtitle}}</div>
+      <div class="card-title" (click)="testshow()">{{slide.place}}</div>
+      <!-- <div class="card-subtitle">{{slide.subtitle}}</div> -->
       <img [src]="slide.img" >
      </ion-slide>
     </ion-slides>

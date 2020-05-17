@@ -17,6 +17,7 @@ declare var google;
 export class OutcomePage implements OnInit {
    // 透過 url 將 selection 傳遞到此頁面
    favorite : Favorites = {
+    img : "123",
     place: "測試",
     collection: 1 
    };
@@ -87,6 +88,7 @@ export class OutcomePage implements OnInit {
     }
     ]
    examples = ["鍋呆子鍋燒麵","老紀牛肉麵","高雄市立圖書館左新分館"];
+   lock = 1; //update的鎖
    constructor(private route: ActivatedRoute, private router: Router ,private zone: NgZone,private geolocation: Geolocation , public service : ControllerserviceService, private loadingController: LoadingController,private nav: NavController) { 
      this.route.queryParams.subscribe(param=>{
        if(param && param.special){
@@ -335,20 +337,26 @@ export class OutcomePage implements OnInit {
   
   //   console.log(this.distance);
   // }
-
- /* UpdateCollection() {  
-    //this.favorite.place=this.example;
+  }
+  UpdateCollection(aname,photo) {  
+    this.lock = 0;
+    this.favorite.place=aname;
+    this.favorite.img = 'assets/img/search/4.jpg';
     this.favorites.forEach(element => {
       if(element.place==this.favorite.place){ //如果重複位置則UPDATE  
-        this.favorite.collection = element.collection + 1 ;
+        this.lock = 1;
+        this.favorite.collection = element.collection + 1 ; //新增一個收藏的人
         this.service.updateFavorite(this.favorite, element.id).then(() => {
         });
-      }else{
-        this.service.addFavorite(this.favorite).then(() => {
-        });
+      }else{  //如果位置沒重複則update (只會發生一次?) 當有兩個地點的時候
+        // this.service.addFavorite(this.favorite).then(() => {
+        // });
       }
-      
     });
+     if(this.lock==0){
+       this.service.addFavorite(this.favorite).then(() => {
+       });
+     }
     console.log(this.favorite);
-  }*/
-}}
+  }
+}
