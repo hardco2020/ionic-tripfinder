@@ -45,6 +45,7 @@ export class OutcomePage implements OnInit {
    favorites: Favorites[]; //load進所有現存資料
    data: any;
    map;
+   api_key = 'AIzaSyCMjg0lGC43K_RsV687kghZ5qTAbPnQAMo';
   //  distance: any;
   //  openingorNot : any;
   //  openPeriod : any;
