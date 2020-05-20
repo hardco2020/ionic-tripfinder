@@ -37,73 +37,73 @@ export class SelectingPhase2Page implements OnInit {
       key: 1,
       name:'outdoor',
       title: '戶外',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/3874004/pexels-photo-3874004.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 2,
       name:'indoor',
       title: '室內',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/4325455/pexels-photo-4325455.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 3,
       name:'dynamic',
       title: '動態',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 4,
       name:'static',
       title: '靜態',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/2942194/pexels-photo-2942194.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 5,
       name:'netbeauty',
       title: '網美踩點',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/600114/pexels-photo-600114.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 6,
       name:'hipster',
       title: '文青必去',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/364110/pexels-photo-364110.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 7,
       name:'near_mountain',
       title: '靠山',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/2175952/pexels-photo-2175952.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 8,
       name:'near_sea',
       title: '靠海',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/756856/pexels-photo-756856.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 9,
       name:'shopping',
       title: '逛街',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/1020370/pexels-photo-1020370.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 10,
       name:'exhibition',
       title: '展覽',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/1718856/pexels-photo-1718856.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 11,
       name:'historic_site',
-      title: '名勝古蹟（歷史性）',
-      img: 'http://via.placeholder.com/300x300'
+      title: '名勝古蹟',
+      img: 'https://images.pexels.com/photos/3361480/pexels-photo-3361480.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 12,
       name:'night_view',
       title: '夜景',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/2670898/pexels-photo-2670898.jpeg?auto=compress&cs=tinysrgb'
     }
   ];
   form: FormGroup;

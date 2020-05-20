@@ -339,6 +339,7 @@ export class OutcomePage implements OnInit {
   //   console.log(this.distance);
   // }
   }
+  /*
   UpdateCollection(aname,photo) {  
     this.lock = 0;
     this.favorite.place=aname;
@@ -359,5 +360,5 @@ export class OutcomePage implements OnInit {
        });
      }
     console.log(this.favorite);
-  }
+  }*/
 }
