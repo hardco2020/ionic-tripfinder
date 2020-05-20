@@ -3,8 +3,11 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { DbService } from './services/db.service';
+
 declare var google;
 export interface Favorites {
+  id: string;
   img: string;
   place: string;
   collection: number;
@@ -21,7 +24,13 @@ export interface googleInfor {
 export class ControllerserviceService {
   private FavoritesCollection: AngularFirestoreCollection<Favorites>; //初始化maybe?
   private Favorites: Observable<Favorites[]>;
-  constructor(db: AngularFirestore) { 
+  alldata: any[] = [];
+
+  constructor(
+    db: AngularFirestore,
+    private sqliteDB: DbService,
+  ) 
+  { 
     this.FavoritesCollection = db.collection<Favorites>('Favorites');
     this.Favorites = this.FavoritesCollection.snapshotChanges().pipe(  //snapchange的固定建置方法
       map( actions=>{
@@ -31,8 +40,20 @@ export class ControllerserviceService {
         return{id,...data};
       })
     }))
+
   }
-  alldata = [{      //所有的data
+
+  ngOnInit() { //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB
+    this.sqliteDB.dbState().subscribe((res) => {
+      if(res){
+        this.sqliteDB.fetchAttractions().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
+          this.alldata = item
+        })
+      }
+    });
+  }
+
+  alldata_old = [{      //所有的data
     "Aid": 1,
     "Aname": "大立百貨空中遊樂園",
     "photo": "CmRaAAAAIClT_Ynie6i7diws5vPTvz4IK7-cyWX93fkUtbAnI2EkIORzchzhzZARIHaaF6vDQTx78ZEIEjNX55fzXE2v8aSZ2PArtcX8rP2a7JeimjeaerACyg9ftF37z6p0cBnwEhDEW3u4n-x7AeGI2F5ApFAsGhSFoyAOGS2JKfDqLSLgRjabwJKxyQ",
@@ -60,6 +81,7 @@ export class ControllerserviceService {
        "Rate": 4.3
      }
   ]
+
   getAlldetails(){
     return [...this.alldata];
 

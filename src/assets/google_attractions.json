@@ -1,7 +1,7 @@
 {  
     "structure":{
         "tables":{
-            "AttractionInfo":"([Aid] PRIMARY KEY, [Aname], [GoogleClass], [Phone], [Address], [Rate])",
+            "AttractionInfo":"([Aid] PRIMARY KEY, [Aname], [photo], [GoogleClass], [Phone], [Address], [Rate])",
             "AttractionSelect":"([Aid] PRIMARY KEY, [InorOut], [StaticorDynamic], [Netbeauty], [Hipster], [NearMountain], [NearSea], [Shopping], [Exhibition], [History], [NightView])"
         }
     },

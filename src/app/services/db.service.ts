@@ -65,6 +65,7 @@ export class DbService {
           items.push({  //getting all the columns by column names
             Aid: res.rows.item(i).Aid,  //變數名: res.rows.item(i).資料表欄位名,
             Aname: res.rows.item(i).Aname,  
+            photo: res.rows.item(i).photo,
             GoogleClass: res.rows.item(i).GoogleClass,
             Phone: res.rows.item(i).Phone,
             Address: res.rows.item(i).Address,
@@ -79,7 +80,7 @@ export class DbService {
   // Add
   addAttraction(Aname, GoogleClass, Phone, Address, Rate) { //get all column variables
     let data = [Aname, GoogleClass, Phone, Address, Rate]; // combine all variables into a dataset
-    return this.storage.executeSql('INSERT INTO AttractionInfo (Aname, GoogleClass, Phone, Address, Rate) VALUES (?, ?, ?, ?, ?, ?)', data)
+    return this.storage.executeSql('INSERT INTO AttractionInfo (Aname, photo, GoogleClass, Phone, Address, Rate) VALUES (?, ?, ?, ?, ?, ?, ?)', data)
     .then(res => {
       this.getAttractions();
     });
@@ -91,6 +92,7 @@ export class DbService {
       return {
         Aid: res.rows.item(0).Aid,  //變數名: res.rows.item(0).資料表欄位名, 因為只有一筆，所以只抓第0列
         Aname: res.rows.item(0).Aname,  
+        photo: res.rows.item(0).photo,  
         GoogleClass: res.rows.item(0).GoogleClass,
         Phone: res.rows.item(0).Phone,
         Address: res.rows.item(0).Address,
@@ -102,7 +104,7 @@ export class DbService {
   // Update
   updateAttraction(Aid, attraction: Attraction) {
     let data = [attraction.Aname, attraction.GoogleClass, attraction.Phone, attraction.Address, attraction.Rate];
-    return this.storage.executeSql(`UPDATE AttractionInfo SET Aname = ?, GoogleClass = ?, Phone = ?, Address = ?, Rate = ? WHERE Aid = ${Aid}`, data)
+    return this.storage.executeSql(`UPDATE AttractionInfo SET Aname = ?,  photo = ?, GoogleClass = ?, Phone = ?, Address = ?, Rate = ? WHERE Aid = ${Aid}`, data)
     .then(data => {
       this.getAttractions();
     })
