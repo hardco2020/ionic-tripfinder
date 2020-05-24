@@ -5,6 +5,7 @@ import { ActivatedRoute,Router } from '@angular/router';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { NavController, LoadingController } from '@ionic/angular';
+import { DbService } from '../../services/db.service'; 
 
 declare var google;
 
@@ -17,6 +18,7 @@ declare var google;
 export class OutcomePage implements OnInit {
    // 透過 url 將 selection 傳遞到此頁面
    favorite : Favorites = {
+    id : "1",
     img : "123",
     place: "測試",
     collection: 1 
@@ -45,12 +47,18 @@ export class OutcomePage implements OnInit {
    favorites: Favorites[]; //load進所有現存資料
    data: any;
    map;
+   api_key = 'AIzaSyCMjg0lGC43K_RsV687kghZ5qTAbPnQAMo';
   //  distance: any;
   //  openingorNot : any;
   //  openPeriod : any;
   //  phoneNumber : any;
    example ="高雄小巨蛋"; //到時候會改成所有地點的資料
-   alldata = [{      //所有的data
+
+   
+   alldata: any[] = [];//sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 此行改到controllerservice後註解掉
+  
+
+   alldata_old = [{      //所有的data
    "Aid": 1,
    "Aname": "大立百貨空中遊樂園",
    "photo": "CmRaAAAAIClT_Ynie6i7diws5vPTvz4IK7-cyWX93fkUtbAnI2EkIORzchzhzZARIHaaF6vDQTx78ZEIEjNX55fzXE2v8aSZ2PArtcX8rP2a7JeimjeaerACyg9ftF37z6p0cBnwEhDEW3u4n-x7AeGI2F5ApFAsGhSFoyAOGS2JKfDqLSLgRjabwJKxyQ",
@@ -89,17 +97,30 @@ export class OutcomePage implements OnInit {
     ]
    examples = ["鍋呆子鍋燒麵","老紀牛肉麵","高雄市立圖書館左新分館"];
    lock = 1; //update的鎖
-   constructor(private route: ActivatedRoute, private router: Router ,private zone: NgZone,private geolocation: Geolocation , public service : ControllerserviceService, private loadingController: LoadingController,private nav: NavController) { 
+
+   constructor(
+     private route: ActivatedRoute, 
+     private router: Router ,
+     private zone: NgZone,
+     private geolocation: Geolocation , 
+     public service : ControllerserviceService, 
+     private loadingController: LoadingController,
+     private nav: NavController,
+     private sqliteDB: DbService,
+     )
+    { 
      this.route.queryParams.subscribe(param=>{
        if(param && param.special){
          this.data = JSON.parse(param.special);
          console.log(this.data);
        }
      });
-   }
+    }
+
    @ViewChild('mapElement',{static:true}) mapElement;
   geocoder = new google.maps.Geocoder;
   GoogleAutocomplete = new google.maps.places.AutocompleteService();
+
   ngOnInit(): void{
     this.service.getFavorites().subscribe(res => {
       this.favorites = res; //接受firebase裡所有的欄位
@@ -107,6 +128,18 @@ export class OutcomePage implements OnInit {
     this.favorite.place =this.example; //將地址存進等等要放進firebase的地址裡 
     // this.service.addFavorite(this.favorite).then(() => { 每次存都會需要先新增欄位，用此處來新增欄位
     // }); 
+
+
+    //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以上改到controllerservice後註解掉
+    this.sqliteDB.dbState().subscribe((res) => {
+      if(res){
+        this.sqliteDB.fetchAttractions().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
+          this.alldata = item
+        })
+      }
+    });
+    //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以下改到controllerservice後註解掉
+
   }
   ngAfterViewInit() : void{
     setTimeout(() => {
@@ -338,6 +371,7 @@ export class OutcomePage implements OnInit {
   //   console.log(this.distance);
   // }
   }
+  /*
   UpdateCollection(aname,photo) {  
     this.lock = 0;
     this.favorite.place=aname;
@@ -358,5 +392,5 @@ export class OutcomePage implements OnInit {
        });
      }
     console.log(this.favorite);
-  }
+  }*/
 }
