@@ -12,27 +12,35 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content fullscreen class="ion-padding">
+  <ion-text>
+    <h4>今天想吃什麼？</h4>
+  </ion-text>
+  <!--p class="error" *ngIf="this.form.controls['checkArray'].errors?.required"-->
+  <!--/p-->
 
-<ion-content>
+  <!--form [formGroup]="form" (ngSubmit)="submitForm()" novalidate-->
+  <ion-grid>
+    <ion-row>
+      <!--col 為欄位 後面參數設定比例為12格下去做響應式畫面，ngFor迴圈串資料-->
+      <ion-col size="6" size-xs="6" size-sm="6" size-md="4" size-lg="3" *ngFor="let label of labels;let i=index">
+        <ion-card class="card-background-page">
+          <ion-item>
+            <ion-card-content>
+              <!--要把使用者勾選出來的checkbox選項進行傳遞-->
+              <ion-checkbox color="primary" slot="start" [value]="label.name" >[value]="label.title"</ion-checkbox>
+              <ion-card-title class="card-title">{{label.title}}</ion-card-title>
+              <img [src]="label.img" style="width: 100px; height: 120px;"/>
+            </ion-card-content> 
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  <!--固定問題-->
-  <ion-list>
-    <ion-list-header>
-      <ion-label>
-      </ion-label>
-    </ion-list-header>
-      <ion-item>
-        <ion-range (ionChange)="ionChange()" min="0" max="100" step="10" snaps="true" pin="true" [(ngModel)]="distanceRange">
-          <ion-icon small range-left name="sunny"></ion-icon>
-          <ion-icon range-right name="sunny"></ion-icon>
-        </ion-range>
-      </ion-item>
-      <p>{{distanceRange}}</p>
-  
-  
-  <!--進入到多選項 同時將資料傳進後端-->
- <div class="ion-padding">
-    <ion-button [disabled]="!distanceValid" expand="block" type="submit" class="ion-no-margin" (click)='turnpage()'>下一步</ion-button>
+  <!--進入到outcome-->
+  <div class="ion-padding">
+    <ion-button>送出</ion-button>
   </div>
-</ion-list>
+<!--form-->
 </ion-content>

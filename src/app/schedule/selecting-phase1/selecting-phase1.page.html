@@ -80,18 +80,18 @@
   進入到多選項 同時將資料傳進後端-->
   <ion-grid>
     <ion-row>
-      <ion-col>
-        <ion-button expand="block" size="large" class="square-btn" [disabled]="!distanceValid" type="submit" class="ion-margin" (click)='turnpage()'>
+      <ion-col size="6">
+        <ion-button expand="block" size="large" id="square-btn" [disabled]="!distanceValid" type="submit" class="ion-margin" (click)='turnpage()'>
           <div class="vertical">
-            <ion-icon src="assets/img/scenery.svg"></ion-icon>  
-            <span>選擇景點</span>
+            <ion-icon class="iconSize ion-margin-top" src="assets/img/scenery.svg"></ion-icon>  
+            <span class="ion-margin">選擇景點</span>
           </div>
         </ion-button>
       </ion-col>
-      <ion-col>
-        <ion-button expand="block" size="large" class="square-btn" [disabled]="!distanceValid" type="submit" class="ion-margin" (click)='turnpagetofood()'>
+      <ion-col size="6">
+        <ion-button expand="block" size="large" id="square-btn" [disabled]="!distanceValid" type="submit" class="ion-margin" (click)='turnpagetofood()'>
           <div class="vertical">
-            <ion-icon src="assets/img/food.svg"></ion-icon>  
+            <ion-icon class="iconSize ion-margin-top" src="assets/img/food.svg"></ion-icon>  
             <span class="ion-margin">選擇餐廳</span>
           </div>
         </ion-button>
