@@ -50,4 +50,14 @@ export class SelectingPhase1Page implements OnInit {
     };
     this.nav.navigateRoot(['selecting-phase2'],navigationExtras);
   }
+  turnpagetofood(){   //換頁到food頁面
+    this.setItem();
+    // 跳轉頁面時透過 navigationExtras 傳遞 selection 資料
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        special: JSON.stringify(this.selection)
+      }
+    };
+    this.nav.navigateRoot(['selecting-food1'],navigationExtras);
+  }
 }

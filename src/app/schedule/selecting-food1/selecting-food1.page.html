@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      探索
+    </ion-title>
+    
+    <!--返回鍵 回到主頁-->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <!--固定問題-->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+      </ion-label>
+    </ion-list-header>
+      <ion-item>
+        <ion-range (ionChange)="ionChange()" min="0" max="100" step="10" snaps="true" pin="true" [(ngModel)]="distanceRange">
+          <ion-icon small range-left name="sunny"></ion-icon>
+          <ion-icon range-right name="sunny"></ion-icon>
+        </ion-range>
+      </ion-item>
+      <p>{{distanceRange}}</p>
+  
+  
+  <!--進入到多選項 同時將資料傳進後端-->
+ <div class="ion-padding">
+    <ion-button [disabled]="!distanceValid" expand="block" type="submit" class="ion-no-margin" (click)='turnpage()'>下一步</ion-button>
+  </div>
+</ion-list>
+</ion-content>

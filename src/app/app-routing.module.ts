@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./schedule/selecting-phase2/selecting-phase2.module').then( m => m.SelectingPhase2PageModule)
   },
   {
+    path: 'selecting-food1',
+    loadChildren: () => import('./schedule/selecting-food1/selecting-food1.module').then( m => m.SelectingFood1PageModule)
+  },
+  {
     path: 'outcome',
     children:[
       {
@@ -34,7 +38,7 @@ const routes: Routes = [
   {
     path: 'collcet-attraction',
     loadChildren: () => import('./myrecord/collcet-attraction/collcet-attraction.module').then( m => m.CollcetAttractionPageModule)
-  },
+  }
   
 
 ];

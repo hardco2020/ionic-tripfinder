@@ -13,13 +13,12 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content class="ion-padding">
 
   <!--固定問題-->
   <ion-list>
     <ion-list-header>
-      <ion-label>
-      </ion-label>
+        <h4>請選擇目的地距離 : {{distanceRange}}</h4>
     </ion-list-header>
       <!-- 動態 load 表單資料 在 schedule/select-form.service.ts 中更改表單數值及選項-->
       <!-- required 至少選擇一項 -->
@@ -35,7 +34,6 @@
           <ion-icon range-right name="sunny"></ion-icon>
         </ion-range>
       </ion-item>
-      <p>{{distanceRange}}</p>
     
 
   <!--
@@ -80,8 +78,29 @@
     </ion-item>
   
   進入到多選項 同時將資料傳進後端-->
- <div class="ion-padding">
-    <ion-button [disabled]="!distanceValid" expand="block" type="submit" class="ion-no-margin" (click)='turnpage()'>下一步</ion-button>
-  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" size="large" class="square-btn" [disabled]="!distanceValid" type="submit" class="ion-margin" (click)='turnpage()'>
+          <div class="vertical">
+            <ion-icon src="assets/img/scenery.svg"></ion-icon>  
+            <span>選擇景點</span>
+          </div>
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" size="large" class="square-btn" [disabled]="!distanceValid" type="submit" class="ion-margin" (click)='turnpagetofood()'>
+          <div class="vertical">
+            <ion-icon src="assets/img/food.svg"></ion-icon>  
+            <span class="ion-margin">選擇餐廳</span>
+          </div>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ <!--<div class="ion-padding">
+    <ion-button [disabled]="!distanceValid" expand="block" type="submit" class="ion-margin" (click)='turnpage()'>選擇景點</ion-button>
+    <ion-button [disabled]="!distanceValid" expand="block" type="submit" class="ion-margin" (click)='turnpagetofood()'>選擇餐廳</ion-button>
+  </div>-->
 </ion-list>
 </ion-content>
