@@ -17,75 +17,75 @@ export class SelectingFood1Page implements OnInit {
   labels = [
     {
       key: 1,
-      name:'outdoor',
+      name:'restaurant',
       title: '餐廳',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 2,
-      name:'indoor',
-      title: '小吃攤',
-      img: 'http://via.placeholder.com/300x300'
+      name:'vendor',
+      title: '攤販',
+      img: 'https://images.pexels.com/photos/3031209/pexels-photo-3031209.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 3,
-      name:'dynamic',
-      title: '平價',
-      img: 'http://via.placeholder.com/300x300'
+      name:'fast_food',
+      title: '速食',
+      img: 'https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 4,
-      name:'static',
+      name:'vegetarian_food',
       title: '素食',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/4050981/pexels-photo-4050981.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 5,
-      name:'netbeauty',
-      title: '餐酒館',
-      img: 'http://via.placeholder.com/300x300'
+      name:'chinese',
+      title: '中式',
+      img: 'https://images.pexels.com/photos/2670327/pexels-photo-2670327.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 6,
-      name:'hipster',
-      title: '中式',
-      img: 'http://via.placeholder.com/300x300'
+      name:'exotic',
+      title: '異國料理',
+      img: 'https://images.pexels.com/photos/3951665/pexels-photo-3951665.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 7,
-      name:'near_mountain',
-      title: '異國料理',
-      img: 'http://via.placeholder.com/300x300'
+      name:'parity',
+      title: '平價',
+      img: 'https://images.pexels.com/photos/3459343/pexels-photo-3459343.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 8,
-      name:'near_sea',
-      title: '日式',
-      img: 'http://via.placeholder.com/300x300'
+      name:'boxed_lunch',
+      title: '便當',
+      img: 'https://images.pexels.com/photos/3297363/pexels-photo-3297363.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 9,
-      name:'shopping',
-      title: '夜市',
-      img: 'http://via.placeholder.com/300x300'
+      name:'baking',
+      title: '烘培',
+      img: 'https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg?auto=compress&cs=tinysrgb'
     },
     {
       key: 10,
-      name:'exhibition',
-      title: '當地特色',
-      img: 'http://via.placeholder.com/300x300'
+      name:'seafood',
+      title: '海鮮',
+      img: 'https://images.pexels.com/photos/2871757/pexels-photo-2871757.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 11,
-      name:'historic_site',
-      title: '素食',
-      img: 'http://via.placeholder.com/300x300'
+      name:'alcohol',
+      title: '酒精',
+      img: 'https://images.pexels.com/photos/2529468/pexels-photo-2529468.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 12,
-      name:'night_view',
+      name:'dessert',
       title: '甜點',
-      img: 'http://via.placeholder.com/300x300'
+      img: 'https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg?auto=compress&cs=tinysrgb'
     }
   ];
 
