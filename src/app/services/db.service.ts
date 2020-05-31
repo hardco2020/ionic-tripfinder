@@ -13,6 +13,7 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 export class DbService {
   private storage: SQLiteObject;
   attractionList = new BehaviorSubject([]); //attraction lsit, original is songList
+  attractionListbycondition = new BehaviorSubject([]);
   private isDbReady: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   constructor(
@@ -69,11 +70,55 @@ export class DbService {
             GoogleClass: res.rows.item(i).GoogleClass,
             Phone: res.rows.item(i).Phone,
             Address: res.rows.item(i).Address,
-            Rate: res.rows.item(i).Rate
+            Rate: res.rows.item(i).Rate,
+            InorOut: res.rows.item(i).InorOut,
+            StaticorDynamic: res.rows.item(i).StaticorDynamic,
+            Netbeauty: res.rows.item(i).Netbeauty, 
+            Hipster: res.rows.item(i).Hipster,  
+            NearMountain: res.rows.item(i).NearMountain, 
+            NearSea: res.rows.item(i).NearSea,  
+            Shopping: res.rows.item(i).Shopping,  
+            Exhibition: res.rows.item(i).Exhibition,  
+            History: res.rows.item(i).History,  
+            NightView: res.rows.item(i).NightView,  
+            favorite: res.rows.item(i).favorite, 
            });
         }
       }
       this.attractionList.next(items);  //Line15宣告的List
+    });
+  }
+
+  getAttractionsbycondition(sqlText) {  //original is getSongs, getSongs=>getAttractions
+    return this.storage.executeSql(sqlText, []).then(res => {
+      let items: Attraction[] = []; //services song.ts class name, original is Song, Song[]=>Attraction[]
+      if (res.rows.length > 0) {
+        for (var i = 0; i < res.rows.length; i++) { 
+          items.push({  //getting all the columns by column names
+            Aid: res.rows.item(i).Aid,  //變數名: res.rows.item(i).資料表欄位名,
+            Aname: res.rows.item(i).Aname,  
+            photo: res.rows.item(i).photo,
+            GoogleClass: res.rows.item(i).GoogleClass,
+            Phone: res.rows.item(i).Phone,
+            Address: res.rows.item(i).Address,
+            Rate: res.rows.item(i).Rate,
+            InorOut: res.rows.item(i).InorOut,
+            StaticorDynamic: res.rows.item(i).StaticorDynamic,
+            Netbeauty: res.rows.item(i).Netbeauty, 
+            Hipster: res.rows.item(i).Hipster,  
+            NearMountain: res.rows.item(i).NearMountain, 
+            NearSea: res.rows.item(i).NearSea,  
+            Shopping: res.rows.item(i).Shopping,  
+            Exhibition: res.rows.item(i).Exhibition,  
+            History: res.rows.item(i).History,  
+            NightView: res.rows.item(i).NightView,  
+            favorite: res.rows.item(i).favorite, 
+           });
+        }
+      }
+      this.attractionListbycondition.next(items);  //Line15宣告的List
+
+      return this.attractionListbycondition.asObservable();
     });
   }
 
@@ -97,6 +142,17 @@ export class DbService {
         Phone: res.rows.item(0).Phone,
         Address: res.rows.item(0).Address,
         Rate: res.rows.item(0).Rate,  
+        InorOut: res.rows.item(0).InorOut,
+        StaticorDynamic: res.rows.item(0).StaticorDynamic,
+        Netbeauty: res.rows.item(0).Netbeauty, 
+        Hipster: res.rows.item(0).Hipster,  
+        NearMountain: res.rows.item(0).NearMountain, 
+        NearSea: res.rows.item(0).NearSea,  
+        Shopping: res.rows.item(0).Shopping,  
+        Exhibition: res.rows.item(0).Exhibition,  
+        History: res.rows.item(0).History,  
+        NightView: res.rows.item(0).NightView,  
+        favorite: res.rows.item(0).favorite, 
       }
     });
   }

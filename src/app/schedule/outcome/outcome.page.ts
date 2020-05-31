@@ -43,7 +43,7 @@ export class OutcomePage implements OnInit {
   //  };
   //  googles: googleInfor[] = [this.test,this.tests,this.testss];
    
-   
+   sql_text: String;
    favorites: Favorites[]; //load進所有現存資料
    data: any;
    map;
@@ -133,7 +133,13 @@ export class OutcomePage implements OnInit {
     //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以上改到controllerservice後註解掉
     this.sqliteDB.dbState().subscribe((res) => {
       if(res){
-        this.sqliteDB.fetchAttractions().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
+        this.sqliteDB.getAttractionsbycondition(this.sql_text)
+      }
+    });
+
+    this.sqliteDB.dbState().subscribe((res) => {
+      if(res){
+        this.sqliteDB.fetchAttractionsbycondition().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
           this.alldata = item
         })
       }
@@ -176,6 +182,8 @@ export class OutcomePage implements OnInit {
    const NightView = this.data.night_view;
    const Shopping = this.data.shopping;
    const History = this.data.historic_site;
+
+   this.sql_text = "SELECT * FROM AttractionInfo WHERE Indoor = 變數 AND Outdoor = 變數 AND Static = 變數 AND Dynamic = 變數 AND Netbeauty = 變數 AND Hipster = 變數 AND NearSea = 變數 AND NearMountain = 變數 AND NightView = 變數 AND Shopping = 變數 AND History = 變數 ";
    /*
     if 室內 = 室外:
         if 動態 = 靜態:
@@ -195,6 +203,7 @@ export class OutcomePage implements OnInit {
         var StaticorDynamic = "s";
       }
     }
+
     /*
     elif 室內=勾 & 室外=不勾:
         if 動態 = 靜態:

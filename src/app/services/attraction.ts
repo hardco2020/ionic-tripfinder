@@ -6,4 +6,15 @@ export class Attraction {
     Phone: string;
     Address: string;
     Rate: string;
+    InorOut: string; 
+    StaticorDynamic: string;
+    Netbeauty: string; 
+    Hipster: string;  
+    NearMountain: string; 
+    NearSea: string;  
+    Shopping: string;  
+    Exhibition: string;  
+    History: string;  
+    NightView: string;  
+    favorite: string; 
 }
