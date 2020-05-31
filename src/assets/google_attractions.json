@@ -16,7 +16,9 @@
                         "GoogleClass": "amusement_park",
                         "Phone": "07 261 3060",
                         "Address": "801台灣高雄市前金區五福三路59號RF",
-                        "Rate": 4.2
+                        "Rate": 4.2,
+                        "InorOut": "out", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 2,
@@ -25,7 +27,9 @@
                         "GoogleClass": "amusement_park",
                         "Phone": "07 370 0821",
                         "Address": "833台灣高雄市鳥松區",
-                        "Rate": 4
+                        "Rate": 4,
+                        "InorOut": "out", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 3,
@@ -35,6 +39,8 @@
                         "Phone": "07 796 7766",
                         "Address": "806台灣高雄市前鎮區中安路1-1號",
                         "Rate": 4.3
+                        , "InorOut": "out", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 4,
@@ -44,6 +50,8 @@
                         "Phone": "07 970 3366",
                         "Address": "806台灣高雄市前鎮區中華五路789號",
                         "Rate": 3.8
+                        , "InorOut": "out", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 5,
@@ -53,6 +61,8 @@
                         "Phone": "07 656 8080",
                         "Address": "840台灣高雄市大樹區學城路一段10號",
                         "Rate": 4.2
+                        , "InorOut": "out", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 6,
@@ -62,6 +72,8 @@
                         "Phone": "080 058 8887",
                         "Address": "840台灣高雄市大樹區學城路一段12號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 7,
@@ -71,6 +83,8 @@
                         "Phone": "07 661 2482",
                         "Address": "842台灣高雄市旗山區三桃巷9號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 8,
@@ -80,6 +94,8 @@
                         "Phone": "0902 191 871",
                         "Address": "807台灣高雄市三民區十全一路161號B2",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 9,
@@ -89,6 +105,8 @@
                         "Phone": "07 970 0528",
                         "Address": "號5樓, No. 789中華五路前鎮區高雄市台灣 806",
                         "Rate": 4.7
+                        , "InorOut": "out", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 10,
@@ -98,6 +116,8 @@
                         "Phone": "07 581 1556",
                         "Address": "813台灣高雄市左營區新庄仔路46號",
                         "Rate": 4.2
+                        , "InorOut": "out", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "y", "Shopping": "n","Exhibition": "n","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 11,
@@ -107,6 +127,8 @@
                         "Phone": "07 972 8001",
                         "Address": "806台灣高雄市前鎮區中安路1之1號（大道西1F - 1S-02a",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 12,
@@ -116,6 +138,8 @@
                         "Phone": "07 970 5706",
                         "Address": "80655台灣高雄市前鎮區三多三路217號6樓",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 13,
@@ -125,6 +149,8 @@
                         "Phone": "07 823 0508",
                         "Address": "806台灣高雄市前鎮區中華五路789號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 14,
@@ -134,6 +160,8 @@
                         "Phone": "07 793 3399",
                         "Address": "3 No. 1-1號, 中安路前鎮區高雄市台灣 806",
                         "Rate": 4.8
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 15,
@@ -143,6 +171,8 @@
                         "Phone": "07 973 2100",
                         "Address": "806台灣高雄市前鎮區中華五路789號4樓",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 16,
@@ -152,6 +182,8 @@
                         "Phone": "07 345 8586",
                         "Address": "813台灣高雄市左營區高鐵路123號5樓",
                         "Rate": 4.9
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 17,
@@ -161,6 +193,8 @@
                         "Phone": "07 735 6166",
                         "Address": "833台灣高雄市鳥松區大埤路32號",
                         "Rate": 3.9
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "y", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 18,
@@ -170,6 +204,8 @@
                         "Phone": "0932 791 725",
                         "Address": "811台灣高雄市楠梓區學專路31號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 19,
@@ -179,6 +215,8 @@
                         "Phone": "0911 003 989",
                         "Address": "830台灣高雄市鳳山區光遠路257巷19號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 20,
@@ -188,6 +226,8 @@
                         "Phone": "07 701 7980",
                         "Address": "831台灣高雄市大寮區鳳屏一路463-2號",
                         "Rate": 4.5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 21,
@@ -197,6 +237,8 @@
                         "Phone": "07 222 3769",
                         "Address": "802台灣高雄市苓雅區中正二路91號1樓",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 22,
@@ -206,6 +248,8 @@
                         "Phone": "0929 804 829",
                         "Address": "802台灣高雄市苓雅區三多二路63號",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 23,
@@ -215,6 +259,8 @@
                         "Phone": "07 556 8661",
                         "Address": "813台灣高雄市左營區博愛二路646號",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 24,
@@ -224,6 +270,8 @@
                         "Phone": "07 723 7107",
                         "Address": "802台灣高雄市苓雅區廣州一街126號",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 25,
@@ -233,6 +281,8 @@
                         "Phone": "07 521 9028",
                         "Address": "803台灣高雄市鹽埕區五福四路184號",
                         "Rate": 4.8
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 26,
@@ -242,6 +292,8 @@
                         "Phone": "0919 876 200",
                         "Address": "802台灣高雄市苓雅區泰成街1巷8號",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 27,
@@ -251,6 +303,8 @@
                         "Phone": "07 359 5881",
                         "Address": "807台灣高雄市三民區鼎泰街248號",
                         "Rate": 4.7
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 28,
@@ -260,6 +314,8 @@
                         "Phone": "07 767 7566",
                         "Address": "2f No. 457號, 文衡路鳳山區高雄市台灣 83048",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 29,
@@ -269,6 +325,8 @@
                         "Phone": "07 521 0014",
                         "Address": "80343台灣高雄市鹽埕區大義街2-2號C8-1倉庫",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "y", "Shopping": "y","Exhibition": "y","History": "y","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 30,
@@ -278,6 +336,8 @@
                         "Phone": "07 226 3119",
                         "Address": "800台灣高雄市新興區五福一路160號",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 31,
@@ -287,6 +347,8 @@
                         "Phone": "0978 306 077",
                         "Address": "802台灣高雄市苓雅區輔仁路155號6 樓 之 2",
                         "Rate": 4.5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 32,
@@ -296,6 +358,8 @@
                         "Phone": "07 311 0137",
                         "Address": "807台灣高雄市三民區遼寧一街358號No",
                         "Rate": 4.5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 33,
@@ -305,6 +369,8 @@
                         "Phone": "07 521 9028",
                         "Address": "803台灣高雄市鹽埕區五福四路184號",
                         "Rate": 4.9
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 34,
@@ -314,6 +380,8 @@
                         "Phone": "07 521 8042",
                         "Address": "803台灣高雄市鹽埕區大義街2號C8-9倉庫",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 35,
@@ -323,6 +391,8 @@
                         "Phone": "07 553 6567",
                         "Address": "804台灣高雄市鼓山區中華一路352號五樓",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 36,
@@ -332,6 +402,8 @@
                         "Phone": "07 224 4926",
                         "Address": "802台灣高雄市苓雅區廣州一街159號",
                         "Rate": 4.9
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 37,
@@ -341,6 +413,8 @@
                         "Phone": "0902 312 756",
                         "Address": "802台灣高雄市苓雅區民權一路94號",
                         "Rate": 4.7
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 38,
@@ -350,6 +424,8 @@
                         "Phone": "0989 211 030",
                         "Address": "802台灣高雄市苓雅區建國一路11-4號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 39,
@@ -359,6 +435,8 @@
                         "Phone": "07 551 9555",
                         "Address": "80343台灣高雄市鹽埕區大勇路68號",
                         "Rate": 4.5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 40,
@@ -368,6 +446,8 @@
                         "Phone": "07 561 7808",
                         "Address": "803台灣高雄市鹽埕區五福四路11號",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 41,
@@ -377,6 +457,8 @@
                         "Phone": "07 715 8671",
                         "Address": "802台灣高雄市苓雅區林德街10巷4號",
                         "Rate": 4.5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 42,
@@ -386,6 +468,8 @@
                         "Phone": "07 288 2998",
                         "Address": "801台灣高雄市前金區六合二路128號2樓",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 43,
@@ -395,6 +479,8 @@
                         "Phone": "07 269 1885",
                         "Address": "802台灣高雄市苓雅區中華四路57號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 44,
@@ -404,6 +490,8 @@
                         "Phone": "07 346 2618",
                         "Address": "807台灣高雄市三民區明誠一路78號",
                         "Rate": 4.8
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 45,
@@ -413,6 +501,8 @@
                         "Phone": "07 285 4312",
                         "Address": "801台灣高雄市前金區中華三路172號",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 46,
@@ -422,6 +512,8 @@
                         "Phone": "07 238 8166",
                         "Address": "800台灣高雄市新興區六合一路148號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 47,
@@ -431,6 +523,8 @@
                         "Phone": "07 281 4078",
                         "Address": "800台灣高雄市新興區中正四路71號2樓",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 48,
@@ -440,6 +534,8 @@
                         "Phone": "07 550 1388",
                         "Address": "804台灣高雄市鼓山區美術東五路120號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 49,
@@ -449,6 +545,8 @@
                         "Phone": "0919 139 779",
                         "Address": "802台灣高雄市苓雅區成功一路230號",
                         "Rate": 4.7
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 50,
@@ -458,6 +556,8 @@
                         "Phone": "0963 757 838",
                         "Address": "80441台灣高雄市鼓山區臨海一路20-7號",
                         "Rate": 4.8
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "y", "Shopping": "n","Exhibition": "n","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 51,
@@ -467,6 +567,8 @@
                         "Phone": "07 535 3088",
                         "Address": "802台灣高雄市苓雅區光華一路99號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 52,
@@ -476,6 +578,8 @@
                         "Phone": "07 272 1888",
                         "Address": "800台灣高雄市新興區中山一路4號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 53,
@@ -485,6 +589,8 @@
                         "Phone": "07 227 0505",
                         "Address": "802台灣高雄市苓雅區五福一路111號",
                         "Rate": 4.5
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 54,
@@ -494,6 +600,8 @@
                         "Phone": "07 227 3535",
                         "Address": "802台灣高雄市苓雅區中正二路22號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 55,
@@ -503,6 +611,8 @@
                         "Phone": "07 282 2158",
                         "Address": "801台灣高雄市前金區七賢二路394號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 56,
@@ -512,6 +622,8 @@
                         "Phone": "07 223 5809",
                         "Address": "802台灣高雄市苓雅區廣州一街165號",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 57,
@@ -521,6 +633,8 @@
                         "Phone": "07 225 3080",
                         "Address": "800台灣高雄市新興區中正二路214號",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 58,
@@ -530,6 +644,8 @@
                         "Phone": "07 713 8838",
                         "Address": "802台灣高雄市苓雅區林德街3號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 59,
@@ -539,6 +655,8 @@
                         "Phone": "07 715 3333",
                         "Address": "80282台灣高雄市苓雅區福壽街136號",
                         "Rate": 4.8
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 60,
@@ -548,6 +666,8 @@
                         "Phone": "07 715 0466",
                         "Address": "802台灣高雄市苓雅區林泉街8巷30號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 61,
@@ -557,6 +677,8 @@
                         "Phone": "07 269 5221",
                         "Address": "b1, No. 38號新光路苓雅區高雄市台灣 802",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 62,
@@ -566,6 +688,8 @@
                         "Phone": "07 229 0300",
                         "Address": "802台灣高雄市苓雅區五福一路77號2F",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 63,
@@ -575,6 +699,8 @@
                         "Phone": "07 225 6611",
                         "Address": "802台灣高雄市苓雅區廣州一街143-6號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 64,
@@ -584,6 +710,8 @@
                         "Phone": "07 332 4910",
                         "Address": "802台灣高雄市苓雅區青年一路141號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 65,
@@ -593,6 +721,8 @@
                         "Phone": "07 226 5267",
                         "Address": "802台灣高雄市苓雅區五福一路57 號 2號樓之2",
                         "Rate": 4.5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 66,
@@ -602,6 +732,8 @@
                         "Phone": "07 536 5388",
                         "Address": "80661台灣高雄市前鎮區忠勤路8號",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 67,
@@ -611,6 +743,8 @@
                         "Phone": "07 743 2143",
                         "Address": "830台灣高雄市鳳山區中山路138號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 68,
@@ -620,6 +754,8 @@
                         "Phone": "07 343 5387",
                         "Address": "80794台灣高雄市三民區明福街2號1樓2樓",
                         "Rate": 4.5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 69,
@@ -629,6 +765,8 @@
                         "Phone": "07 749 9730",
                         "Address": "802台灣高雄市苓雅區尚勇路5號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 70,
@@ -638,6 +776,8 @@
                         "Phone": "07 338 0887",
                         "Address": "802台灣高雄市苓雅區文橫二路115巷15號",
                         "Rate": 4.7
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 71,
@@ -647,6 +787,8 @@
                         "Phone": "07 241 0303",
                         "Address": "800台灣高雄市新興區新田路85-1號",
                         "Rate": 4.8
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 72,
@@ -656,6 +798,8 @@
                         "Phone": "07 384 6676",
                         "Address": "807台灣高雄市三民區壽昌路201號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 73,
@@ -665,6 +809,8 @@
                         "Phone": "07 552 5343",
                         "Address": "804台灣高雄市鼓山區裕誠路1039號",
                         "Rate": 3.4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 74,
@@ -674,6 +820,8 @@
                         "Phone": "07 336 3866",
                         "Address": "802台灣高雄市苓雅區中山二路361號",
                         "Rate": 3.5
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 75,
@@ -683,6 +831,8 @@
                         "Phone": "07 791 6333",
                         "Address": "號 大道 西 2 樓, No. 100中山四路前鎮區高雄市台灣 806",
                         "Rate": 4.5
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 76,
@@ -692,6 +842,8 @@
                         "Phone": "07 362 8981",
                         "Address": "811台灣高雄市楠梓區萬昌街62號",
                         "Rate": 3.5
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 77,
@@ -701,6 +853,8 @@
                         "Phone": "07 727 0853",
                         "Address": "802台灣高雄市苓雅區三多一路335號2樓",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 78,
@@ -710,6 +864,8 @@
                         "Phone": "07 699 2155",
                         "Address": "829台灣高雄市湖內區中山路二段226巷6號",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 79,
@@ -908,6 +1064,8 @@
                         "Phone": "07 221 3633",
                         "Address": "800台灣高雄市新興區文化路70-1號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 101,
@@ -917,6 +1075,8 @@
                         "Phone": "0973 501 399",
                         "Address": "807台灣高雄市三民區九如一路214巷3號",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 102,
@@ -926,6 +1086,8 @@
                         "Phone": "07 777 8135",
                         "Address": "830台灣高雄市鳳山區青年路二段578號",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 103,
@@ -935,6 +1097,8 @@
                         "Phone": "07 370 7268",
                         "Address": "833台灣高雄市鳥松區本館路393號",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 104,
@@ -944,6 +1108,8 @@
                         "Phone": "07 395 3366",
                         "Address": "807台灣高雄市三民區建工路876號",
                         "Rate": 4.8
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 105,
@@ -953,6 +1119,8 @@
                         "Phone": "07 767 0823",
                         "Address": "830台灣高雄市鳳山區青年路二段247號",
                         "Rate": 4.8
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 106,
@@ -962,6 +1130,8 @@
                         "Phone": "0936 533 392",
                         "Address": "830台灣高雄市鳳山區建國路三段322號6樓",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 107,
@@ -971,6 +1141,8 @@
                         "Phone": "07 395 9366",
                         "Address": "807台灣高雄市三民區大昌二路127號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 108,
@@ -980,6 +1152,8 @@
                         "Phone": "07 777 6529",
                         "Address": "83048台灣高雄市鳳山區文衡路548號",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 109,
@@ -989,6 +1163,8 @@
                         "Phone": "0913 281 330",
                         "Address": "80773台灣高雄市三民區陽明路158號1樓",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 110,
@@ -998,6 +1174,8 @@
                         "Phone": "07 555 9688",
                         "Address": "813台灣高雄市左營區博愛二路777號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 111,
@@ -1007,6 +1185,8 @@
                         "Phone": "07 338 1000",
                         "Address": "806台灣高雄市前鎮區三多三路217號",
                         "Rate": 3.9
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 112,
@@ -1016,6 +1196,8 @@
                         "Phone": "07 336 6100",
                         "Address": "806台灣高雄市前鎮區三多三路213號",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 113,
@@ -1025,6 +1207,8 @@
                         "Phone": "07 346 9999",
                         "Address": "813台灣高雄市左營區高鐵路123號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 114,
@@ -1034,6 +1218,8 @@
                         "Phone": "07 225 5791",
                         "Address": "802台灣高雄市苓雅區和平一路218號",
                         "Rate": 3.8
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 115,
@@ -1043,6 +1229,8 @@
                         "Phone": "07 261 3060",
                         "Address": "801台灣高雄市前金區五福三路59號",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 116,
@@ -1052,6 +1240,8 @@
                         "Phone": "07 215 7266",
                         "Address": "801台灣高雄市前金區成功一路266-1號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 117,
@@ -1061,6 +1251,8 @@
                         "Phone": "07 972 8888",
                         "Address": "802台灣高雄市苓雅區三多四路21號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 118,
@@ -1070,6 +1262,8 @@
                         "Phone": "07 281 3111",
                         "Address": "800台灣高雄市新興區五福二路262號",
                         "Rate": 3.8
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 119,
@@ -1079,6 +1273,8 @@
                         "Phone": "07 215 8721",
                         "Address": "801台灣高雄市前金區成功一路266-1號號6F",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 120,
@@ -1088,6 +1284,8 @@
                         "Phone": "07 553 1900",
                         "Address": "81355台灣高雄市左營區博愛二路777號7F",
                         "Rate": 4.7
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 121,
@@ -1097,6 +1295,8 @@
                         "Phone": "07 345 2634",
                         "Address": "81361台灣高雄市左营区高鐵路123號 B1F",
                         "Rate": 4.8
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 122,
@@ -1106,6 +1306,8 @@
                         "Phone": "07 346 9999",
                         "Address": "813台灣高雄市左營區高鐵路115號2F",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 123,
@@ -1115,6 +1317,8 @@
                         "Phone": "07 223 6682",
                         "Address": "802台灣高雄市苓雅區和平一路132號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 124,
@@ -1124,6 +1328,8 @@
                         "Phone": "0908 297 181",
                         "Address": "5F, No. 789號, No. 806中華五路前鎮區高雄市台灣 806",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 125,
@@ -1133,6 +1339,8 @@
                         "Phone": "07 777 7559",
                         "Address": "830台灣高雄市鳳山區文濱路138號",
                         "Rate": 4.9
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 126,
@@ -1142,6 +1350,8 @@
                         "Phone": "07 385 4666",
                         "Address": "807台灣高雄市三民區九如一路67號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 127,
@@ -1151,6 +1361,8 @@
                         "Phone": "07 550 6692",
                         "Address": "813台灣高雄市左營區立信路255-1號",
                         "Rate": 4.8
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 128,
@@ -1160,6 +1372,8 @@
                         "Phone": "0909 765 767",
                         "Address": "813台灣高雄市左營區富民路No. 452號",
                         "Rate": 4.5
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 129,
@@ -1169,6 +1383,8 @@
                         "Phone": "07 236 2008",
                         "Address": "800台灣高雄市新興區七賢一路240號",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 130,
@@ -1178,6 +1394,8 @@
                         "Phone": "07 261 0707",
                         "Address": "80748台灣高雄市三民區建國三路437號b1",
                         "Rate": 4.9
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 131,
@@ -1187,6 +1405,8 @@
                         "Phone": "07 385 1569",
                         "Address": "3樓, No. 579號覺民路三民區高雄市台灣 807",
                         "Rate": 4.9
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 132,
@@ -1196,6 +1416,8 @@
                         "Phone": "07 785 1177",
                         "Address": "807台灣高雄市三民區澄清路466-1號",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 133,
@@ -1205,6 +1427,8 @@
                         "Phone": "07 222 0088",
                         "Address": "80047台灣高雄市新興區中正二路218號2樓",
                         "Rate": 4.9
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 134,
@@ -1214,6 +1438,8 @@
                         "Phone": "07 722 8437",
                         "Address": "806台灣高雄市前鎮區和平二路254號",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 135,
@@ -1223,6 +1449,8 @@
                         "Phone": "07 761 5092",
                         "Address": "806台灣高雄市前鎮區保泰路355號2樓",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 136,
@@ -1232,6 +1460,8 @@
                         "Phone": "07 777 5077",
                         "Address": "830台灣高雄市鳳山區青年路二段201號",
                         "Rate": 4.5
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 137,
@@ -1241,6 +1471,8 @@
                         "Phone": "07 350 9633",
                         "Address": "2 No. 102號, 天祥一路三民區高雄市台灣 807",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 138,
@@ -1250,6 +1482,8 @@
                         "Phone": "07 537 3597",
                         "Address": "802台灣高雄市苓雅區中山二路410號7樓",
                         "Rate": 4.7
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 139,
@@ -1259,6 +1493,8 @@
                         "Phone": "07 556 0838",
                         "Address": "813台灣高雄市左營區明誠二路332號9樓之1",
                         "Rate": 4.5
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 140,
@@ -1268,6 +1504,8 @@
                         "Phone": "080 088 8247",
                         "Address": "804台灣高雄市鼓山區美術東五路61號2f",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 141,
@@ -1277,6 +1515,8 @@
                         "Phone": "080 088 8247",
                         "Address": "2F, No. 171號南華路鳳山區高雄市台灣 830",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 142,
@@ -1286,6 +1526,8 @@
                         "Phone": "07 380 1855",
                         "Address": "807台灣高雄市三民區九如一路805號3 樓",
                         "Rate": 4.9
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 143,
@@ -1295,6 +1537,8 @@
                         "Phone": "07 338 2266",
                         "Address": "806台灣高雄市前鎮區民權二路8號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 144,
@@ -1304,6 +1548,8 @@
                         "Phone": "07 536 0238",
                         "Address": "80661台灣高雄市前鎮區新光路61號",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 145,
@@ -1313,6 +1559,8 @@
                         "Phone": "07 389 9938",
                         "Address": "807台灣高雄市三民區陽明路300號3樓",
                         "Rate": 3.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 146,
@@ -1322,6 +1570,8 @@
                         "Phone": "07 746 8809",
                         "Address": "830台灣高雄市鳳山區曹公路23號",
                         "Rate": 3.5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 147,
@@ -1331,6 +1581,8 @@
                         "Phone": "07 222 5136#8213",
                         "Address": "802台灣高雄市苓雅區五福一路67號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 148,
@@ -1340,6 +1592,8 @@
                         "Phone": "07 237 2563",
                         "Address": "800台灣高雄市新興區中正三路34號",
                         "Rate": 3.5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 149,
@@ -1349,6 +1603,8 @@
                         "Phone": "07 350 0228",
                         "Address": "813台灣高雄市左營區博愛三路453號",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 150,
@@ -1358,6 +1614,8 @@
                         "Phone": "07 322 5528",
                         "Address": "807台灣高雄市三民區十全一路220號",
                         "Rate": 3.7
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 151,
@@ -1367,6 +1625,8 @@
                         "Phone": "07 341 2637",
                         "Address": "807台灣高雄市三民區裕誠路1號",
                         "Rate": 3.5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 152,
@@ -1376,6 +1636,8 @@
                         "Phone": "07 717 3008",
                         "Address": "806台灣高雄市前鎮區保泰路303號4-5樓",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 153,
@@ -1385,6 +1647,8 @@
                         "Phone": "07 841 5875",
                         "Address": "830台灣高雄市鳳山區自強一路119巷75號",
                         "Rate": 3.7
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 154,
@@ -1394,6 +1658,8 @@
                         "Phone": "07 395 0813",
                         "Address": "807台灣高雄市三民區大順二路468號4樓",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 155,
@@ -1403,6 +1669,8 @@
                         "Phone": "07 755 5508",
                         "Address": "830台灣高雄市鳳山區中崙五路1號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 156,
@@ -1412,6 +1680,8 @@
                         "Phone": "07 241 1805",
                         "Address": "800台灣高雄市新興區民生一路271號",
                         "Rate": 3.8
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 157,
@@ -1421,6 +1691,8 @@
                         "Phone": "07 731 4809",
                         "Address": "833台灣高雄市鳥松區大仁北路10號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 158,
@@ -1430,6 +1702,8 @@
                         "Phone": "07 702 3199",
                         "Address": "831台灣高雄市大寮區光明路三段1437號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 159,
@@ -1439,6 +1713,8 @@
                         "Phone": "07 261 1706",
                         "Address": "801台灣高雄市前金區民生二路39號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 160,
@@ -1448,6 +1724,8 @@
                         "Phone": "07 561 0940",
                         "Address": "804台灣高雄市鼓山區延平街87之13號4樓",
                         "Rate": 3.7
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 161,
@@ -1457,6 +1735,8 @@
                         "Phone": "07 782 6855",
                         "Address": "831台灣高雄市大寮區進學路133號",
                         "Rate": 3.5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 162,
@@ -1466,6 +1746,8 @@
                         "Phone": "07 374 7592",
                         "Address": "814台灣高雄市仁武區澄仁路200號",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 163,
@@ -1475,6 +1757,8 @@
                         "Phone": "07 582 0514",
                         "Address": "813台灣高雄市左營區自助里2鄰啟文路12號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 164,
@@ -1484,6 +1768,8 @@
                         "Phone": "07 722 0066",
                         "Address": "802台灣高雄市苓雅區大順三路108號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 165,
@@ -1493,6 +1779,8 @@
                         "Phone": "07 321 0663",
                         "Address": "807台灣高雄市三民區十全一路161號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 166,
@@ -1502,6 +1790,8 @@
                         "Phone": "07 334 5566",
                         "Address": "802台灣高雄市苓雅區三多四路21號13-15樓",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 167,
@@ -1511,6 +1801,8 @@
                         "Phone": "07 536 5388",
                         "Address": "806台灣高雄市前鎮區忠勤路8號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 168,
@@ -1520,6 +1812,8 @@
                         "Phone": "07 311 7141",
                         "Address": "807台灣高雄市三民區十全二路21號",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 169,
@@ -1529,6 +1823,8 @@
                         "Phone": "07 241 2128",
                         "Address": "800台灣高雄市新興區仁智街287號",
                         "Rate": 3.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 170,
@@ -1538,6 +1834,8 @@
                         "Phone": "07 551 1211",
                         "Address": "803台灣高雄市鹽埕區河西路10號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 171,
@@ -1547,6 +1845,8 @@
                         "Phone": "07 216 6189",
                         "Address": "80148台灣高雄市前金區五福三路57號9樓",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 172,
@@ -1556,6 +1856,8 @@
                         "Phone": "07 970 2001",
                         "Address": "806台灣高雄市前鎮區中華五路789號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 173,
@@ -1565,6 +1867,8 @@
                         "Phone": "07 532 8989",
                         "Address": "80343台灣高雄市鹽埕區大勇路5-1, 5-2號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "y", "NearMountain": "n", "NearSea": "y", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 174,
@@ -1574,6 +1878,8 @@
                         "Phone": "07 656 8368",
                         "Address": "840台灣高雄市大樹區學城路一段12號3F",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "y", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 175,
@@ -1583,6 +1889,8 @@
                         "Phone": "07 281 0099",
                         "Address": "3樓, No. 213號五福二路新興區高雄市台灣 80054",
                         "Rate": 3.9
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 176,
@@ -1592,6 +1900,8 @@
                         "Phone": "07 551 1211#5001",
                         "Address": "803台灣高雄市鹽埕區大義街C9-8, C9-20",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "y", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 177,
@@ -1601,6 +1911,8 @@
                         "Phone": "07 622 3300",
                         "Address": "820台灣高雄市岡山區壽天路103之18號5樓",
                         "Rate": 3.8
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 178,
@@ -1610,6 +1922,8 @@
                         "Phone": "07 339 4294",
                         "Address": "802台灣高雄市苓雅區三多三路162號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 179,
@@ -1619,6 +1933,8 @@
                         "Phone": "07 380 0089",
                         "Address": "807台灣高雄市三民區九如一路720號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 180,
@@ -1628,6 +1944,8 @@
                         "Phone": "07 531 2612",
                         "Address": "803台灣高雄市鹽埕區中正四路272號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 181,
@@ -1637,6 +1955,8 @@
                         "Phone": "07 380 0089",
                         "Address": "807台灣高雄市三民區九如一路797號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 182,
@@ -1646,6 +1966,8 @@
                         "Phone": "07 790 5529",
                         "Address": "830台灣高雄市鳳山區青年路二段77號",
                         "Rate": 3.5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 183,
@@ -1655,6 +1977,8 @@
                         "Phone": "07 315 2136",
                         "Address": "807台灣高雄市三民區同盟二路215號",
                         "Rate": 3.9
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 184,
@@ -1664,6 +1988,8 @@
                         "Phone": "07 216 0509",
                         "Address": "801台灣高雄市前金區中正四路261號",
                         "Rate": 3.9
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 185,
@@ -1673,6 +1999,8 @@
                         "Phone": "07 555 0331",
                         "Address": "804台灣高雄市鼓山區美術館路80號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 186,
@@ -1682,6 +2010,8 @@
                         "Phone": "07 380 0089",
                         "Address": "807台灣高雄市三民區九如一路720號",
                         "Rate": 4.5
+                        , "InorOut": "out", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 187,
@@ -1691,6 +2021,8 @@
                         "Phone": "07 571 9973",
                         "Address": "805台灣高雄市旗津區旗津二路701號",
                         "Rate": 3.9
+                        , "InorOut": "out", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 188,
@@ -1700,6 +2032,8 @@
                         "Phone": "07 387 9275",
                         "Address": "807台灣高雄市三民區九如一路797號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 189,
@@ -1718,6 +2052,8 @@
                         "Phone": "07 531 6209",
                         "Address": "804台灣高雄市鼓山區鼓山一路32號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "y", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 191,
@@ -1727,6 +2063,8 @@
                         "Phone": "07 555 0331#300",
                         "Address": "804台灣高雄市鼓山區馬卡道路330號",
                         "Rate": 4.3
+                        , "InorOut": "out", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "y", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 192,
@@ -1736,6 +2074,8 @@
                         "Phone": "07 571 8920",
                         "Address": "805台灣高雄市旗津區旗津三路887號2樓",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "y", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 193,
@@ -1745,6 +2085,8 @@
                         "Phone": "07 312 1101#2734",
                         "Address": "807台灣高雄市三民區十全一路100號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 194,
@@ -1754,6 +2096,8 @@
                         "Phone": "07 521 8900",
                         "Address": "80441台灣高雄市鼓山區倉庫蓬萊路99號 駁二藝術特區蓬萊B7、B8",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "y", "Shopping": "n","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 195,
@@ -1763,6 +2107,8 @@
                         "Phone": "07 562 2419",
                         "Address": "804台灣高雄市鼓山區蓬萊路3號",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "y", "Shopping": "n","Exhibition": "n","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 196,
@@ -1772,6 +2118,8 @@
                         "Phone": "07 625 8111",
                         "Address": "820台灣高雄市岡山區致遠路55號",
                         "Rate": 3.9
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "y","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 197,
@@ -1781,6 +2129,8 @@
                         "Phone": "07 588 8398",
                         "Address": "813台灣高雄市左營區龜山巷157-2號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 198,
@@ -1790,6 +2140,8 @@
                         "Phone": "07 611 9299#5",
                         "Address": "825台灣高雄市橋頭區糖廠路24號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 199,
@@ -1799,6 +2151,8 @@
                         "Phone": "07 315 5688",
                         "Address": "80752台灣高雄市三民區十全二路188號",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "n", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "n","Exhibition": "y","History": "y","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 200,
@@ -1808,6 +2162,8 @@
                         "Phone": "07 285 2799",
                         "Address": "800台灣高雄市新興區七賢二路58號",
                         "Rate": 3.8
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 201,
@@ -1817,6 +2173,8 @@
                         "Phone": "07 315 3999",
                         "Address": "80752台灣高雄市三民區十全一路209號",
                         "Rate": 4.9
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 202,
@@ -1826,6 +2184,8 @@
                         "Phone": "07 556 6766",
                         "Address": "813台灣高雄市左營區立文路77號",
                         "Rate": 3.8
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 203,
@@ -1835,6 +2195,8 @@
                         "Phone": "0968 501 623",
                         "Address": "號16樓 No. 188, 大同一路新興區高雄市台灣 800",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 204,
@@ -1844,6 +2206,8 @@
                         "Phone": "07 235 3111",
                         "Address": "800台灣高雄市新興區七賢一路469號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 205,
@@ -1853,6 +2217,8 @@
                         "Phone": "0928 166 932",
                         "Address": "806台灣高雄市前鎮區三多三路21號3樓",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 206,
@@ -1862,6 +2228,8 @@
                         "Phone": "07 331 0055",
                         "Address": "號 11 樓 489, 中山二路苓雅區高雄市台灣 802",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 207,
@@ -1871,6 +2239,8 @@
                         "Phone": "07 535 3579",
                         "Address": "802台灣高雄市苓雅區四維二路353號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 208,
@@ -1880,6 +2250,8 @@
                         "Phone": "07 555 9992",
                         "Address": "804台灣高雄市鼓山區文信路321號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 209,
@@ -1889,6 +2261,8 @@
                         "Phone": "07 339 3936",
                         "Address": "802台灣高雄市苓雅區中山二路361號",
                         "Rate": 3.9
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 210,
@@ -1898,6 +2272,8 @@
                         "Phone": "07 221 1200",
                         "Address": "800台灣高雄市新興區五福二路47號",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 211,
@@ -1907,6 +2283,8 @@
                         "Phone": "07 285 5552",
                         "Address": "807台灣高雄市三民區河北二路101號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 212,
@@ -2096,6 +2474,8 @@
                         "Phone": "07 813 5678",
                         "Address": "806台灣高雄市前鎮區中華五路789號",
                         "Rate": 4.4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "y", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "y",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 233,
@@ -2105,6 +2485,8 @@
                         "Phone": "07 585 9999",
                         "Address": "813台灣高雄市左營區站前北路1號1F—3F",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 234,
@@ -2114,6 +2496,8 @@
                         "Phone": "07 796 9999",
                         "Address": "806台灣高雄市前鎮區中安路1-1號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 235,
@@ -2123,6 +2507,8 @@
                         "Phone": "07 972 8888",
                         "Address": "802台灣高雄市苓雅區三多四路21號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 236,
@@ -2132,6 +2518,8 @@
                         "Phone": "080 065 6080",
                         "Address": "840台灣高雄市大樹區學城路一段12號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "d", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 237,
@@ -2141,6 +2529,8 @@
                         "Phone": "07 392 6729",
                         "Address": "807台灣高雄市三民區民族一路463號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 238,
@@ -2150,6 +2540,8 @@
                         "Phone": "07 955 5888#0",
                         "Address": "807台灣高雄市三民區民族一路427號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 239,
@@ -2159,6 +2551,8 @@
                         "Phone": "07 536 5388",
                         "Address": "806台灣高雄市前鎮區忠勤路8號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 240,
@@ -2168,6 +2562,8 @@
                         "Phone": "07 823 3111",
                         "Address": "806台灣前鎮區中華五路789號",
                         "Rate": 4.2
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 241,
@@ -2177,6 +2573,8 @@
                         "Phone": "07 236 9169",
                         "Address": "807台灣高雄市三民區長明街224號",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 242,
@@ -2186,6 +2584,8 @@
                         "Phone": "07 272 3277",
                         "Address": "800台灣高雄市新興區文化路70之1號",
                         "Rate": 4
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 243,
@@ -2195,6 +2595,8 @@
                         "Phone": "07 392 6900",
                         "Address": "807台灣高雄市三民區民族一路463號",
                         "Rate": 4.1
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 244,
@@ -2204,6 +2606,8 @@
                         "Phone": "0900 232 831",
                         "Address": "807台灣高雄市三民區褒忠街78巷12號",
                         "Rate": 4.7
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 245,
@@ -2213,6 +2617,8 @@
                         "Phone": "07 215 2733",
                         "Address": "號 5 樓, No. 59五福三路前金區高雄市台灣 801",
                         "Rate": 5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 246,
@@ -2222,6 +2628,8 @@
                         "Phone": "07 281 3168",
                         "Address": "801台灣高雄市前金區大同二路147號",
                         "Rate": 3.5
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 247,
@@ -2231,6 +2639,8 @@
                         "Phone": "07 335 6366",
                         "Address": "802台灣高雄市苓雅區苓雅一路360號",
                         "Rate": 4.9
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 248,
@@ -2240,6 +2650,8 @@
                         "Phone": "07 222 7868",
                         "Address": "802台灣高雄市苓雅區泰順街25號",
                         "Rate": 4.3
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 249,
@@ -2249,6 +2661,8 @@
                         "Phone": "07 586 9630",
                         "Address": "804台灣高雄市鼓山區裕誠路1663號",
                         "Rate": 4.6
+                        , "InorOut": "in", "StaticorDynamic": "s", "Netbeauty": "y", "Hipster": "n", "NearMountain": "n", "NearSea": "n", "Shopping": "y","Exhibition": "n","History": "n","NightView": "n",
+                        "favorite": "n"
                     },
                     {
                         "Aid": 250,
