@@ -42,6 +42,11 @@ export class DbService {
     return this.attractionList.asObservable();
   }
 
+  fetchAttractionsbycondition(): Observable<Attraction[]> { //services song.ts class name, original is Song, Song[]=>Attraction[], fetchSongs()=>fetchAttractions() 
+    return this.attractionListbycondition.asObservable();
+  }
+  
+
     // Render fake data
   getFakeData() {
     this.httpClient.get(
@@ -117,8 +122,6 @@ export class DbService {
         }
       }
       this.attractionListbycondition.next(items);  //Line15宣告的List
-
-      return this.attractionListbycondition.asObservable();
     });
   }
 
