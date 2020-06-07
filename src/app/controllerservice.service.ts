@@ -43,6 +43,7 @@ export class ControllerserviceService {
 
   }
 
+
   ngOnInit() { //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB
     this.sqliteDB.dbState().subscribe((res) => {
       if(res){

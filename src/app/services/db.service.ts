@@ -42,9 +42,9 @@ export class DbService {
     return this.attractionList.asObservable();
   }
 
-  fetchAttractionsbycondition(): Observable<Attraction[]> { //services song.ts class name, original is Song, Song[]=>Attraction[], fetchSongs()=>fetchAttractions() 
-    return this.attractionListbycondition.asObservable();
-  }
+  // fetchAttractionsbycondition(): Observable<Attraction[]> { //services song.ts class name, original is Song, Song[]=>Attraction[], fetchSongs()=>fetchAttractions() 
+  //   return this.attractionListbycondition.asObservable();
+  // }
   
 
     // Render fake data
@@ -86,7 +86,7 @@ export class DbService {
             Exhibition: res.rows.item(i).Exhibition,  
             History: res.rows.item(i).History,  
             NightView: res.rows.item(i).NightView,  
-            favorite: res.rows.item(i).favorite, 
+            favorite: res.rows.item(i).favorite
            });
         }
       }
@@ -94,36 +94,36 @@ export class DbService {
     });
   }
 
-  getAttractionsbycondition(sqlText) {  //original is getSongs, getSongs=>getAttractions
-    return this.storage.executeSql(sqlText, []).then(res => {
-      let items: Attraction[] = []; //services song.ts class name, original is Song, Song[]=>Attraction[]
-      if (res.rows.length > 0) {
-        for (var i = 0; i < res.rows.length; i++) { 
-          items.push({  //getting all the columns by column names
-            Aid: res.rows.item(i).Aid,  //變數名: res.rows.item(i).資料表欄位名,
-            Aname: res.rows.item(i).Aname,  
-            photo: res.rows.item(i).photo,
-            GoogleClass: res.rows.item(i).GoogleClass,
-            Phone: res.rows.item(i).Phone,
-            Address: res.rows.item(i).Address,
-            Rate: res.rows.item(i).Rate,
-            InorOut: res.rows.item(i).InorOut,
-            StaticorDynamic: res.rows.item(i).StaticorDynamic,
-            Netbeauty: res.rows.item(i).Netbeauty, 
-            Hipster: res.rows.item(i).Hipster,  
-            NearMountain: res.rows.item(i).NearMountain, 
-            NearSea: res.rows.item(i).NearSea,  
-            Shopping: res.rows.item(i).Shopping,  
-            Exhibition: res.rows.item(i).Exhibition,  
-            History: res.rows.item(i).History,  
-            NightView: res.rows.item(i).NightView,  
-            favorite: res.rows.item(i).favorite, 
-           });
-        }
-      }
-      this.attractionListbycondition.next(items);  //Line15宣告的List
-    });
-  }
+  // getAttractionsbycondition(sqlText) {  //original is getSongs, getSongs=>getAttractions
+  //   return this.storage.executeSql(sqlText, []).then(res => {
+  //     let items: Attraction[] = []; //services song.ts class name, original is Song, Song[]=>Attraction[]
+  //     if (res.rows.length > 0) {
+  //       for (var i = 0; i < res.rows.length; i++) { 
+  //         items.push({  //getting all the columns by column names
+  //           Aid: res.rows.item(i).Aid,  //變數名: res.rows.item(i).資料表欄位名,
+  //           Aname: res.rows.item(i).Aname,  
+  //           photo: res.rows.item(i).photo,
+  //           GoogleClass: res.rows.item(i).GoogleClass,
+  //           Phone: res.rows.item(i).Phone,
+  //           Address: res.rows.item(i).Address,
+  //           Rate: res.rows.item(i).Rate,
+  //           InorOut: res.rows.item(i).InorOut,
+  //           StaticorDynamic: res.rows.item(i).StaticorDynamic,
+  //           Netbeauty: res.rows.item(i).Netbeauty, 
+  //           Hipster: res.rows.item(i).Hipster,  
+  //           NearMountain: res.rows.item(i).NearMountain, 
+  //           NearSea: res.rows.item(i).NearSea,  
+  //           Shopping: res.rows.item(i).Shopping,  
+  //           Exhibition: res.rows.item(i).Exhibition,  
+  //           History: res.rows.item(i).History,  
+  //           NightView: res.rows.item(i).NightView,  
+  //           favorite: res.rows.item(i).favorite, 
+  //          });
+  //       }
+  //     }
+  //     this.attractionListbycondition.next(items);  //Line15宣告的List
+  //   });
+  // }
 
   // Add
   addAttraction(Aname, GoogleClass, Phone, Address, Rate) { //get all column variables
