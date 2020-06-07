@@ -19,7 +19,6 @@ declare var google;
 export class OutcomePage implements OnInit {
    // 透過 url 將 selection 傳遞到此頁面
    favorite : Favorites = {
-    id : "1",
     img : "123",
     place: "測試",
     collection: 1 
@@ -44,7 +43,7 @@ export class OutcomePage implements OnInit {
   //  };
   //  googles: googleInfor[] = [this.test,this.tests,this.testss];
    
-   
+   sql_text: String;
    favorites: Favorites[]; //load進所有現存資料
    data: any;
    map;
@@ -134,7 +133,13 @@ export class OutcomePage implements OnInit {
     //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以上改到controllerservice後註解掉
     this.sqliteDB.dbState().subscribe((res) => {
       if(res){
-        this.sqliteDB.fetchAttractions().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
+        this.sqliteDB.getAttractionsbycondition(this.sql_text)
+      }
+    });
+
+    this.sqliteDB.dbState().subscribe((res) => {
+      if(res){
+        this.sqliteDB.fetchAttractionsbycondition().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
           this.alldata = item
         })
       }
@@ -179,6 +184,8 @@ export class OutcomePage implements OnInit {
    const History = this.data.historic_site;
    var sql_where : String ;
    
+
+   this.sql_text = "SELECT * FROM AttractionInfo WHERE Indoor = 變數 AND Outdoor = 變數 AND Static = 變數 AND Dynamic = 變數 AND Netbeauty = 變數 AND Hipster = 變數 AND NearSea = 變數 AND NearMountain = 變數 AND NightView = 變數 AND Shopping = 變數 AND History = 變數 ";
    /*
     if 室內 = 室外:
         if 動態 = 靜態:
@@ -200,6 +207,7 @@ export class OutcomePage implements OnInit {
         sql_where = 'StaticorDynamic = '+ StaticorDynamic;
       }
     }
+
     /*
     elif 室內=勾 & 室外=不勾:
         if 動態 = 靜態:
@@ -392,16 +400,25 @@ export class OutcomePage implements OnInit {
   //   console.log(this.distance);
   // }
   }
-  /*
-  UpdateCollection(aname,photo) {  
+  async presentLoading() { //等待Sign
+    const loading = await this.loadingController.create({
+      message: '添加中',
+      duration: 1000
+    });
+    await loading.present();
+
+    const { role, data } = await loading.onDidDismiss();
+    console.log('Loading dismissed!');
+  }
+  UpdateCollection(aname,photo,item) {   
     this.lock = 0;
-    this.favorite.place=aname;
-    this.favorite.img = 'assets/img/search/4.jpg';
+    this.favorite.place= aname;
+    this.favorite.img = photo;
     this.favorites.forEach(element => {
       if(element.place==this.favorite.place){ //如果重複位置則UPDATE  
         this.lock = 1;
         this.favorite.collection = element.collection + 1 ; //新增一個收藏的人
-        this.service.updateFavorite(this.favorite, element.id).then(() => {
+        this.service.updateFavorite(this.favorite,element.id).then(() => {
         });
       }else{  //如果位置沒重複則update (只會發生一次?) 當有兩個地點的時候
         // this.service.addFavorite(this.favorite).then(() => {
@@ -409,9 +426,22 @@ export class OutcomePage implements OnInit {
       }
     });
      if(this.lock==0){
+       this.favorite.collection = 1;
        this.service.addFavorite(this.favorite).then(() => {
        });
      }
+     //呼叫service的function  利用aname找資料庫
+    this.presentLoading();
+    for(let i = 0; i < this.alldata.length; i++) {
+
+      if(this.alldata[i] == item){
+        this.alldata.splice(i, 1);
+      }
+
+    }
+    
+     
     console.log(this.favorite);
-  }*/
+    
+  }
 }

@@ -7,7 +7,7 @@ import { DbService } from './services/db.service';
 
 declare var google;
 export interface Favorites {
-  id: string;
+  id?: string;
   img: string;
   place: string;
   collection: number;

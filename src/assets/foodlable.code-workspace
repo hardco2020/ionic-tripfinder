@@ -1,0 +1,56 @@
+{  
+    "structure":{
+        "tables":{
+            "FoodSelect":"([Aid] PRIMARY KEY, [restaurant], [vendor], [fast_food], [vegetarian_food], [chinese], [exotic], [parity], [boxed_lunch], [baking], [seafood], [alcohol], [dessert])"
+        }
+    },
+    "data":{
+            "inserts": {
+                
+                "FoodSelect": [
+                //{"restaurant": "y/n", "vendor": "y/n", "fast_food": "y/n", "vegetarian_food": "y/n", "chinese": "y/n", "exotic": "y/n", "parity": "y/n","boxed_lunch": "y/n","baking": "y/n","seafood": "y/n","alcohol": "y/n","dessert": "y/n"}
+                //Max Aid : 692
+                // 1~173聖淇
+                // 174~346湘嬅
+                // 347~519竹秀
+                // 520~692旻昌
+                
+                    { "Aid": 1, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 2, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 3, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 4, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 5, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 6, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 7, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 8, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 9, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 10, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 11, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 12, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 13, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 14, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 15, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 16, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 17, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 18, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 19, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 20, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+
+                    { "Aid": 10, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 11, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 12, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 13, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 14, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 15, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 16, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 17, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 18, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 19, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+                    { "Aid": 20, "restaurant": "", "vendor": "", "fast_food": "", "vegetarian_food": "", "chinese": "", "exotic": "", "parity": "","boxed_lunch": "","baking": "","seafood": "","alcohol": "","dessert": ""},
+
+                    
+                ]
+                
+            }
+    }
+}
