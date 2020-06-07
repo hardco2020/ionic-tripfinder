@@ -6,6 +6,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { NavController, LoadingController } from '@ionic/angular';
 import { DbService } from '../../services/db.service'; 
+import { analytics } from 'firebase';
 
 declare var google;
 
@@ -176,6 +177,8 @@ export class OutcomePage implements OnInit {
    const NightView = this.data.night_view;
    const Shopping = this.data.shopping;
    const History = this.data.historic_site;
+   var sql_where : String ;
+   
    /*
     if 室內 = 室外:
         if 動態 = 靜態:
@@ -191,8 +194,10 @@ export class OutcomePage implements OnInit {
       if(Dynamic == Static){
       }else if(Dynamic =="y" && Static =="n"){
         var StaticorDynamic = "d";
+        sql_where = 'StaticorDynamic = '+ StaticorDynamic;
       }else if(Dynamic =="n" && Static =="y"){
         var StaticorDynamic = "s";
+        sql_where = 'StaticorDynamic = '+ StaticorDynamic;
       }
     }
     /*
@@ -210,10 +215,13 @@ export class OutcomePage implements OnInit {
     else if (Indoor == 'y' && Outdoor == 'n'){
       var InorOut = 'in';
       if(Dynamic == Static){
+        sql_where = 'InorOut = '+ InorOut;
       }else if(Dynamic =="y" && Static =="n"){
         var StaticorDynamic = "d";
+        sql_where = 'StaticorDynamic = '+ StaticorDynamic + ' AND InorOut = '+ InorOut;
       }else if(Dynamic =="n" && Static =="y"){
         var StaticorDynamic = "s";
+        sql_where = 'StaticorDynamic = '+ StaticorDynamic + ' AND InorOut = '+ InorOut;
       }
     }
     /*
@@ -231,12 +239,25 @@ export class OutcomePage implements OnInit {
   else if (Indoor == 'n' && Outdoor == 'y'){
     var InorOut = 'out';
     if(Dynamic == Static){
+      sql_where = 'InorOut = '+ InorOut;
     }else if(Dynamic =="y" && Static =="n"){
       var StaticorDynamic = "d";
+      sql_where = 'StaticorDynamic = '+ StaticorDynamic + ' AND InorOut = '+ InorOut;
     }else if(Dynamic =="n" && Static =="y"){
       var StaticorDynamic = "s";
+      sql_where = 'StaticorDynamic = '+ StaticorDynamic + ' AND InorOut = '+ InorOut;
     }
   }
+  
+  // SQL 式 SQL 式 SQL 式 SQL 式 SQL 式 SQL 式
+  var sql_func = 'SELECT * FROM AttractionInfo WHERE ' + sql_where +
+                  'AND Netbeauty = ' + Netbeauty +
+                  'AND Hipster = ' + Hipster +
+                  'AND NearSea = ' + NearSea +
+                  'AND NearMountain = ' + NearMountain +
+                  'AND NightView = ' + NightView +
+                  'AND Shopping = ' + Shopping +
+                  'AND History = ' + History;
 
 
     
