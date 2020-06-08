@@ -183,6 +183,7 @@ export class OutcomePage implements OnInit {
     //   }
     // });
 
+<<<<<<< Updated upstream
     this.sqliteDB.dbState().subscribe((res) => {
       if(res){
         this.sqliteDB.fetchAttractions().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
@@ -191,6 +192,15 @@ export class OutcomePage implements OnInit {
       }
     });
 
+=======
+    // this.sqliteDB.dbState().subscribe((res) => {
+    //   if(res){
+    //     this.sqliteDB.fetchAttractionsbycondition().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
+    //       this.alldata = item
+    //     })
+    //   }
+    // });
+>>>>>>> Stashed changes
     //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以下改到controllerservice後註解掉
 
   }
