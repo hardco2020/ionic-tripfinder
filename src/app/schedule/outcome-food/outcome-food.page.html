@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      
+    </ion-title>
+      
+    <!--返回鍵 回到主頁-->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item-sliding>
+    <ion-item *ngFor="let item of allData" >
+      <ion-card-content>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="auto"> 
+            <div>
+              <img  style="max-height: 250px;" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{item.photo}}&key={{apiKey}}" [routerLink]="['/outcome', item.Aid]"/>
+              <div class="evaluation_star"><ion-icon class="iconSize" slot="end" name="star"></ion-icon>{{item.Rate}}</div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-card-title>
+          {{item.Aname}}
+        </ion-card-title>
+        <ion-card-subtitle>
+          {{item.Address}}
+        </ion-card-subtitle>
+        
+        <ion-chip color="primary">
+          <ion-label>{{item.GoogleClass}}</ion-label>
+        </ion-chip>
+        <ion-chip color="primary">
+          <ion-label>類型二</ion-label>
+        </ion-chip>
+        <!--<ion-button expand="full" (click)="UpdateCollection()">+</ion-button>-->
+        <ion-button expand="full" >+</ion-button>
+      </ion-card-content>
+  </ion-item>
+
+  <ion-item-options side="end"> 
+    <ion-item-option >Favorite</ion-item-option>
+  </ion-item-options>
+</ion-item-sliding>
+  <div #mapElement class='map'></div>
+
+</ion-content>

@@ -182,7 +182,7 @@ export class OutcomePage implements OnInit {
     //     this.sqliteDB.getAttractionsbycondition(this.sql_text)
     //   }
     // });
-
+/*
 <<<<<<< Updated upstream
     this.sqliteDB.dbState().subscribe((res) => {
       if(res){
@@ -202,7 +202,7 @@ export class OutcomePage implements OnInit {
     // });
 >>>>>>> Stashed changes
     //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以下改到controllerservice後註解掉
-
+*/
   }
   ngAfterViewInit() : void{
     setTimeout(() => {

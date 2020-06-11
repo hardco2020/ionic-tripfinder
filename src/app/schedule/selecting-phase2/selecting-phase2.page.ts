@@ -4,7 +4,7 @@ import { NavController } from '@ionic/angular';
 import { NavigationExtras } from '@angular/router';
 
 import { SelectionPh1 } from '../selecting-phase1/selection-ph1';
-import { ActivatedRoute,Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
 import { ValueTransformer } from '@angular/compiler/src/util';
@@ -20,15 +20,15 @@ export class SelectingPhase2Page implements OnInit {
   // 透過 url 將 selection 傳遞到此頁面
   data: any;
   selection: any;
-  constructor(private fb: FormBuilder, public nav: NavController,private route: ActivatedRoute, private router: Router) { 
-    this.route.queryParams.subscribe(param=>{
-      if(param && param.special){
+  constructor(private fb: FormBuilder, public nav: NavController, private route: ActivatedRoute, private router: Router) {
+    this.route.queryParams.subscribe(param => {
+      if (param && param.special) {
         this.data = JSON.parse(param.special);
       }
     });
     this.form = this.fb.group({
       checkArray: this.fb.array([], [Validators.required])
-    })
+    });
   }
 
   // 多選項列表

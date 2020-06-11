@@ -16,8 +16,7 @@
   <ion-text>
     <h4>今天想吃什麼？</h4>
   </ion-text>
-  <!--p class="error" *ngIf="this.form.controls['checkArray'].errors?.required"-->
-  <!--/p-->
+  <p class="error" *ngIf="this.form.controls['checkArray'].errors?.required"></p>
 
   <!--form [formGroup]="form" (ngSubmit)="submitForm()" novalidate-->
   <ion-grid>
@@ -28,7 +27,7 @@
           <ion-item>
             <ion-card-content>
               <!--要把使用者勾選出來的checkbox選項進行傳遞-->
-              <ion-checkbox color="primary" slot="start" [value]="label.name" >[value]="label.title"</ion-checkbox>
+              <ion-checkbox color="primary" slot="start" [value]="label.name" (ionChange)="onCheckboxChange($event)">[value]="label.title"</ion-checkbox>
               <ion-card-title class="card-title">{{label.title}}</ion-card-title>
               <img [src]="label.img" style="width: 100px; height: 120px;"/>
             </ion-card-content> 
@@ -40,7 +39,7 @@
 
   <!--進入到outcome-->
   <div class="ion-padding">
-    <ion-button>送出</ion-button>
+    <ion-button [disabled]="!form.valid" expand="block" type="submit" class="ion-no-margin" (click)="turnpage()">送出</ion-button>
   </div>
 <!--form-->
 </ion-content>
