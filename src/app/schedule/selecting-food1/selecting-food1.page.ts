@@ -158,7 +158,7 @@ export class SelectingFood1Page implements OnInit {
   }
 
   turnpage() {
-    this.setItem();
+    this.selection = Object.assign(this.data, this.result);
     // 跳轉頁面時透過 navigationExtras 傳遞 selection 資料
     let navigationExtras: NavigationExtras = {
       queryParams: {

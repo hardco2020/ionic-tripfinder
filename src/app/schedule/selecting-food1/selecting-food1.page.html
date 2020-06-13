@@ -18,7 +18,7 @@
   </ion-text>
   <p class="error" *ngIf="this.form.controls['checkArray'].errors?.required"></p>
 
-  <!--form [formGroup]="form" (ngSubmit)="submitForm()" novalidate-->
+  <form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
   <ion-grid>
     <ion-row>
       <!--col 為欄位 後面參數設定比例為12格下去做響應式畫面，ngFor迴圈串資料-->
@@ -41,5 +41,5 @@
   <div class="ion-padding">
     <ion-button [disabled]="!form.valid" expand="block" type="submit" class="ion-no-margin" (click)="turnpage()">送出</ion-button>
   </div>
-<!--form-->
+  </form>
 </ion-content>

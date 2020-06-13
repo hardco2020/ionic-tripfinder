@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NavController} from '@ionic/angular';
 
 @Component({
   selector: 'app-outcome-food',
@@ -34,7 +36,14 @@ export class OutcomeFoodPage implements OnInit {
     favorite: 'n'
   }];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParams.subscribe(param => {
+      if (param && param.special) {
+        this.data = JSON.parse(param.special);
+        console.log(this.data);
+      }
+    });
+  }
 
   ngOnInit() {
   }

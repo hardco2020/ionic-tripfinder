@@ -5,7 +5,7 @@ import { ActivatedRoute,Router } from '@angular/router';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { NavController, LoadingController } from '@ionic/angular';
-import { DbService } from '../../services/db.service'; 
+import { DbService } from '../../services/db.service';
 import { analytics } from 'firebase';
 
 declare var google;
@@ -21,7 +21,7 @@ export class OutcomePage implements OnInit {
    favorite : Favorites = {
     img : "123",
     place: "測試",
-    collection: 1 
+    collection: 1
    };
   //  test : googleInfor = {
   //   distance: 1,
