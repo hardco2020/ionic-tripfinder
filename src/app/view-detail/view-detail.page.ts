@@ -1,4 +1,5 @@
 import { Component, OnInit, NgZone ,ViewChild} from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { ActivatedRoute,Router } from '@angular/router';
 import { ControllerserviceService } from '../controllerservice.service'
 import { Geolocation } from '@ionic-native/geolocation/ngx';
@@ -13,18 +14,21 @@ declare var google;
 })
 export class ViewDetailPage implements OnInit {
   loadedDetail: location;
+  api_key = 'AIzaSyCMjg0lGC43K_RsV687kghZ5qTAbPnQAMo';
   data:any;
   map;
   distance: any;
   openingorNot : any;
   openPeriod : any;
   phoneNumber : any;
+  review : any;
   example ="台北市中正區開封街一段14巷劉山東牛肉麵";
   constructor(
      private zone: NgZone,
      private geolocation: Geolocation , 
      private activatedRoute: ActivatedRoute,
      private router: Router,
+     private navCtrl: NavController,
      public service : ControllerserviceService) {
     this.data={
       distance:2
@@ -42,8 +46,10 @@ export class ViewDetailPage implements OnInit {
         return;
       }
       const detailId = parseInt(paraMap.get('detailId'));
-      
-      this.loadedDetail = this.service.getDetail(detailId);
+      let test = paraMap.get('detailId');
+      this.loadedDetail = this.service.getDetail(test);
+      this.phoneNumber = test;
+      this.openPeriod = 10;
     }) //obeservable? 用法
   }
   ngAfterViewInit() : void{
@@ -78,13 +84,14 @@ export class ViewDetailPage implements OnInit {
                     }
                     this.openPeriod = results.opening_hours.weekday_text;
                     this.phoneNumber = results.formatted_phone_number;
+                    this.review = results.reviews[0].text;
                   }
              );
         });
       });
     });
     ////////////找到兩地距離  1.先找到兩個地方的經緯度 再使用function計算出距離
-    this.geocoder.geocode({ 'address': this.loadedDetail.Aname},  (results, status)  => { //先找到當地的經緯度 
+    this.geocoder.geocode({ 'address': this.loadedDetail.Address},  (results, status)  => { //先找到當地的經緯度 
       let pos;
         if (status == google.maps.GeocoderStatus.OK) {
             pos = {                                         //目標經緯度
@@ -116,6 +123,8 @@ export class ViewDetailPage implements OnInit {
         }
     });
   }
-
+  back(){
+    this.navCtrl.back();
+  }
 
 }
