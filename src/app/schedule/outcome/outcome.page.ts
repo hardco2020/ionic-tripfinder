@@ -6,6 +6,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { NavController, LoadingController } from '@ionic/angular';
 import { DbService } from '../../services/db.service'; 
+import { analytics } from 'firebase';
 
 declare var google;
 
@@ -42,6 +43,10 @@ export class OutcomePage implements OnInit {
   //  };
   //  googles: googleInfor[] = [this.test,this.tests,this.testss];
    
+<<<<<<< Updated upstream
+=======
+   //sql_text: String;
+>>>>>>> Stashed changes
    favorites: Favorites[]; //load進所有現存資料
    data: any;
    map;
@@ -57,13 +62,25 @@ export class OutcomePage implements OnInit {
   
 
    alldata_old = [{      //所有的data
-   "Aid": 1,
-   "Aname": "大立百貨空中遊樂園",
-   "photo": "CmRaAAAAIClT_Ynie6i7diws5vPTvz4IK7-cyWX93fkUtbAnI2EkIORzchzhzZARIHaaF6vDQTx78ZEIEjNX55fzXE2v8aSZ2PArtcX8rP2a7JeimjeaerACyg9ftF37z6p0cBnwEhDEW3u4n-x7AeGI2F5ApFAsGhSFoyAOGS2JKfDqLSLgRjabwJKxyQ",
-   "GoogleClass": "amusement_park",
-   "Phone": "07 261 3060",
-   "Address": "801台灣高雄市前金區五福三路59號RF",
-   "Rate": 4.2
+    "Aid": 1,
+    "Aname": "大立百貨空中遊樂園",
+    "photo": "CmRaAAAAIClT_Ynie6i7diws5vPTvz4IK7-cyWX93fkUtbAnI2EkIORzchzhzZARIHaaF6vDQTx78ZEIEjNX55fzXE2v8aSZ2PArtcX8rP2a7JeimjeaerACyg9ftF37z6p0cBnwEhDEW3u4n-x7AeGI2F5ApFAsGhSFoyAOGS2JKfDqLSLgRjabwJKxyQ",
+    "GoogleClass": "amusement_park",
+    "Phone": "07 261 3060",
+    "Address": "801台灣高雄市前金區五福三路59號RF",
+    "Rate": 4.2,
+    "InorOut": "out",
+    "StaticorDynamic": "d",
+    "Netbeauty": "y",
+    "Hipster": "n",
+    "NearMountain": "n",
+    "NearSea": "n",
+    "Shopping": "y",
+    "Exhibition": "n",
+    "History": "n",
+    "NightView": "y",
+    "favorite": "n"
+    
     },
     {
     "Aid": 2,
@@ -72,7 +89,18 @@ export class OutcomePage implements OnInit {
     "GoogleClass": "amusement_park",
     "Phone": "07 370 0821",
     "Address": "833台灣高雄市鳥松區",
-    "Rate": 4
+    "Rate": 4,
+    "InorOut": "out",
+    "StaticorDynamic": "d",
+    "Netbeauty": "y",
+    "Hipster": "n",
+    "NearMountain": "n",
+    "NearSea": "n",
+    "Shopping": "y",
+    "Exhibition": "n",
+    "History": "n",
+    "NightView": "y",
+    "favorite": "n"
     },
     {
       "Aid": 3,
@@ -81,16 +109,38 @@ export class OutcomePage implements OnInit {
       "GoogleClass": "amusement_park",
       "Phone": "07 796 7766",
       "Address": "806台灣高雄市前鎮區中安路1-1號",
-      "Rate": 4.3
+      "Rate": 4.3,
+      "InorOut": "out",
+      "StaticorDynamic": "d",
+      "Netbeauty": "y",
+      "Hipster": "n",
+      "NearMountain": "n",
+      "NearSea": "n",
+      "Shopping": "y",
+      "Exhibition": "n",
+      "History": "n",
+      "NightView": "y",
+      "favorite": "n"
     },
     {
       "Aid": 4,
-                        "Aname": "快樂100",
-                        "photo": "CmRZAAAA-fsbesBp772W6uhAJv9KHpHRzCJS2Zyc0DpWceXW0Wi_dUc7EwK7Ozcx7FzaE90wuNKoyMTrXW6a8c_Yx7kBs5oDKnG0vH0siWwKbxO45FBJKYQZcUHizAyKf_xIKR7dEhDMFLF-WuXuex-cB6-YAe2iGhTT7dyrqvN_b1Y0c7ujEV4GV4O4_Q",
-                        "GoogleClass": "amusement_park",
-                        "Phone": "07 970 3366",
-                        "Address": "806台灣高雄市前鎮區中華五路789號",
-                        "Rate": 3.8
+      "Aname": "快樂100",
+      "photo": "CmRZAAAA-fsbesBp772W6uhAJv9KHpHRzCJS2Zyc0DpWceXW0Wi_dUc7EwK7Ozcx7FzaE90wuNKoyMTrXW6a8c_Yx7kBs5oDKnG0vH0siWwKbxO45FBJKYQZcUHizAyKf_xIKR7dEhDMFLF-WuXuex-cB6-YAe2iGhTT7dyrqvN_b1Y0c7ujEV4GV4O4_Q",
+      "GoogleClass": "amusement_park",
+      "Phone": "07 970 3366",
+      "Address": "806台灣高雄市前鎮區中華五路789號",
+      "Rate": 3.8,
+      "InorOut": "out",
+      "StaticorDynamic": "d",
+      "Netbeauty": "y",
+      "Hipster": "n",
+      "NearMountain": "n",
+      "NearSea": "n",
+      "Shopping": "y",
+      "Exhibition": "n",
+      "History": "n",
+      "NightView": "y",
+      "favorite": "n"
     }
     ]
    examples = ["鍋呆子鍋燒麵","老紀牛肉麵","高雄市立圖書館左新分館"];
@@ -224,21 +274,28 @@ export class OutcomePage implements OnInit {
 
     //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以上改到controllerservice後註解掉
     
+<<<<<<< Updated upstream
     var sql_text = "SELECT * FROM AttractionInfo WHERE Aname = '義大遊樂世界聖托里尼山城'";
     
     this.sqliteDB.getAttractionsbycondition(sql_func).then(res => {
       this.alldata = res
     })
 
+=======
+>>>>>>> Stashed changes
     // this.sqliteDB.dbState().subscribe((res) => {
     //   if(res){
     //     this.sqliteDB.fetchAttractionsbycondition().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
     //       this.alldata = item
     //     })
     //   }
-    
     // });
+<<<<<<< Updated upstream
 /*
+=======
+
+
+>>>>>>> Stashed changes
     this.sqliteDB.dbState().subscribe((res) => {
       if(res){
         this.sqliteDB.fetchAttractions().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
@@ -246,7 +303,12 @@ export class OutcomePage implements OnInit {
         })
       }
     });
+<<<<<<< Updated upstream
 =======
+
+>>>>>>> Stashed changes
+=======
+
 
 >>>>>>> Stashed changes
     // this.sqliteDB.dbState().subscribe((res) => {
@@ -258,9 +320,14 @@ export class OutcomePage implements OnInit {
     // });
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
     //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以下改到controllerservice後註解掉
 */
+=======
+
+    //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以下改到controllerservice後註解掉
+>>>>>>> Stashed changes
 
   }
   ngAfterViewInit() : void{
@@ -287,7 +354,23 @@ export class OutcomePage implements OnInit {
     （同時勾 = 同時不勾）
 
     */
+<<<<<<< Updated upstream
 
+=======
+   const Indoor = this.data.indoor;
+   const Outdoor = this.data.outdoor;
+   const Static = this.data.static;
+   const Dynamic = this.data.dynamic;
+   const Netbeauty = this.data.netbeauty;
+   const Hipster = this.data.hipster;
+   const NearSea = this.data.near_sea;
+   const NearMountain = this.data.near_mountain;
+   const NightView = this.data.night_view;
+   const Shopping = this.data.shopping;
+   const History = this.data.historic_site;
+   var sql_where : String ;
+   
+>>>>>>> Stashed changes
    /*
     if 室內 = 室外:
         if 動態 = 靜態:
@@ -299,6 +382,81 @@ export class OutcomePage implements OnInit {
             SELECT *FROM ...
             WHERE 動靜=靜
     */
+<<<<<<< Updated upstream
+=======
+    if(Indoor == Outdoor){
+      if(Dynamic == Static){
+      }else if(Dynamic =="y" && Static =="n"){
+        var StaticorDynamic = "d";
+        sql_where = 'StaticorDynamic = '+ StaticorDynamic;
+      }else if(Dynamic =="n" && Static =="y"){
+        var StaticorDynamic = "s";
+        sql_where = 'StaticorDynamic = '+ StaticorDynamic;
+      }
+    }
+
+    /*
+    elif 室內=勾 & 室外=不勾:
+        if 動態 = 靜態:
+            SELECT * FROM ...
+            WHERE 內外=內
+        elif 動態=勾 & 靜態=不勾:
+            SELECT * FROM ...
+            WHERE 內外=內 AND 動靜=動
+        elif 動態=不勾 & 靜態=勾:
+            SELECT * FROM ...
+            WHERE 內外=內 AND 動靜=靜
+    */
+    else if (Indoor == 'y' && Outdoor == 'n'){
+      var InorOut = 'in';
+      if(Dynamic == Static){
+        sql_where = 'InorOut = '+ InorOut;
+      }else if(Dynamic =="y" && Static =="n"){
+        var StaticorDynamic = "d";
+        sql_where = 'StaticorDynamic = '+ StaticorDynamic + ' AND InorOut = '+ InorOut;
+      }else if(Dynamic =="n" && Static =="y"){
+        var StaticorDynamic = "s";
+        sql_where = 'StaticorDynamic = '+ StaticorDynamic + ' AND InorOut = '+ InorOut;
+      }
+    }
+    /*
+    elif 室內=不勾 & 室外=勾:
+        if 動態 = 靜態:
+            SELECT * FROM ...
+            WHERE 內外=外
+        elif 動態=勾 & 靜態=不勾:
+            SELECT * FROM ...
+            WHERE 內外=外 AND 動靜=動
+        elif 動態=不勾 & 靜態=勾:
+            SELECT * FROM ...
+            WHERE 內外=外 AND 動靜=靜
+    */
+  else if (Indoor == 'n' && Outdoor == 'y'){
+    var InorOut = 'out';
+    if(Dynamic == Static){
+      sql_where = 'InorOut = '+ InorOut;
+    }else if(Dynamic =="y" && Static =="n"){
+      var StaticorDynamic = "d";
+      sql_where = 'StaticorDynamic = '+ StaticorDynamic + ' AND InorOut = '+ InorOut;
+    }else if(Dynamic =="n" && Static =="y"){
+      var StaticorDynamic = "s";
+      sql_where = 'StaticorDynamic = '+ StaticorDynamic + ' AND InorOut = '+ InorOut;
+    }
+  }
+  
+  // SQL 式 SQL 式 SQL 式 SQL 式 SQL 式 SQL 式
+  var sql_func = 'SELECT * FROM AttractionInfo WHERE ' + sql_where +
+                  'AND Netbeauty = ' + Netbeauty +
+                  'AND Hipster = ' + Hipster +
+                  'AND NearSea = ' + NearSea +
+                  'AND NearMountain = ' + NearMountain +
+                  'AND NightView = ' + NightView +
+                  'AND Shopping = ' + Shopping +
+                  'AND History = ' + History+
+                  'AND favorite = n';
+
+
+>>>>>>> Stashed changes
     
    
     //篩選出一系列地點後根據使用者的距離 金錢等等要求 做google place進一步二階段篩選
@@ -431,6 +589,7 @@ export class OutcomePage implements OnInit {
   //   console.log(this.distance);
   // }
   }
+
   async presentLoading() { //等待Sign
     const loading = await this.loadingController.create({
       message: '添加中',
@@ -441,6 +600,7 @@ export class OutcomePage implements OnInit {
     const { role, data } = await loading.onDidDismiss();
     console.log('Loading dismissed!');
   }
+  
   UpdateCollection(aname,photo,item) {   
     this.lock = 0;
     this.favorite.place= aname;
@@ -461,8 +621,8 @@ export class OutcomePage implements OnInit {
        this.service.addFavorite(this.favorite).then(() => {
        });
      }
-     //呼叫service的function  利用aname找資料庫
-    //this.service.collect(aname)
+     //呼叫db service的function  利用aname找資料庫 傳aname進update 這行底下開始
+
     this.presentLoading();
     for(let i = 0; i < this.alldata.length; i++) {
 
