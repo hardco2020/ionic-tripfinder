@@ -1,16 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="#" (click)="back()"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-title>
       <ion-icon slot="start" name="logo-react"></ion-icon>
       <ion-label>{{loadedDetail.Aname}}</ion-label>
-    </ion-title>
+    </ion-title> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding" [fullscreen]="true">
   <ion-row>
     <ion-col>
-      <img src="https://2.bp.blogspot.com/-5RP5j25aH_Q/XHYwfgfzlgI/AAAAAAAACcE/zj5pI_MZh6YjHntvoryfRlzgZQ0C0OMxwCLcBGAs/s1600/20190227-IMG_7484.jpg"  />
+      <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{loadedDetail.photo}}&key={{api_key}}"  />
     </ion-col>
   </ion-row>
   <ion-row>
@@ -18,9 +21,7 @@
       <ion-chip color="primary">
         <ion-label>{{loadedDetail.GoogleClass}}</ion-label>
       </ion-chip>
-      <ion-chip color="primary">
-        <ion-label>類型二</ion-label>
-      </ion-chip>
+      
     </ion-col>
   </ion-row>
   <ion-row>
@@ -46,7 +47,7 @@
           <ion-icon slot="start" name="call-outline"></ion-icon>
           <ion-label>
             <b>電話</b>
-            <p ngDefaultControl [(ngModel)]="phoneNumber">{{loadedDetail.Phone}}</p>
+            <p ngDefaultControl [(ngModel)]="phoneNumber">{{phoneNumber}}</p>
           </ion-label>
         </ion-item>
         <ion-item lines="none">
@@ -60,8 +61,8 @@
         <ion-item lines="none">
           <ion-icon slot="start" name="book-outline"></ion-icon>
           <ion-label class="multi-line">
-            <b>景點介紹</b>
-            <p>as;lkda;lsdk;alskd;alskd;alskd;alskd</p>
+            <b>景點評論</b>
+            <p ngDefaultControl [(ngModel)]="review">{{review}}</p>
           </ion-label>
         </ion-item>
         <ion-item-divider>
@@ -74,13 +75,7 @@
             <p ngDefaultControl [(ngModel)]="distance">{{distance}}</p>
           </ion-label>
         </ion-item>
-        <ion-item lines="none">
-          <ion-icon slot="start" name="hourglass-outline"></ion-icon>
-          <ion-label>
-            <b>估計停留多少時間</b>
-            <p>1 hr</p>
-          </ion-label>
-        </ion-item>
+       
       </ion-list>
     </ion-col>
   </ion-row>

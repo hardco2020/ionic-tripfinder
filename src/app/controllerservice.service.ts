@@ -87,10 +87,10 @@ export class ControllerserviceService {
     return [...this.alldata];
 
   }
-  getDetail(detailId: number) {
+  getDetail(detailId: string) {
     return{
-      ...this.alldata.find(detail =>{
-      return detail.Aid === detailId
+      ...this.alldata_old.find(detail =>{
+      return detail.Aname === detailId
       })
     };
   }
