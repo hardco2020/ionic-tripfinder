@@ -5,12 +5,7 @@ import { ActivatedRoute,Router } from '@angular/router';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { NavController, LoadingController } from '@ionic/angular';
-<<<<<<< HEAD
-import { DbService } from '../../services/db.service';
-import { analytics } from 'firebase';
-=======
 import { DbService } from '../../services/db.service'; 
->>>>>>> origin/master
 
 declare var google;
 

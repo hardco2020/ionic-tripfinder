@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ControllerserviceService, Favorites, googleInfor } from '../../controllerservice.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NavController} from '@ionic/angular';
+import { NavController, LoadingController } from '@ionic/angular';
+import { DbService } from '../../services/db.service';
 
 @Component({
   selector: 'app-outcome-food',
@@ -9,11 +11,18 @@ import { NavController} from '@ionic/angular';
 })
 export class OutcomeFoodPage implements OnInit {
   data: any;
-  map;
+  lock = 1; // update的鎖
+  favorites: Favorites[]; // load進所有現存資料
   apiKey = 'AIzaSyCMjg0lGC43K_RsV687kghZ5qTAbPnQAMo';
+  alldata: any[] = [];
+  favorite: Favorites = {
+    img : '123',
+    place: '測試',
+    collection: 1
+  };
 
   // Test data
-  allData = [{
+  testData = [{
     Aid: 1,
     Aname: 'BOSTON龍蝦餐廳',
     photo: 'CmRaAAAAbVnCkRTNYh48Uxq2IH5YNHuIaYGSS9SMu_tFvP2l90PJKm9amCRFCAHKmix37GseM8SDLVIXTPmdGoGFcgzBAgLNRULnN9uDdT_ZEMVFWqu2STNVaK87I4wJZGDMHAkDEhDOCwzwLMTw5TESrrLv380qGhREsJlfL1M62FnmPF-tXttDMYu2Vw',
@@ -36,7 +45,12 @@ export class OutcomeFoodPage implements OnInit {
     favorite: 'n'
   }];
 
-  constructor(private route: ActivatedRoute) {
+  constructor(
+    private route: ActivatedRoute,
+    private sqliteDB: DbService,
+    public service: ControllerserviceService,
+    private loadingController: LoadingController
+    ) {
     this.route.queryParams.subscribe(param => {
       if (param && param.special) {
         this.data = JSON.parse(param.special);
@@ -47,5 +61,44 @@ export class OutcomeFoodPage implements OnInit {
 
   ngOnInit() {
   }
+  async presentLoading() { // 等待Sign
+    const loading = await this.loadingController.create({
+      message: '添加中',
+      duration: 1000
+    });
+    await loading.present();
+    const { role, data } = await loading.onDidDismiss();
+    console.log('Loading dismissed!');
+  }
 
+  UpdateCollection(aname, photo, item) {
+    this.lock = 0;
+    this.favorite.place = aname;
+    this.favorite.img = photo;
+    this.favorites.forEach(element => {
+      if (element.place === this.favorite.place) { // 如果重複位置則UPDATE
+        this.lock = 1;
+        this.favorite.collection = element.collection + 1 ; // 新增一個收藏的人
+        this.service.updateFavorite(this.favorite, element.id).then(() => {
+        });
+      } else {
+        // 如果位置沒重複則update (只會發生一次?) 當有兩個地點的時候
+        // this.service.addFavorite(this.favorite).then(() => {
+        // });
+      }
+    });
+    if (this.lock === 0) {
+      this.favorite.collection = 1;
+      this.service.addFavorite(this.favorite).then(() => {
+      });
+    }
+  // 呼叫service的function  利用aname找資料庫
+  // this.service.collect(aname)
+    this.presentLoading();
+    for (let i = 0; i < this.alldata.length; i++) {
+     if (this.alldata[i] === item) {
+       this.alldata.splice(i, 1);
+    }
+   }console.log(this.favorite);
+  }
 }

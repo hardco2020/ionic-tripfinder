@@ -19,6 +19,6 @@ import { OutcomePage } from './outcome.page';
   declarations: [OutcomePage]
 })
 export class OutcomePageModule {
- 
+
 
 }
