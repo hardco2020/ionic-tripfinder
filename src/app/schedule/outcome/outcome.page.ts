@@ -47,7 +47,6 @@ export class OutcomePage implements OnInit {
   //  };
   //  googles: googleInfor[] = [this.test,this.tests,this.testss];
    
-   sql_text: String;
    favorites: Favorites[]; //load進所有現存資料
    data: any;
    map;
@@ -133,21 +132,118 @@ export class OutcomePage implements OnInit {
     // this.service.addFavorite(this.favorite).then(() => { 每次存都會需要先新增欄位，用此處來新增欄位
     // }); 
 
+    const Indoor = this.data.indoor;
+    const Outdoor = this.data.outdoor;
+    const Static = this.data.static;
+    const Dynamic = this.data.dynamic;
+    const Netbeauty = this.data.netbeauty;
+    const Hipster = this.data.hipster;
+    const NearSea = this.data.near_sea;
+    const NearMountain = this.data.near_mountain;
+    const NightView = this.data.night_view;
+    const Shopping = this.data.shopping;
+    const History = this.data.historic_site;
+    var sql_where : String ;
+    
+    /*
+      if 室內 = 室外:
+          if 動態 = 靜態:
+              SELECT * FROM ...
+          elif 動態=勾 & 靜態=不勾:
+              SELECT * FROM ...
+              WHERE 動靜=動
+          elif 動態=不勾 & 靜態=勾:
+              SELECT *FROM ...
+              WHERE 動靜=靜
+      */
+      if(Indoor == Outdoor){
+        if(Dynamic == Static){
+        }else if(Dynamic =="y" && Static =="n"){
+          var StaticorDynamic = "d";
+          sql_where = 'StaticorDynamic = "'+ StaticorDynamic + '"';
+        }else if(Dynamic =="n" && Static =="y"){
+          var StaticorDynamic = "s";
+          sql_where = 'StaticorDynamic = "'+ StaticorDynamic + '"';
+        }
+      }
+
+      /*
+      elif 室內=勾 & 室外=不勾:
+          if 動態 = 靜態:
+              SELECT * FROM ...
+              WHERE 內外=內
+          elif 動態=勾 & 靜態=不勾:
+              SELECT * FROM ...
+              WHERE 內外=內 AND 動靜=動
+          elif 動態=不勾 & 靜態=勾:
+              SELECT * FROM ...
+              WHERE 內外=內 AND 動靜=靜
+      */
+      else if (Indoor == 'y' && Outdoor == 'n'){
+        var InorOut = 'in';
+        if(Dynamic == Static){
+          sql_where = 'InorOut = "'+ InorOut + '"';
+        }else if(Dynamic =="y" && Static =="n"){
+          var StaticorDynamic = "d";
+          sql_where = 'StaticorDynamic = "'+ StaticorDynamic + '" AND InorOut = "'+ InorOut + '"';
+        }else if(Dynamic =="n" && Static =="y"){
+          var StaticorDynamic = "s";
+          sql_where = 'StaticorDynamic = "'+ StaticorDynamic + '" AND InorOut = "'+ InorOut + '"';
+        }
+      }
+      /*
+      elif 室內=不勾 & 室外=勾:
+          if 動態 = 靜態:
+              SELECT * FROM ...
+              WHERE 內外=外
+          elif 動態=勾 & 靜態=不勾:
+              SELECT * FROM ...
+              WHERE 內外=外 AND 動靜=動
+          elif 動態=不勾 & 靜態=勾:
+              SELECT * FROM ...
+              WHERE 內外=外 AND 動靜=靜
+      */
+    else if (Indoor == 'n' && Outdoor == 'y'){
+      var InorOut = 'out';
+      if(Dynamic == Static){
+        sql_where = 'InorOut = "'+ InorOut + '"';
+      }else if(Dynamic =="y" && Static =="n"){
+        var StaticorDynamic = "d";
+        sql_where = 'StaticorDynamic = "'+ StaticorDynamic + '" AND InorOut = "'+ InorOut + '"';
+      }else if(Dynamic =="n" && Static =="y"){
+        var StaticorDynamic = "s";
+        sql_where = 'StaticorDynamic = "'+ StaticorDynamic + '" AND InorOut = "'+ InorOut + '"';
+      }
+    }
+    
+    // SQL 式 SQL 式 SQL 式 SQL 式 SQL 式 SQL 式
+    var sql_func = 'SELECT * FROM AttractionInfo WHERE ' + sql_where +
+                    ' AND Netbeauty = "' + Netbeauty +
+                    '" AND Hipster = "' + Hipster +
+                    '" AND NearSea = "' + NearSea +
+                    '" AND NearMountain = "' + NearMountain +
+                    '" AND NightView = "' + NightView +
+                    '" AND Shopping = "' + Shopping +
+                    '" AND History = "' + History+
+                    '" AND favorite = "n"';
 
     //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以上改到controllerservice後註解掉
+    
+    var sql_text = "SELECT * FROM AttractionInfo WHERE Aname = '義大遊樂世界聖托里尼山城'";
+    
+    this.sqliteDB.getAttractionsbycondition(sql_func).then(res => {
+      this.alldata = res
+    })
+
     // this.sqliteDB.dbState().subscribe((res) => {
     //   if(res){
-    //     this.sqliteDB.getAttractionsbycondition(this.sql_text)
+    //     this.sqliteDB.fetchAttractionsbycondition().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
+    //       this.alldata = item
+    //     })
     //   }
     
     // });
-<<<<<<< Updated upstream
 /*
-<<<<<<< Updated upstream
-=======
-
-
->>>>>>> Stashed changes
     this.sqliteDB.dbState().subscribe((res) => {
       if(res){
         this.sqliteDB.fetchAttractions().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
@@ -155,6 +251,9 @@ export class OutcomePage implements OnInit {
         })
       }
     });
+=======
+
+>>>>>>> Stashed changes
     // this.sqliteDB.dbState().subscribe((res) => {
     //   if(res){
     //     this.sqliteDB.fetchAttractionsbycondition().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
@@ -163,13 +262,11 @@ export class OutcomePage implements OnInit {
     //   }
     // });
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
     //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以下改到controllerservice後註解掉
 */
-=======
-    // sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以下改到controllerservice後註解掉
 
->>>>>>> Stashed changes
   }
   ngAfterViewInit() : void{
     setTimeout(() => {
@@ -195,19 +292,7 @@ export class OutcomePage implements OnInit {
     （同時勾 = 同時不勾）
 
     */
-   const Indoor = this.data.indoor;
-   const Outdoor = this.data.outdoor;
-   const Static = this.data.static;
-   const Dynamic = this.data.dynamic;
-   const Netbeauty = this.data.netbeauty;
-   const Hipster = this.data.hipster;
-   const NearSea = this.data.near_sea;
-   const NearMountain = this.data.near_mountain;
-   const NightView = this.data.night_view;
-   const Shopping = this.data.shopping;
-   const History = this.data.historic_site;
 
-   this.sql_text = "SELECT * FROM AttractionInfo WHERE Indoor = 變數 AND Outdoor = 變數 AND Static = 變數 AND Dynamic = 變數 AND Netbeauty = 變數 AND Hipster = 變數 AND NearSea = 變數 AND NearMountain = 變數 AND NightView = 變數 AND Shopping = 變數 AND History = 變數 ";
    /*
     if 室內 = 室外:
         if 動態 = 靜態:
@@ -219,59 +304,6 @@ export class OutcomePage implements OnInit {
             SELECT *FROM ...
             WHERE 動靜=靜
     */
-    if(Indoor == Outdoor){
-      if(Dynamic == Static){
-      }else if(Dynamic =="y" && Static =="n"){
-        var StaticorDynamic = "d";
-      }else if(Dynamic =="n" && Static =="y"){
-        var StaticorDynamic = "s";
-      }
-    }
-
-    /*
-    elif 室內=勾 & 室外=不勾:
-        if 動態 = 靜態:
-            SELECT * FROM ...
-            WHERE 內外=內
-        elif 動態=勾 & 靜態=不勾:
-            SELECT * FROM ...
-            WHERE 內外=內 AND 動靜=動
-        elif 動態=不勾 & 靜態=勾:
-            SELECT * FROM ...
-            WHERE 內外=內 AND 動靜=靜
-    */
-    else if (Indoor == 'y' && Outdoor == 'n'){
-      var InorOut = 'in';
-      if(Dynamic == Static){
-      }else if(Dynamic =="y" && Static =="n"){
-        var StaticorDynamic = "d";
-      }else if(Dynamic =="n" && Static =="y"){
-        var StaticorDynamic = "s";
-      }
-    }
-    /*
-    elif 室內=不勾 & 室外=勾:
-        if 動態 = 靜態:
-            SELECT * FROM ...
-            WHERE 內外=外
-        elif 動態=勾 & 靜態=不勾:
-            SELECT * FROM ...
-            WHERE 內外=外 AND 動靜=動
-        elif 動態=不勾 & 靜態=勾:
-            SELECT * FROM ...
-            WHERE 內外=外 AND 動靜=靜
-    */
-  else if (Indoor == 'n' && Outdoor == 'y'){
-    var InorOut = 'out';
-    if(Dynamic == Static){
-    }else if(Dynamic =="y" && Static =="n"){
-      var StaticorDynamic = "d";
-    }else if(Dynamic =="n" && Static =="y"){
-      var StaticorDynamic = "s";
-    }
-  }
-
-
     
    
     //篩選出一系列地點後根據使用者的距離 金錢等等要求 做google place進一步二階段篩選
