@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ControllerserviceService, Favorites, googleInfor } from '../../controllerservice.service';
+import { ControllerserviceService, FavFoods, googleInfor } from '../../controllerservice.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NavController, LoadingController } from '@ionic/angular';
 import { DbService } from '../../services/db.service';
@@ -12,10 +12,10 @@ import { DbService } from '../../services/db.service';
 export class OutcomeFoodPage implements OnInit {
   data: any;
   lock = 1; // update的鎖
-  favorites: Favorites[]; // load進所有現存資料
+  favfoods: FavFoods[]; // load進所有現存資料
   apiKey = 'AIzaSyCMjg0lGC43K_RsV687kghZ5qTAbPnQAMo';
   alldata: any[] = [];
-  favorite: Favorites = {
+  favfood: FavFoods = {
     img : '123',
     place: '測試',
     collection: 1
@@ -73,13 +73,13 @@ export class OutcomeFoodPage implements OnInit {
 
   UpdateCollection(aname, photo, item) {
     this.lock = 0;
-    this.favorite.place = aname;
-    this.favorite.img = photo;
-    this.favorites.forEach(element => {
-      if (element.place === this.favorite.place) { // 如果重複位置則UPDATE
+    this.favfood.place = aname;
+    this.favfood.img = photo;
+    this.favfoods.forEach(element => {
+      if (element.place === this.favfood.place) { // 如果重複位置則UPDATE
         this.lock = 1;
-        this.favorite.collection = element.collection + 1 ; // 新增一個收藏的人
-        this.service.updateFavorite(this.favorite, element.id).then(() => {
+        this.favfood.collection = element.collection + 1 ; // 新增一個收藏的人
+        this.service.updateFavFoods(this.favfood, element.id).then(() => {
         });
       } else {
         // 如果位置沒重複則update (只會發生一次?) 當有兩個地點的時候
@@ -88,8 +88,8 @@ export class OutcomeFoodPage implements OnInit {
       }
     });
     if (this.lock === 0) {
-      this.favorite.collection = 1;
-      this.service.addFavorite(this.favorite).then(() => {
+      this.favfood.collection = 1;
+      this.service.addFavFoods(this.favfood).then(() => {
       });
     }
   // 呼叫service的function  利用aname找資料庫
@@ -99,6 +99,6 @@ export class OutcomeFoodPage implements OnInit {
      if (this.alldata[i] === item) {
        this.alldata.splice(i, 1);
     }
-   }console.log(this.favorite);
+   }console.log(this.favfood);
   }
 }

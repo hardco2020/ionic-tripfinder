@@ -12,6 +12,12 @@ export interface Favorites {
   place: string;
   collection: number;
 }
+export interface FavFoods {
+  id?: string;
+  img: string;
+  place: string;
+  collection: number;
+}
 export interface googleInfor {
     distance: number;
     openingorNot: any;
@@ -24,6 +30,11 @@ export interface googleInfor {
 export class ControllerserviceService {
   private FavoritesCollection: AngularFirestoreCollection<Favorites>; //初始化maybe?
   private Favorites: Observable<Favorites[]>;
+
+  //初始化餐廳
+  private FavFoodsCollection: AngularFirestoreCollection<FavFoods>;
+  private FavFoods: Observable<FavFoods[]>;
+
   alldata: any[] = [];
 
   constructor(
@@ -41,7 +52,18 @@ export class ControllerserviceService {
       })
     }))
 
+    this.FavFoodsCollection = db.collection<FavFoods>('FavFoods');
+    this.FavFoods = this.FavFoodsCollection.snapshotChanges().pipe(  //snapchange的固定建置方法
+      map( actions=>{
+      return actions.map(a=>{
+        const data = a.payload.doc.data();
+        const id = a.payload.doc.id;
+        return{id,...data};
+      })
+    }))
+
   }
+
 
 
   ngOnInit() { //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB
@@ -116,6 +138,27 @@ export class ControllerserviceService {
  
   removeFavorite(id) {
     return this.FavoritesCollection.doc(id).delete();
+  }
+
+  ///////////////////餐廳最愛功能
+  getFavFoods() {
+    return this.FavFoods;
+  }
+
+  getFavFood(id) {
+    return this.FavFoodsCollection.doc<FavFoods>(id).valueChanges();
+  }
+ 
+  updateFavFoods(favfoods: FavFoods, id: string) {
+    return this.FavFoodsCollection.doc(id).update(favfoods);
+  }
+ 
+  addFavFoods(favfoods: FavFoods) {
+    return this.FavFoodsCollection.add(favfoods);
+  }
+ 
+  removeFavFoods(id) {
+    return this.FavFoodsCollection.doc(id).delete();
   }
 
 }
