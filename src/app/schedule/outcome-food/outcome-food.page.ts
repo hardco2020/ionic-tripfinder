@@ -59,7 +59,12 @@ export class OutcomeFoodPage implements OnInit {
     });
   }
 
-  ngOnInit() {
+  ngOnInit(): void{
+    var sql_text = "SELECT * FROM FoodInfo";// WHERE Aname = '義大遊樂世界聖托里尼山城'
+    
+    this.sqliteDB.getRestaurantsbycondition(sql_text).then(res => {
+      this.alldata = res
+    })
   }
   async presentLoading() { // 等待Sign
     const loading = await this.loadingController.create({
