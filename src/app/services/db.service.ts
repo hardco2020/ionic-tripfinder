@@ -163,10 +163,9 @@ export class DbService {
   }
 
   // Update
-  updateAttraction(Aid, attraction: Attraction) {
-    let data = [attraction.Aname, attraction.GoogleClass, attraction.Phone, attraction.Address, attraction.Rate];
-    return this.storage.executeSql(`UPDATE AttractionInfo SET Aname = ?,  photo = ?, GoogleClass = ?, Phone = ?, Address = ?, Rate = ? WHERE Aid = ${Aid}`, data)
-    .then(data => {
+  updateAttraction(Aid) {
+    
+    return this.storage.executeSql('UPDATE AttractionInfo SET favorite = "y" WHERE Aid = ?', [Aid] ).then(data => {
       this.getAttractions();
     })
   }

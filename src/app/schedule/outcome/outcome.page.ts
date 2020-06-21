@@ -441,7 +441,7 @@ export class OutcomePage implements OnInit {
     const { role, data } = await loading.onDidDismiss();
     console.log('Loading dismissed!');
   }
-  UpdateCollection(aname,photo,item) {   
+  UpdateCollection(aname,photo,item,aid) {   
     this.lock = 0;
     this.favorite.place= aname;
     this.favorite.img = photo;
@@ -462,6 +462,10 @@ export class OutcomePage implements OnInit {
        });
      }
      //呼叫service的function  利用aname找資料庫
+
+    this.sqliteDB.updateAttraction(aid).then(() => {
+    });
+    
     //this.service.collect(aname)
     this.presentLoading();
     for(let i = 0; i < this.alldata.length; i++) {

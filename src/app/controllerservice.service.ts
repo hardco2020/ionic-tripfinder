@@ -67,13 +67,13 @@ export class ControllerserviceService {
 
 
   ngOnInit() { //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB
-    this.sqliteDB.dbState().subscribe((res) => {
-      if(res){
-        this.sqliteDB.fetchAttractions().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
-          this.alldata = item
-        })
-      }
-    });
+    
+    var sql_text = "SELECT * FROM AttractionInfo WHERE favorite = 'y'";
+    
+    this.sqliteDB.getAttractionsbycondition(sql_text).then(res => {
+      this.alldata = res
+    })
+    
   }
 
   alldata_old = [{      //所有的data
