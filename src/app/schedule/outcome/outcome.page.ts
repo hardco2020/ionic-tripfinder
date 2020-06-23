@@ -43,10 +43,7 @@ export class OutcomePage implements OnInit {
   //  };
   //  googles: googleInfor[] = [this.test,this.tests,this.testss];
    
-<<<<<<< Updated upstream
-=======
    //sql_text: String;
->>>>>>> Stashed changes
    favorites: Favorites[]; //load進所有現存資料
    data: any;
    map;
@@ -274,15 +271,6 @@ export class OutcomePage implements OnInit {
 
     //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以上改到controllerservice後註解掉
     
-<<<<<<< Updated upstream
-    var sql_text = "SELECT * FROM AttractionInfo WHERE Aname = '義大遊樂世界聖托里尼山城'";
-    
-    this.sqliteDB.getAttractionsbycondition(sql_func).then(res => {
-      this.alldata = res
-    })
-
-=======
->>>>>>> Stashed changes
     // this.sqliteDB.dbState().subscribe((res) => {
     //   if(res){
     //     this.sqliteDB.fetchAttractionsbycondition().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
@@ -290,12 +278,8 @@ export class OutcomePage implements OnInit {
     //     })
     //   }
     // });
-<<<<<<< Updated upstream
-/*
-=======
 
 
->>>>>>> Stashed changes
     this.sqliteDB.dbState().subscribe((res) => {
       if(res){
         this.sqliteDB.fetchAttractions().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
@@ -303,14 +287,8 @@ export class OutcomePage implements OnInit {
         })
       }
     });
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
-=======
 
 
->>>>>>> Stashed changes
     // this.sqliteDB.dbState().subscribe((res) => {
     //   if(res){
     //     this.sqliteDB.fetchAttractionsbycondition().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
@@ -318,16 +296,11 @@ export class OutcomePage implements OnInit {
     //     })
     //   }
     // });
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
     //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以下改到controllerservice後註解掉
-*/
-=======
+
 
     //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以下改到controllerservice後註解掉
->>>>>>> Stashed changes
+
 
   }
   ngAfterViewInit() : void{
@@ -354,9 +327,6 @@ export class OutcomePage implements OnInit {
     （同時勾 = 同時不勾）
 
     */
-<<<<<<< Updated upstream
-
-=======
    const Indoor = this.data.indoor;
    const Outdoor = this.data.outdoor;
    const Static = this.data.static;
@@ -369,8 +339,7 @@ export class OutcomePage implements OnInit {
    const Shopping = this.data.shopping;
    const History = this.data.historic_site;
    var sql_where : String ;
-   
->>>>>>> Stashed changes
+
    /*
     if 室內 = 室外:
         if 動態 = 靜態:
@@ -382,8 +351,6 @@ export class OutcomePage implements OnInit {
             SELECT *FROM ...
             WHERE 動靜=靜
     */
-<<<<<<< Updated upstream
-=======
     if(Indoor == Outdoor){
       if(Dynamic == Static){
       }else if(Dynamic =="y" && Static =="n"){
@@ -456,8 +423,6 @@ export class OutcomePage implements OnInit {
                   'AND favorite = n';
 
 
->>>>>>> Stashed changes
-    
    
     //篩選出一系列地點後根據使用者的距離 金錢等等要求 做google place進一步二階段篩選
     // for(let i=0;i<=this.examples.length;i++){
@@ -600,12 +565,8 @@ export class OutcomePage implements OnInit {
     const { role, data } = await loading.onDidDismiss();
     console.log('Loading dismissed!');
   }
-<<<<<<< HEAD
-  
-  UpdateCollection(aname,photo,item) {   
-=======
-  UpdateCollection(aname,photo,item,aid) {   
->>>>>>> master
+
+  UpdateCollection(aname,photo,item,aid) {
     this.lock = 0;
     this.favorite.place= aname;
     this.favorite.img = photo;
@@ -625,17 +586,14 @@ export class OutcomePage implements OnInit {
        this.service.addFavorite(this.favorite).then(() => {
        });
      }
-<<<<<<< HEAD
      //呼叫db service的function  利用aname找資料庫 傳aname進update 這行底下開始
 
-=======
      //呼叫service的function  利用aname找資料庫
 
     this.sqliteDB.updateAttraction(aid).then(() => {
     });
     
     //this.service.collect(aname)
->>>>>>> master
     this.presentLoading();
     for(let i = 0; i < this.alldata.length; i++) {
 
@@ -649,4 +607,4 @@ export class OutcomePage implements OnInit {
     console.log(this.favorite);
     
   }
-}
+} 
