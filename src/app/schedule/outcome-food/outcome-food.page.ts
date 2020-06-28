@@ -66,6 +66,7 @@ export class OutcomeFoodPage implements OnInit {
       this.alldata = res
     })
   }
+  
   async presentLoading() { // 等待Sign
     const loading = await this.loadingController.create({
       message: '添加中',

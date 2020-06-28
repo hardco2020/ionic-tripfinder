@@ -16,6 +16,7 @@ declare var google;
   styleUrls: ['./outcome.page.scss'],
 })
 
+
 export class OutcomePage implements OnInit {
    // 透過 url 將 selection 傳遞到此頁面
    favorite : Favorites = {
@@ -43,7 +44,6 @@ export class OutcomePage implements OnInit {
   //  };
   //  googles: googleInfor[] = [this.test,this.tests,this.testss];
    
-   //sql_text: String;
    favorites: Favorites[]; //load進所有現存資料
    data: any;
    map;
@@ -271,38 +271,13 @@ export class OutcomePage implements OnInit {
 
     //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以上改到controllerservice後註解掉
     
-    // this.sqliteDB.dbState().subscribe((res) => {
-    //   if(res){
-    //     this.sqliteDB.fetchAttractionsbycondition().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
-    //       this.alldata = item
-    //     })
-    //   }
-    // });
-
-
-    this.sqliteDB.dbState().subscribe((res) => {
-      if(res){
-        this.sqliteDB.fetchAttractions().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
-          this.alldata = item
-        })
-      }
-    });
-
-
-    // this.sqliteDB.dbState().subscribe((res) => {
-    //   if(res){
-    //     this.sqliteDB.fetchAttractionsbycondition().subscribe(item => { //連接API(db.services.ts)的fetchAttractions()取得資料
-    //       this.alldata = item
-    //     })
-    //   }
-    // });
-    //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以下改到controllerservice後註解掉
-
-
-    //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以下改到controllerservice後註解掉
-
-
+    var sql_text = "SELECT * FROM AttractionInfo WHERE Aname = '義大遊樂世界聖托里尼山城'";
+    
+    this.sqliteDB.getAttractionsbycondition(sql_func).then(res => {
+      this.alldata = res
+    })
   }
+  
   ngAfterViewInit() : void{
     setTimeout(() => {
       console.log(this.mapElement.nativeElement.innerText);  //防止讀太快讀不到nativeElement
@@ -327,19 +302,6 @@ export class OutcomePage implements OnInit {
     （同時勾 = 同時不勾）
 
     */
-   const Indoor = this.data.indoor;
-   const Outdoor = this.data.outdoor;
-   const Static = this.data.static;
-   const Dynamic = this.data.dynamic;
-   const Netbeauty = this.data.netbeauty;
-   const Hipster = this.data.hipster;
-   const NearSea = this.data.near_sea;
-   const NearMountain = this.data.near_mountain;
-   const NightView = this.data.night_view;
-   const Shopping = this.data.shopping;
-   const History = this.data.historic_site;
-   var sql_where : String ;
-
    /*
     if 室內 = 室外:
         if 動態 = 靜態:
@@ -351,78 +313,7 @@ export class OutcomePage implements OnInit {
             SELECT *FROM ...
             WHERE 動靜=靜
     */
-    if(Indoor == Outdoor){
-      if(Dynamic == Static){
-      }else if(Dynamic =="y" && Static =="n"){
-        var StaticorDynamic = "d";
-        sql_where = 'StaticorDynamic = '+ StaticorDynamic;
-      }else if(Dynamic =="n" && Static =="y"){
-        var StaticorDynamic = "s";
-        sql_where = 'StaticorDynamic = '+ StaticorDynamic;
-      }
-    }
-
-    /*
-    elif 室內=勾 & 室外=不勾:
-        if 動態 = 靜態:
-            SELECT * FROM ...
-            WHERE 內外=內
-        elif 動態=勾 & 靜態=不勾:
-            SELECT * FROM ...
-            WHERE 內外=內 AND 動靜=動
-        elif 動態=不勾 & 靜態=勾:
-            SELECT * FROM ...
-            WHERE 內外=內 AND 動靜=靜
-    */
-    else if (Indoor == 'y' && Outdoor == 'n'){
-      var InorOut = 'in';
-      if(Dynamic == Static){
-        sql_where = 'InorOut = '+ InorOut;
-      }else if(Dynamic =="y" && Static =="n"){
-        var StaticorDynamic = "d";
-        sql_where = 'StaticorDynamic = '+ StaticorDynamic + ' AND InorOut = '+ InorOut;
-      }else if(Dynamic =="n" && Static =="y"){
-        var StaticorDynamic = "s";
-        sql_where = 'StaticorDynamic = '+ StaticorDynamic + ' AND InorOut = '+ InorOut;
-      }
-    }
-    /*
-    elif 室內=不勾 & 室外=勾:
-        if 動態 = 靜態:
-            SELECT * FROM ...
-            WHERE 內外=外
-        elif 動態=勾 & 靜態=不勾:
-            SELECT * FROM ...
-            WHERE 內外=外 AND 動靜=動
-        elif 動態=不勾 & 靜態=勾:
-            SELECT * FROM ...
-            WHERE 內外=外 AND 動靜=靜
-    */
-  else if (Indoor == 'n' && Outdoor == 'y'){
-    var InorOut = 'out';
-    if(Dynamic == Static){
-      sql_where = 'InorOut = '+ InorOut;
-    }else if(Dynamic =="y" && Static =="n"){
-      var StaticorDynamic = "d";
-      sql_where = 'StaticorDynamic = '+ StaticorDynamic + ' AND InorOut = '+ InorOut;
-    }else if(Dynamic =="n" && Static =="y"){
-      var StaticorDynamic = "s";
-      sql_where = 'StaticorDynamic = '+ StaticorDynamic + ' AND InorOut = '+ InorOut;
-    }
-  }
-  
-  // SQL 式 SQL 式 SQL 式 SQL 式 SQL 式 SQL 式
-  var sql_func = 'SELECT * FROM AttractionInfo WHERE ' + sql_where +
-                  'AND Netbeauty = ' + Netbeauty +
-                  'AND Hipster = ' + Hipster +
-                  'AND NearSea = ' + NearSea +
-                  'AND NearMountain = ' + NearMountain +
-                  'AND NightView = ' + NightView +
-                  'AND Shopping = ' + Shopping +
-                  'AND History = ' + History+
-                  'AND favorite = n';
-
-
+    
    
     //篩選出一系列地點後根據使用者的距離 金錢等等要求 做google place進一步二階段篩選
     // for(let i=0;i<=this.examples.length;i++){
@@ -565,8 +456,7 @@ export class OutcomePage implements OnInit {
     const { role, data } = await loading.onDidDismiss();
     console.log('Loading dismissed!');
   }
-
-  UpdateCollection(aname,photo,item,aid) {
+  UpdateCollection(aname,photo,item,aid) {   
     this.lock = 0;
     this.favorite.place= aname;
     this.favorite.img = photo;
@@ -586,8 +476,6 @@ export class OutcomePage implements OnInit {
        this.service.addFavorite(this.favorite).then(() => {
        });
      }
-     //呼叫db service的function  利用aname找資料庫 傳aname進update 這行底下開始
-
      //呼叫service的function  利用aname找資料庫
 
     this.sqliteDB.updateAttraction(aid).then(() => {
