@@ -51,9 +51,15 @@ export class Tab1Page {
     this.service.getFavorites().subscribe(res => {
       this.favorites = res; //接受firebase裡所有的欄位
       this.favorites = this.favorites.sort(function (a, b) {
-        return a.collection < b.collection ? 1 : -1;
+        return a.collection < b.collection ? 1 : -1;  //按照collection進行排序
       })
-      this.slides = this.favorites
+      this.slides[0]=this.favorites[0];
+      this.slides[1]=this.favorites[1];
+      this.slides[2]=this.favorites[2];
+      // for(let i = 0; i < this.slides.length; i++) { bug
+      //   this.slides[i]=this.favorites[i];
+      // }
+      
     });
 
     console.log(this.favorites);

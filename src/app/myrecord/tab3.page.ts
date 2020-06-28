@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class Tab3Page  implements OnInit {
 
   alldata: any[] = [];
-
+  api_key = 'AIzaSyCMjg0lGC43K_RsV687kghZ5qTAbPnQAMo';
   alldata_old = [{      //所有的data
     "Aid": 1,
     "Aname": "大立百貨空中遊樂園",
