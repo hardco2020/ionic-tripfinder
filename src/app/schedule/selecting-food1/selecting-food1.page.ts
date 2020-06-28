@@ -48,75 +48,81 @@ export class SelectingFood1Page implements OnInit {
   labels = [
     {
       key: 1,
-      name: 'restaurant',
-      title: '餐廳',
-      img: 'https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb'
+      name: 'sweet',
+      title: '甜食',
+      img: 'https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 2,
+      name: 'salty',
+      title: '鹹食',
+      img: 'https://images.pexels.com/photos/1838610/pexels-photo-1838610.jpeg?cs=srgb&dl=pexels-1838610.jpg&fm=jpg'
+    },
+    {
+      key: 3,
+      name: 'cheap',
+      title: '銅板',
+      img: 'https://images.pexels.com/photos/3459343/pexels-photo-3459343.jpeg?auto=compress&cs=tinysrgb'
+    },
+    {
+      key: 4,
+      name: 'expensive',
+      title: '高檔',
+      img: 'https://images.pexels.com/photos/4050981/pexels-photo-4050981.jpeg?auto=compress&cs=tinysrgb'
+    },
+    {
+      key: 5,
+      name: 'buffet',
+      title: '吃到飽',
+      img: 'https://images.pexels.com/photos/2670327/pexels-photo-2670327.jpeg?auto=compress&cs=tinysrgb'
+    },
+    {
+      key: 6,
+      name: 'chinese',
+      title: '中式',
+      img: 'https://images.pexels.com/photos/3951665/pexels-photo-3951665.jpeg?auto=compress&cs=tinysrgb'
+    },
+    {
+      key: 7,
+      name: 'western',
+      title: '西式',
+      img: 'https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb'
+    },
+    {
+      key: 8,
+      name: 'japanKorean',
+      title: '日韓式',
+      img: 'https://images.pexels.com/photos/3297363/pexels-photo-3297363.jpeg?auto=compress&cs=tinysrgb'
+    },
+    {
+      key: 9,
+      name: 'asian',
+      title: '東南亞',
+      img: 'https://images.pexels.com/photos/1437590/pexels-photo-1437590.jpeg?cs=srgb&dl=pexels-1437590.jpg&fm=jpg'
+    },
+    {
+      key: 10,
+      name: 'netbeauty',
+      title: '網美',
+      img: 'https://images.pexels.com/photos/2871757/pexels-photo-2871757.jpeg?auto=compress&cs=tinysrgb'
+    },
+    {
+      key: 11,
       name: 'vendor',
       title: '攤販',
       img: 'https://images.pexels.com/photos/3031209/pexels-photo-3031209.jpeg?auto=compress&cs=tinysrgb'
     },
     {
-      key: 3,
-      name: 'fast_food',
-      title: '速食',
-      img: 'https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb'
+      key: 12,
+      name: 'restaurant',
+      title: '餐廳',
+      img: 'https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb'
     },
     {
-      key: 4,
-      name: 'vegetarian_food',
-      title: '素食',
-      img: 'https://images.pexels.com/photos/4050981/pexels-photo-4050981.jpeg?auto=compress&cs=tinysrgb'
-    },
-    {
-      key: 5,
-      name: 'chinese',
-      title: '中式',
-      img: 'https://images.pexels.com/photos/2670327/pexels-photo-2670327.jpeg?auto=compress&cs=tinysrgb'
-    },
-    {
-      key: 6,
-      name: 'exotic',
-      title: '異國料理',
-      img: 'https://images.pexels.com/photos/3951665/pexels-photo-3951665.jpeg?auto=compress&cs=tinysrgb'
-    },
-    {
-      key: 7,
-      name: 'parity',
-      title: '平價',
-      img: 'https://images.pexels.com/photos/3459343/pexels-photo-3459343.jpeg?auto=compress&cs=tinysrgb'
-    },
-    {
-      key: 8,
-      name: 'boxed_lunch',
-      title: '便當',
-      img: 'https://images.pexels.com/photos/3297363/pexels-photo-3297363.jpeg?auto=compress&cs=tinysrgb'
-    },
-    {
-      key: 9,
-      name: 'baking',
-      title: '烘培',
-      img: 'https://images.pexels.com/photos/2135/food-france-morning-breakfast.jpg?auto=compress&cs=tinysrgb'
-    },
-    {
-      key: 10,
-      name: 'seafood',
-      title: '海鮮',
-      img: 'https://images.pexels.com/photos/2871757/pexels-photo-2871757.jpeg?auto=compress&cs=tinysrgb'
-    },
-    {
-      key: 11,
+      key: 13,
       name: 'alcohol',
       title: '酒精',
       img: 'https://images.pexels.com/photos/2529468/pexels-photo-2529468.jpeg?auto=compress&cs=tinysrgb'
-    },
-    {
-      key: 12,
-      name: 'dessert',
-      title: '甜點',
-      img: 'https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg?auto=compress&cs=tinysrgb'
     }
   ];
 
