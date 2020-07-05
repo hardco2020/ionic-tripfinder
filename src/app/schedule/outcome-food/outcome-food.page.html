@@ -29,21 +29,20 @@
         <ion-card-subtitle>
           {{item.Address}}
         </ion-card-subtitle>
-        
-        <ion-chip color="primary">
-          <ion-label>{{item.GoogleClass}}</ion-label>
-        </ion-chip>
-        <ion-chip color="primary">
-          <ion-label>類型二</ion-label>
-        </ion-chip>
-        <ion-button expand="full" (click)="UpdateCollection(item.Aname,item.photo,item)">+</ion-button>
-      </ion-card-content>
-  </ion-item>
-
-  <ion-item-options side="end"> 
-    <ion-item-option >Favorite</ion-item-option>
-  </ion-item-options>
-</ion-item-sliding>
+          
+          <ion-chip color="primary">
+            <ion-label>{{item.GoogleClass}}</ion-label>
+          </ion-chip>
+          <ion-chip color="primary">
+            <ion-label>類型二</ion-label>
+          </ion-chip>
+          <ion-button expand="full" (click)="UpdateCollection(item.Aname,item.photo,item)">+</ion-button>
+        </ion-card-content> 
+    </ion-item>
+    <ion-item-options side="end"> 
+      <ion-item-option >Favorite</ion-item-option>
+    </ion-item-options>
+  </ion-item-sliding>
   <div #mapElement class='map'></div>
 
 </ion-content>
