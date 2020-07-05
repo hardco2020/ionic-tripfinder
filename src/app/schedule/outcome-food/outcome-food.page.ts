@@ -60,6 +60,22 @@ export class OutcomeFoodPage implements OnInit {
   }
 
   ngOnInit(): void{
+
+    var sql_func = 'SELECT * FROM FoodInfo WHERE sweet = "' + this.data.sweet +
+                    '" AND salty = "' + this.data.salty +
+                    '" AND cheap = "' + this.data.cheap +
+                    '" AND expensive = "' + this.data.expensive +
+                    '" AND buffet = "' + this.data.buffet +
+                    '" AND chinese = "' + this.data.chinese +
+                    '" AND western = "' + this.data.western +
+                    '" AND japanKorean = "' + this.data.japanKorean +
+                    '" AND SoutheastAsian = "' + this.data.SoutheastAsian +
+                    '" AND netbeauty = "' + this.data.netbeauty +
+                    '" AND vendor = "' + this.data.vendor +
+                    '" AND restaurant = "' + this.data.restaurant +
+                    '" AND alcohol = "' + this.data.alcohol +
+                    '" AND favorite = "n"';;
+
     var sql_text = "SELECT * FROM FoodInfo";// WHERE Aname = '義大遊樂世界聖托里尼山城'
     
     this.sqliteDB.getRestaurantsbycondition(sql_text).then(res => {
