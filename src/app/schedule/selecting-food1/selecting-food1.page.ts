@@ -31,18 +31,19 @@ export class SelectingFood1Page implements OnInit {
   form: FormGroup;
 
   result = {
-    restaurant: 'n',
-    vendor: 'n',
-    fast_food: 'n',
-    vegetarian_food: 'n',
+    sweet: 'n',
+    salty: 'n',
+    cheap: 'n',
+    expensive: 'n',
+    buffet: 'n',
     chinese: 'n',
-    exotic: 'n',
-    parity: 'n',
-    boxed_lunch: 'n',
-    baking: 'n',
-    seafood: 'n',
-    alcohol: 'n',
-    dessert: 'n',
+    western: 'n',
+    japanKorean: 'n',
+    asian: 'n',
+    netbeauty: 'n',
+    vendor: 'n',
+    restaurant: 'n',
+    alcohol: 'n'
   };
 
   labels = [
