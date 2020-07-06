@@ -13,7 +13,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-item-sliding>
-    <ion-item *ngFor="let item of alldata" >
+    <ion-item *ngFor="let item of testData" >
       <ion-card-content>
         <ion-row class="ion-justify-content-center">
           <ion-col size="auto"> 
@@ -36,7 +36,7 @@
           <ion-chip color="primary">
             <ion-label>類型二</ion-label>
           </ion-chip>
-          <ion-button expand="full" (click)="UpdateCollection(item.Aname,item.photo,item)">+</ion-button>
+          <ion-button expand="full" (click)="UpdateCollection(item.Aname,item.photo,item,item.Aid)">+</ion-button>
         </ion-card-content> 
     </ion-item>
     <ion-item-options side="end"> 
