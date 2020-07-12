@@ -43,67 +43,75 @@ export class SelectingPhase2Page implements OnInit {
       key: 2,
       name:'indoor',
       title: '室內',
-      img: 'https://images.pexels.com/photos/4325455/pexels-photo-4325455.jpeg?auto=compress&cs=tinysrgb'
+      img: 'assets/img/selecting_phase/2.jpeg'
     },
     {
       key: 3,
       name:'dynamic',
       title: '動態',
-      img: 'https://images.pexels.com/photos/917510/pexels-photo-917510.jpeg?auto=compress&cs=tinysrgb'
+      img: 'assets/img/selecting_phase/3.jpeg'
     },
     {
       key: 4,
       name:'static',
       title: '靜態',
-      img: 'https://images.pexels.com/photos/2942194/pexels-photo-2942194.jpeg?auto=compress&cs=tinysrgb'
+      img: 'assets/img/selecting_phase/4.jpeg'
     },
     {
       key: 5,
       name:'netbeauty',
       title: '網美踩點',
-      img: 'https://images.pexels.com/photos/600114/pexels-photo-600114.jpeg?auto=compress&cs=tinysrgb'
+      img: 'assets/img/selecting_phase/5.jpeg'
+      // img: 'https://images.pexels.com/photos/600114/pexels-photo-600114.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 6,
       name:'hipster',
       title: '文青必去',
-      img: 'https://images.pexels.com/photos/364110/pexels-photo-364110.jpeg?auto=compress&cs=tinysrgb'
+      img: 'assets/img/selecting_phase/6.jpeg'
+      // img: 'https://images.pexels.com/photos/364110/pexels-photo-364110.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 7,
       name:'near_mountain',
       title: '靠山',
-      img: 'https://images.pexels.com/photos/2175952/pexels-photo-2175952.jpeg?auto=compress&cs=tinysrgb'
+      img: 'assets/img/selecting_phase/7.jpeg'
+      // img: 'https://images.pexels.com/photos/2175952/pexels-photo-2175952.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 8,
       name:'near_sea',
       title: '靠海',
-      img: 'https://images.pexels.com/photos/756856/pexels-photo-756856.jpeg?auto=compress&cs=tinysrgb'
+      img: 'assets/img/selecting_phase/8.jpeg'
+      // img: 'https://images.pexels.com/photos/756856/pexels-photo-756856.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 9,
       name:'shopping',
       title: '逛街',
-      img: 'https://images.pexels.com/photos/1020370/pexels-photo-1020370.jpeg?auto=compress&cs=tinysrgb'
+      img: 'assets/img/selecting_phase/9.jpeg'
+      // img: 'https://images.pexels.com/photos/1020370/pexels-photo-1020370.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 10,
       name:'exhibition',
       title: '展覽',
-      img: 'https://images.pexels.com/photos/1718856/pexels-photo-1718856.jpeg?auto=compress&cs=tinysrgb'
+      img: 'assets/img/selecting_phase/10.jpeg'
+      // img: 'https://images.pexels.com/photos/1718856/pexels-photo-1718856.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 11,
       name:'historic_site',
       title: '名勝古蹟',
-      img: 'https://images.pexels.com/photos/3361480/pexels-photo-3361480.jpeg?auto=compress&cs=tinysrgb'
+      img: 'assets/img/selecting_phase/11.jpeg'
+      // img: 'https://images.pexels.com/photos/3361480/pexels-photo-3361480.jpeg?auto=compress&cs=tinysrgb'
     },
     {
       key: 12,
       name:'night_view',
       title: '夜景',
-      img: 'https://images.pexels.com/photos/2670898/pexels-photo-2670898.jpeg?auto=compress&cs=tinysrgb'
+      img: 'assets/img/selecting_phase/12.jpeg'
+      // img: 'https://images.pexels.com/photos/2670898/pexels-photo-2670898.jpeg?auto=compress&cs=tinysrgb'
     }
   ];
   form: FormGroup;

@@ -53,7 +53,7 @@ export class OutcomePage implements OnInit {
   //  openPeriod : any;
   //  phoneNumber : any;
    example ="高雄小巨蛋"; //到時候會改成所有地點的資料
-
+   distance : any;
    
    alldata: any[] = [];//sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 此行改到controllerservice後註解掉
   
@@ -142,7 +142,8 @@ export class OutcomePage implements OnInit {
     ]
    examples = ["鍋呆子鍋燒麵","老紀牛肉麵","高雄市立圖書館左新分館"];
    lock = 1; //update的鎖
-
+   exampleLat =  22.672179200000002;
+   exampleLng =  120.28477439999999;
    constructor(
      private route: ActivatedRoute, 
      private router: Router ,
@@ -275,7 +276,76 @@ export class OutcomePage implements OnInit {
     
     this.sqliteDB.getAttractionsbycondition(sql_func).then(res => {
       this.alldata = res
+      this.alldata.forEach(element => {
+        this.geocoder.geocode({ 'address': element.Address },  (results, status)  => { //先找到當地的經緯度 
+          let pos;
+          if (status == google.maps.GeocoderStatus.OK) {
+              pos = {                                         //目標經緯度
+                lat: results[0].geometry.location.lat(),
+                lng: results[0].geometry.location.lng()
+              };
+              
+              
+              // let watch = this.geolocation.watchPosition();
+              // watch.subscribe((data) => {
+              //  // 兩者合併算距離
+              //  console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
+              if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng))>=1000){
+    
+                 this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng))/1000;
+                 this.distance = Math.round(this.distance);
+                 if(this.distance>this.data.distance){
+                        //讓此選項消失                  
+                 }
+                 this.distance = this.distance +"公里";
+                 element.Aname = this.distance;
+               }else{
+                this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng));
+                this.distance = Math.round(this.distance);
+                this.distance = this.distance +"公尺";
+                element.Aname = this.distance;
+    
+              }
+               // 四捨五入
+              // });      
+              
+          }  
+          else{
+            element.Aname = "失敗了";
+          }   
+        });
+      });
     })
+    this.geocoder.geocode({ 'address': "高雄市鹽埕區五福四路19" },  (results, status)  => { //先找到當地的經緯度 
+      let pos;
+      if (status == google.maps.GeocoderStatus.OK) {
+          pos = {                                         //目標經緯度
+            lat: results[0].geometry.location.lat(),
+            lng: results[0].geometry.location.lng()
+          };
+          this.distance = pos.lat;
+          
+          // let watch = this.geolocation.watchPosition();
+          // watch.subscribe((data) => {
+          //  // 兩者合併算距離
+          //  console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
+          //  if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))>=1000){
+
+          //    this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))/1000;
+          //    this.distance = Math.round(this.distance);
+          //    this.distance = this.distance +"公里";
+             
+          //  }else{
+          //   this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude));
+          //   this.distance = Math.round(this.distance);
+          //   this.distance = this.distance +"公尺";
+
+          //  }
+           // 四捨五入
+          // });      
+          
+      }     
+    });
   }
   
   ngAfterViewInit() : void{
@@ -459,7 +529,7 @@ export class OutcomePage implements OnInit {
   UpdateCollection(aname,photo,item,aid) {   
     this.lock = 0;
     this.favorite.place= aname;
-    this.favorite.img = photo;
+    this.favorite.img = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+photo+"&key="+this.api_key;
     this.favorites.forEach(element => {
       if(element.place==this.favorite.place){ //如果重複位置則UPDATE  
         this.lock = 1;
