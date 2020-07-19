@@ -298,12 +298,12 @@ export class OutcomePage implements OnInit {
                         //讓此選項消失                  
                  }
                  this.distance = this.distance +"公里";
-                 element.Aname = this.distance;
+                 
                }else{
                 this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng));
                 this.distance = Math.round(this.distance);
                 this.distance = this.distance +"公尺";
-                element.Aname = this.distance;
+               
     
               }
                // 四捨五入

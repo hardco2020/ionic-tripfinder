@@ -2,7 +2,7 @@
     "structure":{
         "tables":{
             "AttractionInfo":"([Aid] PRIMARY KEY, [Aname], [photo], [GoogleClass], [Phone], [Address], [Rate], [InorOut], [StaticorDynamic], [Netbeauty], [Hipster], [NearMountain], [NearSea], [Shopping], [Exhibition], [History], [NightView], [favorite])",
-            "FoodInfo":"([Aid] PRIMARY KEY, [Aname], [photo], [GoogleClass], [Phone], [Address], [Rate])"
+            "FoodInfo":"([Aid] PRIMARY KEY, [Aname], [photo], [GoogleClass], [Phone], [Address], [Rate],[favorite])"
         }
     },
     "data":{

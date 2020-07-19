@@ -63,45 +63,45 @@ export class Tab1Page {
       // for(let i = 0; i < this.slides.length; i++) { bug
       //   this.slides[i]=this.favorites[i];
       // }
-      this.geocoder.geocode({ 'address': "高雄市左營區明華一路58號"},  (results, status)  => { //先找到當地的經緯度 
-        let pos;
-        if (status == google.maps.GeocoderStatus.OK) {
-            pos = {                                         //目標經緯度
-              lat: results[0].geometry.location.lat(),
-              lng: results[0].geometry.location.lng()
-            };
-            this.geolocation.getCurrentPosition().then((resp) => {  //自己的經緯度
-              console.log(resp.coords.latitude);
-              console.log(resp.coords.longitude);
-              // resp.coords.latitude
-              // resp.coords.longitude
-             }).catch((error) => {
-               console.log('Error getting location', error);
-            });
-            let watch = this.geolocation.watchPosition();
-            watch.subscribe((data) => {
-             // 兩者合併算距離
-             console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
-             if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))>=1000){
+      // this.geocoder.geocode({ 'address': "高雄市左營區明華一路58號"},  (results, status)  => { //先找到當地的經緯度 
+      //   let pos;
+      //   if (status == google.maps.GeocoderStatus.OK) {
+      //       pos = {                                         //目標經緯度
+      //         lat: results[0].geometry.location.lat(),
+      //         lng: results[0].geometry.location.lng()
+      //       };
+      //       this.geolocation.getCurrentPosition().then((resp) => {  //自己的經緯度
+      //         console.log(resp.coords.latitude);
+      //         console.log(resp.coords.longitude);
+      //         // resp.coords.latitude
+      //         // resp.coords.longitude
+      //        }).catch((error) => {
+      //          console.log('Error getting location', error);
+      //       });
+      //       let watch = this.geolocation.watchPosition();
+      //       watch.subscribe((data) => {
+      //        // 兩者合併算距離
+      //        console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
+      //        if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))>=1000){
 
-               this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))/1000;
-               this.distance = Math.round(this.distance);
-               this.distance = this.distance +"公里";
-               console.log(this.distance);
+      //          this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))/1000;
+      //          this.distance = Math.round(this.distance);
+      //          this.distance = this.distance +"公里";
+      //          console.log(this.distance);
                
-             }else{
-              this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude));
-              this.distance = Math.round(this.distance);
-              this.distance = this.distance +"公尺";
-              console.log(this.distance);
+      //        }else{
+      //         this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude));
+      //         this.distance = Math.round(this.distance);
+      //         this.distance = this.distance +"公尺";
+      //         console.log(this.distance);
 
-             }
-             // 四捨五入
-            });      
+      //        }
+      //        // 四捨五入
+      //       });      
             
-        }
+      //   }
         
-    });
+    // });
     });
 
     console.log(this.favorites);
