@@ -126,7 +126,7 @@ export class OutcomeFoodPage implements OnInit {
   UpdateCollection(aname, photo, item, aid) {
     this.lock = 0;
     this.favfood.place = aname;
-    this.favfood.img = photo;
+    this.favfood.img = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+photo+"&key="+this.apiKey;
     this.favfoods.forEach(element => {
       if (element.place === this.favfood.place) { // 如果重複位置則UPDATE
         this.lock = 1;
