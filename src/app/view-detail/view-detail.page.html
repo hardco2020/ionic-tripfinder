@@ -14,11 +14,15 @@
   <ion-row>
     <ion-col>
       <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{loadedDetail.photo}}&key={{api_key}}"  />
+      <ion-card-title>
+        {{loadedDetail.Aname}}
+      </ion-card-title>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col>
       <ion-chip color="primary">
+        
         <ion-label>{{loadedDetail.GoogleClass}}</ion-label>
       </ion-chip>
       
@@ -72,7 +76,8 @@
           <ion-icon slot="start" name="compass-outline"></ion-icon>
           <ion-label>
             <b>目前距離</b>
-            <p ngDefaultControl [(ngModel)]="distance">{{distance}}</p>
+            <p ngDefaultControl [(ngModel)]="currentLat">{{currentLat}}</p>
+            <p ngDefaultControl [(ngModel)]="currentLng">{{currentLng}}</p>
           </ion-label>
         </ion-item>
        

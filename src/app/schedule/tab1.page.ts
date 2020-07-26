@@ -3,6 +3,8 @@ import { Component, OnInit ,NgZone ,ViewChild, AfterContentInit} from '@angular/
 import { NavController } from '@ionic/angular';
 import { ControllerserviceService,Favorites,FavFoods,googleInfor } from '../controllerservice.service';
 import { VirtualTimeScheduler } from 'rxjs';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+declare var google;
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -58,8 +60,14 @@ export class Tab1Page {
     speed: 2000,
    };
   favorites: Favorites[]; //load進所有現存資料
+<<<<<<< HEAD
   favfoods: FavFoods[];
   constructor(public nav: NavController,public service : ControllerserviceService) {}
+=======
+  geocoder = new google.maps.Geocoder;
+  distance: any;
+  constructor(public nav: NavController,public service : ControllerserviceService,private geolocation: Geolocation , ) {}
+>>>>>>> 28cdf076c3c122c9f0bd9c6b0d88005527283114
   ngOnInit(): void{
     this.service.getFavorites().subscribe(res => {
       this.favorites = res; //接受firebase裡所有的欄位
@@ -72,6 +80,7 @@ export class Tab1Page {
       this.slides[4]=this.favorites[2];
       // for(let i = 0; i < this.slides.length; i++) { bug
       //   this.slides[i]=this.favorites[i];
+<<<<<<< HEAD
       // } 
   
     });
@@ -83,6 +92,48 @@ export class Tab1Page {
       this.slides[1]=this.favfoods[0];
       this.slides[3]=this.favfoods[1];
       this.slides[5]=this.favfoods[2];
+=======
+      // }
+      // this.geocoder.geocode({ 'address': "高雄市左營區明華一路58號"},  (results, status)  => { //先找到當地的經緯度 
+      //   let pos;
+      //   if (status == google.maps.GeocoderStatus.OK) {
+      //       pos = {                                         //目標經緯度
+      //         lat: results[0].geometry.location.lat(),
+      //         lng: results[0].geometry.location.lng()
+      //       };
+      //       this.geolocation.getCurrentPosition().then((resp) => {  //自己的經緯度
+      //         console.log(resp.coords.latitude);
+      //         console.log(resp.coords.longitude);
+      //         // resp.coords.latitude
+      //         // resp.coords.longitude
+      //        }).catch((error) => {
+      //          console.log('Error getting location', error);
+      //       });
+      //       let watch = this.geolocation.watchPosition();
+      //       watch.subscribe((data) => {
+      //        // 兩者合併算距離
+      //        console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
+      //        if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))>=1000){
+
+      //          this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))/1000;
+      //          this.distance = Math.round(this.distance);
+      //          this.distance = this.distance +"公里";
+      //          console.log(this.distance);
+               
+      //        }else{
+      //         this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude));
+      //         this.distance = Math.round(this.distance);
+      //         this.distance = this.distance +"公尺";
+      //         console.log(this.distance);
+
+      //        }
+      //        // 四捨五入
+      //       });      
+            
+      //   }
+        
+    // });
+>>>>>>> 28cdf076c3c122c9f0bd9c6b0d88005527283114
     });
 
     console.log(this.favorites);

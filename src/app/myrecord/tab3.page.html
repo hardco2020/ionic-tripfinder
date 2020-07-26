@@ -22,7 +22,7 @@
         <ion-row class="ion-justify-content-center">
           <ion-col size="auto"> 
             <div>
-              <img  style="max-height: 250px;" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{item.photo}}&key={{api_key}}" [routerLink]="['/tab3', item.Aname]"/>
+              <img  style="max-height: 250px;" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{item.photo}}&key={{api_key}}" [routerLink]="['/outcome',item.Aname]"/>
               <div class="evaluation_star"><ion-icon class="iconSize" slot="end" name="star"></ion-icon>{{item.Rate}}</div>
             </div>
           </ion-col>
@@ -33,7 +33,7 @@
         <ion-card-subtitle>
           {{item.Address}}
         </ion-card-subtitle>
-        
+        <!-- <ion-button (click)="back(item.Aname)">+</ion-button> -->
         <ion-chip color="primary">
           <ion-label>{{item.GoogleClass}}</ion-label>
         </ion-chip>

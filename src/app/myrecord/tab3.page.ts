@@ -1,6 +1,7 @@
 import { Component, OnInit ,NgZone ,ViewChild, AfterContentInit} from '@angular/core';
 import { DbService } from '../services/db.service';
 import { Observable } from 'rxjs';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab3',
@@ -51,6 +52,7 @@ export class Tab3Page  implements OnInit {
 
   constructor(
     private sqliteDB: DbService,
+    private nav : NavController
   ) {}
 
   ngOnInit(): void{ //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB
@@ -60,6 +62,11 @@ export class Tab3Page  implements OnInit {
       this.alldata = res
     })
     
+  }
+  back(name){
+    this.nav.navigateRoot(['outcome',name]);
+    location.reload();
+   
   }
 
 }
