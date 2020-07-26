@@ -14,9 +14,17 @@
 
 
 <ion-content class="ion-padding">
+  
 
-  <!--固定問題-->
+  <!-- 固定問題-->
   <ion-list>
+
+    <!-- 輸入目前位置 -->
+    <ion-list-header>
+      <h4>輸入當前位置地址 : </h4>
+    </ion-list-header>
+
+    <!-- 輸入距離範圍 -->
     <ion-list-header>
         <h4>請選擇目的地距離 : {{distanceRange}}</h4>
     </ion-list-header>
@@ -35,49 +43,6 @@
         </ion-range>
       </ion-item>
     
-
-  <!--
-   <ion-item>
-      <ion-label>距離範圍(以內)</ion-label>
-      <ion-select placeholder="-" [(ngModel)]="vals[1]">
-        <ion-select-option value="2km">2公里</ion-select-option>
-        <ion-select-option value="5km">5公里</ion-select-option>
-        <ion-select-option value="10km">10公里</ion-select-option>
-        <ion-select-option value="20km">20公里</ion-select-option>
-      </ion-select>
-    </ion-item>
-  
-    <ion-item>
-      <ion-label>交通工具</ion-label>
-      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss" [(ngModel)]="transportion">
-        <ion-select-option value="walk">走路</ion-select-option>
-        <ion-select-option value="ride">騎車</ion-select-option>
-        <ion-select-option value="drive">汽車</ion-select-option>
-        <ion-select-option value="mrt">大眾運輸</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>時段</ion-label>
-      <ion-select placeholder="-" okText="Okay" cancelText="Dismiss" [(ngModel)]="period">
-        <ion-select-option value="morning">早上</ion-select-option>
-        <ion-select-option value="afternoon">下午</ion-select-option>
-        <ion-select-option value="evening">晚上</ion-select-option>
-        <ion-select-option value="midnight">深夜</ion-select-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>消費金額</ion-label>
-      <ion-select value="default" okText="Okay" cancelText="Dismiss" [(ngModel)]="amount">
-        <ion-select-option value="unlimit">不限</ion-select-option>
-        <ion-select-option value="100">$100</ion-select-option>
-        <ion-select-option value="500">$500</ion-select-option>
-        <ion-select-option value="2000">$2000</ion-select-option>
-      </ion-select>
-    </ion-item>
-  
-  進入到多選項 同時將資料傳進後端-->
   <ion-grid>
     <ion-row>
       <ion-col size="6">

@@ -42,7 +42,11 @@ const routes: Routes = [
   {
     path: 'outcome-food',
     loadChildren: () => import('./schedule/outcome-food/outcome-food.module').then( m => m.OutcomeFoodPageModule)
+  },  {
+    path: 'test',
+    loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
   },
+
 
   
 

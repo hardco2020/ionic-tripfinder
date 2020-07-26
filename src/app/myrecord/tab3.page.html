@@ -12,6 +12,10 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+ <!-- <ion-item *ngIf="alldata_old == null; else elseTmpl">
+    <p>empty</p>
+  </ion-item>-->
+  <ng-template #elseTmpl>
   <ion-item-sliding>
     <ion-item *ngFor="let item of alldata" >
       <ion-card-content>
@@ -43,6 +47,7 @@
       <ion-item-option >Favorite</ion-item-option>
     </ion-item-options>
   </ion-item-sliding>
+  </ng-template>
 
   
 

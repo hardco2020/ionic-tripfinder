@@ -15,6 +15,7 @@ export class SelectingPhase1Page implements OnInit {
 
   ngOnInit() {
     //this.getSelectForm();
+    this.distanceRange = 0;
   }
   
   // ngModel 變數值
