@@ -276,6 +276,7 @@ export class OutcomePage implements OnInit {
     
     this.sqliteDB.getAttractionsbycondition(sql_func).then(res => {
       this.alldata = res
+      console.log(this.alldata)
       this.alldata.forEach(element => {
         this.geocoder.geocode({ 'address': element.Address },  (results, status)  => { //先找到當地的經緯度 
           let pos;

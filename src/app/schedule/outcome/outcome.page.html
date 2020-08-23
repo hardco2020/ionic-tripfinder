@@ -71,10 +71,11 @@
           <ion-col size="auto"> 
             <div>
               <img  style="max-height: 250px;" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{item.photo}}&key={{api_key}}" [routerLink]="['/outcome', item.Aname]"/>
-              <div class="evaluation_star"><ion-icon class="iconSize" slot="end" name="star"></ion-icon>{{item.Rate}}</div>
-            </div>
+              <div class="evaluation_star"><ion-icon class="iconSize" slot="end" name="star"></ion-icon>{{item.distance}}</div>
+            </div> 
           </ion-col>
         </ion-row>
+       
         <ion-card-title>
           {{item.Aname}}
         </ion-card-title>
@@ -83,8 +84,9 @@
         </ion-card-subtitle>
         
         
+        
         <ion-chip color="primary">
-          <ion-label>{{item.GoogleClass}}</ion-label>
+          <ion-label>{{item.favorite}}</ion-label>
         </ion-chip>
        
         <!--<ion-button expand="full" (click)="UpdateCollection()">+</ion-button>-->

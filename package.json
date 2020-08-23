@@ -21,8 +21,8 @@
     "@angular/router": "~8.2.14",
     "@babel/compat-data": "^7.8.0",
     "@ionic-native/core": "^5.23.0",
-    "@ionic-native/geolocation": "^5.27.0",
-    "@ionic-native/native-geocoder": "^5.27.0",
+    "@ionic-native/geolocation": "^5.28.0",
+    "@ionic-native/native-geocoder": "^5.28.0",
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/sqlite": "^5.26.0",
     "@ionic-native/sqlite-porter": "^5.25.0",
@@ -31,8 +31,10 @@
     "angularfire2": "^5.4.2",
     "cordova-android": "^8.1.0",
     "cordova-browser": "^6.0.0",
+    "cordova-plugin-add-swift-support": "^2.0.2",
     "cordova-plugin-advanced-geolocation": "git+https://github.com/esri/cordova-plugin-advanced-geolocation.git",
     "cordova-plugin-geolocation": "^4.0.2",
+    "cordova-plugin-nativegeocoder": "^3.4.1",
     "cordova-sqlite-storage": "^5.0.0",
     "core-js": "^2.5.4",
     "firebase": "^7.14.1",
@@ -84,7 +86,8 @@
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-advanced-geolocation": {}
+      "cordova-plugin-advanced-geolocation": {},
+      "cordova-plugin-nativegeocoder": {}
     },
     "platforms": [
       "browser",
