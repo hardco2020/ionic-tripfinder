@@ -6,6 +6,8 @@ export class Attraction {
     Phone: string;
     Address: string;
     Rate: string;
+    favorite: string; 
+    distance: number;
     InorOut: string; 
     StaticorDynamic: string;
     Netbeauty: string; 
@@ -16,5 +18,4 @@ export class Attraction {
     Exhibition: string;  
     History: string;  
     NightView: string;  
-    favorite: string; 
 }
