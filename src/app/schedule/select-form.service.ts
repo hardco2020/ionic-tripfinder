@@ -1,76 +1,76 @@
 import { Injectable } from '@angular/core';
+import { NgZone } from '@angular/core';
+import { NativeGeocoder, NativeGeocoderResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
 
+declare var google;
 @Injectable({
   providedIn: 'root'
 })
 export class SelectFormService {
-   // 表單資料初始化
-   items =[{
-    'title':'距離範圍(以內)',
-    'model':'distance',
-    'options': [{
-      'value': 2,
-      'text': '2 公里'
-    },{
-      'value': 5,
-      'text': '5 公里'
-    },{
-      'value': 10,
-      'text': '10 公里'
-    },{
-      'value': 20,
-      'text': '20 公里'
-    }]
-  },{
-    'title':'交通工具',
-    'model':'transportion',
-    'options': [{
-      'value': 'walk',
-      'text': '走路'
-    },{
-      'value': 'bike',
-      'text': '腳踏車'
-    },{
-      'value': 'car',
-      'text': '開車'
-    },{
-      'value': 'mortocycle',
-      'text': '機車'
-    }]
-  },{
-    'title':'時段',
-    'model':'period',
-    'options': [{
-      'value': 'morning',
-      'text': '早上'
-    },{
-      'value': 'afternoon',
-      'text': '下午'
-    },{
-      'value': 'night',
-      'text': '傍晚'
-    }]
-  },{
-    'title':'消費金額',
-    'model':'amount',
-    'options': [{
-      'value': 0,
-      'text': 'free',
-    },{
-      'value': 500,
-      'text': '0 - 500 元'
-    },{
-      'value': 2000,
-      'text': '500 - 2000 元'
-    },{
-      'value': 10000,
-      'text': '10000 以上'
-    }]
-  }
-  ];
-  constructor() { }
 
-  getSelectForm(){
-    return this.items;
+  lat: string;
+  long: string;  
+  autocomplete: { input: string; };
+  autocompleteItems: any[];
+  placeid: any;
+  GoogleAutocomplete: any;
+
+  options: NativeGeocoderOptions = {
+    useLocale: true,
+    maxResults: 5    
+  }; 
+
+  constructor(
+    private nativeGeocoder: NativeGeocoder,     // latlan <-> address change
+    public zone: NgZone,
+  ) {
+    this.GoogleAutocomplete = new google.maps.places.AutocompleteService();
+    this.autocomplete = { input: '' };
+    this.autocompleteItems = [];
+  }
+  UpdateSearchResults(event){
+    // get input content
+    this.autocomplete.input = event;
+    if (this.autocomplete.input == '') {
+      this.autocompleteItems = [];
+      return;
+    }
+    // choose 'tw' contry & through the input to predict auto-list to autocomplete items
+    this.GoogleAutocomplete.getPlacePredictions({ 
+      input: this.autocomplete.input ,
+      componentRestrictions: {country: 'tw'} },
+    (predictions, status) => {
+      this.autocompleteItems = [];
+      this.zone.run(() => {
+        predictions.forEach((prediction) => {
+          this.autocompleteItems.push(prediction);
+        });
+      });
+    });
+
+    return this.autocompleteItems;
+  }
+   // when click one of autocompleteitem
+   SelectSearchResult(item) {
+    console.log(item.description);
+    // through the address to get the lat/lng
+    this.nativeGeocoder.forwardGeocode(item.description, this.options)
+    .then((coordinates: NativeGeocoderResult[]) => {
+      console.log('The coordinates are latitude=' + coordinates[0].latitude + ' and longitude=' + coordinates[0].longitude)
+      this.lat = coordinates[0].latitude;
+      this.long = coordinates[0].longitude;  
+    })
+    .catch((error: any) => console.log(error));  
+  
+    this.placeid = item.place_id;
+    this.ClearAutocomplete();
+
+    return item.description, this.lat, this.long, this.placeid;
+  }
+  
+  // clean ionsearchbar
+  ClearAutocomplete(){
+    this.autocompleteItems = []
+    this.autocomplete.input = ''
   }
 }

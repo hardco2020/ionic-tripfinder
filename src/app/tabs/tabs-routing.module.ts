@@ -23,7 +23,8 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () =>
-              import('../myrecord/tab3.module').then(m => m.Tab3PageModule)
+             // import('../myrecord/tab3.module').then(m => m.Tab3PageModule)
+             import('../test/test.module').then(m => m.TestPageModule)
           }
         ]
       },

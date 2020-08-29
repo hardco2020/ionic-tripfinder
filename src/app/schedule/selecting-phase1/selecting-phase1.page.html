@@ -8,42 +8,42 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="#"></ion-back-button>
     </ion-buttons>
-
   </ion-toolbar>
+
+  <ion-list-header>
+    <h4>輸入當前位置地址 : </h4>
+  </ion-list-header> 
+   <!-- searchbar auto -->
+    <ion-searchbar [(ngModel)]="autocomplete.input" (ngModelChange)="UpdateSearchResults( $event )" placeholder="Search for a place"  (ionClear)="ClearAutocomplete()"></ion-searchbar>
+    <ion-list [hidden]="autocompleteItems.length == 0">
+      <ion-item *ngFor="let item of autocompleteItems" tappable (click)="SelectSearchResult(item)">
+        {{ item.description }}
+      </ion-item>
+    </ion-list>
+  <!-- 顯示目前位置 -->
+  <ion-list-header>
+    經度 : {{ lat }} <br>     
+    緯度 : {{ long }} 
+  </ion-list-header>
+  
 </ion-header>
 
 
 <ion-content class="ion-padding">
-  
-
-  <!-- 固定問題-->
   <ion-list>
-
-    <!-- 輸入目前位置 -->
-    <ion-list-header>
-      <h4>輸入當前位置地址 : </h4>
-    </ion-list-header>
-
     <!-- 輸入距離範圍 -->
     <ion-list-header>
-        <h4>請選擇目的地距離 : {{distanceRange}}</h4>
+        <h4>選擇距離區間 : {{distanceRange}}</h4>
     </ion-list-header>
-      <!-- 動態 load 表單資料 在 schedule/select-form.service.ts 中更改表單數值及選項-->
-      <!-- required 至少選擇一項 -->
-      <!--<ion-item *ngFor= "let item of items;let i = index">
-        <ion-label>{{item.title}}</ion-label>
-        <ion-select required placeholder="-" name="item.model" okText="Okay" cancelText="Dismiss" [(ngModel)]="vals[i]">
-          <ion-select-option *ngFor = "let option of item.options" [value]=option.value>{{option.text}}</ion-select-option>
-        </ion-select>
-      </ion-item>-->
       <ion-item>
         <ion-range (ionChange)="ionChange()" min="0" max="100" step="10" snaps="true" pin="true" [(ngModel)]="distanceRange">
           <ion-icon small range-left name="sunny"></ion-icon>
           <ion-icon range-right name="sunny"></ion-icon>
         </ion-range>
       </ion-item>
-    
-  <ion-grid>
+
+    <!-- 輸入 景點 / 餐廳 -->
+    <ion-grid>
     <ion-row>
       <ion-col size="6">
         <ion-button expand="block" size="large" id="square-btn" [disabled]="!distanceValid" type="submit" class="ion-margin" (click)='turnpage()'>
@@ -62,10 +62,6 @@
         </ion-button>
       </ion-col>
     </ion-row>
-  </ion-grid>
- <!--<div class="ion-padding">
-    <ion-button [disabled]="!distanceValid" expand="block" type="submit" class="ion-margin" (click)='turnpage()'>選擇景點</ion-button>
-    <ion-button [disabled]="!distanceValid" expand="block" type="submit" class="ion-margin" (click)='turnpagetofood()'>選擇餐廳</ion-button>
-  </div>-->
+    </ion-grid>
 </ion-list>
 </ion-content>
