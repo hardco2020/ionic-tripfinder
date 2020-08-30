@@ -39,7 +39,7 @@ export class SelectingFood1Page implements OnInit {
     chinese: 'n',
     western: 'n',
     japanKorean: 'n',
-    asian: 'n',
+    southeastAsian: 'n',
     netbeauty: 'n',
     vendor: 'n',
     restaurant: 'n',
@@ -97,7 +97,7 @@ export class SelectingFood1Page implements OnInit {
     },
     {
       key: 9,
-      name: 'asian',
+      name: 'southeastAsian',
       title: '東南亞',
       img: 'https://images.pexels.com/photos/1437590/pexels-photo-1437590.jpeg?cs=srgb&dl=pexels-1437590.jpg&fm=jpg'
     },
