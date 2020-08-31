@@ -249,7 +249,7 @@ export class DbService {
             cheap: res.rows.item(i).cheap,
             expensive: res.rows.item(i).expensive,
             buffet: res.rows.item(i).buffet,  
-            chinese: res.rows.item(i).chinese,
+            chinese: res.rows.item(i).chinese, 
             western: res.rows.item(i).western,
             japanKorean: res.rows.item(i).japanKorean,
             southeastAsian: res.rows.item(i).southeastAsian,

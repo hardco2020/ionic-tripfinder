@@ -13,9 +13,9 @@
 
 <ion-content [fullscreen]="true">
   <ion-item-sliding>
-    <ion-item *ngFor="let item of testData" >
+    <ion-item *ngFor="let item of alldata" >
       <ion-card-content>
-        <ion-row class="ion-justify-content-center">
+         <ion-row class="ion-justify-content-center">
           <ion-col size="auto"> 
             <div>
               <img  style="max-height: 250px;" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{item.photo}}&key={{apiKey}}" [routerLink]="['/outcome', item.Aid]"/>

@@ -276,7 +276,6 @@ export class OutcomePage implements OnInit {
     
     this.sqliteDB.getAttractionsbycondition(sql_func).then(res => {
       this.alldata = res
-      console.log(this.alldata)
       this.alldata.forEach(element => {
         this.geocoder.geocode({ 'address': element.Address },  (results, status)  => { //先找到當地的經緯度 
           let pos;
@@ -284,9 +283,7 @@ export class OutcomePage implements OnInit {
               pos = {                                         //目標經緯度
                 lat: results[0].geometry.location.lat(),
                 lng: results[0].geometry.location.lng()
-              };
-              
-              
+              };    
               // let watch = this.geolocation.watchPosition();
               // watch.subscribe((data) => {
               //  // 兩者合併算距離
@@ -296,16 +293,21 @@ export class OutcomePage implements OnInit {
                  this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng))/1000;
                  this.distance = Math.round(this.distance);
                  if(this.distance>this.data.distance){
-                        //讓此選項消失                  
-                 }
+                    console.log("太遠了");
+                    this.alldata.splice(this.alldata.indexOf(element),1);
+                 } 
                  this.distance = this.distance +"公里";
+                 element.distance = this.distance;
                  
                }else{
                 this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng));
                 this.distance = Math.round(this.distance);
+                if(this.distance>this.data.distance){
+                  console.log("太遠了");
+                  this.alldata.splice(this.alldata.indexOf(element),1);
+               } 
                 this.distance = this.distance +"公尺";
-               
-    
+                element.distance = this.distance;
               }
                // 四捨五入
               // });      
@@ -316,7 +318,7 @@ export class OutcomePage implements OnInit {
           }   
         });
       });
-    })
+    }) 
     this.geocoder.geocode({ 'address': "高雄市鹽埕區五福四路19" },  (results, status)  => { //先找到當地的經緯度 
       let pos;
       if (status == google.maps.GeocoderStatus.OK) {

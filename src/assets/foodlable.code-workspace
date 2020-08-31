@@ -1,7 +1,7 @@
 {  
     "structure":{
         "tables":{
-            "FoodSelect":"([Aid] PRIMARY KEY, [restaurant], [vendor], [fast_food], [vegetarian_food], [chinese], [exotic], [parity], [boxed_lunch], [baking], [seafood], [alcohol], [dessert])"
+            "FoodSelect":"([Aid] PRIMARY KEY, [sweet], [salty], [cheap], [expensive], [buffet], [chinese], [western], [japanKorean], [asian], [netbeauty], [vendor], [restaurant],[alcohol])"
         }
     },
     "data":{

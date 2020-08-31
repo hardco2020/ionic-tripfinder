@@ -8,7 +8,6 @@ import { Platform } from '@ionic/angular';
 
 
 declare var google;
-declare var AdvancedGeolocation:any;
 
 @Component({
   selector: 'app-view-detail',
