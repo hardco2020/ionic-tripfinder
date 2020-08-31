@@ -91,6 +91,7 @@ export class OutcomeFoodPage implements OnInit {
     // this.service.addFavorite(this.favorite).then(() => { 每次存都會需要先新增欄位，用此處來新增欄位
     // }); 
 
+<<<<<<< HEAD
     var sql_func = 'SELECT * FROM FoodInfo WHERE sweet = "' + this.data.sweet +
                     '" AND salty = "' + this.data.salty +
                     '" AND cheap = "' + this.data.cheap +
@@ -105,6 +106,53 @@ export class OutcomeFoodPage implements OnInit {
                     '" AND restaurant = "' + this.data.restaurant +
                     '" AND alcohol = "' + this.data.alcohol +
                     '" AND favorite = "n"';
+=======
+    const sweet = this.data.sweet;
+    const salty = this.data.salty;
+    const cheap = this.data.cheap;
+    const expensive = this.data.expensive;
+    const buffet = this.data.buffet;
+    const chinese = this.data.chinese;
+    const western = this.data.western;
+    const japanKorean = this.data.japanKorean;
+    const southeastAsian = this.data.southeastAsian;
+    const netbeauty = this.data.netbeauty;
+    const vendor = this.data.vendor;
+    const restaurant = this.data.restaurant;
+    const alcohol = this.data.alcohol;
+  
+    // var sql_func = 'SELECT * FROM FoodInfo WHERE sweet = "' + sweet +
+    //                 '" AND salty = "' + salty +
+    //                 '" AND cheap = "' + cheap +
+    //                 '" AND expensive = "' + expensive +
+    //                 '" AND buffet = "' + buffet +
+    //                 '" AND chinese = "' + chinese +
+    //                 '" AND western = "' + western +
+    //                 '" AND japanKorean = "' + japanKorean +
+    //                 '" AND southeastAsian = "' + southeastAsian +
+    //                 '" AND netbeauty = "' + netbeauty +
+    //                 '" AND vendor = "' + vendor +
+    //                 '" AND restaurant = "' + restaurant +
+    //                 '" AND alcohol = "' + alcohol +
+    //                 '" AND favorite = "n"';
+
+                
+  var sql_func = 'SELECT * FROM FoodInfo WHERE sweet = "n' +
+  '" AND salty = "y' +
+  '" AND cheap = "y' +
+  '" AND expensive = "n' +
+  '" AND buffet = "n' +
+  '" AND chinese = "y' +
+  '" AND western = "n' +
+  '" AND japanKorean = "n' +
+  '" AND southeastAsian = "n' +
+  '" AND netbeauty = "n' +
+  '" AND vendor = "n' +
+  '" AND restaurant = "y' +
+  '" AND alcohol = "n' +
+  '" AND favorite = "n"';
+
+>>>>>>> master
 
     var sql_text = "SELECT * FROM FoodInfo";// WHERE Aname = '義大遊樂世界聖托里尼山城'
     
@@ -126,7 +174,7 @@ export class OutcomeFoodPage implements OnInit {
   UpdateCollection(aname, photo, item, aid) {
     this.lock = 0;
     this.favfood.place = aname;
-    this.favfood.img = photo;
+    this.favfood.img = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference="+photo+"&key="+this.apiKey;
     this.favfoods.forEach(element => {
       if (element.place === this.favfood.place) { // 如果重複位置則UPDATE
         this.lock = 1;

@@ -22,6 +22,12 @@ export class TestPage implements OnInit {
   location: any;
   placeid: any;
   GoogleAutocomplete: any;
+  i=0;
+
+  options: NativeGeocoderOptions = {
+    useLocale: true,
+    maxResults: 5    
+  }; 
 
   constructor(
     private geolocation: Geolocation,
@@ -34,23 +40,22 @@ export class TestPage implements OnInit {
   }
   //LOAD THE MAP ONINIT.
   ngOnInit() {
-    this.loadMap();    
+    this.loadMap();   
   }
 
   //LOADING THE MAP HAS 2 PARTS.
   loadMap() {
-    
     //FIRST GET THE LOCATION FROM THE DEVICE.
-    this.geolocation.getCurrentPosition().then((resp) => {
+    /*this.geolocation.getCurrentPosition().then((resp) => {
       let latLng = new google.maps.LatLng(resp.coords.latitude, resp.coords.longitude);
       let mapOptions = {
         center: latLng,
         zoom: 15,
         mapTypeId: google.maps.MapTypeId.ROADMAP
-      } 
-      
+      } */
+      let latLng = {};
       //LOAD THE MAP WITH THE PREVIOUS VALUES AS PARAMETERS.
-      this.getAddressFromCoords(resp.coords.latitude, resp.coords.longitude); 
+      /*this.getAddressFromCoords(resp.coords.latitude, resp.coords.longitude); 
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions); 
       this.map.addListener('tilesloaded', () => {
         console.log('accuracy',this.map, this.map.center.lat());
@@ -60,17 +65,13 @@ export class TestPage implements OnInit {
       }); 
     }).catch((error) => {
       console.log('Error getting location', error);
-    });
+    });*/
   }
 
 
-  getAddressFromCoords(lattitude, longitude) {
+  /*getAddressFromCoords(lattitude, longitude) {
     console.log("getAddressFromCoords "+lattitude+" "+longitude);
-    let options: NativeGeocoderOptions = {
-      useLocale: true,
-      maxResults: 5    
-    }; 
-    this.nativeGeocoder.reverseGeocode(lattitude, longitude, options)
+    this.nativeGeocoder.reverseGeocode(lattitude, longitude, this.options)
       .then((result: NativeGeocoderResult[]) => {
         this.address = "";
         let responseAddress = [];
@@ -92,15 +93,18 @@ export class TestPage implements OnInit {
   //FUNCTION SHOWING THE COORDINATES OF THE POINT AT THE CENTER OF THE MAP
   ShowCords(){
     alert('lat' +this.lat+', long'+this.long )
-  }
-
+  }*/
   //AUTOCOMPLETE, SIMPLY LOAD THE PLACE USING GOOGLE PREDICTIONS AND RETURNING THE ARRAY.
-  UpdateSearchResults(){
+  UpdateSearchResults(event){
+    this.autocomplete.input = event;
+
     if (this.autocomplete.input == '') {
       this.autocompleteItems = [];
       return;
     }
-    this.GoogleAutocomplete.getPlacePredictions({ input: this.autocomplete.input },
+    this.GoogleAutocomplete.getPlacePredictions({ 
+      input: this.autocomplete.input ,
+      componentRestrictions: {country: 'tw'} },
     (predictions, status) => {
       this.autocompleteItems = [];
       this.zone.run(() => {
@@ -113,8 +117,20 @@ export class TestPage implements OnInit {
    //wE CALL THIS FROM EACH ITEM.
    SelectSearchResult(item) {
     ///WE CAN CONFIGURE MORE COMPLEX FUNCTIONS SUCH AS UPLOAD DATA TO FIRESTORE OR LINK IT TO SOMETHING
-    console.log();     
+    console.log(item.description);
+
+    this.nativeGeocoder.forwardGeocode(item.description, this.options)
+    .then((coordinates: NativeGeocoderResult[]) => {
+      console.log('The coordinates are latitude=' + coordinates[0].latitude + ' and longitude=' + coordinates[0].longitude)
+      this.lat = coordinates[0].latitude;
+      this.long = coordinates[0].longitude;  
+    })
+    .catch((error: any) => console.log(error));  
+  
     this.placeid = item.place_id;
+    //this.ShowCords();
+    this.ClearAutocomplete();
+    this.autocomplete.input = item.description;
 
   }
   
@@ -123,11 +139,6 @@ export class TestPage implements OnInit {
   ClearAutocomplete(){
     this.autocompleteItems = []
     this.autocomplete.input = ''
-  }
- 
-  //sIMPLE EXAMPLE TO OPEN AN URL WITH THE PLACEID AS PARAMETER.
-  GoTo(){
-    return window.location.href = 'https://www.google.com/maps/search/?api=1&query=Google&query_place_id='+this.placeid;
   }
 
 }
