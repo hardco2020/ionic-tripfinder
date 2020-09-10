@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild} from '@angular/core';
 import { ControllerserviceService, FavFoods, googleInfor } from '../../controllerservice.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NavController, LoadingController } from '@ionic/angular';
 import { DbService } from '../../services/db.service';
+
+declare var google;
 
 @Component({
   selector: 'app-outcome-food',
@@ -12,9 +14,16 @@ import { DbService } from '../../services/db.service';
 export class OutcomeFoodPage implements OnInit {
   data: any;
   lock = 1; // update的鎖
+  map;
   favfoods: FavFoods[]; // load進所有現存資料
   apiKey = 'AIzaSyCMjg0lGC43K_RsV687kghZ5qTAbPnQAMo';
+  testbug = 1;
   alldata: any[] = [];
+  testdata: any[] = [];
+  distance: any;
+  datanum = 0;
+  exampleLat =  22.672179200000002;
+  exampleLng =  120.28477439999999;
   favfood: FavFoods = {
     img : '123',
     place: '測試',
@@ -67,7 +76,7 @@ export class OutcomeFoodPage implements OnInit {
     dessert: 'y',
     favorite: 'n'
   }];
-
+  
   constructor(
     private route: ActivatedRoute,
     private sqliteDB: DbService,
@@ -81,32 +90,17 @@ export class OutcomeFoodPage implements OnInit {
       }
     });
   }
+  @ViewChild('mapElement',{static:true}) mapElement;
+  geocoder = new google.maps.Geocoder;
 
   ngOnInit(): void{
-
+    
     this.service.getFavFoods().subscribe(res => {
       this.favfoods = res; //接受firebase裡所有的欄位
     });
     this.favfood.place =this.example; //將地址存進等等要放進firebase的地址裡 
     // this.service.addFavorite(this.favorite).then(() => { 每次存都會需要先新增欄位，用此處來新增欄位
     // }); 
-
-<<<<<<< HEAD
-    var sql_func = 'SELECT * FROM FoodInfo WHERE sweet = "' + this.data.sweet +
-                    '" AND salty = "' + this.data.salty +
-                    '" AND cheap = "' + this.data.cheap +
-                    '" AND expensive = "' + this.data.expensive +
-                    '" AND buffet = "' + this.data.buffet +
-                    '" AND chinese = "' + this.data.chinese + 
-                    '" AND western = "' + this.data.western +
-                    '" AND japanKorean = "' + this.data.japanKorean +
-                    '" AND SoutheastAsian = "' + this.data.SoutheastAsian +
-                    '" AND netbeauty = "' + this.data.netbeauty +
-                    '" AND vendor = "' + this.data.vendor +
-                    '" AND restaurant = "' + this.data.restaurant +
-                    '" AND alcohol = "' + this.data.alcohol +
-                    '" AND favorite = "n"';
-=======
     const sweet = this.data.sweet;
     const salty = this.data.salty;
     const cheap = this.data.cheap;
@@ -120,6 +114,8 @@ export class OutcomeFoodPage implements OnInit {
     const vendor = this.data.vendor;
     const restaurant = this.data.restaurant;
     const alcohol = this.data.alcohol;
+    this.exampleLat = Number(this.data.lat);
+    this.exampleLng = Number(this.data.long);
   
     // var sql_func = 'SELECT * FROM FoodInfo WHERE sweet = "' + sweet +
     //                 '" AND salty = "' + salty +
@@ -152,24 +148,188 @@ export class OutcomeFoodPage implements OnInit {
   '" AND alcohol = "n' +
   '" AND favorite = "n"';
 
->>>>>>> master
 
     var sql_text = "SELECT * FROM FoodInfo";// WHERE Aname = '義大遊樂世界聖托里尼山城'
     
-    this.sqliteDB.getRestaurantsbycondition(sql_func).then(res => {
-      this.alldata = res
+    this.sqliteDB.getRestaurantsbycondition(sql_func,this.datanum).then(res => {
+      this.alldata = res;
+      console.log(this.exampleLat); 
+      this.presentLoading();
+      // for(let i = 0;i<10;i++){
+      //   this.testData[i]= this.alldata[i];
+      //   this.geocoder.geocode({'address': this.alldata[i].Address },  (results, status)  => { //先找到當地的經緯度 
+      //         let pos;
+      //         if (status == google.maps.GeocoderStatus.OK) {
+      //             pos = {                                         //目標經緯度
+      //               lat: results[0].geometry.location.lat(),
+      //               lng: results[0].geometry.location.lng()
+      //             };    
+      //             console.log(pos);
+      //             // let watch = this.geolocation.watchPosition();
+      //             // watch.subscribe((data) => {
+      //             //  // 兩者合併算距離
+      //             //  console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
+      //             if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng))>=1000){
+      //                console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng)))
+      //                this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng))/1000;
+      //                this.distance = Math.round(this.distance);
+      //                console.log(this.distance);
+      //                if(this.distance>this.data.distance){
+      //                   console.log("太遠了"); 
+      //                   this.alldata.splice(this.alldata.indexOf(this.alldata[i]),1);
+      //                } 
+      //                this.distance = this.distance +"公里";
+      //                this.alldata[i].distance = this.distance; 
+                     
+      //              }else{ 
+      //               console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng)))
+      //               this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng));
+      //               this.distance = Math.round(this.distance);
+      //               console.log(this.distance);
+      //               if(this.distance/1000>this.data.distance){
+      //                 console.log(this.distance/1000);
+      //                 console.log("太遠了");
+      //                 this.alldata.splice(this.alldata.indexOf(this.alldata[i]),1);
+      //               } 
+      //               this.distance = this.distance +"公尺";
+      //               this.alldata[i].distance = this.distance;
+      //               }
+      //              // 四捨五入
+      //             // });                 
+      //         }  
+      //         else{
+      //           console.log("失敗了")
+      //         }     
+      //       });
+          
+      
+      this.alldata.forEach(element => {
+        this.geocoder.geocode({'address': element.Address },  (results, status)  => { //先找到當地的經緯度 
+          let pos;
+          if (status == google.maps.GeocoderStatus.OK) {
+              pos = {                                         //目標經緯度
+                lat: results[0].geometry.location.lat(),
+                lng: results[0].geometry.location.lng()
+              };    
+              console.log(pos);
+              // let watch = this.geolocation.watchPosition();
+              // watch.subscribe((data) => {
+              //  // 兩者合併算距離
+              //  console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
+              if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng))>=1000){
+                 console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng)))
+                 this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng))/1000;
+                 this.distance = Math.round(this.distance);
+                 console.log(this.distance);
+                 if(this.distance>this.data.distance){
+                    console.log("太遠了"); 
+                    this.alldata.splice(this.alldata.indexOf(element),1);
+                 } 
+                 this.distance = this.distance +"公里";
+                 element.distance = this.distance; 
+                 
+               }else{ 
+                console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng)))
+                this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng));
+                this.distance = Math.round(this.distance);
+                console.log(this.distance);
+                if(this.distance/1000>this.data.distance){
+                  console.log(this.distance/1000);
+                  console.log("太遠了");
+                  this.alldata.splice(this.alldata.indexOf(element),1);
+                } 
+                this.distance = this.distance +"公尺";
+                element.distance = this.distance;
+                }
+               // 四捨五入
+              // });                 
+          }  
+          else{
+            console.log("失敗了")
+          }     
+        });
+      })
     })
   }
   
   async presentLoading() { // 等待Sign
     const loading = await this.loadingController.create({
-      message: '添加中',
+      message: '添加中', 
       duration: 1000
     });
     await loading.present();
     const { role, data } = await loading.onDidDismiss();
-    console.log('Loading dismissed!');
+    console.log('Loading dismissed!'); 
   }
+  nextpage(){
+    this.datanum = this.datanum + 10;
+    console.log(this.datanum);
+    var sql_func = 'SELECT * FROM FoodInfo WHERE sweet = "n' +
+    '" AND salty = "y' +
+    '" AND cheap = "y' +
+    '" AND expensive = "n' +
+    '" AND buffet = "n' +
+    '" AND chinese = "y' +
+    '" AND western = "n' +
+    '" AND japanKorean = "n' +
+    '" AND southeastAsian = "n' +
+    '" AND netbeauty = "n' +
+    '" AND vendor = "n' + 
+    '" AND restaurant = "y' +
+    '" AND alcohol = "n' +
+    '" AND favorite = "n"';
+
+    this.sqliteDB.getRestaurantsbycondition(sql_func,this.datanum).then(res => {
+      this.alldata = res;
+      this.presentLoading();
+      this.alldata.forEach(element => {
+        this.geocoder.geocode({'address': element.Address },  (results, status)  => { //先找到當地的經緯度 
+          let pos;
+          if (status == google.maps.GeocoderStatus.OK) {
+              pos = {                                         //目標經緯度
+                lat: results[0].geometry.location.lat(),
+                lng: results[0].geometry.location.lng()
+              };    
+              console.log(pos);
+              // let watch = this.geolocation.watchPosition();
+              // watch.subscribe((data) => {
+              //  // 兩者合併算距離
+              //  console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
+              if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng))>=1000){
+                console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng)))
+                this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng))/1000;
+                this.distance = Math.round(this.distance);
+                console.log(this.distance);
+                if(this.distance>this.data.distance){
+                    console.log("太遠了"); 
+                    this.alldata.splice(this.alldata.indexOf(element),1);
+                } 
+                this.distance = this.distance +"公里";
+                element.distance = this.distance; 
+                
+              }else{ 
+                console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng)))
+                this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng));
+                this.distance = Math.round(this.distance);
+                console.log(this.distance);
+                if(this.distance/1000>this.data.distance){
+                  console.log(this.distance/1000);
+                  console.log("太遠了");
+                  this.alldata.splice(this.alldata.indexOf(element),1);
+                } 
+                this.distance = this.distance +"公尺";
+                element.distance = this.distance;
+                }
+              // 四捨五入
+              // });                 
+          }  
+          else{
+            console.log("失敗了")
+          }     
+        });
+      }) 
+    })
+  } 
 
   UpdateCollection(aname, photo, item, aid) {
     this.lock = 0;

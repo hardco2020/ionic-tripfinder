@@ -229,11 +229,11 @@ export class DbService {
     });
   }
 
-  getRestaurantsbycondition(sqlText): Promise<Restaurant[]>{  //original is getSongs, getSongs=>getAttractions
+  getRestaurantsbycondition(sqlText,num): Promise<Restaurant[]>{  //original is getSongs, getSongs=>getAttractions
     return this.storage.executeSql(sqlText, []).then(res => {
       let items: Restaurant[] = []; //services song.ts class name, original is Song, Song[]=>Attraction[]
       if (res.rows.length > 0) {
-        for (var i = 0; i < res.rows.length; i++) { 
+        for (var i = num; i < num+10; i++) { 
           items.push({  //getting all the columns by column names
             Aid: res.rows.item(i).Aid,  //變數名: res.rows.item(i).資料表欄位名,
             Aname: res.rows.item(i).Aname,  

@@ -51,6 +51,8 @@ export class SelectingPhase1Page implements OnInit {
   setItem(){  
     this.selection = {
       distance: this.distanceRange,
+      lat: this.lat,
+      long: this.long 
     };
   }
   ionChange(){
