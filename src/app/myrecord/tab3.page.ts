@@ -61,6 +61,8 @@ export class Tab3Page  implements OnInit {
     this.sqliteDB.getAttractionsbycondition(sql_text).then(res => {
       this.alldata = res
     })
+
+    console.log(this.alldata);
     
   }
   back(name){

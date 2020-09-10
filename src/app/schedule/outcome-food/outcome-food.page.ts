@@ -25,48 +25,30 @@ export class OutcomeFoodPage implements OnInit {
 
   // Test data
   testData = [{
-    Aid: 1,
-    Aname: 'BOSTON龍蝦餐廳',
-    photo: 'CmRaAAAAbVnCkRTNYh48Uxq2IH5YNHuIaYGSS9SMu_tFvP2l90PJKm9amCRFCAHKmix37GseM8SDLVIXTPmdGoGFcgzBAgLNRULnN9uDdT_ZEMVFWqu2STNVaK87I4wJZGDMHAkDEhDOCwzwLMTw5TESrrLv380qGhREsJlfL1M62FnmPF-tXttDMYu2Vw',
-    GoogleClass: 'restaurant',
-    Phone: '07 235 0101',
-    Address: '800台灣高雄市新興區民族二路121號',
-    Rate: 4.3,
-    restaurant: 'y',
-    vendor: 'n',
-    fast_food: 'n',
-    vegetarian_food: 'n',
-    chinese: 'n',
-    exotic: 'y',
-    parity: 'y',
-    boxed_lunch: 'n',
-    baking: 'n',
-    seafood: 'y',
-    alcohol: 'y',
-    dessert: 'y',
-    favorite: 'n'
-  },{
-    Aid: 2,
-    Aname: '貳樓餐廳 Second Floor Cafe 高雄店',
-    photo: 'CmRaAAAA4caQCokTxmMKfmg6PoacfVPMkx3JZNxxaNmj1Wt4crzJM69N4Ogz6yurkV_sfcj1fIH9qXD_SwcI0w-lSxw-JmNDWG222gp6mzMv05TvgPyP1Q3UTS8onMS2h5zGYcvqEhAanRKuGiMzYu5zGVVWLPytGhRJl4rotJhsh3r27PWa2650csmeQQ',
-    GoogleClass: 'restaurant',
-    Phone: '07 791 9222',
-    Address: '806台灣高雄市前鎮區中安路1 之1號二樓',
-    Rate: 4.3,
-    restaurant: 'y',
-    vendor: 'n',
-    fast_food: 'n',
-    vegetarian_food: 'n',
-    chinese: 'n',
-    exotic: 'y',
-    parity: 'n',
-    boxed_lunch: 'n',
-    baking: 'n',
-    seafood: 'y',
-    alcohol: 'y',
-    dessert: 'y',
-    favorite: 'n'
-  }];
+      "Aid": 343,
+      "Aname": "長壽素食",
+      "photo": "CmRaAAAAVTox-ql-A8z82Yhuub8fknfTeoXVDkRAn4Yf303F15pivWnpPGTqsLzpUR1ZmOu1V60MpjL6v0deO0sQUhQkLCkqvUTWaZt0D1iuJHXSJAIgL9E_YlqJy8WQNCg0hiGREhDobRFOB7IMfgtBHF2OLZiSGhRtm7cIzX8JHECzsPGdZtEq2MusWQ",
+      "GoogleClass": "restaurant",
+      "Phone": "07 336 3342",
+      "Address": "802台灣高雄市苓雅區仁愛三街364號",
+      "Rate": 4.3,
+      "blog": "https://angelina619.pixnet.net/blog/post/16286503&sa=U&ved=2ahUKEwi1iK_koP_qAhWIEqYKHVCoC1kQFjAOegQIBxAB&usg=AOvVaw23jlhRhb3akzy3xl0DEKKx",
+      "favorite": "n",
+      "distance": 0,
+      "sweet": "n",
+      "salty": "y",
+      "cheap": "n",
+      "expensive": "n",
+      "buffet": "n",
+      "chinese": "y",
+      "western": "n",
+      "japanKorean": "n",
+      "southeastAsian": "n",
+      "netbeauty": "n",
+      "vendor": "n",
+      "restaurant": "y",
+      "alcohol": "n"
+     }];
 
   constructor(
     private route: ActivatedRoute,
@@ -99,18 +81,18 @@ export class OutcomeFoodPage implements OnInit {
                     '" AND chinese = "' + this.data.chinese +
                     '" AND western = "' + this.data.western +
                     '" AND japanKorean = "' + this.data.japanKorean +
-                    '" AND SoutheastAsian = "' + this.data.SoutheastAsian +
+                    '" AND southeastAsian = "' + this.data.southeastAsian +
                     '" AND netbeauty = "' + this.data.netbeauty +
                     '" AND vendor = "' + this.data.vendor +
                     '" AND restaurant = "' + this.data.restaurant +
                     '" AND alcohol = "' + this.data.alcohol +
-                    '" AND favorite = "n"';;
+                    '" AND favorite = "n"';
 
     var sql_text = "SELECT * FROM FoodInfo";// WHERE Aname = '義大遊樂世界聖托里尼山城'
     
-    /*this.sqliteDB.getRestaurantsbycondition(sql_text).then(res => {
+    this.sqliteDB.getRestaurantsbycondition(sql_func).then(res => {
       this.alldata = res
-    })*/
+    });
   }
   
   async presentLoading() { // 等待Sign
@@ -145,6 +127,8 @@ export class OutcomeFoodPage implements OnInit {
       });
     }
   // 呼叫service的function  利用aname找資料庫
+  this.sqliteDB.updateRestaurant(aid).then(() => {
+  });
   // this.service.collect(aname)
     this.presentLoading();
     for (let i = 0; i < this.alldata.length; i++) {
