@@ -13,18 +13,21 @@
 
 <ion-content [fullscreen]="true">
   <ion-item-sliding>
-    <ion-item *ngFor="let item of testData" >
+    <ng-container *ngFor="let item of alldata" >
       <ion-card-content>
-        <ion-row class="ion-justify-content-center">
+         <ion-row class="ion-justify-content-center">
           <ion-col size="auto"> 
             <div>
-              <img  style="max-height: 250px;" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{item.photo}}&key={{apiKey}}" [routerLink]="['/outcome', item.Aid]"/>
+              <img  style="max-height: 250px;" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{item.photo}}&key={{apiKey}}" [routerLink]="['/outcome', item.Aname]"/>
               <div class="evaluation_star"><ion-icon class="iconSize" slot="end" name="star"></ion-icon>{{item.Rate}}</div>
             </div>
           </ion-col>
         </ion-row>
         <ion-card-title>
           {{item.Aname}}
+        </ion-card-title>
+        <ion-card-title>
+          {{item.distance}}
         </ion-card-title>
         <ion-card-subtitle>
           {{item.Address}}
@@ -37,12 +40,14 @@
             <ion-label>類型二</ion-label>
           </ion-chip>
           <ion-button expand="full" (click)="UpdateCollection(item.Aname,item.photo,item,item.Aid)">+</ion-button>
+          
         </ion-card-content> 
-    </ion-item>
+    </ng-container> 
     <ion-item-options side="end"> 
       <ion-item-option >Favorite</ion-item-option>
     </ion-item-options>
   </ion-item-sliding>
+  <ion-button (click)="nextpage()">下一頁</ion-button>  
   <div #mapElement class='map'></div>
 
 </ion-content>

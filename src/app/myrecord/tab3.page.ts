@@ -65,10 +65,10 @@ export class Tab3Page  implements OnInit {
     console.log(this.alldata);
     
   }
-  back(name){
-    this.nav.navigateRoot(['outcome',name]);
-    location.reload();
+  // back(name){
+  //   this.nav.navigateRoot(['outcome',name]);
+  //   location.reload();
    
-  }
+  // }
 
 }
