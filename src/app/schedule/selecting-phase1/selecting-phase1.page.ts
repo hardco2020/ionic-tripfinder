@@ -5,6 +5,7 @@ import { SelectFormService } from '../select-form.service'
 
 import { NgZone } from '@angular/core';
 import { NativeGeocoder, NativeGeocoderResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
+import { empty } from 'rxjs';
 
 declare var google;
 @Component({
@@ -27,12 +28,12 @@ export class SelectingPhase1Page implements OnInit {
   private selection : any;
 
   ngOnInit() {
-    this.distanceRange = 0;
+    this.distanceRange = "5";
   }
   
   // ngModel 變數值
   distanceRange:any;
-  distanceValid:boolean = false;
+  placeValid:boolean = false;
   items: any;
   //google auto 變數
   lat: string;
@@ -55,11 +56,11 @@ export class SelectingPhase1Page implements OnInit {
       long: this.long 
     };
   }
-  ionChange(){
-    if(this.distanceRange>0){
-      this.distanceValid=true;
+  placeChange(){
+    if( this.autocomplete.input.length > 0){
+      this.placeValid=true;
     }else{
-      this.distanceValid=false;
+      this.placeValid=false;
     }
   }
   turnpage(){   //換頁到phase2
@@ -105,6 +106,8 @@ export class SelectingPhase1Page implements OnInit {
         });
       });
     });
+    console.log(this.autocomplete.input)
+    this.placeChange();
   }
 
    SelectSearchResult(item) {
@@ -123,10 +126,12 @@ export class SelectingPhase1Page implements OnInit {
     this.placeid = item.place_id;
     this.ClearAutocomplete();
     this.autocomplete.input = item.description;
+    this.placeChange();
  }
 
   ClearAutocomplete(){
     this.autocompleteItems = []
     this.autocomplete.input = ''
+    this.placeChange();
   }
 }

@@ -404,6 +404,8 @@ export class OutcomeFoodPage implements OnInit {
       });
     }
   // 呼叫service的function  利用aname找資料庫
+  this.sqliteDB.updateRestaurant(aid).then(() => {
+  });
   // this.service.collect(aname)
     this.presentLoading();
     for (let i = 0; i < this.alldata.length; i++) {
