@@ -54,10 +54,10 @@ export class OutcomePage implements OnInit {
   //  phoneNumber : any;
    example ="高雄小巨蛋"; //到時候會改成所有地點的資料
    distance : any;
-   
+   datanum = 0 ; //用來傳遞一次傳資料的數量
    alldata: any[] = [];//sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 此行改到controllerservice後註解掉
   
-
+   sql : any;
    alldata_old = [{      //所有的data
     "Aid": 1,
     "Aname": "大立百貨空中遊樂園",
@@ -179,15 +179,50 @@ export class OutcomePage implements OnInit {
     const Outdoor = this.data.outdoor;
     const Static = this.data.static;
     const Dynamic = this.data.dynamic;
-    const Netbeauty = this.data.netbeauty;
-    const Hipster = this.data.hipster;
-    const NearSea = this.data.near_sea;
-    const NearMountain = this.data.near_mountain;
-    const NightView = this.data.night_view;
-    const Shopping = this.data.shopping;
-    const History = this.data.historic_site;
+    let  Netbeauty = this.data.netbeauty;
+    let  Hipster = this.data.hipster;
+    let NearSea = this.data.near_sea;
+    let NearMountain = this.data.near_mountain;
+    let NightView = this.data.night_view;
+    let Shopping = this.data.shopping;
+    let History = this.data.historic_site;
     var sql_where : String ;
-    
+    if(Netbeauty=="y"){  //有條件的加入sql式中
+      Netbeauty = ' And Netbeauty = "'+ Netbeauty + '"'; 
+    }else{
+      Netbeauty = "";
+    }
+    if(Hipster=="y"){  //有條件的加入sql式中
+      Hipster = ' And Hipster = "'+ Hipster + '"';
+                 
+    }else{
+      Hipster = "";
+    }
+    if(NearSea=="y"){  //有條件的加入sql式中
+      NearSea = ' And NearSea = "'+ NearSea + '"';
+    }else{
+      NearSea = "";
+    }
+    if(NearMountain=="y"){  //有條件的加入sql式中
+      NearMountain = ' And NearMountain = "'+ NearMountain + '"';
+    }else{
+      NearMountain = "";
+    }
+    if(NightView=="y"){  //有條件的加入sql式中
+      NightView = ' And NightView = "'+ NightView + '"';
+    }else{
+      NightView = "";
+    }
+    if(Shopping=="y"){  //有條件的加入sql式中
+      Shopping = ' And Shopping = "'+ Shopping + '"';
+    }else{
+      Shopping = "";
+    }
+    if(History=="y"){  //有條件的加入sql式中
+      History = ' And History = "'+ History + '"';
+    }else{
+      History = "";
+    }
     /*
       if 室內 = 室外:
           if 動態 = 靜態:
@@ -220,7 +255,7 @@ export class OutcomePage implements OnInit {
               WHERE 內外=內 AND 動靜=動
           elif 動態=不勾 & 靜態=勾:
               SELECT * FROM ...
-              WHERE 內外=內 AND 動靜=靜
+              WHERE 內外=內 AND 動靜=靜 
       */
       else if (Indoor == 'y' && Outdoor == 'n'){
         var InorOut = 'in';
@@ -258,24 +293,29 @@ export class OutcomePage implements OnInit {
         sql_where = 'StaticorDynamic = "'+ StaticorDynamic + '" AND InorOut = "'+ InorOut + '"';
       }
     }
-    
-    // SQL 式 SQL 式 SQL 式 SQL 式 SQL 式 SQL 式
-    var sql_func = 'SELECT * FROM AttractionInfo WHERE ' + sql_where +
-                    ' AND Netbeauty = "' + Netbeauty +
-                    '" AND Hipster = "' + Hipster +
-                    '" AND NearSea = "' + NearSea +
-                    '" AND NearMountain = "' + NearMountain +
-                    '" AND NightView = "' + NightView +
-                    '" AND Shopping = "' + Shopping +
-                    '" AND History = "' + History+
-                    '" AND favorite = "n"';
-
+     
+    // SQL 式 SQL 式 SQL 式 SQL 式 SQL 式 SQL 式x
+    var sql_func = "SELECT * FROM AttractionInfo WHERE " + sql_where
+                    +Netbeauty+Hipster+NearSea+NearMountain+NightView+Shopping+History+
+                    ' AND favorite = "n"';
+  
+                    // '" AND Hipster = "' + Hipster +
+                    // '" AND NearSea = "' + NearSea +
+                    // '" AND NearMountain = "' + NearMountain +
+                    // '" AND NightView = "' + NightView +
+                    // '" AND Shopping = "' + Shopping +
+                    // '" AND History = "' + History+
+                    // '" AND favorite = "n"';
+    this.sql = sql_func;
+    console.log(sql_func); 
     //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 以上改到controllerservice後註解掉
     
     var sql_text = "SELECT * FROM AttractionInfo WHERE Aname = '義大遊樂世界聖托里尼山城'";
     
-    this.sqliteDB.getAttractionsbycondition(sql_func).then(res => {
+    this.sqliteDB.getAttractionsbycondition(sql_func,this.datanum).then(res => {
       this.alldata = res
+      console.log(this.alldata);
+      this.presentLoading();
       this.alldata.forEach(element => {
         this.geocoder.geocode({ 'address': element.Address },  (results, status)  => { //先找到當地的經緯度 
           let pos;
@@ -302,7 +342,7 @@ export class OutcomePage implements OnInit {
                }else{
                 this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng));
                 this.distance = Math.round(this.distance);
-                if(this.distance>this.data.distance){
+                if(this.distance/1000>this.data.distance){
                   console.log("太遠了");
                   this.alldata.splice(this.alldata.indexOf(element),1);
                } 
@@ -310,8 +350,7 @@ export class OutcomePage implements OnInit {
                 element.distance = this.distance;
               }
                // 四捨五入
-              // });      
-              
+              // });                
           }  
           else{
             element.Aname = "失敗了";
@@ -319,36 +358,6 @@ export class OutcomePage implements OnInit {
         });
       });
     }) 
-    this.geocoder.geocode({ 'address': "高雄市鹽埕區五福四路19" },  (results, status)  => { //先找到當地的經緯度 
-      let pos;
-      if (status == google.maps.GeocoderStatus.OK) {
-          pos = {                                         //目標經緯度
-            lat: results[0].geometry.location.lat(),
-            lng: results[0].geometry.location.lng()
-          };
-          this.distance = pos.lat;
-          
-          // let watch = this.geolocation.watchPosition();
-          // watch.subscribe((data) => {
-          //  // 兩者合併算距離
-          //  console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
-          //  if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))>=1000){
-
-          //    this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))/1000;
-          //    this.distance = Math.round(this.distance);
-          //    this.distance = this.distance +"公里";
-             
-          //  }else{
-          //   this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude));
-          //   this.distance = Math.round(this.distance);
-          //   this.distance = this.distance +"公尺";
-
-          //  }
-           // 四捨五入
-          // });      
-          
-      }     
-    });
   }
   
   ngAfterViewInit() : void{
@@ -360,174 +369,67 @@ export class OutcomePage implements OnInit {
           center: { lat: -34.9011, lng: -56.1645 },
           zoom: 15
       });
-    // 此處先用if else處理篩選
-    // 等待竹秀將phase2傳值到此處
-    /*
-    資料庫
-    |內外 | 動靜 |
-      內     動
-      外     靜
-
-    ionic選項
-    |室內 | 室外 | 動態 | 靜態 |
-      勾    勾     勾     勾
-     不勾   不勾   不勾   不勾
-    （同時勾 = 同時不勾）
-
-    */
-   /*
-    if 室內 = 室外:
-        if 動態 = 靜態:
-            SELECT * FROM ...
-        elif 動態=勾 & 靜態=不勾:
-            SELECT * FROM ...
-            WHERE 動靜=動
-        elif 動態=不勾 & 靜態=勾:
-            SELECT *FROM ...
-            WHERE 動靜=靜
-    */
-    
-   
-    //篩選出一系列地點後根據使用者的距離 金錢等等要求 做google place進一步二階段篩選
-    // for(let i=0;i<=this.examples.length;i++){
-    //   this.GoogleAutocomplete.getPlacePredictions({ input: this.examples[i] },  //用此地址作為範例
-    //     (predictions, status) => {
-    //       this.zone.run(() => {
-    //         predictions.forEach((prediction) => {  
-    //             let service = new google.maps.places.PlacesService(this.map);  //將算出的prediction id丟進detail來找到進階資訊
-    //             service.getDetails(
-    //               {placeId: prediction.place_id},
-    //                 (results, status) =>{
-    //                   console.log(results);
-    //                   // console.log(results.opening_hours.open_now);  //知道現在有沒有開 
-    //                   if(results.opening_hours.open_now==false){
-    //                     this.googles[i].openingorNot= "休業中";
-                  
-    //                   }else{
-    //                     this.googles[i].openingorNot = "營業中";
-    //                   }
-    //                   console.log(results.opening_hours.weekday_text);
-    //                   console.log(i);
-                      
-    //                   this.googles[i].distance = i;
-    //                   console.log(this.googles[i].distance);
-    //                   this.googles[i].openPeriod = results.opening_hours.weekday_text;
-    //                   this.googles[i].phoneNumber = results.formatted_phone_number;
-                      
-    //                 }
-    //            );
-    //       });
-    //     });
-    //   });
-    //   this.geocoder.geocode({ 'address': this.examples[i]},  (results, status)  => { //先找到當地的經緯度 
-    //     let pos;
-    //       if (status == google.maps.GeocoderStatus.OK) {
-    //           pos = {                                         //目標經緯度
-    //             lat: results[0].geometry.location.lat(),
-    //             lng: results[0].geometry.location.lng()
-    //           };
-    //           this.geolocation.getCurrentPosition().then((resp) => {  //自己的經緯度
-    //             // resp.coords.latitude
-    //             // resp.coords.longitude
-    //            }).catch((error) => {
-    //              console.log('Error getting location', error);
-    //           });
-    //           let watch = this.geolocation.watchPosition();
-    //           watch.subscribe((data) => {
-    //            // 兩者合併算距離
-    //            //console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
-    //            if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))>=1000){
-  
-    //              this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))/1000;
-                 
-    //              this.distance = Math.round(this.distance);
-    //              this.distance = this.distance +"公里";
-    //              this.googles[i].distance = this.distance;
-                 
-    //            }else{
-    //             this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude));
-    //             this.distance = Math.round(this.distance);
-    //             this.distance = this.distance +"公尺";
-    //             this.googles[i].distance = this.distance;
-    //            }
-    //            // 四捨五入
-    //           });      
-    //       }
-    //   });  
-    //   console.log(this.distance);
-    // }
-  
-    ////////////////////測試
-    // this.GoogleAutocomplete.getPlacePredictions({ input: this.example },  //用此地址作為範例
-    //   (predictions, status) => {
-    //     this.zone.run(() => {
-    //       predictions.forEach((prediction) => {  
-    //           //console.log(prediction)
-    //           let service = new google.maps.places.PlacesService(this.map);  //將算出的prediction id丟進detail來找到進階資訊
-    //           service.getDetails(
-    //             {placeId: prediction.place_id},
-    //               (results, status) =>{
-    //                 //console.log(results);
-    //                 //console.log(results.opening_hours.open_now);  //知道現在有沒有開 
-    //                 if(results.opening_hours.open_now==false){
-    //                   this.openingorNot = "休業中";
-    //                 }else{
-    //                   this.openingorNot = "營業中";
-    //                 }
-    //                 this.openPeriod = results.opening_hours.weekday_text;
-    //                 this.phoneNumber = results.formatted_phone_number;
-    //               }
-    //          );
-    //     });
-    //   });
-    // });
-    ////////////找到兩地距離  1.先找到兩個地方的經緯度 再使用function計算出距離
-    
-  //   this.geocoder.geocode({ 'address': this.example},  (results, status)  => { //先找到當地的經緯度 
-  //     let pos;
-  //       if (status == google.maps.GeocoderStatus.OK) {
-  //           pos = {                                         //目標經緯度
-  //             lat: results[0].geometry.location.lat(),
-  //             lng: results[0].geometry.location.lng()
-  //           };
-  //           this.geolocation.getCurrentPosition().then((resp) => {  //自己的經緯度
-  //             // resp.coords.latitude
-  //             // resp.coords.longitude
-  //            }).catch((error) => {
-  //              console.log('Error getting location', error);
-  //           });
-  //           let watch = this.geolocation.watchPosition();
-  //           watch.subscribe((data) => {
-  //            // 兩者合併算距離
-  //            //console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
-  //            if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))>=1000){
-
-  //              this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude))/1000;
-  //              this.distance = Math.round(this.distance);
-  //              this.distance = this.distance +"公里";
-  //            }else{
-  //             this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude));
-  //             this.distance = Math.round(this.distance);
-  //             this.distance = this.distance +"公尺";
-  //            }
-  //            // 四捨五入
-  //           });      
-  //       }
-  //   });
-  
-  //   console.log(this.distance);
-  // }
   }
 
   async presentLoading() { //等待Sign
     const loading = await this.loadingController.create({
       message: '添加中',
-      duration: 1000
+      duration: 2000
     });
     await loading.present();
 
     const { role, data } = await loading.onDidDismiss();
     console.log('Loading dismissed!');
+  }
+  nextpage(){   
+    console.log(this.sql); 
+    this.datanum = this.datanum+10;
+    this.sqliteDB.getAttractionsbycondition(this.sql,this.datanum).then(res => {
+      this.alldata = res
+      console.log(this.alldata);
+      this.presentLoading();
+      this.alldata.forEach(element => {
+        this.geocoder.geocode({ 'address': element.Address },  (results, status)  => { //先找到當地的經緯度 
+          let pos;
+          if (status == google.maps.GeocoderStatus.OK) {
+              pos = {                                         //目標經緯度
+                lat: results[0].geometry.location.lat(),
+                lng: results[0].geometry.location.lng()
+              };    
+              // let watch = this.geolocation.watchPosition();
+              // watch.subscribe((data) => {
+              //  // 兩者合併算距離
+              //  console.log(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(data.coords.latitude,data.coords.longitude)));
+              if(google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng))>=1000){
+    
+                 this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng))/1000;
+                 this.distance = Math.round(this.distance);
+                 if(this.distance>this.data.distance){
+                    console.log("太遠了");
+                    this.alldata.splice(this.alldata.indexOf(element),1);
+                 } 
+                 this.distance = this.distance +"公里";
+                 element.distance = this.distance;
+                 
+               }else{
+                this.distance = google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(pos.lat, pos.lng), new google.maps.LatLng(this.exampleLat,this.exampleLng));
+                this.distance = Math.round(this.distance);
+                if(this.distance/1000>this.data.distance){
+                  console.log("太遠了");
+                  this.alldata.splice(this.alldata.indexOf(element),1);
+               } 
+                this.distance = this.distance +"公尺";
+                element.distance = this.distance;
+              }
+               // 四捨五入
+              // });                
+          }  
+          else{
+            element.Aname = "失敗了";
+          }   
+        });
+      });
+    }) 
   }
   UpdateCollection(aname,photo,item,aid) {   
     this.lock = 0;

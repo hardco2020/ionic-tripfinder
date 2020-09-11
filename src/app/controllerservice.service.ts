@@ -70,7 +70,7 @@ export class ControllerserviceService {
     
     var sql_text = "SELECT * FROM AttractionInfo WHERE favorite = 'y'";
     
-    this.sqliteDB.getAttractionsbycondition(sql_text).then(res => {
+    this.sqliteDB.getAttractionsbyfavorite(sql_text).then(res => {
       this.alldata = res
     })
     

@@ -58,12 +58,12 @@ export class Tab3Page  implements OnInit {
   ngOnInit(): void{ //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB
     var sql_text = "SELECT * FROM AttractionInfo WHERE favorite = 'y'";
     
-    this.sqliteDB.getAttractionsbycondition(sql_text).then(res => {
+    this.sqliteDB.getAttractionsbyfavorite(sql_text).then(res => {
       this.alldata = res
-    })
-    
+    }) 
+     
   }
-  // back(name){
+  // back(name){ 
   //   this.nav.navigateRoot(['outcome',name]);
   //   location.reload();
    

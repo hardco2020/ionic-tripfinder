@@ -101,60 +101,111 @@ export class OutcomeFoodPage implements OnInit {
     this.favfood.place =this.example; //將地址存進等等要放進firebase的地址裡 
     // this.service.addFavorite(this.favorite).then(() => { 每次存都會需要先新增欄位，用此處來新增欄位
     // }); 
-    const sweet = this.data.sweet;
-    const salty = this.data.salty;
-    const cheap = this.data.cheap;
-    const expensive = this.data.expensive;
-    const buffet = this.data.buffet;
-    const chinese = this.data.chinese;
-    const western = this.data.western;
-    const japanKorean = this.data.japanKorean;
-    const southeastAsian = this.data.southeastAsian;
-    const netbeauty = this.data.netbeauty;
-    const vendor = this.data.vendor;
-    const restaurant = this.data.restaurant;
-    const alcohol = this.data.alcohol;
+    let sweet = this.data.sweet;
+    let salty = this.data.salty;
+    let cheap = this.data.cheap;
+    let expensive = this.data.expensive;
+    let buffet = this.data.buffet;
+    let chinese = this.data.chinese;
+    let western = this.data.western;
+    let japanKorean = this.data.japanKorean;
+    let southeastAsian = this.data.southeastAsian;
+    let netbeauty = this.data.netbeauty;
+    let vendor = this.data.vendor;
+    let restaurant = this.data.restaurant;
+    let alcohol = this.data.alcohol;
     this.exampleLat = Number(this.data.lat);
     this.exampleLng = Number(this.data.long);
-  
-    // var sql_func = 'SELECT * FROM FoodInfo WHERE sweet = "' + sweet +
-    //                 '" AND salty = "' + salty +
-    //                 '" AND cheap = "' + cheap +
-    //                 '" AND expensive = "' + expensive +
-    //                 '" AND buffet = "' + buffet +
-    //                 '" AND chinese = "' + chinese +
-    //                 '" AND western = "' + western +
-    //                 '" AND japanKorean = "' + japanKorean +
-    //                 '" AND southeastAsian = "' + southeastAsian +
-    //                 '" AND netbeauty = "' + netbeauty +
-    //                 '" AND vendor = "' + vendor +
-    //                 '" AND restaurant = "' + restaurant +
-    //                 '" AND alcohol = "' + alcohol +
-    //                 '" AND favorite = "n"';
+    if(sweet=="y"){  //有條件的加入sql式中
+      sweet = ' sweet = "'+ sweet + '"'; 
+    }else{ 
+      sweet = "";
+    }
+    if(salty=="y"){  //有條件的加入sql式中
+      salty = ' And salty = "'+ salty + '"'; 
+    }else{ 
+      salty = "";
+    }
+    if(cheap=="y"){  //有條件的加入sql式中
+      cheap = ' And cheap = "'+ cheap + '"'; 
+    }else{
+      cheap = "";
+    }
+    if(expensive=="y"){  //有條件的加入sql式中
+      expensive = ' And expensive = "'+ expensive + '"'; 
+    }else{
+      expensive = "";
+    }
+    if(buffet=="y"){  //有條件的加入sql式中
+      buffet = ' And buffet = "'+ buffet + '"'; 
+    }else{
+      buffet = "";
+    }
+    if(chinese=="y"){  //有條件的加入sql式中
+      chinese = ' And chinese = "'+ chinese + '"'; 
+    }else{
+      chinese = "";
+    }
+    if(western=="y"){  //有條件的加入sql式中
+      western = ' And western = "'+ western + '"'; 
+    }else{
+      western = "";
+    }
+    if(japanKorean=="y"){  //有條件的加入sql式中
+      japanKorean = ' And japanKorean = "'+ japanKorean + '"'; 
+    }else{
+      japanKorean = "";
+    }
+    if(southeastAsian=="y"){  //有條件的加入sql式中
+      southeastAsian = ' And southeastAsian = "'+ southeastAsian + '"'; 
+    }else{
+      southeastAsian = "";
+    }
+    if(netbeauty=="y"){  //有條件的加入sql式中
+      netbeauty = ' And netbeauty = "'+ netbeauty + '"'; 
+    }else{
+      netbeauty = "";
+    }
+    if(vendor=="y"){  //有條件的加入sql式中
+      vendor = ' And vendor = "'+ vendor + '"'; 
+    }else{
+      vendor = "";
+    }
+    if(restaurant=="y"){  //有條件的加入sql式中
+      restaurant = ' And restaurant = "'+ restaurant + '"'; 
+    }else{
+      restaurant = "";
+    }
+    if(alcohol=="y"){  //有條件的加入sql式中
+      alcohol = ' And alcohol = "'+ alcohol + '"'; 
+    }else{
+      alcohol = "";
+    }
 
-                
-  var sql_func = 'SELECT * FROM FoodInfo WHERE sweet = "n' +
-  '" AND salty = "y' +
-  '" AND cheap = "y' +
-  '" AND expensive = "n' +
-  '" AND buffet = "n' +
-  '" AND chinese = "y' +
-  '" AND western = "n' +
-  '" AND japanKorean = "n' +
-  '" AND southeastAsian = "n' +
-  '" AND netbeauty = "n' +
-  '" AND vendor = "n' +
-  '" AND restaurant = "y' +
-  '" AND alcohol = "n' +
-  '" AND favorite = "n"';
-
+  var sql_func = 'SELECT * FROM FoodInfo WHERE' 
+  + sweet + salty + cheap + expensive + buffet + chinese
+  + western + japanKorean + southeastAsian + netbeauty
+  + vendor + restaurant + alcohol + ' AND favorite = "n"';
+  // '" AND cheap = "y' +
+  // '" AND expensive = "n' +
+  // '" AND buffet = "n' +
+  // '" AND chinese = "y' +
+  // '" AND western = "n' +
+  // '" AND japanKorean = "n' +
+  // '" AND southeastAsian = "n' +
+  // '" AND netbeauty = "n' +
+  // '" AND vendor = "n' +
+  // '" AND restaurant = "y' +
+  // '" AND alcohol = "n' +
+  // '" AND favorite = "n"';
+  console.log(sql_func);
 
     var sql_text = "SELECT * FROM FoodInfo";// WHERE Aname = '義大遊樂世界聖托里尼山城'
     
     this.sqliteDB.getRestaurantsbycondition(sql_func,this.datanum).then(res => {
       this.alldata = res;
       console.log(this.exampleLat); 
-      this.presentLoading();
+      this.presentLoading(); 
       // for(let i = 0;i<10;i++){
       //   this.testData[i]= this.alldata[i];
       //   this.geocoder.geocode({'address': this.alldata[i].Address },  (results, status)  => { //先找到當地的經緯度 

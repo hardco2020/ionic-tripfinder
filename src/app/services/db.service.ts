@@ -105,8 +105,7 @@ export class DbService {
       this.attractionList.next(items);  //Line15宣告的List
     });
   }
-
-  getAttractionsbycondition(sqlText): Promise<Attraction[]>{  //original is getSongs, getSongs=>getAttractions
+  getAttractionsbyfavorite(sqlText): Promise<Attraction[]>{  //original is getSongs, getSongs=>getAttractions
     return this.storage.executeSql(sqlText, []).then(res => {
       let items: Attraction[] = []; //services song.ts class name, original is Song, Song[]=>Attraction[]
       if (res.rows.length > 0) {
@@ -119,6 +118,40 @@ export class DbService {
             Phone: res.rows.item(i).Phone,
             Address: res.rows.item(i).Address,
             Rate: res.rows.item(i).Rate,
+            distance: res.rows.item(i).distance,
+            InorOut: res.rows.item(i).InorOut,
+            StaticorDynamic: res.rows.item(i).StaticorDynamic,
+            Netbeauty: res.rows.item(i).Netbeauty, 
+            Hipster: res.rows.item(i).Hipster,  
+            NearMountain: res.rows.item(i).NearMountain, 
+            NearSea: res.rows.item(i).NearSea,  
+            Shopping: res.rows.item(i).Shopping,  
+            Exhibition: res.rows.item(i).Exhibition,  
+            History: res.rows.item(i).History,  
+            NightView: res.rows.item(i).NightView,  
+            favorite: res.rows.item(i).favorite, 
+           });
+        }
+      }
+      return items;
+    });
+
+    
+  }
+
+  getAttractionsbycondition(sqlText,num): Promise<Attraction[]>{  //original is getSongs, getSongs=>getAttractions
+    return this.storage.executeSql(sqlText, []).then(res => {
+      let items: Attraction[] = []; //services song.ts class name, original is Song, Song[]=>Attraction[]
+      if (res.rows.length > 0) {
+        for (var i = num; i < num+10; i++) { 
+          items.push({  //getting all the columns by column names
+            Aid: res.rows.item(i).Aid,  //變數名: res.rows.item(i).資料表欄位名,
+            Aname: res.rows.item(i).Aname,  
+            photo: res.rows.item(i).photo,
+            GoogleClass: res.rows.item(i).GoogleClass,
+            Phone: res.rows.item(i).Phone,
+            Address: res.rows.item(i).Address,
+            Rate: res.rows.item(i).Rate, 
             distance: res.rows.item(i).distance,
             InorOut: res.rows.item(i).InorOut,
             StaticorDynamic: res.rows.item(i).StaticorDynamic,

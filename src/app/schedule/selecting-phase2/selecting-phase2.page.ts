@@ -121,7 +121,7 @@ export class SelectingPhase2Page implements OnInit {
     static:"n",
     dynamic:"n",
     netbeauty:"n",
-    hipster:"n",
+    hipster:"n", 
     near_mountain:"n",
     near_sea:"n",
     shopping:"n",
