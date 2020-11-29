@@ -1,18 +1,16 @@
 
-import { Component, OnInit ,NgZone ,ViewChild, AfterContentInit} from '@angular/core';
+import { Component} from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { ControllerserviceService,Favorites,FavFoods,googleInfor } from '../controllerservice.service';
-import { VirtualTimeScheduler } from 'rxjs';
+import { ControllerserviceService,Favorites,FavFoods } from '../controllerservice.service';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 declare var google;
 @Component({
   selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
+  templateUrl: 'tab1.page.html', 
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-
-  // 圖片的位置
+  // 圖片的位置  
   slides = [
     {
       img: 'assets/img/search/1.jpg',
@@ -60,10 +58,10 @@ export class Tab1Page {
     speed: 2000,
    };
   favorites: Favorites[]; //load進所有現存資料
-  favfoods: FavFoods[];
+  favfoods: FavFoods[]; 
   geocoder = new google.maps.Geocoder;
   distance: any;
-  constructor(public nav: NavController,public service : ControllerserviceService,private geolocation: Geolocation , ) {}
+  constructor(public nav: NavController,public service : ControllerserviceService) {}
   ngOnInit(): void{
     this.service.getFavorites().subscribe(res => {
       this.favorites = res; //接受firebase裡所有的欄位
@@ -76,8 +74,8 @@ export class Tab1Page {
       this.slides[4]=this.favorites[2];
       // for(let i = 0; i < this.slides.length; i++) { bug
       //   this.slides[i]=this.favorites[i];
-      // } 
-  
+      // }  
+      
     });
     this.service.getFavFoods().subscribe(res => {
       this.favfoods = res;
@@ -100,7 +98,7 @@ export class Tab1Page {
       //         console.log(resp.coords.longitude);
       //         // resp.coords.latitude
       //         // resp.coords.longitude
-      //        }).catch((error) => {
+      //        }).catch((error) => { 
       //          console.log('Error getting location', error);
       //       });
       //       let watch = this.geolocation.watchPosition();
@@ -128,9 +126,10 @@ export class Tab1Page {
         
     // });
     });
-
-    console.log(this.favorites);
+    // this.androidPermissions .requestPermissions([this.androidPermissions.PERMISSION.WRITE_GSERVICES]);
+    // console.log(this.favorites);
   }
+  
   // ngAfterViewInit() : void{
   //   setTimeout(() => {
   //   }, 1000);
@@ -141,9 +140,5 @@ export class Tab1Page {
   turnpage(){   // 換頁到phase1
     this.nav.navigateRoot(['selecting-phase1']);
   }
-  testshow(){
-    this.favorites.map(element => {
-      this.slides.push(element);
-    });
-  }
+
 }

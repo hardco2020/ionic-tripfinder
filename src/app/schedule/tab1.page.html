@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title class="ion-text-center">
-      LOGO
+      邊玩邊吃
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,7 +11,7 @@
   <ion-card>
     <ion-slides [options]="slideOptsOne" pager="true">
      <ion-slide *ngFor="let slide of slides">
-      <div class="card-title" (click)="testshow()">{{slide.place}}</div>
+      <div class="card-title">{{slide.place}}</div>
       <div class="card-subtitle">{{distance}}</div>
       <img [src]="slide.img" [routerLink]="['/outcome',slide.place]" >
      </ion-slide>

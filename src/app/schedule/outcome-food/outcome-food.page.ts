@@ -122,7 +122,7 @@ export class OutcomeFoodPage implements OnInit {
       sweet = "";
     }
     if(salty=="y"){  //有條件的加入sql式中
-      salty = ' And salty = "'+ salty + '"'; 
+      salty = ' salty = "'+ salty + '"'; 
     }else{ 
       salty = "";
     }

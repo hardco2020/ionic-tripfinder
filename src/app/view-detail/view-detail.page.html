@@ -69,18 +69,14 @@
             <p ngDefaultControl [(ngModel)]="review">{{review}}</p>
           </ion-label>
         </ion-item>
-        <ion-item-divider>
-          <ion-label>距離與時間</ion-label>
-        </ion-item-divider>
         <ion-item lines="none">
-          <ion-icon slot="start" name="compass-outline"></ion-icon>
-          <ion-label>
-            <b>目前距離</b>
-            <p ngDefaultControl [(ngModel)]="currentLat">{{currentLat}}</p>
-            <p ngDefaultControl [(ngModel)]="currentLng">{{currentLng}}</p>
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+          <ion-label class="multi-line">
+            <b>部落格推薦</b>
+            <p>{{loadedDetail.blog}}</p>
           </ion-label>
         </ion-item>
-       
+        
       </ion-list>
     </ion-col>
   </ion-row>
