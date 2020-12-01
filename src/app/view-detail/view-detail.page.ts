@@ -6,6 +6,8 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { location } from '../location.model';
 import { Platform } from '@ionic/angular';
 
+///網站連結
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 declare var google;
 
@@ -28,6 +30,7 @@ export class ViewDetailPage implements OnInit {
   currentLat : any;
   currentLng: any;
   constructor(
+     public iab : InAppBrowser,
      private zone: NgZone,
      private geolocation: Geolocation , 
      private activatedRoute: ActivatedRoute,
@@ -181,5 +184,7 @@ export class ViewDetailPage implements OnInit {
   back(){
     this.navCtrl.back();
   }
-
+  onshow(url){
+    const browser = this.iab.create(url);
+  }
 }

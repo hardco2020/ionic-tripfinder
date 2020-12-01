@@ -19,7 +19,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { SQLite } from '@ionic-native/sqlite/ngx';
 import { HttpClientModule } from '@angular/common/http';
 import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
- 
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -34,6 +34,7 @@ import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
     HttpClientModule
   ],
   providers: [
+    InAppBrowser,
     Geolocation,
     NativeGeocoder,
     StatusBar,
