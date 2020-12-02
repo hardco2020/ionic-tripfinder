@@ -5,86 +5,60 @@ import { NavigationExtras } from '@angular/router';
 
 import { SelectionPh1 } from '../selecting-phase1/selection-ph1';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { FormsModule} from '@angular/forms';
 import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
 import { ValueTransformer } from '@angular/compiler/src/util';
 import { throwError } from 'rxjs';
 
 @Component({
-  selector: 'app-selecting-phase2',
-  templateUrl: './selecting-phase2.page.html',
-  styleUrls: ['./selecting-phase2.page.scss'],
+  selector: 'app-phase22',
+  templateUrl: './phase22.page.html',
+  styleUrls: ['./phase22.page.scss'],
 })
-export class SelectingPhase2Page implements OnInit {
-
-  // 透過 url 將 selection 傳遞到此頁面
+export class Phase22Page  {
   data: any;
   selection: any;
-  constructor(private fb: FormBuilder, public nav: NavController, private route: ActivatedRoute, private router: Router) {
-    this.route.queryParams.subscribe(param => {
-      if (param && param.special) {
+  //記得要使用formbuilder前要在本頁的module裡加上reactform module
+  constructor(public fb: FormBuilder , public nav: NavController, private route: ActivatedRoute, private router: Router) {
+    this.route.queryParams.subscribe(param=>{
+      if(param && param.special){
         this.data = JSON.parse(param.special);
+        console.log(this.data);
       }
     });
     this.form = this.fb.group({
       checkArray: this.fb.array([], [Validators.required])
-    });
+    });  
   }
-
-  // 多選項列表
   labels = [
     {
-      key: 1,
-      name:'outdoor',
-      title: '戶外',
-      img: 'https://images.pexels.com/photos/3874004/pexels-photo-3874004.jpeg?auto=compress&cs=tinysrgb'
+      key: 5,
+      name:'netbeauty',
+      title: '網美踩點',
+      img: 'assets/img/selecting_phase/5.jpeg'
+      // img: 'https://images.pexels.com/photos/600114/pexels-photo-600114.jpeg?auto=compress&cs=tinysrgb'
     },
     {
-      key: 2,
-      name:'indoor',
-      title: '室內',
-      img: 'assets/img/selecting_phase/2.jpeg'
+      key: 6,
+      name:'hipster',
+      title: '文青必去',
+      img: 'assets/img/selecting_phase/6.jpeg'
+      // img: 'https://images.pexels.com/photos/364110/pexels-photo-364110.jpeg?auto=compress&cs=tinysrgb'
     },
     {
-      key: 3,
-      name:'dynamic',
-      title: '動態',
-      img: 'assets/img/selecting_phase/3.jpeg'
+      key: 7,
+      name:'near_mountain',
+      title: '靠山',
+      img: 'assets/img/selecting_phase/7.jpeg'
+      // img: 'https://images.pexels.com/photos/2175952/pexels-photo-2175952.jpeg?auto=compress&cs=tinysrgb'
     },
     {
-      key: 4,
-      name:'static',
-      title: '靜態',
-      img: 'assets/img/selecting_phase/4.jpeg'
-    }
-    // {
-    //   key: 5,
-    //   name:'netbeauty',
-    //   title: '網美踩點',
-    //   img: 'assets/img/selecting_phase/5.jpeg'
-    //   // img: 'https://images.pexels.com/photos/600114/pexels-photo-600114.jpeg?auto=compress&cs=tinysrgb'
-    // },
-    // {
-    //   key: 6,
-    //   name:'hipster',
-    //   title: '文青必去',
-    //   img: 'assets/img/selecting_phase/6.jpeg'
-    //   // img: 'https://images.pexels.com/photos/364110/pexels-photo-364110.jpeg?auto=compress&cs=tinysrgb'
-    // },
-    // {
-    //   key: 7,
-    //   name:'near_mountain',
-    //   title: '靠山',
-    //   img: 'assets/img/selecting_phase/7.jpeg'
-    //   // img: 'https://images.pexels.com/photos/2175952/pexels-photo-2175952.jpeg?auto=compress&cs=tinysrgb'
-    // },
-    // {
-    //   key: 8,
-    //   name:'near_sea',
-    //   title: '靠海',
-    //   img: 'assets/img/selecting_phase/8.jpeg'
-    //   // img: 'https://images.pexels.com/photos/756856/pexels-photo-756856.jpeg?auto=compress&cs=tinysrgb'
-    // },
+      key: 8,
+      name:'near_sea',
+      title: '靠海',
+      img: 'assets/img/selecting_phase/8.jpeg'
+      // img: 'https://images.pexels.com/photos/756856/pexels-photo-756856.jpeg?auto=compress&cs=tinysrgb'
+    },
     // {
     //   key: 9,
     //   name:'shopping',
@@ -115,11 +89,11 @@ export class SelectingPhase2Page implements OnInit {
     // }
   ];
   form: FormGroup;
-  result = {
-    indoor:"n",
-    outdoor:"n", 
-    static:"n",
-    dynamic:"n",
+  result = {   //用來檢查checkbox的結果
+    indoor : "n",
+    outdoor : "n",
+    static  : "n",
+    dynamic : "n",
     netbeauty:"n",
     hipster:"n", 
     near_mountain:"n",
@@ -129,9 +103,12 @@ export class SelectingPhase2Page implements OnInit {
     historic_site:"n",
     night_view:"n",
   };
-  a:any;
   ngOnInit() {
-    console.log(this.data);
+    this.result.indoor = this.data.indoor;
+    this.result.outdoor = this.data.outdoor;
+    this.result.static = this.data.static;
+    this.result.dynamic = this.data.dynamic;
+    // console.log(this.data);    
   }
   turnpage(){   //換頁到 outcome
     this.selection = Object.assign(this.data,this.result);
@@ -141,7 +118,7 @@ export class SelectingPhase2Page implements OnInit {
         special: JSON.stringify(this.selection)
       }
     };
-    this.nav.navigateRoot(['phase22'],navigationExtras);
+    this.nav.navigateRoot(['phase23'],navigationExtras);
   }
   onCheckboxChange(e) {
     const checkArray: FormArray = this.form.get('checkArray') as FormArray;
@@ -154,7 +131,7 @@ export class SelectingPhase2Page implements OnInit {
       checkArray.controls.forEach((item: FormControl) => {
         if (item.value == e.target.value) { 
           checkArray.removeAt(i);  
-          this.result[e.target.value]="n";
+          // this.result[e.target.value]="n";
           return;
         }
         i++;
@@ -164,5 +141,4 @@ export class SelectingPhase2Page implements OnInit {
   submitForm() { 
     console.log(this.form.value)
   }
-
 }

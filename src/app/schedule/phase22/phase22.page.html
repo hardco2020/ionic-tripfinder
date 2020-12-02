@@ -14,11 +14,9 @@
 
 <ion-content fullscreen class="ion-padding">
   <ion-text>
-    <h4>今晚想來點？</h4>
+    <h4>是想當個文青上山下海呢？還是當網美水水呢?</h4>
   </ion-text>
-  <p class="error" *ngIf="this.form.controls['checkArray'].errors?.required"></p>
-
-  <form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
+<form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
   <ion-grid>
     <ion-row>
       <!--col 為欄位 後面參數設定比例為12格下去做響應式畫面，ngFor迴圈串資料-->
@@ -36,8 +34,6 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
-  <!--進入到outcome-->
   <div class="ion-padding">
     <ion-button [disabled]="!form.valid" expand="block" type="submit" class="ion-no-margin" (click)="turnpage()">送出</ion-button>
   </div>

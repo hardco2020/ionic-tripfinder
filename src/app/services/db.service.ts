@@ -142,8 +142,8 @@ export class DbService {
   getAttractionsbycondition(sqlText,num): Promise<Attraction[]>{  //original is getSongs, getSongs=>getAttractions
     return this.storage.executeSql(sqlText, []).then(res => {
       let items: Attraction[] = []; //services song.ts class name, original is Song, Song[]=>Attraction[]
-      if (res.rows.length > 0) {
-        for (var i = num; i < num+10; i++) { 
+      if (res.rows.length > 0) { 
+        for (var i = num; i < num+5 ; i++) { 
           items.push({  //getting all the columns by column names
             Aid: res.rows.item(i).Aid,  //變數名: res.rows.item(i).資料表欄位名,
             Aname: res.rows.item(i).Aname,  

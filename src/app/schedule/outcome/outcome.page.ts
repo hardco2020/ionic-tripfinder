@@ -4,9 +4,10 @@ import { ActivatedRoute,Router } from '@angular/router';
 //import { ConsoleReporter } from 'jasmine';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
-import { NavController, LoadingController } from '@ionic/angular';
+import { NavController, LoadingController,IonInfiniteScroll } from '@ionic/angular';
 import { DbService } from '../../services/db.service'; 
 import { analytics } from 'firebase';
+
 
 declare var google;
 
@@ -43,10 +44,11 @@ export class OutcomePage implements OnInit {
   //   openPeriod:4,
   //  };
   //  googles: googleInfor[] = [this.test,this.tests,this.testss];
-   
+  
    favorites: Favorites[]; //load進所有現存資料
    data: any;
    map;
+   index = 0;
    api_key = 'AIzaSyCMjg0lGC43K_RsV687kghZ5qTAbPnQAMo';
   //  distance: any;
   //  openingorNot : any;
@@ -56,7 +58,7 @@ export class OutcomePage implements OnInit {
    distance : any;
    datanum = 0 ; //用來傳遞一次傳資料的數量
    alldata: any[] = [];//sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB 此行改到controllerservice後註解掉
-  
+   alldata_new: any[] = []; //新的放入的data
    sql : any;
    alldata_old = [{      //所有的data
     "Aid": 1,
@@ -162,7 +164,7 @@ export class OutcomePage implements OnInit {
        }
      });
     }
-
+  @ViewChild(IonInfiniteScroll,{static:true}) infiniteScroll: IonInfiniteScroll;
    @ViewChild('mapElement',{static:true}) mapElement;
   geocoder = new google.maps.Geocoder;
   GoogleAutocomplete = new google.maps.places.AutocompleteService();
@@ -316,6 +318,8 @@ export class OutcomePage implements OnInit {
       this.alldata = res
       console.log(this.alldata);
       this.presentLoading();
+      ////////////////////從這裡可以開始寫分段
+
       this.alldata.forEach(element => {
         this.geocoder.geocode({ 'address': element.Address },  (results, status)  => { //先找到當地的經緯度 
           let pos;
@@ -383,12 +387,15 @@ export class OutcomePage implements OnInit {
   }
   nextpage(){   
     console.log(this.sql); 
-    this.datanum = this.datanum+10;
+    // 先將全部資料導入，除於八? 按照長度顯示?
+    this.datanum = this.datanum+5;
     this.sqliteDB.getAttractionsbycondition(this.sql,this.datanum).then(res => {
-      this.alldata = res
-      console.log(this.alldata);
-      this.presentLoading();
-      this.alldata.forEach(element => {
+      this.alldata_new = res 
+      // this.alldata = res 
+
+      console.log(this.alldata_new +"新資料")
+      // console.log(this.alldata);  
+      this.alldata_new.forEach(element => {
         this.geocoder.geocode({ 'address': element.Address },  (results, status)  => { //先找到當地的經緯度 
           let pos;
           if (status == google.maps.GeocoderStatus.OK) {
@@ -406,7 +413,7 @@ export class OutcomePage implements OnInit {
                  this.distance = Math.round(this.distance);
                  if(this.distance>this.data.distance){
                     console.log("太遠了");
-                    this.alldata.splice(this.alldata.indexOf(element),1);
+                    this.alldata_new.splice(this.alldata_new.indexOf(element),1);
                  } 
                  this.distance = this.distance +"公里";
                  element.distance = this.distance;
@@ -416,7 +423,7 @@ export class OutcomePage implements OnInit {
                 this.distance = Math.round(this.distance);
                 if(this.distance/1000>this.data.distance){
                   console.log("太遠了");
-                  this.alldata.splice(this.alldata.indexOf(element),1);
+                  this.alldata_new.splice(this.alldata_new.indexOf(element),1);
                } 
                 this.distance = this.distance +"公尺";
                 element.distance = this.distance;
@@ -428,8 +435,14 @@ export class OutcomePage implements OnInit {
             element.Aname = "失敗了";
           }   
         });
-      });
-    }) 
+      }); 
+      console.log(this.alldata_new +"資料1234")  
+      this.alldata.push(this.alldata_new)  //將新爬的data放入資料庫
+      console.log(this.alldata) 
+    })
+    // this.alldata.push(this.alldata_new)  //將新爬的data放入資料庫
+    
+    console.log(this.alldata+"hello ")     
   }
   UpdateCollection(aname,photo,item,aid) {   
     this.lock = 0;
@@ -466,8 +479,21 @@ export class OutcomePage implements OnInit {
 
     }
     
-     
-    console.log(this.favorite);
+
     
+  }
+  doRefresh(event) {
+    console.log('Begin async operation');  
+    setTimeout(() => {
+      this.nextpage()
+      console.log("test")
+      event.target.complete();
+      // if (this.posts.length < this.limit) {
+      //   event.target.disabled = true;
+      // }
+    }, 2000);
+  } 
+  showdata(){
+    console.log(this.alldata) 
   }
 } 

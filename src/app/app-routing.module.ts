@@ -15,6 +15,14 @@ const routes: Routes = [
     loadChildren: () => import('./schedule/selecting-phase2/selecting-phase2.module').then( m => m.SelectingPhase2PageModule)
   },
   {
+    path: 'phase22',
+    loadChildren: () => import('./schedule/phase22/phase22.module').then( m => m.Phase22PageModule)
+  },
+  {
+    path: 'phase23',
+    loadChildren: () => import('./schedule/phase23/phase23.module').then( m => m.Phase23PageModule)
+  },
+  {
     path: 'selecting-food1',
     loadChildren: () => import('./schedule/selecting-food1/selecting-food1.module').then( m => m.SelectingFood1PageModule)
   },
@@ -42,10 +50,20 @@ const routes: Routes = [
   {
     path: 'outcome-food',
     loadChildren: () => import('./schedule/outcome-food/outcome-food.module').then( m => m.OutcomeFoodPageModule)
-  },  {
+  },
+  {
     path: 'test',
     loadChildren: () => import('./test/test.module').then( m => m.TestPageModule)
   },
+  {
+    path: 'phase22',
+    loadChildren: () => import('./schedule/phase22/phase22.module').then( m => m.Phase22PageModule)
+  },
+  {
+    path: 'phase23',
+    loadChildren: () => import('./schedule/phase23/phase23.module').then( m => m.Phase23PageModule)
+  },
+
 
 
   
