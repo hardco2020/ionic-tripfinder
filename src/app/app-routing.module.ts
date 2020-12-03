@@ -62,7 +62,11 @@ const routes: Routes = [
   {
     path: 'phase23',
     loadChildren: () => import('./schedule/phase23/phase23.module').then( m => m.Phase23PageModule)
+  },  {
+    path: 'selecting-phase2-v2',
+    loadChildren: () => import('./selecting-phase2-v2/selecting-phase2-v2.module').then( m => m.SelectingPhase2V2PageModule)
   },
+
 
 
 

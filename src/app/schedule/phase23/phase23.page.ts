@@ -114,7 +114,7 @@ export class Phase23Page  {
       });
     }
   }
-  submitForm() { 
-    console.log(this.form.value)
+  submitForm(){  
+    console.log(this.form.value) 
   }
 }

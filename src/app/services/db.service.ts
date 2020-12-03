@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
+import { IfStmt } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -59,18 +60,21 @@ export class DbService {
 
     // Render fake data
   getFakeData() {
-    this.httpClient.get(
-      'assets/google_attractions.json', //get the sql or json file 
-      {responseType: 'text'}
-    ).subscribe(data => {
-      this.sqlPorter.importJsonToDb(this.storage, data)
-        .then(_ => {
-          this.getAttractions();   //original is getSongs, getSongs=>getAttractions
-          this.getRestaurants();
-          this.isDbReady.next(true);
-        })
-        .catch(error => console.error(error));
-    });
+    if(this.storage==null){
+      this.httpClient.get( 
+        'assets/google_attractions.json', //get the sql or json file 
+        {responseType: 'text'}
+      ).subscribe(data => {
+        console.log(data) 
+        this.sqlPorter.importJsonToDb(this.storage, data)
+          .then(_ => {
+            this.getAttractions();   //original is getSongs, getSongs=>getAttractions
+            this.getRestaurants();
+            this.isDbReady.next(true);
+          })
+          .catch(error => console.error(error));
+      });
+    }
   }
 
   // Get list
