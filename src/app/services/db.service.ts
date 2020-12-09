@@ -26,16 +26,16 @@ export class DbService {
     private httpClient: HttpClient,
     private sqlPorter: SQLitePorter,
   ) {
-    this.platform.ready().then(() => {
-      this.sqlite.create({
-        name: 'positronx_db.db',
-        location: 'default'
-      })
-      .then((db: SQLiteObject) => {
-          this.storage = db;
-          this.getFakeData();
-      });
-    });
+    // this.platform.ready().then(() => {
+    //   this.sqlite.create({
+    //     name: 'positronx_db.db',
+    //     location: 'default'
+    //   })
+    //   .then((db: SQLiteObject) => {
+    //       this.storage = db;
+    //       this.getFakeData();
+    //   });
+    // });
   }
 
   dbState() {

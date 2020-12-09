@@ -12,42 +12,7 @@ declare var google;
 export class Tab1Page {
   // 圖片的位置  
   slides = [
-    {
-      img: 'assets/img/search/1.jpg',
-      place: '合歡山',
-      // subtitle: '高雄市',
-      collection : 1
-    },
-    {
-      img: 'assets/img/search/2.jpg',
-      place: '合歡山',
-      // subtitle: '合歡山',
-      collection : 1
-    },
-    {
-      img: 'assets/img/search/2.jpg',
-      place: '合歡山',
-      // subtitle: '合歡山',
-      collection : 1
-    },
-    {
-      img: 'assets/img/search/3.jpg',
-      place: '哪裡哪裡',
-      // subtitle: 'Good',
-      collection : 1
-    },
-    {
-      img: 'assets/img/search/3.jpg',
-      place: '哪裡哪裡',
-      // subtitle: 'Good',
-      collection : 1
-    },
-    {
-      img: 'assets/img/search/4.jpg',
-      place: '熱門景點4',
-      // subtitle: '',
-      collection : 1
-    }
+    
   ];
 
   // 讓圖片進行輪播
@@ -138,7 +103,7 @@ export class Tab1Page {
   //   });
   // }
   turnpage(){   // 換頁到phase1
-    this.nav.navigateRoot(['selecting-phase1']);
+    this.nav.navigateRoot(['tabs/tab1/selecting-phase1']);
   }
 
 }

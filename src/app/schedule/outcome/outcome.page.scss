@@ -19,4 +19,25 @@
   .iconSize{
     font-size: small;
   }
+.ion-color-blueIwant {
+  --ion-color-base: #134f6c;
+  --ion-color-base-rgb: 240, 176, 0;
+  --ion-color-contrast: #000000;
+  --ion-color-contrast-rgb: 0, 0, 0;
+  --ion-color-shade: #d39b00;
+  --ion-color-tint: #f2b81a
+}
   
+ion-header{
+  --background : #134f6c;
+}
+ion-toolbar{
+  --background : #134f6c;
+}
+// ion-title{
+//   --background : #134f6c;
+// }
+ion-card-title{
+  --background : #134f6c;
+}
+

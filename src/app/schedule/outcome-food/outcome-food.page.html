@@ -1,53 +1,104 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header  [translucent]="true">
+  <ion-toolbar >
+ 
     <ion-title>
-      
+      <p style="font-size: 20px; color:  white;" absolute-drag>邊吃邊玩</p>
     </ion-title>
       
     <!--返回鍵 回到主頁-->
+    <!-- <ion-button (click)="lastpage()">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button> -->
+    <!-- <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons> -->
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="#"></ion-back-button>
+      <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-item-sliding>
-    <ng-container *ngFor="let item of alldata" >
+  <div slot='fixed' style="position:relative">
+  <ion-segment 
+  value="all" 
+  color="tertiary" 
+
+  mode="ios"
+  >
+  
+    <ion-segment-button value="all" *ngFor="let item of category" (click)="changecategory(item)">
+      <ion-label>{{item}}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  </div>
+  <!-- <ion-slides  #slides autoplay="true" loop="true" pager="false" scrollbar="false" >
+    <ion-slide style="height:10%" *ngFor="let item of category" > -->
+      <!-- <ion-card>
+        <ion-card-header> -->
+          <!-- <ion-card-title (click)="changecategory(item)"> -->
+          <!-- <input type="button" value="{{item}}" style="float: right;" (click)="changecategory(item)">
+            {{item}} -->
+          <!-- </ion-card-title>
+          <ion-card-content>
+            Awesome content
+          </ion-card-content>
+        </ion-card-header> -->
+        <!-- <ion-card-content>
+          Awesome content
+        </ion-card-content> -->
+      <!-- </ion-card> -->
+    <!-- </ion-slide> -->
+    <!-- </ion-item> -->
+  <!-- </ion-slides> -->
+<ion-list>   
+  <ion-item-sliding> 
+    <!-- <ion-item *ngFor="let item of alldata">   -->
+      <ion-item *ngFor="let item of scrolldata"> 
       <ion-card-content>
-         <ion-row class="ion-justify-content-center">
+        <ion-row class="ion-justify-content-center"> 
           <ion-col size="auto"> 
-            <div>
-              <img  style="max-height: 250px;" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{item.photo}}&key={{apiKey}}" [routerLink]="['/outcome', item.Aname]"/>
-              <div class="evaluation_star"><ion-icon class="iconSize" slot="end" name="star"></ion-icon>{{item.Rate}}</div>
-            </div>
+            <div (click)="onshow(item.link)">
+              <img  style="max-height: 250px;" src="{{item.photo}}" />
+              <!-- <div class="evaluation_star"><ion-icon class="iconSize" slot="end" name="star"></ion-icon>{{item.Rate}}</div> -->
+            </div> 
           </ion-col>
         </ion-row>
+       
         <ion-card-title>
-          {{item.Aname}}
+          <p style="font-weight: bold; font-size: 20px; color:  #134f6c;" absolute-drag>{{item.Aname}}</p>
         </ion-card-title>
-        <ion-card-title>
+        <ion-icon name="location-outline"></ion-icon>
+        <span class="text">
           {{item.distance}}
-        </ion-card-title>
-        <ion-card-subtitle>
-          {{item.Address}}
-        </ion-card-subtitle>
-          
-          <ion-chip color="primary">
-            <ion-label>{{item.GoogleClass}}</ion-label>
-          </ion-chip>
-          <ion-chip color="primary">
-            <ion-label>類型二</ion-label>
-          </ion-chip>
-          <ion-button expand="full" (click)="UpdateCollection(item.Aname,item.photo,item,item.Aid)">+</ion-button>
-          
-        </ion-card-content> 
-    </ng-container> 
-    <ion-item-options side="end"> 
-      <ion-item-option >Favorite</ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>
-  <ion-button (click)="nextpage()">下一頁</ion-button>  
-  <div #mapElement class='map'></div>
+        </span>
+        <ion-label>
+          {{item.tag}}
+        </ion-label>
+        <!-- <ion-chip color="primary">
+          <ion-label>{{item.GoogleClass}}</ion-label>
+        </ion-chip> -->
+       
+        <!--<ion-button expand="full" (click)="UpdateCollection()">+</ion-button>-->
+        <ion-button expand="full" (click)="UpdateCollection(item.Aname,item.photo,item)">+</ion-button>
+      </ion-card-content> 
+      
+  </ion-item>
+  <ion-item-options side="end"> 
+    <ion-item-option >Favorite</ion-item-option> 
+  </ion-item-options>
+</ion-item-sliding>
+</ion-list>
 
-</ion-content>
+<!-- 利用infinte scroll來刷新 -->
+<ion-infinite-scroll threshold="5%" (ionInfinite)="loadData($event)">
+  <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="載入更多餐廳..."> 
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+<div #mapElement class='map'></div> 
+<!-- </ion-list>  -->
+</ion-content>  
+

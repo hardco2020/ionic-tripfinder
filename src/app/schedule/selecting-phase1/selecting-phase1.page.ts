@@ -28,7 +28,7 @@ export class SelectingPhase1Page implements OnInit {
   private selection : any;
 
   ngOnInit() {
-    this.distanceRange = "5";
+    this.distanceRange = "100";
   }
   
   // ngModel 變數值
@@ -71,7 +71,7 @@ export class SelectingPhase1Page implements OnInit {
         special: JSON.stringify(this.selection)
       }
     };
-    this.nav.navigateRoot(['selecting-phase2'], navigationExtras);
+    this.nav.navigateRoot(['tabs/tab1/phase22'], navigationExtras);
   }
   turnpagetofood() {   //換頁到food頁面
     this.setItem();
@@ -81,7 +81,7 @@ export class SelectingPhase1Page implements OnInit {
         special: JSON.stringify(this.selection)
       }
     };
-    this.nav.navigateRoot(['selecting-food1'], navigationExtras);
+    this.nav.navigateRoot(['tabs/tab1/selecting-food1'], navigationExtras);
   }
   // google autocomplete
   UpdateSearchResults(event){

@@ -1,7 +1,7 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      探索
+    <ion-title >
+      <p style="float:left; font-size: 20px; color:  white;" >找主題</p>
     </ion-title>
     
     <!--返回鍵 回到choose-travel1-->
@@ -11,30 +11,71 @@
 
   </ion-toolbar>
 </ion-header>
-
-<ion-content fullscreen class="ion-padding">
+<!-- 
+<ion-content fullscreen class="ion-padding" > -->
+<ion-content padding class="background" >
   <ion-text>
-    <h4>是想當個文青上山下海呢？還是當網美水水呢?</h4>
+    <h4 style="color:  white;">是想當個文青上山下海呢？還是當網美水水呢?</h4>
   </ion-text>
 <form [formGroup]="form" (ngSubmit)="submitForm()" novalidate>
-  <ion-grid>
-    <ion-row>
+  <ion-button  expand="full"(click)="unhidden1()" >文化探索</ion-button>
+  <ion-grid [hidden]="ishidden1">
+    <ion-row size="3" size-xs="3" size-sm="3" size-md="2" size-lg="3"*ngFor="let label of labels1;let i=index">
       <!--col 為欄位 後面參數設定比例為12格下去做響應式畫面，ngFor迴圈串資料-->
-      <ion-col  size="6" size-xs="6" size-sm="6" size-md="4" size-lg="3"*ngFor="let label of labels;let i=index">
+      <ion-col  >
         <ion-card class="card-background-page"> 
           <ion-item>
-            <ion-card-content>
-              <!--要把使用者勾選出來的checkbox選項進行傳遞-->
-              <ion-checkbox color="primary" slot="start" [value]="label.name" (ionChange)="onCheckboxChange($event)">[value]="label.title"</ion-checkbox>
-              <ion-card-title class="card-title">{{label.title}}</ion-card-title>
-              <img [src]="label.img" style="width: 100px; height: 120px;"/>
-            </ion-card-content> 
+              <ion-label class="card-title">{{label.title}}</ion-label>
+              <ion-checkbox   color="primary" slot="start"  [value]="label.name" (ionChange)="onCheckboxChange($event)">[value]="label.title"</ion-checkbox>
           </ion-item>
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <div class="ion-padding">
+  <ion-button  expand="full"(click)="unhidden2()" >找點樂子</ion-button>
+  <ion-grid [hidden]="ishidden2">
+    <ion-row size="3" size-xs="3" size-sm="3" size-md="2" size-lg="3"*ngFor="let label of labels2;let i=index">
+      <!--col 為欄位 後面參數設定比例為12格下去做響應式畫面，ngFor迴圈串資料-->
+      <ion-col  >
+        <ion-card class="card-background-page"> 
+          <ion-item>
+              <ion-label class="card-title">{{label.title}}</ion-label>
+              <ion-checkbox   color="primary" slot="start"  [value]="label.name" (ionChange)="onCheckboxChange($event)">[value]="label.title"</ion-checkbox>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button  expand="full"(click)="unhidden3()" >景致欣賞</ion-button>
+  <ion-grid [hidden]="ishidden3">
+    <ion-row size="3" size-xs="3" size-sm="3" size-md="2" size-lg="3"*ngFor="let label of labels3;let i=index">
+      <!--col 為欄位 後面參數設定比例為12格下去做響應式畫面，ngFor迴圈串資料-->
+      <ion-col  >
+        <ion-card class="card-background-page"> 
+          <ion-item>
+              <ion-label class="card-title">{{label.title}}</ion-label>
+              <ion-checkbox   color="primary" slot="start"  [value]="label.name" (ionChange)="onCheckboxChange($event)">[value]="label.title"</ion-checkbox>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-button  expand="full"(click)="unhidden4()" >吃吃喝喝</ion-button>
+  <ion-grid [hidden]="ishidden4">
+    <ion-row size="3" size-xs="3" size-sm="3" size-md="2" size-lg="3"*ngFor="let label of labels4;let i=index">
+      <!--col 為欄位 後面參數設定比例為12格下去做響應式畫面，ngFor迴圈串資料-->
+      <ion-col  >
+        <ion-card class="card-background-page"> 
+          <ion-item>
+              <ion-label class="card-title">{{label.title}}</ion-label>
+              <ion-checkbox   color="primary" slot="start"  [value]="label.name" (ionChange)="onCheckboxChange($event)">[value]="label.title"</ion-checkbox>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <div class="ion-padding"  >
     <ion-button [disabled]="!form.valid" expand="block" type="submit" class="ion-no-margin" (click)="turnpage()">送出</ion-button>
   </div>
 </form>

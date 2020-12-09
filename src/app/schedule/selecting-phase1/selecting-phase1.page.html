@@ -1,8 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title class="ion-text-center">
-      探索
-    </ion-title>
+    <ion-title >
+      <p style="float:left; font-size: 20px; color:  white;" >探索</p>
+    </ion-title> 
     
     <!--返回鍵 回到主頁-->
     <ion-buttons slot="start">
@@ -33,7 +33,7 @@
   <ion-list>
     <!-- 輸入距離範圍 -->
     <ion-list-header>
-        <h4>時間距離 : {{distanceRange}} 公里</h4>
+        <!-- <h4>時間距離 : {{distanceRange}} 公里</h4> -->
     </ion-list-header>
      <!-- <ion-item>
         <ion-range min="0" max="100" step="10" snaps="true" pin="true" [(ngModel)]="distanceRange">
@@ -41,14 +41,14 @@
           <ion-icon range-right name="sunny"></ion-icon>
         </ion-range>
       </ion-item>-->
-      <ion-item>
+      <!-- <ion-item>
         <ion-select  [value]="distanceRange" [(ngModel)]="distanceRange"> 
           <ion-select-option value="5">5分鐘內</ion-select-option>
           <ion-select-option value="10">15分鐘內</ion-select-option>
           <ion-select-option value="30">30分鐘內</ion-select-option>
           <ion-select-option value="100">30分鐘以上</ion-select-option>
         </ion-select> 
-      </ion-item>
+      </ion-item> -->
 
     <!-- 輸入 景點 / 餐廳 -->
     <ion-grid>

@@ -1,117 +1,102 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header  [translucent]="true">
+  <ion-toolbar >
+ 
     <ion-title>
-      
+      <p style="font-size: 20px; color:  white;" absolute-drag>邊吃邊玩</p>
     </ion-title>
       
     <!--返回鍵 回到主頁-->
+    
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="#"></ion-back-button>
+      <ion-back-button defaultHref="/phase22"></ion-back-button>
     </ion-buttons>
+    
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<ion-list>
- <!-- 
-  <ion-card>
-    <ion-card-content>
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="auto"> 
-          <div>
-            <img  style="max-height: 250px;" src="https://2.bp.blogspot.com/-5RP5j25aH_Q/XHYwfgfzlgI/AAAAAAAACcE/zj5pI_MZh6YjHntvoryfRlzgZQ0C0OMxwCLcBGAs/s1600/20190227-IMG_7484.jpg"  />
-            <div class="evaluation_star"><ion-icon class="iconSize" slot="end" name="star"></ion-icon> 4.5</div>
-          </div>
-        </ion-col>
-      </ion-row>
-      <ion-card-title>
-        駁二藝術特區
-      </ion-card-title>
-      <ion-card-subtitle>
-        803高雄市鹽埕區大勇路1號
-      </ion-card-subtitle>
-      
-      <ion-chip color="primary">
-        <ion-label>類型一</ion-label>
-      </ion-chip>
-      <ion-chip color="primary">
-        <ion-label>類型二</ion-label>
-      </ion-chip>
-      <p class="hello substr">
-        駁二藝術特區是一個位於臺灣高雄市鹽埕區、鼓山區的藝術園區，以「前衛、實驗、創新」為理念來打造國際藝術平台
-      </p>
-     
-      <ion-row>
-        <ion-col>
-          <ion-label ngDefaultControl [(ngModel)]="distance">{{distance}}</ion-label>
-        </ion-col>
-        <ion-col>
-      <ion-label ngDefaultControl [(ngModel)]="openingorNot">{{openingorNot}}</ion-label>
-      </ion-col>
-      <ion-label ngDefaultControl [(ngModel)]="openPeriod">{{openPeriod}}</ion-label>
-      <ion-label ngDefaultControl [(ngModel)]="phoneNumber">電話{{phoneNumber}}</ion-label>
-      
-    </ion-row>
-    <ion-list>
-      <ion-item *ngFor="let item of googles">
-        {{item.phoneNumber}} 
-      </ion-item>
-    </ion-list>
-    <ion-button expand="full" (click)="UpdateCollection()">+</ion-button>
-    <ion-button expand="full" (click)="Test()">Test</ion-button>
-    
+  <div slot='fixed' style="position:relative;">
+  <ion-segment 
+  value="all" 
 
-    <ion-item-options side="end"> 
-      <ion-item-option >Favorite</ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>-->
+  color="orange"
+  mode="ios"
+  >
+  
+    <ion-segment-button value="all" *ngFor="let item of category" (click)="changecategory(item)">
+      <ion-label>{{item}}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  </div>
+  <!-- <ion-slides  #slides autoplay="true" loop="true" pager="false" scrollbar="false" >
+    <ion-slide style="height:10%" *ngFor="let item of category" > -->
+      <!-- <ion-card>
+        <ion-card-header> -->
+          <!-- <ion-card-title (click)="changecategory(item)"> -->
+          <!-- <input type="button" value="{{item}}" style="float: right;" (click)="changecategory(item)">
+            {{item}} -->
+          <!-- </ion-card-title>
+          <ion-card-content>
+            Awesome content
+          </ion-card-content>
+        </ion-card-header> -->
+        <!-- <ion-card-content>
+          Awesome content
+        </ion-card-content> -->
+      <!-- </ion-card> -->
+    <!-- </ion-slide> -->
+    <!-- </ion-item> -->
+  <!-- </ion-slides> -->
+<ion-list>   
   <ion-item-sliding> 
     <ion-item *ngFor="let item of alldata">  
       <ion-card-content>
         <ion-row class="ion-justify-content-center"> 
           <ion-col size="auto"> 
-            <div>
-              <img  style="max-height: 250px;" src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{item.photo}}&key={{api_key}}" [routerLink]="['/outcome', item.Aname]"/>
-              <div class="evaluation_star"><ion-icon class="iconSize" slot="end" name="star"></ion-icon>{{item.Rate}}</div>
+            <div (click)="onshow(item.link)">
+              <img  style="max-height: 250px;" src="{{item.photo}}" />
+              <!-- <div class="evaluation_star"><ion-icon class="iconSize" slot="end" name="star"></ion-icon>{{item.Rate}}</div> -->
             </div> 
           </ion-col>
         </ion-row>
        
         <ion-card-title>
-          {{item.Aname}}
+          <p style="font-weight: bold; font-size: 30px; color:  #134f6c;" absolute-drag>{{item.Aname}}</p>
         </ion-card-title>
-        <ion-card-title>
-          {{item.distance}}
-        </ion-card-title>
+        <!--目前景點還沒有此功能-->
+        <!-- <ion-icon name="location-outline"></ion-icon>
         <ion-card-subtitle>
-          {{item.Address}}
-        </ion-card-subtitle>
-        
-        
-        
-        <ion-chip color="primary">
+          {{item.distance}}公里
+        </ion-card-subtitle> -->
+        <ion-label>
+          {{item.tag}}
+        </ion-label>
+         
+        <!-- <ion-chip color="primary">
           <ion-label>{{item.GoogleClass}}</ion-label>
-        </ion-chip>
+        </ion-chip> -->
        
         <!--<ion-button expand="full" (click)="UpdateCollection()">+</ion-button>-->
-        <ion-button expand="full" (click)="UpdateCollection(item.Aname,item.photo,item,item.Aid)">+</ion-button>
+        <ion-button expand="full" (click)="UpdateCollection(item.Aname,item.photo,item)">+</ion-button>
       </ion-card-content> 
-      <ion-button (click)="showdata()">下一頁</ion-button>
+      
   </ion-item>
-
   <ion-item-options side="end"> 
     <ion-item-option >Favorite</ion-item-option> 
   </ion-item-options>
 </ion-item-sliding>
+</ion-list>
+<!-- <ion-button (click)="showdata()">下一頁</ion-button> -->
 
 <!-- 利用infinte scroll來刷新 -->
-<ion-infinite-scroll threshold="100px" (ionInfinite)="doRefresh($event)">
+<!-- <ion-infinite-scroll threshold="100px" (ionInfinite)="doRefresh($event)">
   <ion-infinite-scroll-content
     loadingSpinner="bubbles"
     loadingText="Loading more data..."> 
   </ion-infinite-scroll-content>
-</ion-infinite-scroll>
+</ion-infinite-scroll> -->
 <div #mapElement class='map'></div> 
-</ion-list> 
+<!-- </ion-list>  -->
 </ion-content>  
 

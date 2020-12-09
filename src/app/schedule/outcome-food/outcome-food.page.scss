@@ -19,3 +19,12 @@
   .iconSize{
     font-size: small;
   }
+  ion-toolbar{
+    --background : #134f6c;
+  }
+  ion-back-button {
+    & > div {
+        position: absolute;
+        z-index: 1;
+    }
+}

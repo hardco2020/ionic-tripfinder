@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
+import { combineLatest } from 'rxjs'
 import { map } from 'rxjs/operators';
 import { DbService } from './services/db.service';
 
@@ -11,12 +12,107 @@ export interface Favorites {
   img: string;
   place: string;
   collection: number;
+  link: string;
+  tag: string;
+}
+export interface TouristData {
+  id?: string;
+  Aname: string; 
+  hipster: string;
+  watersport : string;
+  themepark: string;
+  historic: string;
+  latern: string;
+  tourbus: string; 
+  mustbuy: string;
+  hotspot: string; 
+  creature: string;
+  seafood: string; 
+  weirdscene: string;  
+  temple: string; 
+  weddingdress: string;  
+  hotspring: string;  
+  dawn: string;  
+  musteat: string;  
+  exhibition: string;
+  seaview: string;
+  summer: string;
+  date: string;
+  seabay: string;
+  sunset :string;
+  nationalpark : string;
+  nationalscenic: string;
+  nationalforest: string;
+  oldstreet : string;
+  nightstreet: string;
+  tribetour: string;
+  museum: string;
+  biketour: string;
+  foresttrail: string;
+  barrierfree: string;
+  moutaintrail: string;
+  hakka: string;
+  kol: string;
+  nightview: string;
+  flowerview: string;
+  battlefield:string;
+  lighthouse: string;
+  familyfriendly: string;
+  art: string;
+  railway: string;
+  viewingplatform: string;
+  favorite: string;
+  photo: string;
+  link: string;
+  tag: string;
+}
+export interface FoodieData {
+  id?: string;
+  Aname: string; 
+  brunch: string;
+  expencive : string;
+  hotpot: string;
+  dessert: string;
+  snack: string;
+  date: string; 
+  cake: string;
+  coffee: string; 
+  bar: string;
+  steak: string; 
+  barbeque: string;  
+  japenesebar: string; 
+  beverage: string;  
+  banquet: string;  
+  latenight: string;  
+  seafood: string;  
+  ramen: string;
+  beefnoodle: string;
+  sushi: string;
+  vegetarian: string;
+  japenese: string;
+  korean :string;
+  chinese : string;
+  american: string;
+  italian: string;
+  taifood : string;
+  honkong: string;
+  breakfast: string;
+  lunch: string;
+  dinner: string;
+  petfriendly: string;
+  distance : number;
+  favorite: string,
+  photo: string,
+  link: string,
+  tag : string
 }
 export interface FavFoods {
   id?: string;
   img: string;
   place: string;
   collection: number;
+  link: string;
+  tag: string;
 }
 export interface googleInfor {
     distance: number;
@@ -26,19 +122,26 @@ export interface googleInfor {
 }
 @Injectable({
   providedIn: 'root'
-})
+}) 
 export class ControllerserviceService {
+  public tag  = "hipster";
+  public foodietag = "brunch"; //測試用標籤
   private FavoritesCollection: AngularFirestoreCollection<Favorites>; //初始化maybe?
   private Favorites: Observable<Favorites[]>;
+  
+  //用來導入所有tourist data的資訊
+  private TouristCollection: AngularFirestoreCollection<TouristData>; //初始化maybe?
+  private Tourists: Observable<TouristData[]>;
 
+  private FoodieCollection: AngularFirestoreCollection<FoodieData>; //初始化maybe?
+  private Foodies: Observable<FoodieData[]>;
   //初始化餐廳
   private FavFoodsCollection: AngularFirestoreCollection<FavFoods>;
   private FavFoods: Observable<FavFoods[]>;
 
   alldata: any[] = [];
-
   constructor(
-    db: AngularFirestore,
+    public db: AngularFirestore,
     private sqliteDB: DbService,
   ) 
   { 
@@ -61,18 +164,33 @@ export class ControllerserviceService {
         return{id,...data};
       })
     }))
-
+    this.TouristCollection  = db.collection<TouristData>('touristdata',ref=>
+    ref.where(this.tag,'==','y')); //此處要輸入firebase裡的欄位名稱
+    this.Tourists = this.TouristCollection.snapshotChanges().pipe(  //snapchange的固定建置方法
+      map( actions=>{
+      return actions.map(a=>{
+        const data = a.payload.doc.data();
+        const id = a.payload.doc.id;
+        return{id,...data};
+      }) 
+    }))
+    
+    this.FoodieCollection  = db.collection<FoodieData>('foodiedata',ref=>
+    ref.where(this.foodietag,'==','y')); //此處要輸入firebase裡的欄位名稱
+    this.Foodies = this.FoodieCollection.snapshotChanges().pipe(  //snapchange的固定建置方法
+      map( actions=>{
+      return actions.map(a=>{
+        const data = a.payload.doc.data();
+        const id = a.payload.doc.id;
+        return{id,...data};
+      }) 
+    }))
   }
 
 
 
   ngOnInit() { //sqliteDB DBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDBDB
     
-    var sql_text = "SELECT * FROM AttractionInfo WHERE favorite = 'y'";
-    
-    this.sqliteDB.getAttractionsbyfavorite(sql_text).then(res => {
-      this.alldata = res
-    })
     
   }
 
@@ -18191,7 +18309,81 @@ export class ControllerserviceService {
   removeFavorite(id) {
     return this.FavoritesCollection.doc(id).delete();
   }
+  /////////////旅遊景點置入 一次性使用 為了植入資料 以及每次要用的時候取出資料
+  getTourists() {
+    return this.Tourists
 
+  }
+  // getTourist(id) {
+  //   return this.Tourists
+  // }
+  changeTourist(tag){
+    this.TouristCollection  = this.db.collection<TouristData>('touristdata',ref=>
+    ref.where(tag,'==','y')); //此處要輸入firebase裡的欄位名稱
+    this.Tourists = this.TouristCollection.snapshotChanges().pipe(  //snapchange的固定建置方法
+      map( actions=>{
+      return actions.map(a=>{
+        const data = a.payload.doc.data();
+        const id = a.payload.doc.id;
+        return{id,...data};
+      }) 
+    }))
+    return this.Tourists
+    // console.log(this.Tourists)
+  }
+  favoriteTourist(){
+    this.TouristCollection  = this.db.collection<TouristData>('touristdata',ref=>
+    ref.where('favorite','==','y')); //此處要輸入firebase裡的欄位名稱
+    this.Tourists = this.TouristCollection.snapshotChanges().pipe(  //snapchange的固定建置方法
+      map( actions=>{
+      return actions.map(a=>{
+        const data = a.payload.doc.data();
+        const id = a.payload.doc.id;
+        return{id,...data};
+      }) 
+    }))
+    return this.Tourists
+    // console.log(this.Tourists)
+  }
+  updateTourist(tourist: TouristData, id: string) {
+    return this.TouristCollection.doc(id).update(tourist);
+  }
+
+  addTourist(tourist: TouristData) {
+    return this.TouristCollection.add(tourist);
+  }
+  //////////////////餐廳的搜尋功能
+  changeFoodie(tag){
+    this.FoodieCollection  = this.db.collection<FoodieData>('foodiedata',ref=>
+    ref.where(tag,'==','y')); //此處要輸入firebase裡的欄位名稱
+    this.Foodies = this.FoodieCollection.snapshotChanges().pipe(  //snapchange的固定建置方法
+      map( actions=>{
+      return actions.map(a=>{
+        const data = a.payload.doc.data();
+        const id = a.payload.doc.id;
+        return{id,...data};
+      }) 
+    }))
+    return this.Foodies
+    // console.log(this.Foodies)
+  }
+  updateFoodie(foodie: FoodieData, id: string) {
+    return this.FoodieCollection.doc(id).update(foodie);
+  }
+  favoriteFoodie(){
+    this.FoodieCollection  = this.db.collection<FoodieData>('Foodiedata',ref=>
+    ref.where('favorite','==','y')); //此處要輸入firebase裡的欄位名稱
+    this.Foodies = this.FoodieCollection.snapshotChanges().pipe(  //snapchange的固定建置方法
+      map( actions=>{
+      return actions.map(a=>{
+        const data = a.payload.doc.data();
+        const id = a.payload.doc.id;
+        return{id,...data};
+      }) 
+    }))
+    return this.Foodies
+    // console.log(this.Foodies)
+  }
   ///////////////////餐廳最愛功能
   getFavFoods() {
     return this.FavFoods;

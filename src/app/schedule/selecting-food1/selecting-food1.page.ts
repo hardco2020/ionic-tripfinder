@@ -12,12 +12,16 @@ import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@ang
   styleUrls: ['./selecting-food1.page.scss'],
 })
 export class SelectingFood1Page implements OnInit {
+  ishidden1 = true; //控制欄位
+  ishidden2 = true; //控制欄位
+  ishidden3 = true; //控制欄位
   data: any;
   selection: any;
   constructor(private fb: FormBuilder, public nav: NavController, private route: ActivatedRoute, private router: Router) {
     this.route.queryParams.subscribe(param => {
       if (param && param.special) {
         this.data = JSON.parse(param.special);
+        console.log(this.data)
       }
     });
     this.form = this.fb.group({
@@ -31,102 +35,165 @@ export class SelectingFood1Page implements OnInit {
   form: FormGroup;
 
   result = {
-    sweet: 'n',
-    salty: 'n',
-    cheap: 'n',
-    expensive: 'n',
-    buffet: 'n',
-    chinese: 'n',
-    western: 'n',
-    japanKorean: 'n',
-    southeastAsian: 'n',
-    netbeauty: 'n',
-    vendor: 'n',
-    restaurant: 'n',
-    alcohol: 'n'
   };
 
-  labels = [
-    {
-      key: 1,
-      name: 'sweet',
-      title: '甜食',
-      img: 'https://images.pexels.com/photos/2373520/pexels-photo-2373520.jpeg?auto=compress&cs=tinysrgb'
-    },
-    {
-      key: 2,
-      name: 'salty',
-      title: '鹹食',
-      img: 'https://images.pexels.com/photos/1838610/pexels-photo-1838610.jpeg?cs=srgb&dl=pexels-1838610.jpg&fm=jpg'
-    },
+  labels1 = [
     {
       key: 3,
-      name: 'cheap',
-      title: '銅板',
-      img: 'https://images.pexels.com/photos/3459343/pexels-photo-3459343.jpeg?auto=compress&cs=tinysrgb'
+      name: 'hotpot',
+      title: '#火鍋',
+      
     },
     {
       key: 4,
-      name: 'expensive',
-      title: '高檔',
-      img: 'https://images.pexels.com/photos/4050981/pexels-photo-4050981.jpeg?auto=compress&cs=tinysrgb'
+      name: 'dessert',
+      title: '#甜點',
     },
     {
       key: 5,
-      name: 'buffet',
-      title: '吃到飽',
-      img: 'https://images.pexels.com/photos/2670327/pexels-photo-2670327.jpeg?auto=compress&cs=tinysrgb'
-    },
-    {
-      key: 6,
-      name: 'chinese',
-      title: '中式',
-      img: 'https://images.pexels.com/photos/3951665/pexels-photo-3951665.jpeg?auto=compress&cs=tinysrgb'
+      name: 'snack',
+      title: '#小吃',
     },
     {
       key: 7,
-      name: 'western',
-      title: '西式',
-      img: 'https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb'
+      name: 'cake',
+      title: '#蛋糕',
     },
     {
       key: 8,
-      name: 'japanKorean',
-      title: '日韓式',
-      img: 'https://images.pexels.com/photos/3297363/pexels-photo-3297363.jpeg?auto=compress&cs=tinysrgb'
+      name: 'coffee',
+      title: '#咖啡',
     },
     {
       key: 9,
-      name: 'southeastAsian',
-      title: '東南亞',
-      img: 'https://images.pexels.com/photos/1437590/pexels-photo-1437590.jpeg?cs=srgb&dl=pexels-1437590.jpg&fm=jpg'
+      name: 'bar',
+      title: '#餐酒館/酒吧',
     },
     {
       key: 10,
-      name: 'netbeauty',
-      title: '網美',
-      img: 'https://images.pexels.com/photos/2871757/pexels-photo-2871757.jpeg?auto=compress&cs=tinysrgb'
+      name: 'steak',
+      title: '#牛排',
     },
     {
       key: 11,
-      name: 'vendor',
-      title: '攤販',
-      img: 'https://images.pexels.com/photos/3031209/pexels-photo-3031209.jpeg?auto=compress&cs=tinysrgb'
+      name: 'barbeque',
+      title: '#燒烤',
     },
     {
       key: 12,
-      name: 'restaurant',
-      title: '餐廳',
-      img: 'https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb'
+      name: 'japenesebar',
+      title: '#居酒屋',
     },
     {
       key: 13,
-      name: 'alcohol',
-      title: '酒精',
-      img: 'https://images.pexels.com/photos/2529468/pexels-photo-2529468.jpeg?auto=compress&cs=tinysrgb'
+      name: 'beverage',
+      title: '#冰品飲料',
+    },
+    {
+      key: 14,
+      name: 'banquet',
+      title: '#合菜',
+    },
+    {
+      key: 16,
+      name: 'seafood',
+      title: '#海鮮',
+    },
+    {
+      key: 17,
+      name: 'ramen',
+      title: '#拉麵',
+    },
+    {
+      key: 18,
+      name: 'beefnoodle',
+      title: '#牛肉麵',
+    },
+    {
+      key: 19,
+      name: 'sushi',
+      title: '#壽司',
+    },
+    {
+      key: 20,
+      name: 'vegetarian',
+      title: '#素食',
+    },
+  ]
+  labels2 = [
+    {
+      key: 1,
+      name: 'japenese',
+      title: '#日式料理',
+    },
+    {
+      key: 2,
+      name: 'korean',
+      title: '#韓式料理',
+    },
+    {
+      key: 3,
+      name: 'chinese',
+      title: '#中式料理',
+    },
+    {
+      key: 4,
+      name: 'american',
+      title: '#美式料理',
+    },
+    {
+      key: 5,
+      name: 'italian',
+      title: '#義式料理',
+    },
+    {
+      key: 6,
+      name: 'taifood',
+      title: '#泰式料理',
+    },
+    {
+      key: 7,
+      name: 'honkong',
+      title: '#港式料理',
     }
-  ];
-
+  ]
+  labels3 = [
+    {
+      key: 6,
+      name: 'date',
+      title: '#約會餐廳',
+    },
+    {
+      key: 1,
+      name: 'petfriendly',
+      title: '#寵物友善',
+    },
+    {
+      key: 2,
+      name: 'breakfast',
+      title: '#早餐',
+    },
+    {
+      key: 3,
+      name: 'lunch',
+      title: '#午餐',
+    },
+    {
+      key: 4,
+      name: 'dinner',
+      title: '#晚餐',
+    },
+    {
+      key: 5,
+      name: 'brunch',
+      title: '#早午餐',
+    },
+    {
+      key: 15,
+      name: 'latenight',
+      title: '#宵夜',
+    }
+  ]
   ngOnInit() {
     console.log(this.data);
   }
@@ -151,6 +218,8 @@ export class SelectingFood1Page implements OnInit {
     if (e.target.checked) { // 如果有勾的話
       checkArray.push(new FormControl(e.target.value)); // push進array裡
       this.result[e.target.value] = 'y';
+
+      console.log(this.result)
     } else {
       let i: number = 0;
       checkArray.controls.forEach((item: FormControl) => {
@@ -172,9 +241,32 @@ export class SelectingFood1Page implements OnInit {
         special: JSON.stringify(this.selection)
       }
     };
-    this.nav.navigateRoot(['outcome-food'], navigationExtras);
+    this.nav.navigateRoot(['tabs/tab1/outcome-food'], navigationExtras);
   }
-
+  unhidden1(){ //點出隱藏欄位1
+    if(this.ishidden1==true){
+      this.ishidden1 = false;
+    }
+    else{
+      this.ishidden1 = true;
+    }
+  }
+  unhidden2(){ //點出隱藏欄位2
+    if(this.ishidden2==true){
+      this.ishidden2 = false;
+    }
+    else{
+      this.ishidden2 = true;
+    }
+  }
+  unhidden3(){ //點出隱藏欄位2
+    if(this.ishidden3==true){
+      this.ishidden3 = false;
+    }
+    else{
+      this.ishidden3 = true;
+    }
+  }
   submitForm() {
     console.log(this.form.value);
   }
